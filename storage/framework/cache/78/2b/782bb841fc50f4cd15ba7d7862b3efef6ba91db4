@@ -1,0 +1,23 @@
+1585388887a:1:{s:15:"test-advert.htm";a:11:{s:8:"fileName";s:15:"test-advert.htm";s:7:"content";s:291:"title = "Тест формы"
+url = "/test-advert"
+layout = "home"
+is_hidden = 1
+
+[session]
+security = "all"
+
+[createAdvert]
+==
+<h2 class="text-center">текст из cms</h2>
+
+<main class="main">
+  <div class="container">
+    {% component 'createAdvert' %}
+  </div>
+</main>";s:5:"mtime";i:1585053748;s:6:"markup";s:153:"<h2 class="text-center">текст из cms</h2>
+
+<main class="main">
+  <div class="container">
+    {% component 'createAdvert' %}
+  </div>
+</main>";s:4:"code";N;s:5:"title";s:19:"Тест формы";s:3:"url";s:12:"/test-advert";s:6:"layout";s:4:"home";s:9:"is_hidden";s:1:"1";s:7:"session";a:1:{s:8:"security";s:3:"all";}s:12:"createAdvert";a:0:{}}}

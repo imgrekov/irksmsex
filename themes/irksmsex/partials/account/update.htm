@@ -1,0 +1,51 @@
+{{ form_ajax('onUpdate') }}
+
+<fieldset class="form-wrapper">
+	<!-- <div class="form-group">
+		<label for="accountName">Имя</label>
+		<input name="name" type="text" class="form-control" id="accountName" value="{{ user.name }}">
+	</div> -->
+
+	{% if loginAttribute == "username" %}
+	<div class="form-group">
+		<label for="accountName">Имя пользователя</label>
+		<input name="username" type="text" class="form-control" id="userName" value="{{ user.username }}">
+	</div>
+	{% endif %}
+
+	<h3 class="form-wrapper__title" data-toggle="tooltip" data-placement="left" title="Её нельзя изменить">
+		Текущая почта
+		<span>*</span>
+	</h3>
+	<div class="form-group">
+		<input name="email" type="email" class="form-control" id="Email" value="{{ user.email }}" disabled>
+	</div>
+
+	<!-- на всякий случай сохраню -->
+	<!-- <div class="form-group">
+		<label for="accountEmail">Почта</label>
+		<input name="email" type="email" class="form-control" id="accountEmail" value="{{ user.email }}">
+	</div> -->
+
+</fieldset>
+
+
+<fieldset class="form-wrapper">
+
+	<h3>Новый пароль</h3>
+
+	<div class="form-group">
+		<label for="accountPassword">Обновите пароль</label>
+		<input name="password" type="password" class="form-control" id="accountPassword" placeholder="Введите новый пароль">
+	</div>
+
+	<div class="form-group">
+		<label for="accountPasswordConfirm">Подтвердите его</label>
+		<input name="password_confirmation" type="password" class="form-control" id="accountPasswordConfirm" placeholder="Подтвердите его">
+	</div>
+</fieldset>
+
+
+<button type="submit" class="btn btn-success">Сохранить</button>
+
+{{ form_close() }}

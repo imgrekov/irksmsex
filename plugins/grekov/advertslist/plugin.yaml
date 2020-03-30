@@ -1,0 +1,11 @@
+plugin:
+    name: 'grekov.advertslist::lang.plugin.name'
+    description: 'grekov.advertslist::lang.plugin.description'
+    author: Grekov
+    icon: oc-icon-adn
+    homepage: ''
+navigation:
+    adverts:
+        label: Объявления
+        url: grekov/advertslist/ads
+        icon: icon-adn

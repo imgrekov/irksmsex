@@ -1,0 +1,51 @@
+title = "Аккаунт"
+url = "/user/account"
+layout = "home"
+description = "Регистрация и логин пользователей"
+is_hidden = 0
+
+[account]
+redirect = "user/profile"
+paramCode = "code"
+forceSecure = 0
+
+[session]
+security = "all"
+
+[resetPassword]
+paramCode = "code"
+==
+<div class="user-hero">
+
+
+	{% if not user %}
+	<div class="row">
+		<div class="col-md-5">
+			<h2 class="user-form__title">Вход</h2>
+			{% partial account ~ '::signin' %}
+		</div>
+
+		<div class="col-md-7">
+			{% partial account ~ '::register' %}
+		</div>
+	</div>
+
+
+	{% else %}
+
+	<div class="profile-edit">
+		<h1 class="profile-edit__title">Настройки</h1>
+		<small>Здесь ты можешь обновить пароль и деактивировать аккаунт.</small>
+
+		<hr>
+		
+		<div class="profile-edit__update">{% partial account ~ '::update' %}</div>
+		<hr>
+		{% partial account ~ '::deactivate_link' %}
+	</div>
+
+
+	{% endif %}
+
+
+</div><!-- /.user-hero -->

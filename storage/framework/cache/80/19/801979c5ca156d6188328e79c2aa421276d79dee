@@ -1,0 +1,26 @@
+1585470912a:1:{s:18:"second/socials.htm";a:5:{s:8:"fileName";s:18:"second/socials.htm";s:7:"content";s:275:"
+<div class="titlefoot">
+  <div class="socials">
+    <a href="#!">
+      <i class="fa fa-vk"></i>
+    </a>
+    <a href="#!">
+      <i class="fa fa-facebook-square"></i>
+    </a>
+    <a href="#!">
+      <i class="fa fa-odnoklassniki"></i>
+    </a>
+  </div>
+</div>";s:5:"mtime";i:1585080876;s:6:"markup";s:273:"<div class="titlefoot">
+  <div class="socials">
+    <a href="#!">
+      <i class="fa fa-vk"></i>
+    </a>
+    <a href="#!">
+      <i class="fa fa-facebook-square"></i>
+    </a>
+    <a href="#!">
+      <i class="fa fa-odnoklassniki"></i>
+    </a>
+  </div>
+</div>";s:4:"code";N;}}

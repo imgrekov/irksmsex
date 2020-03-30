@@ -1,0 +1,46 @@
+fields:
+    text:
+        label: 'Текст объявления'
+        size: ''
+        span: full
+        placeholder: 'Текст объявления'
+        required: 1
+        type: textarea
+    category:
+        label: Категория
+        span: auto
+        required: 1
+        type: text
+    type:
+        label: Тип
+        span: auto
+        required: 1
+        type: text
+    author:
+        label: Автор
+        span: auto
+        required: 1
+        type: text
+    highlight:
+        label: Выделение
+        span: auto
+        type: text
+    state:
+        label: Активно/неактивно
+        span: auto
+        type: text
+    image1:
+        label: 'Изображение 1'
+        mode: image
+        span: auto
+        type: mediafinder
+    image2:
+        label: 'Изображение 2'
+        mode: image
+        span: auto
+        type: mediafinder
+    image3:
+        label: 'Изображение 3'
+        mode: image
+        span: auto
+        type: mediafinder

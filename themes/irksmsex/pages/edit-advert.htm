@@ -1,0 +1,110 @@
+title = "Редактировать объявление"
+url = "/edit/:id"
+layout = "index"
+description = "Редактировать добавленное объявление"
+is_hidden = 0
+
+[session]
+security = "all"
+
+[builderDetails]
+modelClass = "Grekov\AdvertsList\Models\Advert"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "id"
+notFoundMessage = "Объявление не найдено"
+
+[editAdvert]
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+
+
+{% if record %}
+
+
+<div class="advert-edit">
+  <h1 class="advert-edit__title">Редактировать объявление</h1>
+  <!-- /.advert-edit__title -->
+  <p class="advert-edit__desc">Активируй, меняй текст и изображения.</p>
+  <!-- /.advert-edir__desc -->
+
+  <div class="ad-info">
+    <h3>Информация об&nbsp;объявлении</h3>
+    <p>
+      Объявление:
+      {% if record.state == true %}
+      <span class="badge badge-success">активно</span> <!-- /.badge-success -->
+      {% else %}
+      <span class="badge badge-danger">неактивно</span> <!-- /.state -->
+      {% endif %}
+    </p>
+
+    <p>
+      <!-- Текст в соответствии с категорией объявления -->
+      Категория:
+      {% if record.category == 'ona-on' %}
+      <span class="badge badge-info">Девушка ищет парня</span> <!-- /.state-category -->
+      {% elseif record.category == 'on-ona' %}
+      <span class="badge badge-info">Парень ищет девушку</span> <!-- /.state-category -->
+      {% elseif record.category == 'on-on' %}
+      <span class="badge badge-info">Парень ищет парня</span> <!-- /.state-category -->
+      {% elseif record.category == 'ona-ona' %}
+      <span class="badge badge-info">Девушка ищет девушку</span> <!-- /.state-category -->
+      {% elseif record.category == 'free' %}
+      <span class="badge badge-info">Досуг в Иркутске</span> <!-- /.state-category -->
+      {% elseif record.category == 'services' %}
+      <span class="badge badge-info">Услуги массажа</span> <!-- /.state-category -->
+      {% elseif record.category == 'family' %}
+      <span class="badge badge-info">Семейные пары</span> <!-- /.state-category -->
+      {% elseif record.category == 'flirt' %}
+      <span class="badge badge-info">Свободные отношения</span> <!-- /.state-category -->
+      {% elseif record.category == 'realty' %}
+      <span class="badge badge-info">Недвижимость</span> <!-- /.state-category -->
+      {% elseif record.category == 'arenda' %}
+      <span class="badge badge-info">Аренда квартир на сутки</span> <!-- /.state-category -->
+      {% elseif record.category == 'work' %}
+      <span class="badge badge-info">Работа в Иркутске</span> <!-- /.state-category -->
+      {% else %}
+      <span class="d-block badge badge-danger">Ошибка. Категория не найдена</span> <!-- /.badge-danger -->
+      {% endif %}
+    </p>
+  </div>
+
+  {% component 'editAdvert' %}
+
+  <hr class="my-3">
+
+  <button class="btn btn-outline-secondary btn-sm" type="button" data-toggle="tooltip" data-placement="right"
+    title="Удалить или деактивировать объявления" href="javascript:;" onclick="$('.advert-advance').toggle()">
+    Дополнительные функции
+  </button>
+
+  <div class="advert-advance" style="display: none">
+
+    <!-- Удалить объявление -->
+    {{ form_ajax('onEditDelete', { redirect: "/advert/edit-success", 'data-request-flash': true } ) }}
+    <input name="id" type="hidden" value="{{ record.id }}">
+    <div class="form-group">
+      <span class="advert-edit-deactivate__text" data-toggle="tooltip" data-placement="bottom"
+        title="Безвозвратно">Удалить объявление</span>
+      <button class="btn btn-danger btn-sm">Удалить</button>
+    </div>
+    {{ form_close() }}
+
+  </div> <!-- /.advert-advance -->
+
+</div> <!-- /.advert-edit -->
+
+
+
+{% else %}
+
+<div class="err">
+  <img src="{{ 'assets/images/errors/404.svg'|theme }}" alt="404 Ошибка">
+  <h1 class="text-right">{{ notFoundMessage|raw }}</h1>
+</div> <!-- /.err -->
+
+{% endif %}

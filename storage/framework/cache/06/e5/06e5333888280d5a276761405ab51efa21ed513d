@@ -1,0 +1,56 @@
+1585471628a:1:{s:20:"categories/flirt.htm";a:9:{s:8:"fileName";s:20:"categories/flirt.htm";s:7:"content";s:907:"﻿title = "Ищу секс"
+h1 = "Свободные отношения, флирт"
+url = "/categories/flirt"
+layout = "advert"
+==
+
+<ul class="advert-list">
+  
+  <li>
+    <div id="1" class="sms">
+      <!-- Время добавления объявления -->
+      <span class="timehead">2020-01-29 21:20</span>
+
+      <!-- Текст объявления -->
+      <span class="sms__text">
+        Ищу девушку для ***, и чобы не выносила
+        мозг. Возможно и мп, при сильной симатии
+      </span>
+
+      <!-- Управление объявлением -->
+      <div class="menu">
+        <a href="#!">Поднять</a>
+        <a href="#!">Выделить</a>
+        <a href="#!">Удалить</a>
+        <a href="#!">Фото</a>
+        <span>№ 1</span>
+      </div>
+
+    </div>
+  </li>
+</ul>
+";s:5:"mtime";i:1583928364;s:6:"markup";s:765:"<ul class="advert-list">
+  
+  <li>
+    <div id="1" class="sms">
+      <!-- Время добавления объявления -->
+      <span class="timehead">2020-01-29 21:20</span>
+
+      <!-- Текст объявления -->
+      <span class="sms__text">
+        Ищу девушку для ***, и чобы не выносила
+        мозг. Возможно и мп, при сильной симатии
+      </span>
+
+      <!-- Управление объявлением -->
+      <div class="menu">
+        <a href="#!">Поднять</a>
+        <a href="#!">Выделить</a>
+        <a href="#!">Удалить</a>
+        <a href="#!">Фото</a>
+        <span>№ 1</span>
+      </div>
+
+    </div>
+  </li>
+</ul>";s:4:"code";N;s:5:"title";s:15:"Ищу секс";s:2:"h1";s:49:"Свободные отношения, флирт";s:3:"url";s:17:"/categories/flirt";s:6:"layout";s:6:"advert";}}

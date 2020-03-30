@@ -1,0 +1,56 @@
+1585471628a:1:{s:22:"categories/ona-ona.htm";a:9:{s:8:"fileName";s:22:"categories/ona-ona.htm";s:7:"content";s:963:"﻿title = "Смс объявления парней, которые ищут девушек"
+h1 = "Девушка ищет дувушку"
+url = "/categories/ona-ona"
+layout = "advert"
+==
+
+<ul class="advert-list">
+  
+  <li>
+    <div id="1" class="sms">
+      <!-- Время добавления объявления -->
+      <span class="timehead">2020-01-29 21:20</span>
+
+      <!-- Текст объявления -->
+      <span class="sms__text">
+        Ищу девушку для ***, и чобы не выносила
+        мозг. Возможно и мп, при сильной симатии
+      </span>
+
+      <!-- Управление объявлением -->
+      <div class="menu">
+        <a href="#!">Поднять</a>
+        <a href="#!">Выделить</a>
+        <a href="#!">Удалить</a>
+        <a href="#!">Фото</a>
+        <span>№ 1</span>
+      </div>
+
+    </div>
+  </li>
+</ul>
+";s:5:"mtime";i:1583928386;s:6:"markup";s:765:"<ul class="advert-list">
+  
+  <li>
+    <div id="1" class="sms">
+      <!-- Время добавления объявления -->
+      <span class="timehead">2020-01-29 21:20</span>
+
+      <!-- Текст объявления -->
+      <span class="sms__text">
+        Ищу девушку для ***, и чобы не выносила
+        мозг. Возможно и мп, при сильной симатии
+      </span>
+
+      <!-- Управление объявлением -->
+      <div class="menu">
+        <a href="#!">Поднять</a>
+        <a href="#!">Выделить</a>
+        <a href="#!">Удалить</a>
+        <a href="#!">Фото</a>
+        <span>№ 1</span>
+      </div>
+
+    </div>
+  </li>
+</ul>";s:4:"code";N;s:5:"title";s:80:"Смс объявления парней, которые ищут девушек";s:2:"h1";s:38:"Девушка ищет дувушку";s:3:"url";s:19:"/categories/ona-ona";s:6:"layout";s:6:"advert";}}

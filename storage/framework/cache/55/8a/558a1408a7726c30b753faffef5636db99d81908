@@ -1,0 +1,17 @@
+1585382997a:1:{s:22:"advert/add-success.htm";a:10:{s:8:"fileName";s:22:"advert/add-success.htm";s:7:"content";s:396:"title = "Объявление создано успешно"
+url = "/advert/add-success"
+layout = "index"
+is_hidden = 0
+
+[session]
+security = "all"
+==
+{%
+  partial 'adverts/success'
+  title = "Объявление создано успешно"
+  text = "Сейчас оно неактивно. Его необходимо активировать в личном кабинете"
+%}";s:5:"mtime";i:1585215693;s:6:"markup";s:237:"{%
+  partial 'adverts/success'
+  title = "Объявление создано успешно"
+  text = "Сейчас оно неактивно. Его необходимо активировать в личном кабинете"
+%}";s:4:"code";N;s:5:"title";s:50:"Объявление создано успешно";s:3:"url";s:19:"/advert/add-success";s:6:"layout";s:5:"index";s:9:"is_hidden";s:1:"0";s:7:"session";a:1:{s:8:"security";s:3:"all";}}}

@@ -1,0 +1,54 @@
+1585471628a:1:{s:21:"categories/family.htm";a:9:{s:8:"fileName";s:21:"categories/family.htm";s:7:"content";s:919:"title = "Семейные пары и бисексуальные знакомства"
+url = "/categories/family"
+layout = "advert"
+is_hidden = 0
+==
+<ul class="advert-list">
+  
+  <li>
+    <div id="2" class="sms">
+      <!-- Время добавления объявления -->
+      <span class="timehead">2020-01-29 21:20</span>
+
+      <!-- Текст объявления -->
+      <span class="sms__text">
+        Ищу девушку для ***, и чобы не выносила
+        мозг. Возможно и мп, при сильной симатии
+      </span>
+
+      <!-- Управление объявлением -->
+      <div class="menu">
+        <a href="#!">Поднять</a>
+        <a href="#!">Выделить</a>
+        <a href="#!">Удалить</a>
+        <a href="#!">Фото</a>
+        <span>№ 1</span>
+      </div>
+
+    </div>
+  </li>
+</ul>";s:5:"mtime";i:1583928316;s:6:"markup";s:765:"<ul class="advert-list">
+  
+  <li>
+    <div id="2" class="sms">
+      <!-- Время добавления объявления -->
+      <span class="timehead">2020-01-29 21:20</span>
+
+      <!-- Текст объявления -->
+      <span class="sms__text">
+        Ищу девушку для ***, и чобы не выносила
+        мозг. Возможно и мп, при сильной симатии
+      </span>
+
+      <!-- Управление объявлением -->
+      <div class="menu">
+        <a href="#!">Поднять</a>
+        <a href="#!">Выделить</a>
+        <a href="#!">Удалить</a>
+        <a href="#!">Фото</a>
+        <span>№ 1</span>
+      </div>
+
+    </div>
+  </li>
+</ul>";s:4:"code";N;s:5:"title";s:76:"Семейные пары и бисексуальные знакомства";s:3:"url";s:18:"/categories/family";s:6:"layout";s:6:"advert";s:9:"is_hidden";s:1:"0";}}

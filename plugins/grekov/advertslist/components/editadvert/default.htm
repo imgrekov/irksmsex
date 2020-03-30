@@ -1,0 +1,163 @@
+{{ form_ajax('onEditAdvert', { class: "advert-edit-form", id: "advert-edit-form", 'data-request-flash': true, 'data-request-files': true, redirect: "../advert/edit-success" }) }}
+
+<input type="hidden" name="id" value="{{ record.id }}">
+
+<fieldset class="advert-form">
+
+
+  <div class="advert-edit-form__text">
+    <label for="text">Текст объявления</label>
+    <textarea id="text" name="text" required>{{ record.text }}</textarea>
+  </div>
+
+
+  <div class="row mb-4">
+
+    <div class="col-md-7">
+
+      <div class="form-group advert-edit__type">
+        <p>Тип объявления</p>
+
+        <label for="basic">
+          <input type="radio" name="type" id="basic" value="basic" {% if record.type == 'basic' %} checked {% endif %}>
+          Обычное
+        </label>
+        <label for="vip">
+          <input type="radio" name="type" id="vip" value="vip" {% if record.type == 'vip' %} checked {% endif %}>
+          Вип
+        </label>
+        <label for="xvip">
+          <input type="radio" name="type" id="xvip" value="xvip" {% if record.type == 'xvip' %} checked {% endif %}>
+          xVIP
+        </label>
+      </div> <!-- /.form-group -->
+
+      <div class="form-group advert-edit-vip">
+        <input name="highlight" type="checkbox" id="highlight" style="display: none;" {% if record.highlight == 'on' %}
+          checked {% endif %}>
+        <label for="highlight" class="check" data-toggle="tooltip" data-placement="bottom" title="Синий фон с надписью">
+          <svg width="18px" height="18px" viewBox="0 0 18 18">
+            <path
+              d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+            </path>
+            <polyline points="1 9 7 14 15 4"></polyline>
+          </svg>
+          Экстра выделение
+        </label>
+      </div> <!-- /.advert-edit__vip -->
+
+      <div class="form-group advert-edit-vip">
+        <input name="state" type="checkbox" id="state" style="display: none;" {% if record.state == 'on' %} checked
+          {% endif %}>
+        <label for="state" class="check" data-toggle="tooltip" data-placement="bottom"
+          title="{% if record.state == 'on' %} Чтобы деактивировать пройдите вниз {% else %} Показывать объявление {% endif %}">
+          <svg width="18px" height="18px" viewBox="0 0 18 18">
+            <path
+              d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z">
+            </path>
+            <polyline points="1 9 7 14 15 4"></polyline>
+          </svg>
+          {% if record.state == true %} Активно {% else %} Активировать {% endif %}
+        </label>
+      </div> <!-- /.advert-edit__activate -->
+
+    </div> <!-- /.col-md-6 -->
+
+
+    <div class="col-md-5">
+      <div class="form-group advert-edit__category">
+
+        <p class="advert-edit__category-desc">Категория</p>
+        <!-- /.advert-edit__category-desc -->
+
+        <select name="category" id="category" form="advert-edit-form" required>
+          <option value="on-ona" {% if record.category == 'on-ona' %}selected{%endif%}>
+            Парень ищет девушку
+          </option> <!-- on-ona -->
+
+          <option value="ona-on" {% if record.category == 'ona-on' %}selected{%endif%}>
+            Девушка ищет парня
+          </option> <!-- ona-on -->
+
+          <option value="on-on" {% if record.category == 'on-on' %}selected{%endif%}>
+            Парень ищет парня
+          </option> <!-- on-on -->
+
+          <option value="ona-ona" {% if record.category == 'ona-ona' %}selected{%endif%}>
+            Девушка ищет девушку
+          </option> <!-- ona-ona -->
+
+          <option value="free" {% if record.category == 'free' %}selected{%endif%}>
+            Досуг в Иркутске
+          </option> <!-- free -->
+
+          <option value="services" {% if record.category == 'services' %}selected{%endif%}>
+            Услуги массажа
+          </option> <!-- services -->
+
+          <option value="family" {% if record.category == 'family' %}selected{%endif%}>
+            Семейные пары
+          </option> <!-- family -->
+
+          <option value="flirt" {% if record.category == 'flirt' %}selected{%endif%}>
+            Флирт
+          </option> <!-- flirt -->
+
+          <option value="realty" {% if record.category == 'realty' %}selected{%endif%}>
+            Недвижимость
+          </option> <!-- realty -->
+
+          <option value="arenda" {% if record.category == 'arenda' %}selected{%endif%}>
+            Аренда квартир на сутки
+          </option> <!-- arenda -->
+
+          <option value="work" {% if record.category == 'work' %}selected{%endif%}>
+            Работа или подработка
+          </option> <!-- work -->
+        </select>
+        <!-- /#category -->
+
+      </div> <!-- /.form-group advert-edit__category -->
+
+    </div> <!-- /.col-md-6 -->
+  </div>
+  <!-- /.row -->
+
+
+  <div class="advert-edit__image">
+    <h3 class="mb-3 advert-edit__image-title">Добавьте изображения к&nbsp;объявлению</h3>
+
+
+    <div class="advert-edit__image-wrap">
+
+      <div class="">
+        <input type="file" class="mb-3" name="attachimage1" id="attachimage1">
+        <span class="remove-button btn btn-outline-danger btn-sm" id="btn-remove-image1">Очистить</span>
+      </div> <!-- /.advert-edit__image-item -->
+
+      <div class="advert-edit__image-item">
+        <p>№ — 2</p>
+        <input class="inputfile" type="file" id="attachimage2" name="attachimage2" accept="image/jpeg,image/png,image/jpg">
+        <label for="attachimage2">Выберите файл</label>
+        <div class="image2-name image-name"></div>
+        <span class="remove-button btn btn-outline-danger btn-sm" id="btn-remove-image2">Очистить</span>
+      </div> <!-- /.advert-edit__image-item -->
+
+      <div class="advert-edit__image-item">
+        <p>№ — 3</p>
+        <input class="inputfile" type="file" id="attachimage3" name="attachimage3" accept="image/jpeg,image/png,image/jpg">
+        <label for="attachimage3">Выберите файл</label>
+        <div class="image3-name image-name"></div>
+        <span class="remove-button btn btn-outline-danger btn-sm" id="btn-remove-image3">Очистить</span>
+      </div> <!-- /.advert-edit__image-item -->
+
+    </div> <!-- /.advert-edit__image-wrap -->
+
+  </div> <!-- /.advert-edit__image -->
+
+</fieldset> <!-- /.advert-form -->
+
+<button type="submit" class="btn btn-success">Готово</button>
+<!-- /.btn btn-success -->
+
+{{ form_close() }}

@@ -1,0 +1,15 @@
+<form data-request="{{ __SELF__ }}::onRestorePassword"
+	data-request-update="'{{ __SELF__ }}::reset': '#partialUserResetForm'">
+
+	<fieldset class="form-wrapper">
+
+		<h2>Забыли пароль?</h2>
+
+		<div class="form-group">
+			<label for="userRestoreEmail">Введите свою почту</label>
+			<input name="email" type="email" class="form-control" id="userRestoreEmail" placeholder="Например: info@irksmsex.ru">
+		</div>
+	</fieldset>
+
+	<button type="submit" class="btn btn-success">Восстановить пароль</button>
+</form>

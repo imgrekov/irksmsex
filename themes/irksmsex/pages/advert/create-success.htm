@@ -1,0 +1,13 @@
+title = "Объявление создано успешно"
+url = "/advert/create-success"
+layout = "index"
+is_hidden = 0
+
+[session]
+security = "all"
+==
+{%
+  partial 'adverts/success'
+  title = "Объявление создано успешно"
+  text = "Сейчас оно неактивно. Его необходимо активировать в личном кабинете"
+%}

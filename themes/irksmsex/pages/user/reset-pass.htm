@@ -1,0 +1,18 @@
+title = "Сброс пароля"
+url = "/user/reset-password"
+layout = "home"
+description = "Сброс пароля"
+is_hidden = 0
+
+[resetPassword]
+paramCode = "code"
+==
+
+<div class="reset-pass" id="partialUserResetForm">
+  {% if resetPassword.code == null %}
+  {% partial resetPassword ~ '::restore' %}
+  {% else %}
+  {% partial resetPassword ~ '::reset' %}
+  {% endif %}
+</div>
+<!-- /#partialUserResetForm -->

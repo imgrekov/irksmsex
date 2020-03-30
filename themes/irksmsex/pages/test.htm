@@ -1,0 +1,16 @@
+title = "Тестирую формы"
+url = "/test"
+layout = "index"
+is_hidden = 0
+
+[session]
+security = "all"
+==
+<div class="jumbotron">
+
+  {{ form_ajax('onLol', { 'data-request-flash': true }) }}
+  <input type="text" class="form-control mb-2" name="text" id="text">
+  <button type="submit" class="btn btn-success btn-sm">Отправить</button>
+  {{ form_close() }}
+  
+</div>

@@ -1,0 +1,29 @@
+title = "Создать объявление"
+url = "/create"
+layout = "index"
+description = "Добавить объявление"
+is_hidden = 0
+
+[session]
+security = "all"
+
+[createAdvert]
+==
+<div class="infblock">
+	<a class="btn btn-secondary" href="{{ 'help'|page }}">Как добавлять объявления?</a>
+</div>
+
+<div class='title'>
+	<h2>Добавить объявление</h2>
+</div>
+
+
+<div class="sms3">
+	<a class="btn btn-light btn-sm" href="{{ 'home'|page }}">На главную</a>
+</div>
+
+<main class="main">
+	<div class="container">
+		{% component 'createAdvert' %}
+	</div>
+</main>

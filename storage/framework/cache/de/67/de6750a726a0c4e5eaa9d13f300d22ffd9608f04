@@ -1,0 +1,56 @@
+1585471628a:1:{s:19:"categories/free.htm";a:9:{s:8:"fileName";s:19:"categories/free.htm";s:7:"content";s:960:"title = "Досуг в Иркутске, агентства экскорт, индивидуалки"
+h1 = "Досуг в Иркутске"
+url = "/categories/free"
+layout = "advert"
+==
+
+<ul class="advert-list">
+  
+  <li>
+    <div id="1" class="sms">
+      <!-- Время добавления объявления -->
+      <span class="timehead">2020-01-29 21:20</span>
+
+      <!-- Текст объявления -->
+      <span class="sms__text">
+        Ищу девушку для ***, и чобы не выносила
+        мозг. Возможно и мп, при сильной симатии
+      </span>
+
+      <!-- Управление объявлением -->
+      <div class="menu">
+        <a href="#!">Поднять</a>
+        <a href="#!">Выделить</a>
+        <a href="#!">Удалить</a>
+        <a href="#!">Фото</a>
+        <span>№ 1</span>
+      </div>
+
+    </div>
+  </li>
+</ul>
+";s:5:"mtime";i:1583928371;s:6:"markup";s:765:"<ul class="advert-list">
+  
+  <li>
+    <div id="1" class="sms">
+      <!-- Время добавления объявления -->
+      <span class="timehead">2020-01-29 21:20</span>
+
+      <!-- Текст объявления -->
+      <span class="sms__text">
+        Ищу девушку для ***, и чобы не выносила
+        мозг. Возможно и мп, при сильной симатии
+      </span>
+
+      <!-- Управление объявлением -->
+      <div class="menu">
+        <a href="#!">Поднять</a>
+        <a href="#!">Выделить</a>
+        <a href="#!">Удалить</a>
+        <a href="#!">Фото</a>
+        <span>№ 1</span>
+      </div>
+
+    </div>
+  </li>
+</ul>";s:4:"code";N;s:5:"title";s:91:"Досуг в Иркутске, агентства экскорт, индивидуалки";s:2:"h1";s:30:"Досуг в Иркутске";s:3:"url";s:16:"/categories/free";s:6:"layout";s:6:"advert";}}

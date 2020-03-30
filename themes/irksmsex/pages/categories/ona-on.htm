@@ -1,0 +1,91 @@
+title = "Смс объявления девушек, которые ищут парней"
+url = "/categories/ona-on"
+layout = "advert"
+is_hidden = 0
+
+[builderList AdvertsList]
+modelClass = "Grekov\AdvertsList\Models\Advert"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Здесь пока нет объявлений. Добавьте его первым"
+detailsPage = "cats/post"
+detailsKeyColumn = "id"
+detailsUrlParameter = "id"
+recordsPerPage = 50
+pageNumber = "{{ :page }}"
+==
+{% set records = AdvertsList.records %}
+{% set displayColumn = AdvertsList.displayColumn %}
+{% set noRecordsMessage = AdvertsList.noRecordsMessage %}
+{% set detailsPage = AdvertsList.detailsPage %}
+{% set detailsKeyColumn = AdvertsList.detailsKeyColumn %}
+{% set detailsUrlParameter = AdvertsList.detailsUrlParameter %}
+
+
+
+<ul class="record-list">
+  {% for record in records %}
+
+  {% if record.category == 'ona-on' %}
+
+  <li class="{% if record.type == 'vip' %}vip{% elseif record.type == 'svip' %}svip{% else %}basic{% endif %}">
+    <div id="{{ record.id }}" class="sms">
+      <!-- Время добавления объявления -->
+
+      {% if record.type == 'vip' %}
+      <img src="{{ 'assets/images/vip.png'|theme }}" alt="vip" class="id">
+      {% endif %}
+
+      <span class="timehead">
+        {{ record.created_at|date('d-m-Y H:i') }}
+      </span>
+
+      <!-- <span class="views">0</span> -->
+      <!-- /.views -->
+
+      <!-- Текст объявления -->
+      <div class="sms__text">
+        {{ record.text|raw }}
+      </div>
+
+
+      {% if record.image1 %}
+      <div class="advert__imgs-wrap">
+        <img class="advert__image" src="{{ record.image2|media }}" alt="Фото1">
+      </div>
+      {% endif %}
+      
+      {% if record.image2 %}
+      <div class="advert__imgs-wrap">
+        <img class="advert__image" src="{{ record.image2|media }}" alt="Фото2">
+      </div>
+      {% endif %}
+
+      {% if record.image3 %}
+      <div class="advert__imgs-wrap">
+        <img class="advert__image" src="{{ record.image3|media }}" alt="Фото3">
+      </div>
+      {% endif %}
+
+      <!-- Управление объявлением -->
+      <div class="menu">
+        <a class="menu-btn__up" href="#!">Поднять</a>
+        <a class="menu-btn__select" href="#!">Выделить</a>
+        <a href="#!">Удалить</a>
+        <a href="#!">Фото</a>
+        <span>№ {{ record.id }}</span>
+      </div>
+
+    </div>
+  </li>
+  {% endif %}
+
+
+  {% else %}
+  <li class="advert-none">{{ noRecordsMessage }}</li>
+  {% endfor %}
+
+</ul>
+
+{% partial 'adverts/pagination' %}

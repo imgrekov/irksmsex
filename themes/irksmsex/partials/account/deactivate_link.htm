@@ -1,0 +1,23 @@
+<button class="profile-edit-deactivate btn btn-outline-secondary btn-sm" type="button" data-toggle="tooltip" data-placement="right" title="Удалить все объявления" href="javascript:;"
+	onclick="$('#accountDeactivateForm').toggle()">
+	Деактивировать аккаунт
+</button>
+
+<div id="accountDeactivateForm" style="display: none">
+	{{ form_ajax('onDeactivate') }}
+
+	<div class="profile-deactivate">
+		<h2 class="text-monospace profile-edit-title">Твой аккаунт будет заморожен, а&nbsp;объявления удалены</h2>
+		<small>Ты сможешь заново активировать аккаунт войдя в него.</small>
+	</div>
+
+	<div class="form-group">
+		<label for="accountDeletePassword">Чтобы продолжить, введи пароль:</label>
+		<input name="password" type="password" class="form-control" id="accountDeletePassword" placeholder="Текущий пароль">
+	</div>
+
+	<button type="submit" class="btn btn-danger btn-sm">Деактивировать</button>
+	<a class="btn btn-outline-primary btn-sm" href="javascript:;" onclick="$('#accountDeactivateForm').toggle()">Я
+		передумал</a>
+	{{ form_close() }}
+</div>

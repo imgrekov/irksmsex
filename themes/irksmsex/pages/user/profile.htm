@@ -1,0 +1,227 @@
+title = "Профиль пользователя"
+url = "/user/profile"
+layout = "index"
+description = "Страница профиля пользователя"
+is_hidden = 0
+
+[session]
+security = "all"
+
+[builderList userAdverts]
+modelClass = "Grekov\AdvertsList\Models\Advert"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Вы ещё не создали ни одного объявления"
+detailsPage = "edit-advert"
+detailsKeyColumn = "id"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = userAdverts.records %}
+{% set displayColumn = userAdverts.displayColumn %}
+{% set noRecordsMessage = userAdverts.noRecordsMessage %}
+{% set detailsPage = userAdverts.detailsPage %}
+{% set detailsKeyColumn = userAdverts.detailsKeyColumn %}
+{% set detailsUrlParameter = userAdverts.detailsUrlParameter %}
+
+
+<div class="profile">
+
+  <div class="profile-head">
+    <h1 class="profile__title">Личный кабинет</h1>
+    <a class="btn btn-outline-primary profile__add-link" href="{{ 'create-advert'|page }}">Создать объявлнение</a>
+  </div>
+  <!-- /.profile-head -->
+
+  <hr>
+
+  <div class="profile-hero">
+    <h2 class="profile-hero__title">Ваши объявлнения</h2>
+
+
+    <ul class="profile-hero__list">
+
+      {% for record in records if user.email == record.author %}
+
+      <li class="profile-hero__item">
+
+        <div class="row">
+
+          <div class="col-sm-8">
+
+            <div class="profile-hero__info">
+              <span class="timehead">
+                {{ record.updated_at|date('Создано d-m-Y, в H:i') }}
+              </span> <!-- /.timehead -->
+
+              <div class="profile-hero__item-text">
+
+                {% if record.type == 'vip' %}
+                <img src="{{ 'assets/images/vip.png'|theme }}" alt="vip" class="id">
+                {% endif %}
+
+                {{ record.text|raw }}
+              </div> <!-- /.profile-hero__item-text -->
+
+
+              {% if record.image1 %}
+              <div class="advert__imgs-wrap">
+                <div class="advert__image"><img src="{{ record.image1|media }}" alt="Фото2"></div>
+
+                {% if record.image2 %}
+                <div class="advert__image"><img src="{{ record.image2|media }}" alt="Фото2"></div>
+                {% endif %}
+                {% if record.image3 %}
+                <div class="advert__image"><img src="{{ record.image3|media }}" alt="Фото3"></div>
+                {% endif %}
+
+              </div>
+              {% endif %}
+
+
+              <span class="profile-hero__id">ID: {{record.id}}</span> <!-- /.profile-hero__id -->
+            </div> <!-- /.profile-hero__info -->
+
+          </div>
+          <!-- /.col-md-8 -->
+
+
+          <div class="col-sm-4 pos-r">
+            <div class="profile-hero__status">
+              <p>
+                Объявление:
+                {% if record.state == 'on' %}
+                <span class="badge badge-success">активно</span> <!-- /.badge-success -->
+                {% else %}
+                <span class="badge badge-danger">неактивно</span> <!-- /.state -->
+                {% endif %}
+              </p>
+              <p>
+                Объявление:
+                {% if record.highlight == 'on' %}
+                <span class="badge badge-success">выделено</span> <!-- /.badge-success -->
+                {% else %}
+                <span class="badge badge-danger">не выделено</span> <!-- /.state -->
+                {% endif %}
+              </p>
+              <p>
+                <!-- Здесь посчитать количество картинок. Если изображений нет, то "0". Если есть, то их количество. -->
+                Изображений добавлено: <span class="badge badge-primary countimgs">0</span> <!-- /.badge-primary -->
+              </p>
+              <p>
+                <!-- Текст в соответствии с категорией объявления -->
+                Категория:
+                {% if record.category == 'ona-on' %}
+                <span class="state state-category">Девушка ищет парня</span> <!-- /.state-category -->
+                {% elseif record.category == 'on-ona' %}
+                <span class="state state-category">Парень ищет девушку</span> <!-- /.state-category -->
+                {% elseif record.category == 'on-on' %}
+                <span class="state state-category">Парень ищет парня</span> <!-- /.state-category -->
+                {% elseif record.category == 'ona-ona' %}
+                <span class="state state-category">Девушка ищет девушку</span> <!-- /.state-category -->
+                {% elseif record.category == 'free' %}
+                <span class="state state-category">Досуг в Иркутске</span> <!-- /.state-category -->
+                {% elseif record.category == 'services' %}
+                <span class="state state-category">Услуги массажа</span> <!-- /.state-category -->
+                {% elseif record.category == 'family' %}
+                <span class="state state-category">Семейные пары</span> <!-- /.state-category -->
+                {% elseif record.category == 'flirt' %}
+                <span class="state state-category">Свободные отношения</span> <!-- /.state-category -->
+                {% elseif record.category == 'realty' %}
+                <span class="state state-category">Недвижимость</span> <!-- /.state-category -->
+                {% elseif record.category == 'arenda' %}
+                <span class="state state-category">Аренда квартир на сутки</span> <!-- /.state-category -->
+                {% elseif record.category == 'work' %}
+                <span class="state state-category">Работа в Иркутске</span> <!-- /.state-category -->
+                {% else %}
+                <span class="d-block badge badge-danger">Ошибка. Категория не найдена</span> <!-- /.badge-danger -->
+                {% endif %}
+              </p>
+            </div> <!-- /.profile-hero__status -->
+
+            <hr>
+
+            <a class="btn btn-success btn-sm profile-hero__action"
+              href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">Редактировать
+              объявлнение</a>
+            <!-- /.profile-hero__action -->
+          </div>
+          <!-- /.col-md-4 -->
+
+        </div> <!-- /.row -->
+
+      </li> <!-- /.profile-hero__item -->
+
+      {% else %}
+      <li class="advert-none">
+        <p>{{ noRecordsMessage }} <span>&uarr;</span></p>
+      </li>
+      {% endfor %}
+
+      <li class="profile-hero__item">
+
+        <div class="row">
+          <div class="col-sm-8">
+
+            <div class="profile-hero__info">
+              <span class="timehead">
+                {{ record.created_at|date('Создано d-m-Y, в H:i') }}
+              </span>
+              <!-- /.timehead -->
+              <p class="profile-hero__item-text">
+                Это базовое объявлнение. Оно не из БД.
+              </p>
+              <!-- /.profile-hero__item-text -->
+
+              <div class="advert__imgs-wrap">
+                <div class="advert__image"><img src="{{ 'assets/images/test/cat-3.jpg'|theme }}" alt="Фото3"></div>
+                <div class="advert__image"><img src="{{ 'assets/images/test/cat-2.jpg'|theme }}" alt="Фото2"></div>
+                <div class="advert__image"><img src="{{ 'assets/images/test/cat-4.jpg'|theme }}" alt="Фото2"></div>
+              </div> <!-- /.advert__imgs-wrap -->
+
+              <span class="profile-hero__id">ID: БОЖЕСТВЕННОЕ{{record.id}}</span>
+            </div>
+
+
+          </div>
+          <!-- /.col-md-8 -->
+
+          <div class="col-sm-4 pos-r">
+            <div class="profile-hero__status">
+              <p>
+                Объявление <span class="badge badge-danger">неактивно</span> <!-- /.badge-danger -->
+              </p>
+
+              <p>
+                Изображений добавлено: <span class="badge badge-primary countimgs"></span> <!-- /.badge-primary -->
+              </p>
+
+              <p>
+                Категория: <span class="state state-category">Парень ищет девушку</span> <!-- /.state-category -->
+              </p>
+            </div>
+
+            <hr>
+
+            {% spaceless %}
+            <a class="btn btn-success btn-sm profile-hero__action"
+              href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">Редактировать&nbsp;объявлнение</a>
+            <!-- /.profile-hero__action -->
+            {% endspaceless %}
+
+
+          </div>
+          <!-- /.col-md-4 -->
+        </div>
+        <!-- /.row -->
+
+      </li> <!-- /.profile-hero__item -->
+
+    </ul>
+    <!-- /.profile-hero__list -->
+  </div>
+  <!-- /.profile-hero -->
+
+</div>
+<!-- /.profile -->

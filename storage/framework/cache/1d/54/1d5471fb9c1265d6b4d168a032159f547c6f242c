@@ -1,0 +1,25 @@
+1585471628a:1:{s:15:"user-status.htm";a:5:{s:8:"fileName";s:15:"user-status.htm";s:7:"content";s:570:"<div class="user-status">
+  {% if user %}
+  <a href="{{ 'user/profile'|page }}" class="btn btn-primary btn-sm">Личный кабинет</a>
+  <a href="{{ 'user/account'|page }}" class="btn btn-info btn-sm">Настройки</a>
+  <a href="javascript:;" data-request="onLogout" class="btn btn-danger btn-sm">Выйти</a>
+  <!-- /.logout -->
+
+  {% else %}
+  <a href="{{ 'user/account'|page }}" class="btn btn-light btn-sm user-status__link">Регистрация и Вход</a>
+  <!-- /.user-status__link -->
+  {% endif %}
+</div>
+<!-- /.user-status -->";s:5:"mtime";i:1584868013;s:6:"markup";s:570:"<div class="user-status">
+  {% if user %}
+  <a href="{{ 'user/profile'|page }}" class="btn btn-primary btn-sm">Личный кабинет</a>
+  <a href="{{ 'user/account'|page }}" class="btn btn-info btn-sm">Настройки</a>
+  <a href="javascript:;" data-request="onLogout" class="btn btn-danger btn-sm">Выйти</a>
+  <!-- /.logout -->
+
+  {% else %}
+  <a href="{{ 'user/account'|page }}" class="btn btn-light btn-sm user-status__link">Регистрация и Вход</a>
+  <!-- /.user-status__link -->
+  {% endif %}
+</div>
+<!-- /.user-status -->";s:4:"code";N;}}

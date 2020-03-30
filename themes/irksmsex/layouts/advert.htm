@@ -1,0 +1,116 @@
+==
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>
+		{% if this.page.title %}
+		{{ this.page.title }}
+		{% else %}
+		Сайт знакомств irksmsex.ru
+		{% endif %}
+	</title>
+	<meta http-equiv="content-type" content="charset=utf-8">
+	<meta name="keywords" content="знакомства для девушек, парни иркутска, ищу парня, ищу мужчину">
+	<meta name="description" content="Размещение объявлений для поиска девушек">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+
+	{% styles %}
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="{{ 'assets/css/style.min.css'|theme }}">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120"
+		href="{{ 'assets/images/favicon/apple-touch-icon.png'|theme }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicon/favicon-32x32.png'|theme }}">
+	<link rel="mask-icon" href="{{ 'assets/images/favicon/safari-pinned-tab.svg'|theme }}" color="#5bbad5">
+
+</head>
+
+<body>
+
+	{% partial 'user-status' %}
+
+	{% partial 'header' %}
+
+	{% partial 'adverts/add-advert' %}
+
+	<ul class="xvip-record">
+		{% for record in records if record.type == 'xvip' and record.category == this.page.attr %}
+
+		<li class="xvip-record-item">
+			<div id="{{ record.id }}" class="sms">
+				<!-- Время добавления объявления -->
+
+
+				<span class="timehead">
+					{{ record.created_at|date('d-m-Y H:i') }}
+				</span>
+
+				<!-- <span class="views">0</span> -->
+				<!-- /.views -->
+
+				<!-- Текст объявления -->
+				<div class="sms__text">
+					{{ record.text|raw }}
+				</div>
+
+
+				{% if record.image1 %}
+				<div class="advert__imgs-wrap">
+					<div class="advert__image"><img src="{{ record.image1|media }}" alt="Фото1"></div>
+
+					{% if record.image2 %}
+					<div class="advert__image"><img src="{{ record.image2|media }}" alt="Фото2"></div>
+					{% endif %}
+					{% if record.image3 %}
+					<div class="advert__image"><img src="{{ record.image3|media }}" alt="Фото3"></div>
+					{% endif %}
+
+				</div>
+				{% endif %}
+
+
+			</div>
+		</li>
+
+		{% endfor %}
+
+	</ul>
+
+	{% partial 'adverts/title' %}
+
+	{% partial 'adverts/tohome' %}
+
+	<div class="adverts-list">
+		{% page %}
+	</div>
+
+	{% partial 'footer' %}
+
+  <!-- Версия jquery — 3.3.1 -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <!-- Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+
+  <!-- Bootstrap-4.4.1.js -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+
+  <!-- My scripts -->
+  <script src="{{ 'assets/js/app.js'|theme }}"></script>
+
+  <!-- OctoberCMS scripts -->
+  {% framework extras %}
+  {% scripts %}
+  
+</body>
+
+</html>

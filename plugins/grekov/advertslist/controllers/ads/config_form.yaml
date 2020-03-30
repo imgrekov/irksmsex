@@ -1,0 +1,10 @@
+name: Ads
+form: $/grekov/advertslist/models/advert/fields.yaml
+modelClass: Grekov\AdvertsList\Models\Advert
+defaultRedirect: grekov/advertslist/ads
+create:
+    redirect: 'grekov/advertslist/ads/update/:id'
+    redirectClose: grekov/advertslist/ads
+update:
+    redirect: grekov/advertslist/ads
+    redirectClose: grekov/advertslist/ads
