@@ -34,5 +34,7 @@ class Advert extends Model
 	/**
 	 * @var array Validation rules
 	 */
-	public $rules = [];
+	public $rules = [
+		'type' => 'required',
+	];
 }

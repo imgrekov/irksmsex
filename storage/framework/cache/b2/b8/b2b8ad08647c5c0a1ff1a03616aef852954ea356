@@ -1,4 +1,4 @@
-1585471628a:1:{s:8:"help.htm";a:10:{s:8:"fileName";s:8:"help.htm";s:7:"content";s:5686:"title = "Как добавить объявление?"
+1585570293a:1:{s:8:"help.htm";a:10:{s:8:"fileName";s:8:"help.htm";s:7:"content";s:5953:"title = "Как добавить объявление?"
 url = "/help"
 layout = "help"
 is_hidden = 0
@@ -7,20 +7,22 @@ is_hidden = 0
 security = "all"
 ==
 <div class="help-block">
-	<p class="help-block__title">Рубрика: Смс знакомства > Парень ищет девушку</p>
+	
+	<p class="help-block__title">Рубрика: Смс знакомства > Парень ищет девушку</p> <!-- /.help-block__title -->
 
 	<a class="help-block__line" href="#simple">
 		Как разместить обычное объявление?
-	</a>
+	</a> <!-- /.help-block__line -->
 
 	<a class="help-block__line" href="#vip">
 		Как разместить VIP объявление?
-	</a>
+	</a> <!-- /.help-block__line -->
 
 	<a class="help-block__line" href="#pravila">
 		Правила публикаций объявлений <span>&darr;</span>
-	</a>
-</div>
+	</a> <!-- /.help-block__line -->
+
+</div> <!-- /.help-block -->
 
 <div class="sms3">
 	<a class="btn btn-light btn-sm" href="{{ 'home'|page }}">К объявлениям</a>
@@ -28,7 +30,7 @@ security = "all"
 
 <div class="title">
 	<h2 id="simple">Как разместить обычное объявление?</h2>
-</div>
+</div> <!-- /.title -->
 
 <div class="content">
 
@@ -49,12 +51,12 @@ security = "all"
 			<img src="{{ 'assets/images/example/sms_example21.jpg'|theme }}">
 		</div>
 	</div>
-</div>
+</div> <!-- /.content -->
 
 
 <div class="title">
 	<h2 id="vip">Как разместить VIP объявление</h2>
-</div>
+</div> <!-- /.title -->
 
 <div class="content">
 	<div class="help-desc">
@@ -86,11 +88,11 @@ security = "all"
 			<p>Пример отображения VIP объявления:</p><img src="{{ 'assets/images/example/vipsample.jpg'|theme }}">
 		</div>
 	</div>
-</div>
+</div> <!-- /.content -->
 
 <div class="title">
-	<h2 id="pravila">Правила публикации объявлений</h2>
-</div>
+	<h2 id="pravila">Правила публикации объявлений</h2> <!-- /.pravila -->
+</div> <!-- /.title -->
 
 <div class="content">
 	<div class="red">
@@ -133,21 +135,23 @@ security = "all"
 			с&nbsp;которых размещаются объявления, постоянно нарушающие правила публикации смс&nbsp;объявлений.</div>
 
 	</div>
-</div>";s:5:"mtime";i:1584962916;s:6:"markup";s:5547:"<div class="help-block">
-	<p class="help-block__title">Рубрика: Смс знакомства > Парень ищет девушку</p>
+</div> <!-- /.content -->";s:5:"mtime";i:1585560094;s:6:"markup";s:5814:"<div class="help-block">
+	
+	<p class="help-block__title">Рубрика: Смс знакомства > Парень ищет девушку</p> <!-- /.help-block__title -->
 
 	<a class="help-block__line" href="#simple">
 		Как разместить обычное объявление?
-	</a>
+	</a> <!-- /.help-block__line -->
 
 	<a class="help-block__line" href="#vip">
 		Как разместить VIP объявление?
-	</a>
+	</a> <!-- /.help-block__line -->
 
 	<a class="help-block__line" href="#pravila">
 		Правила публикаций объявлений <span>&darr;</span>
-	</a>
-</div>
+	</a> <!-- /.help-block__line -->
+
+</div> <!-- /.help-block -->
 
 <div class="sms3">
 	<a class="btn btn-light btn-sm" href="{{ 'home'|page }}">К объявлениям</a>
@@ -155,7 +159,7 @@ security = "all"
 
 <div class="title">
 	<h2 id="simple">Как разместить обычное объявление?</h2>
-</div>
+</div> <!-- /.title -->
 
 <div class="content">
 
@@ -176,12 +180,12 @@ security = "all"
 			<img src="{{ 'assets/images/example/sms_example21.jpg'|theme }}">
 		</div>
 	</div>
-</div>
+</div> <!-- /.content -->
 
 
 <div class="title">
 	<h2 id="vip">Как разместить VIP объявление</h2>
-</div>
+</div> <!-- /.title -->
 
 <div class="content">
 	<div class="help-desc">
@@ -213,11 +217,11 @@ security = "all"
 			<p>Пример отображения VIP объявления:</p><img src="{{ 'assets/images/example/vipsample.jpg'|theme }}">
 		</div>
 	</div>
-</div>
+</div> <!-- /.content -->
 
 <div class="title">
-	<h2 id="pravila">Правила публикации объявлений</h2>
-</div>
+	<h2 id="pravila">Правила публикации объявлений</h2> <!-- /.pravila -->
+</div> <!-- /.title -->
 
 <div class="content">
 	<div class="red">
@@ -260,4 +264,4 @@ security = "all"
 			с&nbsp;которых размещаются объявления, постоянно нарушающие правила публикации смс&nbsp;объявлений.</div>
 
 	</div>
-</div>";s:4:"code";N;s:5:"title";s:45:"Как добавить объявление?";s:3:"url";s:5:"/help";s:6:"layout";s:4:"help";s:9:"is_hidden";s:1:"0";s:7:"session";a:1:{s:8:"security";s:3:"all";}}}
+</div> <!-- /.content -->";s:4:"code";N;s:5:"title";s:45:"Как добавить объявление?";s:3:"url";s:5:"/help";s:6:"layout";s:4:"help";s:9:"is_hidden";s:1:"0";s:7:"session";a:1:{s:8:"security";s:3:"all";}}}

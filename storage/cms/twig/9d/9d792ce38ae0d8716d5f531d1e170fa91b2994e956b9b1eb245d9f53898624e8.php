@@ -268,8 +268,11 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
 
     <div class=\"advert-edit__image-wrap\">
 
-      <div class=\"\">
-        <input type=\"file\" class=\"mb-3\" name=\"attachimage1\" id=\"attachimage1\">
+      <div class=\"advert-edit__image-item\">
+        <p>№ — 1</p>
+        <input class=\"inputfile\" type=\"file\" id=\"attachimage1\" name=\"attachimage1\" accept=\"image/jpeg,image/png,image/jpg\">
+        <label for=\"attachimage1\">Выберите файл</label>
+        <div class=\"image1-name image-name\"></div>
         <span class=\"remove-button btn btn-outline-danger btn-sm\" id=\"btn-remove-image1\">Очистить</span>
       </div> <!-- /.advert-edit__image-item -->
 
@@ -299,7 +302,7 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
 <!-- /.btn btn-success -->
 
 ";
-        // line 163
+        // line 166
         echo call_user_func_array($this->env->getFunction('form_close')->getCallable(), ["close"]);
     }
 
@@ -315,7 +318,7 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
 
     public function getDebugInfo()
     {
-        return array (  303 => 163,  249 => 114,  240 => 110,  231 => 106,  222 => 102,  213 => 98,  204 => 94,  195 => 90,  186 => 86,  177 => 82,  168 => 78,  159 => 74,  144 => 61,  138 => 60,  124 => 53,  120 => 51,  115 => 50,  98 => 37,  96 => 36,  85 => 30,  76 => 26,  67 => 22,  52 => 10,  42 => 3,  37 => 1,);
+        return array (  306 => 166,  249 => 114,  240 => 110,  231 => 106,  222 => 102,  213 => 98,  204 => 94,  195 => 90,  186 => 86,  177 => 82,  168 => 78,  159 => 74,  144 => 61,  138 => 60,  124 => 53,  120 => 51,  115 => 50,  98 => 37,  96 => 36,  85 => 30,  76 => 26,  67 => 22,  52 => 10,  42 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -452,8 +455,11 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
 
     <div class=\"advert-edit__image-wrap\">
 
-      <div class=\"\">
-        <input type=\"file\" class=\"mb-3\" name=\"attachimage1\" id=\"attachimage1\">
+      <div class=\"advert-edit__image-item\">
+        <p>№ — 1</p>
+        <input class=\"inputfile\" type=\"file\" id=\"attachimage1\" name=\"attachimage1\" accept=\"image/jpeg,image/png,image/jpg\">
+        <label for=\"attachimage1\">Выберите файл</label>
+        <div class=\"image1-name image-name\"></div>
         <span class=\"remove-button btn btn-outline-danger btn-sm\" id=\"btn-remove-image1\">Очистить</span>
       </div> <!-- /.advert-edit__image-item -->
 
