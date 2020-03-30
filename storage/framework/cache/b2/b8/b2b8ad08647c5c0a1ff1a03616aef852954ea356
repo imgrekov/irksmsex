@@ -1,4 +1,4 @@
-1585585256a:1:{s:8:"help.htm";a:10:{s:8:"fileName";s:8:"help.htm";s:7:"content";s:5558:"title = "Как добавить объявление?"
+1585586657a:1:{s:8:"help.htm";a:10:{s:8:"fileName";s:8:"help.htm";s:7:"content";s:5631:"title = "Как добавить объявление?"
 url = "/help"
 layout = "help"
 is_hidden = 0
@@ -12,7 +12,8 @@ security = "all"
 
 
 <div class="description">
-	<h2 class="description__title">Описание</h2>
+	<h2 class="description__title">Описание всего</h2>
+	<h4 class="text-center mb-3">Тип объявления</h4>
 	<!-- /.description__title -->
 
 	<div class="row">
@@ -47,7 +48,7 @@ security = "all"
 			<ul class="description__list">
 
 				<li class="description__item">
-					<p><span>vip</span> — добаляет сердечко. Делает выше basic.</p>
+					<p><span>vip</span> — добаляет сердечко. Стоит выше basic.</p>
 					<div class="description__item-img-wrap">
 						<img src="{{ 'assets/images/example/vip.jpg'|theme }}" alt="">
 					</div>
@@ -140,13 +141,14 @@ security = "all"
 	</div> <!-- /.rules-desc -->
 
 
-</div> <!-- /.rules -->";s:5:"mtime";i:1585584646;s:6:"markup";s:5419:"<div class="sms3 help-page">
+</div> <!-- /.rules -->";s:5:"mtime";i:1585586056;s:6:"markup";s:5492:"<div class="sms3 help-page">
 	<a class="btn btn-light btn-sm" href="{{ 'home'|page }}">К объявлениям</a>
 </div>
 
 
 <div class="description">
-	<h2 class="description__title">Описание</h2>
+	<h2 class="description__title">Описание всего</h2>
+	<h4 class="text-center mb-3">Тип объявления</h4>
 	<!-- /.description__title -->
 
 	<div class="row">
@@ -181,7 +183,7 @@ security = "all"
 			<ul class="description__list">
 
 				<li class="description__item">
-					<p><span>vip</span> — добаляет сердечко. Делает выше basic.</p>
+					<p><span>vip</span> — добаляет сердечко. Стоит выше basic.</p>
 					<div class="description__item-img-wrap">
 						<img src="{{ 'assets/images/example/vip.jpg'|theme }}" alt="">
 					</div>

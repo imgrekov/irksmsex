@@ -43,7 +43,8 @@ class __TwigTemplate_39be55843eaa69e448d1936c6a6c587498e9eaffa33fdc0914a8c166e0d
 
 
 <div class=\"description\">
-\t<h2 class=\"description__title\">Описание</h2>
+\t<h2 class=\"description__title\">Описание всего</h2>
+\t<h4 class=\"text-center mb-3\">Тип объявления</h4>
 \t<!-- /.description__title -->
 
 \t<div class=\"row\">
@@ -54,7 +55,7 @@ class __TwigTemplate_39be55843eaa69e448d1936c6a6c587498e9eaffa33fdc0914a8c166e0d
 \t\t\t\t\t<p><span>basic</span> — Обычное объявление.</p>
 \t\t\t\t\t<div class=\"description__item-img-wrap\">
 \t\t\t\t\t\t<img src=\"";
-        // line 17
+        // line 18
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/example/basic.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t</div>
@@ -66,7 +67,7 @@ class __TwigTemplate_39be55843eaa69e448d1936c6a6c587498e9eaffa33fdc0914a8c166e0d
 \t\t\t\t\t<p><span>xvip</span> — Поднимает объявление выше всех. Существовать может только одно такое объявление.</p>
 \t\t\t\t\t<div class=\"description__item-img-wrap\">
 \t\t\t\t\t\t<img src=\"";
-        // line 26
+        // line 27
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/example/xvip.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t</div>
@@ -84,10 +85,10 @@ class __TwigTemplate_39be55843eaa69e448d1936c6a6c587498e9eaffa33fdc0914a8c166e0d
 \t\t\t<ul class=\"description__list\">
 
 \t\t\t\t<li class=\"description__item\">
-\t\t\t\t\t<p><span>vip</span> — добаляет сердечко. Делает выше basic.</p>
+\t\t\t\t\t<p><span>vip</span> — добаляет сердечко. Стоит выше basic.</p>
 \t\t\t\t\t<div class=\"description__item-img-wrap\">
 \t\t\t\t\t\t<img src=\"";
-        // line 44
+        // line 45
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/example/vip.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t</div>
@@ -100,7 +101,7 @@ class __TwigTemplate_39be55843eaa69e448d1936c6a6c587498e9eaffa33fdc0914a8c166e0d
 \t\t\t\t\t<p><span>Экстра выделение</span> — Выделяет объявление фоном.</p>
 \t\t\t\t\t<div class=\"description__item-img-wrap\">
 \t\t\t\t\t\t<img src=\"";
-        // line 54
+        // line 55
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/example/basic.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t</div>
@@ -198,7 +199,7 @@ class __TwigTemplate_39be55843eaa69e448d1936c6a6c587498e9eaffa33fdc0914a8c166e0d
 
     public function getDebugInfo()
     {
-        return array (  104 => 54,  91 => 44,  70 => 26,  58 => 17,  40 => 2,  37 => 1,);
+        return array (  105 => 55,  92 => 45,  71 => 27,  59 => 18,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -209,7 +210,8 @@ class __TwigTemplate_39be55843eaa69e448d1936c6a6c587498e9eaffa33fdc0914a8c166e0d
 
 
 <div class=\"description\">
-\t<h2 class=\"description__title\">Описание</h2>
+\t<h2 class=\"description__title\">Описание всего</h2>
+\t<h4 class=\"text-center mb-3\">Тип объявления</h4>
 \t<!-- /.description__title -->
 
 \t<div class=\"row\">
@@ -244,7 +246,7 @@ class __TwigTemplate_39be55843eaa69e448d1936c6a6c587498e9eaffa33fdc0914a8c166e0d
 \t\t\t<ul class=\"description__list\">
 
 \t\t\t\t<li class=\"description__item\">
-\t\t\t\t\t<p><span>vip</span> — добаляет сердечко. Делает выше basic.</p>
+\t\t\t\t\t<p><span>vip</span> — добаляет сердечко. Стоит выше basic.</p>
 \t\t\t\t\t<div class=\"description__item-img-wrap\">
 \t\t\t\t\t\t<img src=\"{{ 'assets/images/example/vip.jpg'|theme }}\" alt=\"\">
 \t\t\t\t\t</div>
