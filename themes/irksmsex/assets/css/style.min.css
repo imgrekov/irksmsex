@@ -27,6 +27,12 @@ a:active {
   color: #6d83ff;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .border-bottom {
   border-bottom: 1px solid #111111;
 }
@@ -199,14 +205,128 @@ div.sms1 a {
   margin-top: 15px
 }
 
-ul {
-  list-style-position: outside;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background-color: #fff;
+
+
+.description {
+  padding: 15px 10px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #000000;
 }
+
+.description__title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.description__title::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  background-color: #202020;
+  width: 120px;
+  height: 2px;
+  transform: translate(-50%, -50%);
+}
+
+/* .description__list {} */
+
+.description__item p {
+  margin-bottom: 0.5rem;
+}
+
+.description__item {
+  margin-bottom: 2rem;
+}
+
+.description__item span {
+  font-weight: 500;
+}
+
+.description__item-img-wrap img {
+  max-width: 100%;
+}
+
+
+.howadd {
+  padding: 0.5rem 1rem 1rem;
+  background-color: #fafafa;
+  border-bottom: 1px solid #000000;
+}
+
+.howadd h2 {
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.howadd h2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  background-color: #202020;
+  width: 120px;
+  height: 2px;
+  transform: translate(-50%, -50%);
+}
+
+.howadd-wrap {
+  padding: 0.75rem 1.75rem;
+  box-shadow: 0 0 6px #00000080;
+  border-radius: 4px;
+}
+
+.howadd-wrap li {
+  font-size: 18px;
+  cursor: default;
+}
+
+.howadd-wrap ol {
+  margin-bottom: 0;
+}
+
+.rules,
+.rules__desc {
+  padding: 10px 15px;
+  background-color: #ededed;
+}
+
+.rules>ol {
+  margin-bottom: 0;
+  padding-left: 1em;
+}
+
+.rules>ol li {
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0;
+  cursor: default;
+
+  transition: all 0.2s linear;
+}
+
+.rules>ol li:hover {
+  color: #0079FC;
+  cursor: default;
+
+  transition: all 0.2s linear;
+}
+
+.rules>ol li:last-child {
+  margin-bottom: 0;
+}
+
+/* .rules>ol li p {} */
+/* .rules>ol li p>span {} */
+
+.rules-desc {
+  font-size: 14px;
+}
+
+
 
 div.sms1 {
   background-color: #abd3ff;
@@ -227,119 +347,47 @@ div.sms3 {
   padding: 10px 0;
 }
 
-div.pravila {
-  background-color: #87bfff;
-  text-align: center;
-  color: #9b2a5d;
+
+
+.record-list {
+  background-color: #fcfcfc;
+}
+
+.record-list li {
   border-bottom: 1px solid #111111;
-  padding: 10px
-}
-
-div.zaim {
-  background-color: #FED2AB;
-  text-align: center;
-  color: blue;
-  margin-bottom: 1px;
-  padding: 2px
-}
-
-div.confirm {
-  background-color: #FFFFFF;
-  text-align: center
-}
-
-div.confirm1 {
-  background-color: #ffffff;
-  padding: 10px 30px
-}
-
-.confirm__date {
-  font-weight: 700
-}
-
-div.confirm2 {
-  background-color: #FFFFFF
-}
-
-div.confirm a {
-  color: #F2AD94;
-  text-shadow: 0 0 0 #FF6B20
-}
-
-div.confirm1 a {
-  color: #F2AD94;
-  text-shadow: 0 0 0 #FF6B20
-}
-
-.game_img {
-  width: 100%;
-  position: relative
-}
-
-.game_item {
-  display: inline-block
-}
-
-.game_content {
-  float: right;
-  width: 38%
-}
-
-.imgwrap {
-  margin-right: 5px;
-  float: left;
-  width: 60%;
-}
-
-@media screen and (max-width: 570px) {
-  .imgwrap {
-    margin-right: 0;
-    position: relative;
-    width: 100%;
-    margin-bottom: 1em;
-  }
-
-  .game_content {
-    width: 100%;
-  }
-}
-
-.vip2 {
-  text-align: center;
-}
-
-.vip2 img {
-  width: 55px;
-  height: 55px;
-}
-
-.red {
-  color: #f10000
-}
-
-.zaim a {
-  font-weight: bold;
-  color: blue;
-}
-
-.content {
-  padding: 15px;
-  background-color: #ffffff;
 }
 
 .record-list>li:first-child {
   border-top: 1px solid #111111;
 }
 
-.record-list>li {
-  border-bottom: 1px solid #111111;
+.xvip-record {
+  background-color: #fafafa;
+  z-index: -2;
 }
 
-.xvip-record .xvip-record-item {
+.xvip-record-item {
+  position: relative;
+  background-color: #ffd7008f;
+
   border-bottom: 1px solid #111111;
+
+  z-index: 3;
 }
 
-
+.xvip-record-item::after {
+  content: 'VIP';
+  display: block;
+  color: #ffffff;
+  position: absolute;
+  right: 80px;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
 
 
 .advert-none {
@@ -359,6 +407,8 @@ div.confirm1 a {
   transform: rotate(-45deg);
   color: rgba(0, 123, 255, 0.8);
 }
+
+
 
 .advert__imgs-wrap {
   max-width: 100%;
@@ -1165,9 +1215,9 @@ hr {
 }
 
 .profile-hero__status p>span.state {
-  padding: .25em .4em; 
+  padding: .25em .4em;
   border-radius: 4px;
-  
+
   font-size: 13px;
   font-weight: 700;
   color: #fefefe;

@@ -1,4 +1,4 @@
-1585570293a:1:{s:15:"user-status.htm";a:5:{s:8:"fileName";s:15:"user-status.htm";s:7:"content";s:570:"<div class="user-status">
+1585585059a:1:{s:15:"user-status.htm";a:5:{s:8:"fileName";s:15:"user-status.htm";s:7:"content";s:570:"<div class="user-status">
   {% if user %}
   <a href="{{ 'user/profile'|page }}" class="btn btn-primary btn-sm">Личный кабинет</a>
   <a href="{{ 'user/account'|page }}" class="btn btn-info btn-sm">Настройки</a>

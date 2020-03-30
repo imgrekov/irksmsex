@@ -34,157 +34,156 @@ class __TwigTemplate_39be55843eaa69e448d1936c6a6c587498e9eaffa33fdc0914a8c166e0d
     {
         $macros = $this->macros;
         // line 1
-        echo "<div class=\"help-block\">
-\t
-\t<p class=\"help-block__title\">Рубрика: Смс знакомства > Парень ищет девушку</p> <!-- /.help-block__title -->
-
-\t<a class=\"help-block__line\" href=\"#simple\">
-\t\tКак разместить обычное объявление?
-\t</a> <!-- /.help-block__line -->
-
-\t<a class=\"help-block__line\" href=\"#vip\">
-\t\tКак разместить VIP объявление?
-\t</a> <!-- /.help-block__line -->
-
-\t<a class=\"help-block__line\" href=\"#pravila\">
-\t\tПравила публикаций объявлений <span>&darr;</span>
-\t</a> <!-- /.help-block__line -->
-
-</div> <!-- /.help-block -->
-
-<div class=\"sms3\">
+        echo "<div class=\"sms3 help-page\">
 \t<a class=\"btn btn-light btn-sm\" href=\"";
-        // line 20
+        // line 2
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
         echo "\">К объявлениям</a>
 </div>
 
-<div class=\"title\">
-\t<h2 id=\"simple\">Как разместить обычное объявление?</h2>
-</div> <!-- /.title -->
 
-<div class=\"content\">
+<div class=\"description\">
+\t<h2 class=\"description__title\">Описание</h2>
+\t<!-- /.description__title -->
 
-\t<p class=\"help-desc\">
-\t\tДля размещения обычного объявления, отправьте смс сообщение:
-\t\t<br>
-\t\t<span class=\"bfs15\">
-\t\t\tvot1</span>&nbsp;(пробел)&nbsp;<b>сообщение</b> на&nbsp;номер&nbsp;<span
-\t\t\tclass=\"bfs15\">9009</span>&nbsp;смс&nbsp;сообщения (10 рублей)
-\t</p>
+\t<div class=\"row\">
+\t\t<div class=\"col-md-6\">
+\t\t\t<ul class=\"description__list\">
 
-\t<div style=\"text-align: center;padding: 5px;\">
-\t\t<div class=\"help\">
-\t\t\t<img src=\"";
-        // line 39
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/example/sms_example11.jpg");
-        echo "\">
+\t\t\t\t<li class=\"description__item\">
+\t\t\t\t\t<p><span>basic</span> — Обычное объявление.</p>
+\t\t\t\t\t<div class=\"description__item-img-wrap\">
+\t\t\t\t\t\t<img src=\"";
+        // line 17
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/example/basic.jpg");
+        echo "\" alt=\"\">
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- /.description__item-img-wrap -->
+\t\t\t\t</li>
+\t\t\t\t<!-- /.description__item -->
+
+\t\t\t\t<li class=\"description__item\">
+\t\t\t\t\t<p><span>xvip</span> — Поднимает объявление выше всех. Существовать может только одно такое объявление.</p>
+\t\t\t\t\t<div class=\"description__item-img-wrap\">
+\t\t\t\t\t\t<img src=\"";
+        // line 26
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/example/xvip.jpg");
+        echo "\" alt=\"\">
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- /.description__item-img-wrap -->
+\t\t\t\t</li>
+\t\t\t\t<!-- /.description__item -->
+
+\t\t\t</ul>
+\t\t\t<!-- /.description__list -->
 \t\t</div>
+\t\t<!-- /.col-md-6 -->
 
-\t\t<div class=\"help\">
-\t\t\t<img src=\"";
-        // line 43
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/example/sms_example21.jpg");
-        echo "\">
+
+\t\t<div class=\"col-md-6\">
+\t\t\t<ul class=\"description__list\">
+
+\t\t\t\t<li class=\"description__item\">
+\t\t\t\t\t<p><span>vip</span> — добаляет сердечко. Делает выше basic.</p>
+\t\t\t\t\t<div class=\"description__item-img-wrap\">
+\t\t\t\t\t\t<img src=\"";
+        // line 44
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/example/vip.jpg");
+        echo "\" alt=\"\">
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- /.description__item-img-wrap -->
+\t\t\t\t</li>
+\t\t\t\t<!-- /.description__item -->
+
+
+\t\t\t\t<li class=\"description__item\">
+\t\t\t\t\t<p><span>Экстра выделение</span> — Выделяет объявление фоном.</p>
+\t\t\t\t\t<div class=\"description__item-img-wrap\">
+\t\t\t\t\t\t<img src=\"";
+        // line 54
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/example/basic.jpg");
+        echo "\" alt=\"\">
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- /.description__item-img-wrap -->
+\t\t\t\t</li>
+\t\t\t\t<!-- /.description__item -->
+
+\t\t\t</ul>
+\t\t\t<!-- /.description__list -->
 \t\t</div>
+\t\t<!-- /.col-md-6 -->
 \t</div>
-</div> <!-- /.content -->
+\t<!-- /.row -->
+
+</div>
+<!-- /.description -->
 
 
-<div class=\"title\">
-\t<h2 id=\"vip\">Как разместить VIP объявление</h2>
-</div> <!-- /.title -->
-
-<div class=\"content\">
-\t<div class=\"help-desc\">
-\t\t<p>VIP объявление отличается от&nbsp;обычного объявления тем, что держится
-\t\t\tв&nbsp;<b>первых</b> позициях на&nbsp;<b>главной странице</b>
-\t\t\tрубрики&nbsp;течение 2-х&nbsp;суток&nbsp;обозначается&nbsp;значком&nbsp;
-\t\t\t<img src=\"";
-        // line 58
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/example/vip2.png");
-        echo "\" alt=\"ТОП сообщение\">.
-\t\t</p>
-\t\t<p>Ваше объявление не&nbsp;останется незамеченным!</p>
-\t\t<p>Для размещения&nbsp;объявления отправьте смс&nbsp;сообщение:</p>
-\t\t<span class=\"bfs15\">votvip1</span>&nbsp;(пробел)&nbsp;<b>сообщение</b>
-\t\tна&nbsp;номер&nbsp;<span class=\"bfs15\">9009</span>&nbsp;смс&nbsp;сообщения
-\t\t(~90 рублей)
-\t</div>
-
-\t<div style=\"text-align: center;padding: 5px;\">
-\t\t<div class=\"help\">
-\t\t\t<img src=\"";
-        // line 69
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/example/vip_example11.jpg");
-        echo "\">
-\t\t</div>
-
-\t\t<div class=\"help\">
-\t\t\t<img src=\"";
-        // line 73
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/example/vip_example21.jpg");
-        echo "\">
-\t\t</div>
-
-
-\t</div>
-\t<div style=\"text-align: center;padding: 5px;\">
-\t\t<div class=\"help\">
-\t\t\t<p>Пример отображения VIP объявления:</p><img src=\"";
-        // line 80
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/example/vipsample.jpg");
-        echo "\">
-\t\t</div>
-\t</div>
-</div> <!-- /.content -->
-
-<div class=\"title\">
-\t<h2 id=\"pravila\">Правила публикации объявлений</h2> <!-- /.pravila -->
-</div> <!-- /.title -->
-
-<div class=\"content\">
-\t<div class=\"red\">
-\t\t<ol class=\"rules\">
-\t\t\t<li>
-\t\t\t\t<p>
-\t\t\t\t\tАдминистрация сервиса не&nbsp;несёт ответственности за&nbsp;достоверность информации и&nbsp;содержание
-\t\t\t\t\tобъявлений.
-\t\t\t\t</p>
-\t\t\t</li>
-\t\t\t<li>
-\t\t\t\t<p>
-\t\t\t\t\tОтправитель объявления полностью отвечает перед третьими лицами за&nbsp;достоверность информации
-\t\t\t\t\tв&nbsp;размещаемых объявлениях.
-\t\t\t\t</p>
-\t\t\t</li>
-\t\t\t<li>
-\t\t\t\t<p>Не&nbsp;принимаются к&nbsp;публикации объявления: содержащие рекламу иных сайтов, платных коротких номеров,
-\t\t\t\t\tнецензурные выражения, а также безграмотные, бессмысленные, оскорбительные, клеветнические и мошеннические.
-\t\t\t\t</p>
-\t\t\t</li>
-\t\t\t<li>
-\t\t\t\t<p>Запрещены к&nbsp;публикации объявления, комментирующие действия администрации сервиса.</p>
-\t\t\t</li>
-\t\t\t<li>
-\t\t\t\t<p>Запрещены к&nbsp;публикации фотографии женских и&nbsp;мужских гениталий.</p>
-\t\t\t</li>
+<div class=\"howadd\">
+\t<h2>Как добавить объявление?</h2>
+\t<div class=\"howadd-wrap\">
+\t\t<ol>
+\t\t\t<li>Зарегистрируйтесь.</li>
+\t\t\t<li>В личном кабинете нажмите кнопку \"Создать объявление\"</li>
+\t\t\t<li>Создайте объявление: напишите текст и выберите категорию</li>
+\t\t\t<li>Вернитесь в личный кабинет и нажмите на кнопку \"Редактировать объявление\"</li>
+\t\t\t<li>На странице необходимо выбрать тип объявления, </li>
+\t\t\t<li>По желанию добавте изображения и дополнительно выделите объявление</li>
+\t\t\t<li>Нажмите на кнопку \"Готово\", затем оплатите</li>
+\t\t\t<li>Profit! Осталось только ждать, пока на него ответят</li>
 \t\t</ol>
-
-\t\t<hr>
-
-\t\t<div class=\"rules-desc\">В&nbsp;вышеперечисленных случаях администрация сервиса оставляет за&nbsp;собой право
-\t\t\tна&nbsp;свое усмотрение
-\t\t\tудалить
-\t\t\tобъявление или его&nbsp;часть, проводить модерацию объявлений, такую как: смена рубрики &nbsp;соответствии
-\t\t\tсо&nbsp;смыслом
-\t\t\tобъявления, внесение изменений в&nbsp;текст объявления &nbsp;целью приведения его в&nbsp;соответствие
-\t\t\tс&nbsp;правилами
-\t\t\tпубликации. Администрация сервиса оставляет за&nbsp;собой право <strong>блокировать телефонные номера</strong>,
-\t\t\tс&nbsp;которых размещаются объявления, постоянно нарушающие правила публикации смс&nbsp;объявлений.</div>
-
 \t</div>
-</div> <!-- /.content -->";
+\t<!-- /.howadd-wrap -->
+</div>
+<!-- /.howadd -->
+
+
+<div class=\"rules\">
+\t<ol>
+\t\t<li>
+\t\t\t<p>
+\t\t\t\tАдминистрация сервиса не&nbsp;несёт ответственности за&nbsp;достоверность информации и&nbsp;содержание
+\t\t\t\tобъявлений.
+\t\t\t</p>
+\t\t</li>
+\t\t<li>
+\t\t\t<p>
+\t\t\t\tОтправитель объявления полностью отвечает перед третьими лицами за&nbsp;достоверность информации
+\t\t\t\tв&nbsp;размещаемых объявлениях.
+\t\t\t</p>
+\t\t</li>
+\t\t<li>
+\t\t\t<p>Не&nbsp;принимаются к&nbsp;публикации объявления: содержащие рекламу иных сайтов, платных коротких номеров,
+\t\t\t\tнецензурные выражения, а также безграмотные, бессмысленные, оскорбительные, клеветнические и мошеннические.
+\t\t\t</p>
+\t\t</li>
+\t\t<li>
+\t\t\t<p>Запрещены к&nbsp;публикации объявления, комментирующие действия администрации сервиса.</p>
+\t\t</li>
+\t\t<li>
+\t\t\t<p>Запрещены к&nbsp;публикации фотографии женских и&nbsp;мужских гениталий.</p>
+\t\t</li>
+\t</ol>
+
+\t<hr class=\"my-3\">
+
+
+\t<div class=\"rules-desc\">
+\t\t<p>
+\t\t\tВ&nbsp;вышеперечисленных случаях администрация сервиса оставляет за&nbsp;собой право
+\t\t\tна&nbsp;свое усмотрение <strong>удалить объявление или его&nbsp;часть</strong>, изменить
+\t\t\tобъявление: <strong>сменить рубрику</strong>, <strong>внести изменения в&nbsp;текст объявления</strong>.
+\t\t</p>
+
+\t\t<p>
+\t\t\tАдминистрация сервиса оставляет за&nbsp;собой право
+\t\t\t<strong>блокировать аккаунты пользователей</strong>, с&nbsp;которых размещаются объявления, постоянно нарушающие
+\t\t\tправила.
+\t\t</p>
+\t</div> <!-- /.rules-desc -->
+
+
+</div> <!-- /.rules -->";
     }
 
     public function getTemplateName()
@@ -199,140 +198,145 @@ class __TwigTemplate_39be55843eaa69e448d1936c6a6c587498e9eaffa33fdc0914a8c166e0d
 
     public function getDebugInfo()
     {
-        return array (  136 => 80,  126 => 73,  119 => 69,  105 => 58,  87 => 43,  80 => 39,  58 => 20,  37 => 1,);
+        return array (  104 => 54,  91 => 44,  70 => 26,  58 => 17,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"help-block\">
-\t
-\t<p class=\"help-block__title\">Рубрика: Смс знакомства > Парень ищет девушку</p> <!-- /.help-block__title -->
-
-\t<a class=\"help-block__line\" href=\"#simple\">
-\t\tКак разместить обычное объявление?
-\t</a> <!-- /.help-block__line -->
-
-\t<a class=\"help-block__line\" href=\"#vip\">
-\t\tКак разместить VIP объявление?
-\t</a> <!-- /.help-block__line -->
-
-\t<a class=\"help-block__line\" href=\"#pravila\">
-\t\tПравила публикаций объявлений <span>&darr;</span>
-\t</a> <!-- /.help-block__line -->
-
-</div> <!-- /.help-block -->
-
-<div class=\"sms3\">
+        return new Source("<div class=\"sms3 help-page\">
 \t<a class=\"btn btn-light btn-sm\" href=\"{{ 'home'|page }}\">К объявлениям</a>
 </div>
 
-<div class=\"title\">
-\t<h2 id=\"simple\">Как разместить обычное объявление?</h2>
-</div> <!-- /.title -->
 
-<div class=\"content\">
+<div class=\"description\">
+\t<h2 class=\"description__title\">Описание</h2>
+\t<!-- /.description__title -->
 
-\t<p class=\"help-desc\">
-\t\tДля размещения обычного объявления, отправьте смс сообщение:
-\t\t<br>
-\t\t<span class=\"bfs15\">
-\t\t\tvot1</span>&nbsp;(пробел)&nbsp;<b>сообщение</b> на&nbsp;номер&nbsp;<span
-\t\t\tclass=\"bfs15\">9009</span>&nbsp;смс&nbsp;сообщения (10 рублей)
-\t</p>
+\t<div class=\"row\">
+\t\t<div class=\"col-md-6\">
+\t\t\t<ul class=\"description__list\">
 
-\t<div style=\"text-align: center;padding: 5px;\">
-\t\t<div class=\"help\">
-\t\t\t<img src=\"{{ 'assets/images/example/sms_example11.jpg'|theme }}\">
+\t\t\t\t<li class=\"description__item\">
+\t\t\t\t\t<p><span>basic</span> — Обычное объявление.</p>
+\t\t\t\t\t<div class=\"description__item-img-wrap\">
+\t\t\t\t\t\t<img src=\"{{ 'assets/images/example/basic.jpg'|theme }}\" alt=\"\">
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- /.description__item-img-wrap -->
+\t\t\t\t</li>
+\t\t\t\t<!-- /.description__item -->
+
+\t\t\t\t<li class=\"description__item\">
+\t\t\t\t\t<p><span>xvip</span> — Поднимает объявление выше всех. Существовать может только одно такое объявление.</p>
+\t\t\t\t\t<div class=\"description__item-img-wrap\">
+\t\t\t\t\t\t<img src=\"{{ 'assets/images/example/xvip.jpg'|theme }}\" alt=\"\">
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- /.description__item-img-wrap -->
+\t\t\t\t</li>
+\t\t\t\t<!-- /.description__item -->
+
+\t\t\t</ul>
+\t\t\t<!-- /.description__list -->
 \t\t</div>
+\t\t<!-- /.col-md-6 -->
 
-\t\t<div class=\"help\">
-\t\t\t<img src=\"{{ 'assets/images/example/sms_example21.jpg'|theme }}\">
+
+\t\t<div class=\"col-md-6\">
+\t\t\t<ul class=\"description__list\">
+
+\t\t\t\t<li class=\"description__item\">
+\t\t\t\t\t<p><span>vip</span> — добаляет сердечко. Делает выше basic.</p>
+\t\t\t\t\t<div class=\"description__item-img-wrap\">
+\t\t\t\t\t\t<img src=\"{{ 'assets/images/example/vip.jpg'|theme }}\" alt=\"\">
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- /.description__item-img-wrap -->
+\t\t\t\t</li>
+\t\t\t\t<!-- /.description__item -->
+
+
+\t\t\t\t<li class=\"description__item\">
+\t\t\t\t\t<p><span>Экстра выделение</span> — Выделяет объявление фоном.</p>
+\t\t\t\t\t<div class=\"description__item-img-wrap\">
+\t\t\t\t\t\t<img src=\"{{ 'assets/images/example/basic.jpg'|theme }}\" alt=\"\">
+\t\t\t\t\t</div>
+\t\t\t\t\t<!-- /.description__item-img-wrap -->
+\t\t\t\t</li>
+\t\t\t\t<!-- /.description__item -->
+
+\t\t\t</ul>
+\t\t\t<!-- /.description__list -->
 \t\t</div>
+\t\t<!-- /.col-md-6 -->
 \t</div>
-</div> <!-- /.content -->
+\t<!-- /.row -->
+
+</div>
+<!-- /.description -->
 
 
-<div class=\"title\">
-\t<h2 id=\"vip\">Как разместить VIP объявление</h2>
-</div> <!-- /.title -->
-
-<div class=\"content\">
-\t<div class=\"help-desc\">
-\t\t<p>VIP объявление отличается от&nbsp;обычного объявления тем, что держится
-\t\t\tв&nbsp;<b>первых</b> позициях на&nbsp;<b>главной странице</b>
-\t\t\tрубрики&nbsp;течение 2-х&nbsp;суток&nbsp;обозначается&nbsp;значком&nbsp;
-\t\t\t<img src=\"{{ 'assets/images/example/vip2.png'|theme }}\" alt=\"ТОП сообщение\">.
-\t\t</p>
-\t\t<p>Ваше объявление не&nbsp;останется незамеченным!</p>
-\t\t<p>Для размещения&nbsp;объявления отправьте смс&nbsp;сообщение:</p>
-\t\t<span class=\"bfs15\">votvip1</span>&nbsp;(пробел)&nbsp;<b>сообщение</b>
-\t\tна&nbsp;номер&nbsp;<span class=\"bfs15\">9009</span>&nbsp;смс&nbsp;сообщения
-\t\t(~90 рублей)
-\t</div>
-
-\t<div style=\"text-align: center;padding: 5px;\">
-\t\t<div class=\"help\">
-\t\t\t<img src=\"{{ 'assets/images/example/vip_example11.jpg'|theme }}\">
-\t\t</div>
-
-\t\t<div class=\"help\">
-\t\t\t<img src=\"{{ 'assets/images/example/vip_example21.jpg'|theme }}\">
-\t\t</div>
-
-
-\t</div>
-\t<div style=\"text-align: center;padding: 5px;\">
-\t\t<div class=\"help\">
-\t\t\t<p>Пример отображения VIP объявления:</p><img src=\"{{ 'assets/images/example/vipsample.jpg'|theme }}\">
-\t\t</div>
-\t</div>
-</div> <!-- /.content -->
-
-<div class=\"title\">
-\t<h2 id=\"pravila\">Правила публикации объявлений</h2> <!-- /.pravila -->
-</div> <!-- /.title -->
-
-<div class=\"content\">
-\t<div class=\"red\">
-\t\t<ol class=\"rules\">
-\t\t\t<li>
-\t\t\t\t<p>
-\t\t\t\t\tАдминистрация сервиса не&nbsp;несёт ответственности за&nbsp;достоверность информации и&nbsp;содержание
-\t\t\t\t\tобъявлений.
-\t\t\t\t</p>
-\t\t\t</li>
-\t\t\t<li>
-\t\t\t\t<p>
-\t\t\t\t\tОтправитель объявления полностью отвечает перед третьими лицами за&nbsp;достоверность информации
-\t\t\t\t\tв&nbsp;размещаемых объявлениях.
-\t\t\t\t</p>
-\t\t\t</li>
-\t\t\t<li>
-\t\t\t\t<p>Не&nbsp;принимаются к&nbsp;публикации объявления: содержащие рекламу иных сайтов, платных коротких номеров,
-\t\t\t\t\tнецензурные выражения, а также безграмотные, бессмысленные, оскорбительные, клеветнические и мошеннические.
-\t\t\t\t</p>
-\t\t\t</li>
-\t\t\t<li>
-\t\t\t\t<p>Запрещены к&nbsp;публикации объявления, комментирующие действия администрации сервиса.</p>
-\t\t\t</li>
-\t\t\t<li>
-\t\t\t\t<p>Запрещены к&nbsp;публикации фотографии женских и&nbsp;мужских гениталий.</p>
-\t\t\t</li>
+<div class=\"howadd\">
+\t<h2>Как добавить объявление?</h2>
+\t<div class=\"howadd-wrap\">
+\t\t<ol>
+\t\t\t<li>Зарегистрируйтесь.</li>
+\t\t\t<li>В личном кабинете нажмите кнопку \"Создать объявление\"</li>
+\t\t\t<li>Создайте объявление: напишите текст и выберите категорию</li>
+\t\t\t<li>Вернитесь в личный кабинет и нажмите на кнопку \"Редактировать объявление\"</li>
+\t\t\t<li>На странице необходимо выбрать тип объявления, </li>
+\t\t\t<li>По желанию добавте изображения и дополнительно выделите объявление</li>
+\t\t\t<li>Нажмите на кнопку \"Готово\", затем оплатите</li>
+\t\t\t<li>Profit! Осталось только ждать, пока на него ответят</li>
 \t\t</ol>
-
-\t\t<hr>
-
-\t\t<div class=\"rules-desc\">В&nbsp;вышеперечисленных случаях администрация сервиса оставляет за&nbsp;собой право
-\t\t\tна&nbsp;свое усмотрение
-\t\t\tудалить
-\t\t\tобъявление или его&nbsp;часть, проводить модерацию объявлений, такую как: смена рубрики &nbsp;соответствии
-\t\t\tсо&nbsp;смыслом
-\t\t\tобъявления, внесение изменений в&nbsp;текст объявления &nbsp;целью приведения его в&nbsp;соответствие
-\t\t\tс&nbsp;правилами
-\t\t\tпубликации. Администрация сервиса оставляет за&nbsp;собой право <strong>блокировать телефонные номера</strong>,
-\t\t\tс&nbsp;которых размещаются объявления, постоянно нарушающие правила публикации смс&nbsp;объявлений.</div>
-
 \t</div>
-</div> <!-- /.content -->", "D:\\OSPanel\\domains\\irksmsex.ru/themes/irksmsex/pages/help.htm", "");
+\t<!-- /.howadd-wrap -->
+</div>
+<!-- /.howadd -->
+
+
+<div class=\"rules\">
+\t<ol>
+\t\t<li>
+\t\t\t<p>
+\t\t\t\tАдминистрация сервиса не&nbsp;несёт ответственности за&nbsp;достоверность информации и&nbsp;содержание
+\t\t\t\tобъявлений.
+\t\t\t</p>
+\t\t</li>
+\t\t<li>
+\t\t\t<p>
+\t\t\t\tОтправитель объявления полностью отвечает перед третьими лицами за&nbsp;достоверность информации
+\t\t\t\tв&nbsp;размещаемых объявлениях.
+\t\t\t</p>
+\t\t</li>
+\t\t<li>
+\t\t\t<p>Не&nbsp;принимаются к&nbsp;публикации объявления: содержащие рекламу иных сайтов, платных коротких номеров,
+\t\t\t\tнецензурные выражения, а также безграмотные, бессмысленные, оскорбительные, клеветнические и мошеннические.
+\t\t\t</p>
+\t\t</li>
+\t\t<li>
+\t\t\t<p>Запрещены к&nbsp;публикации объявления, комментирующие действия администрации сервиса.</p>
+\t\t</li>
+\t\t<li>
+\t\t\t<p>Запрещены к&nbsp;публикации фотографии женских и&nbsp;мужских гениталий.</p>
+\t\t</li>
+\t</ol>
+
+\t<hr class=\"my-3\">
+
+
+\t<div class=\"rules-desc\">
+\t\t<p>
+\t\t\tВ&nbsp;вышеперечисленных случаях администрация сервиса оставляет за&nbsp;собой право
+\t\t\tна&nbsp;свое усмотрение <strong>удалить объявление или его&nbsp;часть</strong>, изменить
+\t\t\tобъявление: <strong>сменить рубрику</strong>, <strong>внести изменения в&nbsp;текст объявления</strong>.
+\t\t</p>
+
+\t\t<p>
+\t\t\tАдминистрация сервиса оставляет за&nbsp;собой право
+\t\t\t<strong>блокировать аккаунты пользователей</strong>, с&nbsp;которых размещаются объявления, постоянно нарушающие
+\t\t\tправила.
+\t\t</p>
+\t</div> <!-- /.rules-desc -->
+
+
+</div> <!-- /.rules -->", "D:\\OSPanel\\domains\\irksmsex.ru/themes/irksmsex/pages/help.htm", "");
     }
 }
