@@ -1,4 +1,4 @@
-1585585442a:1:{s:16:"user/account.htm";a:13:{s:8:"fileName";s:16:"user/account.htm";s:7:"content";s:1028:"title = "Аккаунт"
+1585471628a:1:{s:16:"user/account.htm";a:13:{s:8:"fileName";s:16:"user/account.htm";s:7:"content";s:1028:"title = "Аккаунт"
 url = "/user/account"
 layout = "home"
 description = "Регистрация и логин пользователей"
