@@ -19,6 +19,9 @@ nginx-ssl.error.log
 php-errors.log
 sftp-config.json
 selenium.php
+staroge/cms/
+staroge/framework/
+staroge/logs/
 
 # for netbeans compiler
 nbproject
