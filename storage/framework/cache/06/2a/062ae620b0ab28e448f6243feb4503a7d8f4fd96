@@ -1,4 +1,4 @@
-1585586212a:1:{s:16:"user/profile.htm";a:12:{s:8:"fileName";s:16:"user/profile.htm";s:7:"content";s:9423:"title = "Профиль пользователя"
+1585826167a:1:{s:16:"user/profile.htm";a:12:{s:8:"fileName";s:16:"user/profile.htm";s:7:"content";s:9367:"title = "Профиль пользователя"
 url = "/user/profile"
 layout = "index"
 description = "Страница профиля пользователя"
@@ -175,12 +175,12 @@ pageNumber = "{{ :page }}"
               <!-- /.profile-hero__item-text -->
 
               <div class="advert__imgs-wrap">
-                <div class="advert__image"><img src="{{ 'assets/images/test/cat-3.jpg'|theme }}" alt="Фото3"></div>
-                <div class="advert__image"><img src="{{ 'assets/images/test/cat-2.jpg'|theme }}" alt="Фото2"></div>
-                <div class="advert__image"><img src="{{ 'assets/images/test/cat-4.jpg'|theme }}" alt="Фото2"></div>
+                <div class="advert__image"><img src="https://i.imgur.com/XodPq9C.jpg" alt="Фото1"></div>
+                <div class="advert__image"><img src="https://i.imgur.com/nHHu73O.jpg" alt="Фото2"></div>
+                <div class="advert__image"><img src="https://i.imgur.com/iTL2zyK.jpg" alt="Фото3"></div>
               </div> <!-- /.advert__imgs-wrap -->
 
-              <span class="profile-hero__id">ID: БОЖЕСТВЕННОЕ{{record.id}}</span>
+              <span class="profile-hero__id">ID: *{{record.id}}</span>
             </div>
 
 
@@ -224,7 +224,7 @@ pageNumber = "{{ :page }}"
   <!-- /.profile-hero -->
 
 </div>
-<!-- /.profile -->";s:5:"mtime";i:1585476314;s:6:"markup";s:8862:"{% set records = userAdverts.records %}
+<!-- /.profile -->";s:5:"mtime";i:1585825558;s:6:"markup";s:8806:"{% set records = userAdverts.records %}
 {% set displayColumn = userAdverts.displayColumn %}
 {% set noRecordsMessage = userAdverts.noRecordsMessage %}
 {% set detailsPage = userAdverts.detailsPage %}
@@ -381,12 +381,12 @@ pageNumber = "{{ :page }}"
               <!-- /.profile-hero__item-text -->
 
               <div class="advert__imgs-wrap">
-                <div class="advert__image"><img src="{{ 'assets/images/test/cat-3.jpg'|theme }}" alt="Фото3"></div>
-                <div class="advert__image"><img src="{{ 'assets/images/test/cat-2.jpg'|theme }}" alt="Фото2"></div>
-                <div class="advert__image"><img src="{{ 'assets/images/test/cat-4.jpg'|theme }}" alt="Фото2"></div>
+                <div class="advert__image"><img src="https://i.imgur.com/XodPq9C.jpg" alt="Фото1"></div>
+                <div class="advert__image"><img src="https://i.imgur.com/nHHu73O.jpg" alt="Фото2"></div>
+                <div class="advert__image"><img src="https://i.imgur.com/iTL2zyK.jpg" alt="Фото3"></div>
               </div> <!-- /.advert__imgs-wrap -->
 
-              <span class="profile-hero__id">ID: БОЖЕСТВЕННОЕ{{record.id}}</span>
+              <span class="profile-hero__id">ID: *{{record.id}}</span>
             </div>
 
 
