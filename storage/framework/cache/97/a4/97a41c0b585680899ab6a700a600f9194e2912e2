@@ -1,4 +1,4 @@
-1585388451a:1:{s:27:"account/deactivate_link.htm";a:5:{s:8:"fileName";s:27:"account/deactivate_link.htm";s:7:"content";s:1231:"<button class="profile-edit-deactivate btn btn-outline-secondary btn-sm" type="button" data-toggle="tooltip" data-placement="right" title="Удалить все объявления" href="javascript:;"
+1585824401a:1:{s:27:"account/deactivate_link.htm";a:5:{s:8:"fileName";s:27:"account/deactivate_link.htm";s:7:"content";s:1241:"<button class="profile-edit-deactivate btn btn-outline-secondary btn-sm" type="button" data-toggle="tooltip" data-placement="right" title="Удалить все объявления" href="javascript:;"
 	onclick="$('#accountDeactivateForm').toggle()">
 	Деактивировать аккаунт
 </button>
@@ -7,7 +7,7 @@
 	{{ form_ajax('onDeactivate') }}
 
 	<div class="profile-deactivate">
-		<h2 class="text-monospace profile-edit-title">Твой аккаунт будет заморожен, а&nbsp;объявления удалены</h2>
+		<h2 class="text-monospace profile-edit-title">Ваш аккаунт будет заморожен, а&nbsp;все&nbsp;объявления удалены</h2>
 		<small>Ты сможешь заново активировать аккаунт войдя в него.</small>
 	</div>
 
@@ -20,7 +20,7 @@
 	<a class="btn btn-outline-primary btn-sm" href="javascript:;" onclick="$('#accountDeactivateForm').toggle()">Я
 		передумал</a>
 	{{ form_close() }}
-</div>";s:5:"mtime";i:1584694886;s:6:"markup";s:1231:"<button class="profile-edit-deactivate btn btn-outline-secondary btn-sm" type="button" data-toggle="tooltip" data-placement="right" title="Удалить все объявления" href="javascript:;"
+</div>";s:5:"mtime";i:1585823801;s:6:"markup";s:1241:"<button class="profile-edit-deactivate btn btn-outline-secondary btn-sm" type="button" data-toggle="tooltip" data-placement="right" title="Удалить все объявления" href="javascript:;"
 	onclick="$('#accountDeactivateForm').toggle()">
 	Деактивировать аккаунт
 </button>
@@ -29,7 +29,7 @@
 	{{ form_ajax('onDeactivate') }}
 
 	<div class="profile-deactivate">
-		<h2 class="text-monospace profile-edit-title">Твой аккаунт будет заморожен, а&nbsp;объявления удалены</h2>
+		<h2 class="text-monospace profile-edit-title">Ваш аккаунт будет заморожен, а&nbsp;все&nbsp;объявления удалены</h2>
 		<small>Ты сможешь заново активировать аккаунт войдя в него.</small>
 	</div>
 

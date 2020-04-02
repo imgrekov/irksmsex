@@ -46,7 +46,7 @@ class __TwigTemplate_04ee2bf4540b78a84badc29ee316cb5b99edfa90c140594af6a79c87d9c
         echo "
 
 \t<div class=\"profile-deactivate\">
-\t\t<h2 class=\"text-monospace profile-edit-title\">Твой аккаунт будет заморожен, а&nbsp;объявления удалены</h2>
+\t\t<h2 class=\"text-monospace profile-edit-title\">Ваш аккаунт будет заморожен, а&nbsp;все&nbsp;объявления удалены</h2>
 \t\t<small>Ты сможешь заново активировать аккаунт войдя в него.</small>
 \t</div>
 
@@ -91,7 +91,7 @@ class __TwigTemplate_04ee2bf4540b78a84badc29ee316cb5b99edfa90c140594af6a79c87d9c
 \t{{ form_ajax('onDeactivate') }}
 
 \t<div class=\"profile-deactivate\">
-\t\t<h2 class=\"text-monospace profile-edit-title\">Твой аккаунт будет заморожен, а&nbsp;объявления удалены</h2>
+\t\t<h2 class=\"text-monospace profile-edit-title\">Ваш аккаунт будет заморожен, а&nbsp;все&nbsp;объявления удалены</h2>
 \t\t<small>Ты сможешь заново активировать аккаунт войдя в него.</small>
 \t</div>
 

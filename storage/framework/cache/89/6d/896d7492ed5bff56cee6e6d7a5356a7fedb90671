@@ -1,4 +1,4 @@
-1585471628a:1:{s:10:"footer.htm";a:5:{s:8:"fileName";s:10:"footer.htm";s:7:"content";s:372:"<div class="titlefoot">
+1585825540a:1:{s:10:"footer.htm";a:5:{s:8:"fileName";s:10:"footer.htm";s:7:"content";s:372:"<div class="titlefoot">
   <a rel='nofollow' class="btn btn-light btn-sm" href="{{ 'home'|page }}">На главную</a>
 </div>
 
