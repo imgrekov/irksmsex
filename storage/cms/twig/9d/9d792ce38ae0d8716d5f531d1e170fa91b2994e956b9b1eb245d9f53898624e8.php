@@ -273,7 +273,7 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
         <input class=\"inputfile\" type=\"file\" id=\"attachimage1\" name=\"attachimage1\" accept=\"image/jpeg,image/png,image/jpg\">
         <label for=\"attachimage1\">Выберите файл</label>
         <div class=\"image1-name image-name\"></div>
-        <span class=\"remove-button btn btn-outline-danger btn-sm\" id=\"btn-remove-image1\">Очистить</span>
+        <a class=\"remove-button btn btn-outline-danger btn-sm\" href=\"javascript:;\" id=\"btn-remove-image1\">Очистить</a>
       </div> <!-- /.advert-edit__image-item -->
 
       <div class=\"advert-edit__image-item\">
@@ -281,7 +281,7 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
         <input class=\"inputfile\" type=\"file\" id=\"attachimage2\" name=\"attachimage2\" accept=\"image/jpeg,image/png,image/jpg\">
         <label for=\"attachimage2\">Выберите файл</label>
         <div class=\"image2-name image-name\"></div>
-        <span class=\"remove-button btn btn-outline-danger btn-sm\" id=\"btn-remove-image2\">Очистить</span>
+        <a class=\"remove-button btn btn-outline-danger btn-sm\" href=\"javascript:;\" id=\"btn-remove-image2\">Очистить</a>
       </div> <!-- /.advert-edit__image-item -->
 
       <div class=\"advert-edit__image-item\">
@@ -289,7 +289,7 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
         <input class=\"inputfile\" type=\"file\" id=\"attachimage3\" name=\"attachimage3\" accept=\"image/jpeg,image/png,image/jpg\">
         <label for=\"attachimage3\">Выберите файл</label>
         <div class=\"image3-name image-name\"></div>
-        <span class=\"remove-button btn btn-outline-danger btn-sm\" id=\"btn-remove-image3\">Очистить</span>
+        <a class=\"remove-button btn btn-outline-danger btn-sm\" href=\"javascript:;\" id=\"btn-remove-image3\">Очистить</a>
       </div> <!-- /.advert-edit__image-item -->
 
     </div> <!-- /.advert-edit__image-wrap -->
@@ -460,7 +460,7 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
         <input class=\"inputfile\" type=\"file\" id=\"attachimage1\" name=\"attachimage1\" accept=\"image/jpeg,image/png,image/jpg\">
         <label for=\"attachimage1\">Выберите файл</label>
         <div class=\"image1-name image-name\"></div>
-        <span class=\"remove-button btn btn-outline-danger btn-sm\" id=\"btn-remove-image1\">Очистить</span>
+        <a class=\"remove-button btn btn-outline-danger btn-sm\" href=\"javascript:;\" id=\"btn-remove-image1\">Очистить</a>
       </div> <!-- /.advert-edit__image-item -->
 
       <div class=\"advert-edit__image-item\">
@@ -468,7 +468,7 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
         <input class=\"inputfile\" type=\"file\" id=\"attachimage2\" name=\"attachimage2\" accept=\"image/jpeg,image/png,image/jpg\">
         <label for=\"attachimage2\">Выберите файл</label>
         <div class=\"image2-name image-name\"></div>
-        <span class=\"remove-button btn btn-outline-danger btn-sm\" id=\"btn-remove-image2\">Очистить</span>
+        <a class=\"remove-button btn btn-outline-danger btn-sm\" href=\"javascript:;\" id=\"btn-remove-image2\">Очистить</a>
       </div> <!-- /.advert-edit__image-item -->
 
       <div class=\"advert-edit__image-item\">
@@ -476,7 +476,7 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
         <input class=\"inputfile\" type=\"file\" id=\"attachimage3\" name=\"attachimage3\" accept=\"image/jpeg,image/png,image/jpg\">
         <label for=\"attachimage3\">Выберите файл</label>
         <div class=\"image3-name image-name\"></div>
-        <span class=\"remove-button btn btn-outline-danger btn-sm\" id=\"btn-remove-image3\">Очистить</span>
+        <a class=\"remove-button btn btn-outline-danger btn-sm\" href=\"javascript:;\" id=\"btn-remove-image3\">Очистить</a>
       </div> <!-- /.advert-edit__image-item -->
 
     </div> <!-- /.advert-edit__image-wrap -->

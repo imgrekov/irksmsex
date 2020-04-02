@@ -1,4 +1,4 @@
-1585844710a:1:{s:8:"home.htm";a:10:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:4577:"title = "Знакомства в Иркутске по смс и бесплатные объявления"
+1585851639a:1:{s:8:"home.htm";a:10:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:4655:"title = "Знакомства в Иркутске по смс и бесплатные объявления"
 url = "/"
 layout = "home"
 is_hidden = 0
@@ -22,7 +22,7 @@ security = "all"
       Девушка ищет парня
       <img src="{{ 'assets/images/cats/f-m.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -32,7 +32,7 @@ security = "all"
       Парень ищет девушку
       <img src="{{ 'assets/images/cats/m-f.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -42,7 +42,7 @@ security = "all"
       Парень ищет парня
       <img src="{{ 'assets/images/cats/m-m.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -52,7 +52,7 @@ security = "all"
       Дувешка ищет девушку
       <img src="{{ 'assets/images/cats/f-f.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -62,7 +62,7 @@ security = "all"
       Досуг в Иркутске
       <img src="{{ 'assets/images/cats/dosug.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -72,7 +72,7 @@ security = "all"
       Услуги массажа
       <img src="{{ 'assets/images/cats/services.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -82,7 +82,7 @@ security = "all"
       Семейные пары
       <img src="{{ 'assets/images/cats/family.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -92,7 +92,7 @@ security = "all"
       Свободные отношения, флирт
       <img src="{{ 'assets/images/cats/free.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -115,6 +115,10 @@ security = "all"
     <span class="arrow">
       Недвижимость
       <img alt='мобильные смс знакомства' src="{{ 'assets/images/cats/realty.png'|theme }}">
+      <span class="count">
+        <i class="fa fa-comment-o"></i>
+        <span>1</span>
+      </span>
     </span>
   </a>
 
@@ -123,7 +127,7 @@ security = "all"
       Аренда квартир (суточно)
       <img alt='мобильные смс знакомства' src="{{ 'assets/images/cats/arenda.png'|theme }}">
       <span class="count">
-        <i class="far fa-comment-alt"></i>
+        <i class="fa fa-comment-o"></i>
         <span>1</span>
       </span>
     </span>
@@ -134,15 +138,15 @@ security = "all"
       Работа
       <img alt="мобильные смс знакомства" src="{{ 'assets/images/cats/work.png'|theme }}">
       <span class="count">
-        <i class="far fa-comment-alt"></i>
-        <span>6</span>
+        <i class="fa fa-comment-o"></i>
+        <span>1</span>
       </span>
     </span>
   </a>
 
 </div>
 
-{% partial 'second/socials' %}";s:5:"mtime";i:1585828173;s:6:"markup";s:4390:"<div class="infblock">
+{% partial 'second/socials' %}";s:5:"mtime";i:1585849103;s:6:"markup";s:4468:"<div class="infblock">
   <h1>Сайт знакомств и доска объявлений в Иркутске</h1>
 </div>
 
@@ -158,7 +162,7 @@ security = "all"
       Девушка ищет парня
       <img src="{{ 'assets/images/cats/f-m.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -168,7 +172,7 @@ security = "all"
       Парень ищет девушку
       <img src="{{ 'assets/images/cats/m-f.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -178,7 +182,7 @@ security = "all"
       Парень ищет парня
       <img src="{{ 'assets/images/cats/m-m.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -188,7 +192,7 @@ security = "all"
       Дувешка ищет девушку
       <img src="{{ 'assets/images/cats/f-f.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -198,7 +202,7 @@ security = "all"
       Досуг в Иркутске
       <img src="{{ 'assets/images/cats/dosug.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -208,7 +212,7 @@ security = "all"
       Услуги массажа
       <img src="{{ 'assets/images/cats/services.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -218,7 +222,7 @@ security = "all"
       Семейные пары
       <img src="{{ 'assets/images/cats/family.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -228,7 +232,7 @@ security = "all"
       Свободные отношения, флирт
       <img src="{{ 'assets/images/cats/free.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="far fa-comment-alt"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -251,6 +255,10 @@ security = "all"
     <span class="arrow">
       Недвижимость
       <img alt='мобильные смс знакомства' src="{{ 'assets/images/cats/realty.png'|theme }}">
+      <span class="count">
+        <i class="fa fa-comment-o"></i>
+        <span>1</span>
+      </span>
     </span>
   </a>
 
@@ -259,7 +267,7 @@ security = "all"
       Аренда квартир (суточно)
       <img alt='мобильные смс знакомства' src="{{ 'assets/images/cats/arenda.png'|theme }}">
       <span class="count">
-        <i class="far fa-comment-alt"></i>
+        <i class="fa fa-comment-o"></i>
         <span>1</span>
       </span>
     </span>
@@ -270,8 +278,8 @@ security = "all"
       Работа
       <img alt="мобильные смс знакомства" src="{{ 'assets/images/cats/work.png'|theme }}">
       <span class="count">
-        <i class="far fa-comment-alt"></i>
-        <span>6</span>
+        <i class="fa fa-comment-o"></i>
+        <span>1</span>
       </span>
     </span>
   </a>

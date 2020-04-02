@@ -555,6 +555,64 @@ ul>li>.sms {
   padding: 1.25rem;
 }
 
+.main-link {
+  display: block;
+  padding: 10px;
+  background-color: #FBFBF5;
+  border-top: 1px dotted #abd3fe;
+  text-align: center;
+  color: #000000;
+}
+
+.main-link:hover {
+  background-color: #fcfcec;
+}
+
+.main-link img {
+  padding: 0 5px;
+}
+
+.count {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.count>svg {
+  font-size: 16px
+}
+
+.count>span {
+  padding-left: 10px;
+  color: #565656;
+  font-weight: bold
+}
+
+
+
+
+#toTop {
+  width: 100px;
+  background: #409FF5;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: none;
+  color: #333;
+  font-size: 14px;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 0
+}
+
+
 .user-status {
   background-color: #abd3fe;
   padding: 0.25rem 1.25rem;
@@ -783,15 +841,15 @@ ul>li>.sms {
 }
 
 .profile-edit-deactivate {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   display: inline-block;
 }
 
 #accountDeactivateForm {
   margin-top: calc(1rem + 2px);
-  border: 1px solid #c8c8c8;
-  border-radius: 4px;
-  padding: 20px 15px;
+  /* border: 1px solid #c8c8c8; */
+  /* border-radius: 4px; */
+  /* padding: 20px 15px; */
 }
 
 .profile-pass-link {
@@ -802,6 +860,18 @@ ul>li>.sms {
 }
 
 /* end */
+
+
+
+/* ajax-error */
+.ajax-errors {
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+/* END ajax-error */
 
 
 
@@ -938,6 +1008,7 @@ ul>li>.sms {
 .success a {
   margin-top: 1.25rem;
 }
+
 /* END success */
 
 

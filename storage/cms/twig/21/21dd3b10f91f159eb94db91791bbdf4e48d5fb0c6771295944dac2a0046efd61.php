@@ -56,7 +56,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/f-m.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -72,7 +72,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/m-f.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -88,7 +88,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/m-m.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -104,7 +104,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/f-f.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -120,7 +120,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/dosug.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -136,7 +136,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/services.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -152,7 +152,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/family.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -168,7 +168,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/free.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -197,39 +197,43 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
         // line 109
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/realty.png");
         echo "\">
-    </span>
-  </a>
-
-  <a class=\"main-link\" href=\"";
-        // line 113
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories/arenda");
-        echo "\">
-    <span class=\"arrow\">
-      Аренда квартир (суточно)
-      <img alt='мобильные смс знакомства' src=\"";
-        // line 116
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/arenda.png");
-        echo "\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i>
+        <i class=\"fa fa-comment-o\"></i>
         <span>1</span>
       </span>
     </span>
   </a>
 
   <a class=\"main-link\" href=\"";
-        // line 124
+        // line 117
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories/arenda");
+        echo "\">
+    <span class=\"arrow\">
+      Аренда квартир (суточно)
+      <img alt='мобильные смс знакомства' src=\"";
+        // line 120
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/arenda.png");
+        echo "\">
+      <span class=\"count\">
+        <i class=\"fa fa-comment-o\"></i>
+        <span>1</span>
+      </span>
+    </span>
+  </a>
+
+  <a class=\"main-link\" href=\"";
+        // line 128
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories/work");
         echo "\">
     <span class=\"arrow\">
       Работа
       <img alt=\"мобильные смс знакомства\" src=\"";
-        // line 127
+        // line 131
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/work.png");
         echo "\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i>
-        <span>6</span>
+        <i class=\"fa fa-comment-o\"></i>
+        <span>1</span>
       </span>
     </span>
   </a>
@@ -237,7 +241,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
 </div>
 
 ";
-        // line 137
+        // line 141
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("second/socials"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
@@ -255,7 +259,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
 
     public function getDebugInfo()
     {
-        return array (  241 => 137,  228 => 127,  222 => 124,  211 => 116,  205 => 113,  198 => 109,  192 => 106,  168 => 85,  162 => 82,  152 => 75,  146 => 72,  136 => 65,  130 => 62,  120 => 55,  114 => 52,  104 => 45,  98 => 42,  88 => 35,  82 => 32,  72 => 25,  66 => 22,  56 => 15,  50 => 12,  37 => 1,);
+        return array (  245 => 141,  232 => 131,  226 => 128,  215 => 120,  209 => 117,  198 => 109,  192 => 106,  168 => 85,  162 => 82,  152 => 75,  146 => 72,  136 => 65,  130 => 62,  120 => 55,  114 => 52,  104 => 45,  98 => 42,  88 => 35,  82 => 32,  72 => 25,  66 => 22,  56 => 15,  50 => 12,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -276,7 +280,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
       Девушка ищет парня
       <img src=\"{{ 'assets/images/cats/f-m.png'|theme }}\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -286,7 +290,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
       Парень ищет девушку
       <img src=\"{{ 'assets/images/cats/m-f.png'|theme }}\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -296,7 +300,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
       Парень ищет парня
       <img src=\"{{ 'assets/images/cats/m-m.png'|theme }}\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -306,7 +310,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
       Дувешка ищет девушку
       <img src=\"{{ 'assets/images/cats/f-f.png'|theme }}\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -316,7 +320,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
       Досуг в Иркутске
       <img src=\"{{ 'assets/images/cats/dosug.png'|theme }}\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -326,7 +330,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
       Услуги массажа
       <img src=\"{{ 'assets/images/cats/services.png'|theme }}\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -336,7 +340,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
       Семейные пары
       <img src=\"{{ 'assets/images/cats/family.png'|theme }}\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -346,7 +350,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
       Свободные отношения, флирт
       <img src=\"{{ 'assets/images/cats/free.png'|theme }}\" alt=\"Картинка категории\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i><span>1</span>
+        <i class=\"fa fa-comment-o\"></i><span>1</span>
       </span>
     </span>
   </a>
@@ -369,6 +373,10 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
     <span class=\"arrow\">
       Недвижимость
       <img alt='мобильные смс знакомства' src=\"{{ 'assets/images/cats/realty.png'|theme }}\">
+      <span class=\"count\">
+        <i class=\"fa fa-comment-o\"></i>
+        <span>1</span>
+      </span>
     </span>
   </a>
 
@@ -377,7 +385,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
       Аренда квартир (суточно)
       <img alt='мобильные смс знакомства' src=\"{{ 'assets/images/cats/arenda.png'|theme }}\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i>
+        <i class=\"fa fa-comment-o\"></i>
         <span>1</span>
       </span>
     </span>
@@ -388,8 +396,8 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
       Работа
       <img alt=\"мобильные смс знакомства\" src=\"{{ 'assets/images/cats/work.png'|theme }}\">
       <span class=\"count\">
-        <i class=\"far fa-comment-alt\"></i>
-        <span>6</span>
+        <i class=\"fa fa-comment-o\"></i>
+        <span>1</span>
       </span>
     </span>
   </a>
