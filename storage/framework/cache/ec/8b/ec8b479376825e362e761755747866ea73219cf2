@@ -1,4 +1,4 @@
-1585825532a:1:{s:15:"edit-advert.htm";a:13:{s:8:"fileName";s:15:"edit-advert.htm";s:7:"content";s:4562:"title = "Редактировать объявление"
+1585828361a:1:{s:15:"edit-advert.htm";a:13:{s:8:"fileName";s:15:"edit-advert.htm";s:7:"content";s:4562:"title = "Редактировать объявление"
 url = "/edit/:id"
 layout = "index"
 description = "Редактировать добавленное объявление"
