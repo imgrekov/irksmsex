@@ -1,4 +1,4 @@
-1585828361a:1:{s:8:"home.htm";a:6:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:2572:"==
+1585832107a:1:{s:8:"home.htm";a:6:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:2757:"==
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -61,16 +61,20 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
 
+  <!-- Yandex Share2 -->
+  <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+  <script src="https://yastatic.net/share2/share.js" async="async"></script>
+
   <!-- My scripts -->
   <script src="{{ 'assets/js/app.js'|theme }}"></script>
 
   <!-- OctoberCMS scripts -->
   {% framework extras %}
   {% scripts %}
-  
+
 </body>
 
-</html>";s:5:"mtime";i:1585559864;s:6:"markup";s:2568:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1585830754;s:6:"markup";s:2753:"<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -132,13 +136,17 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
 
+  <!-- Yandex Share2 -->
+  <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+  <script src="https://yastatic.net/share2/share.js" async="async"></script>
+
   <!-- My scripts -->
   <script src="{{ 'assets/js/app.js'|theme }}"></script>
 
   <!-- OctoberCMS scripts -->
   {% framework extras %}
   {% scripts %}
-  
+
 </body>
 
 </html>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

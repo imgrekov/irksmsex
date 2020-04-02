@@ -1,9 +1,6 @@
 {% if not user.is_activated %}
 
-<h1 class="profile-edit__title">Ваш emfil не подтверждён.</h1>
-<p>
-    You should verify your account otherwise it may be deleted. Please check your email to verify.
-    <a href="javascript:;" data-request="onSendActivationEmail">Отправить снова</a>.
-</p>
+<h1 class="profile-edit__title">Ваш email не подтверждён.</h1>
+<p><a href="javascript:;" data-request="onSendActivationEmail">Отправить снова.</a></p>
 
 {% endif %}

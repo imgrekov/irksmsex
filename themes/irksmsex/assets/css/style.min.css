@@ -18,14 +18,6 @@ body {
   box-shadow: 0 0 13px #000
 }
 
-h1 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
 a:hover,
 a:active {
   color: #6D83FF
@@ -39,16 +31,18 @@ a:active {
   margin-bottom: 0;
 }
 
-.socials {
-  font-size: 24px
+
+
+.ya-share2__container_size_m .ya-share2__item {
+  margin-left: 0.5rem !important;
 }
 
-.socials a {
-  display: inline-block;
-  color: #ffffff !important;
-  margin: 0 8px;
-  padding: 0 5px
+.ya-share2__container_size_m .ya-share2__icon {
+  width: 30px !important;
+  height: 30px !important;
 }
+
+
 
 .help-block {
   padding: 15px;
@@ -79,61 +73,7 @@ a:active {
   max-width: 400px
 }
 
-.btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc
-}
 
-.btn-xs,
-.btn-group-xs>.btn {
-  padding: 1px 5px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 3px
-}
-
-/* .btn {
-  display: inline-block;
-  margin: 0;
-
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.4;
-
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  color: #212529;
-  padding: 5px 10px;
-
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-} */
-
-.pull-right {
-  padding: 8px 16px
-}
-
-.imgfoto {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.center {
-  margin: 0 auto;
-  max-width: 340px;
-  overflow: hidden
-}
 
 
 .header {
@@ -142,74 +82,10 @@ a:active {
   padding: 20px
 }
 
-.time1 {
-  background-color: #FBEC5D;
-  padding: 2px;
-  border-radius: 5px
-}
 
-.bfs15,
-.bfs10 {
-  font-size: 15px;
-  font-weight: bold
-}
 
-.bfs10 {
-  color: red
-}
 
-.title1 {
-  text-align: center;
-  color: red;
-  font-weight: bold;
-  padding: 3px;
-  border: #d4d4d4 solid 1px;
-  background-color: #FFFFFF
-}
 
-div.menu {
-  display: -moz-flex;
-  display: -o-flex;
-  display: -ms-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.menu-btn__up {
-  color: #00bfff !important;
-}
-
-.menu-btn__select {
-  color: #76c825 !important;
-}
-
-div.menu>span {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  text-align: right;
-  font-size: 12px;
-  color: #b1b1b1
-}
-
-.menu a {
-  color: #D9005B;
-  text-shadow: 0 0 0 #FF6B20;
-  font-size: 12px;
-  margin: 0 5px
-}
-
-.menu a::after {
-  content: '|';
-  padding-left: 10px;
-  color: #000000;
-}
-
-.menu a:last-child::after {
-  content: '';
-}
 
 .record-text {
   margin-bottom: 10px;
@@ -231,9 +107,6 @@ div.menu>span {
 div.sms1 a {
   color: #007bff;
 }
-
-
-
 
 
 .adv {
@@ -264,31 +137,6 @@ div.sms1 a {
 .infblock h1 {
   font-size: 22px;
 }
-
-/* .infblock__btn_pravila {
-  display: inline-block;
-  padding: 5px 15px;
-
-  font-weight: bold;
-  font-size: 18px;
-
-  border-radius: 4px;
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
-
-  color: #000000;
-  background-color: #fff;
-} */
-
-/* a.nice-btn {
-  font-weight: bold;
-  color: #ff1d1d;
-  display: inline-block;
-  padding: 8px 16px;
-  background: #f5f5f5 linear-gradient(to top, #e6e6e6, #ffffff);
-  border: 1px solid #ccc;
-  border-bottom-color: #bbb;
-  border-radius: 4px
-} */
 
 .adv1,
 .adv2,
@@ -325,7 +173,7 @@ div.sms1 a {
 
 .title h1 {
   font-size: 24px;
-  margin: 0
+  margin: 0;
 }
 
 .title h2 {
@@ -334,26 +182,14 @@ div.sms1 a {
 
 .titlefoot {
   background-color: #0079FF;
-  padding: 10px 0;
+  padding: 0.5rem 0;
   text-align: center
-}
-
-.title img {
-  vertical-align: middle
 }
 
 .arrow {
   display: block;
   padding: 0;
   font-weight: normal
-}
-
-.count {
-  padding: 2px;
-  border-radius: 100px;
-  font-size: 17px;
-  font-weight: normal;
-  color: #a7a7a7
 }
 
 .footer {
@@ -363,7 +199,7 @@ div.sms1 a {
 
 .copy {
   text-align: center;
-  background-color: #0079FF;
+  background-color: #0079ff;
   padding: 10px;
   font-size: 9pt;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -374,12 +210,9 @@ div.sms1 a {
 }
 
 ul {
-  list-style-position: outside;
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 100%;
-  background-color: #fff;
 }
 
 div.sms1 {

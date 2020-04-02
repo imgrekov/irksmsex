@@ -35,17 +35,7 @@ class __TwigTemplate_7f2bb5e5ecf5a30ca8e36dd4a0acacbe5d6c230713be9d87c8dbfa9a063
         $macros = $this->macros;
         // line 1
         echo "<div class=\"titlefoot\">
-  <div class=\"socials\">
-    <a href=\"#!\">
-      <i class=\"fa fa-vk\"></i>
-    </a>
-    <a href=\"#!\">
-      <i class=\"fa fa-facebook-square\"></i>
-    </a>
-    <a href=\"#!\">
-      <i class=\"fa fa-odnoklassniki\"></i>
-    </a>
-  </div>
+  <div class=\"ya-share2\" data-title=\"Я знакомлю здесь — irksmsex.ru\" data-services=\"vkontakte,facebook,odnoklassniki,moimir,viber,whatsapp,telegram\"></div>
 </div>";
     }
 
@@ -62,17 +52,7 @@ class __TwigTemplate_7f2bb5e5ecf5a30ca8e36dd4a0acacbe5d6c230713be9d87c8dbfa9a063
     public function getSourceContext()
     {
         return new Source("<div class=\"titlefoot\">
-  <div class=\"socials\">
-    <a href=\"#!\">
-      <i class=\"fa fa-vk\"></i>
-    </a>
-    <a href=\"#!\">
-      <i class=\"fa fa-facebook-square\"></i>
-    </a>
-    <a href=\"#!\">
-      <i class=\"fa fa-odnoklassniki\"></i>
-    </a>
-  </div>
+  <div class=\"ya-share2\" data-title=\"Я знакомлю здесь — irksmsex.ru\" data-services=\"vkontakte,facebook,odnoklassniki,moimir,viber,whatsapp,telegram\"></div>
 </div>", "D:\\OSPanel\\domains\\irksmsex.ru/themes/irksmsex/partials/second/socials.htm", "");
     }
 }

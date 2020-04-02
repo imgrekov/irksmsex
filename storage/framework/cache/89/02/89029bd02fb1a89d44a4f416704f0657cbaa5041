@@ -1,4 +1,4 @@
-1585392036a:1:{s:22:"adverts/add-advert.htm";a:5:{s:8:"fileName";s:22:"adverts/add-advert.htm";s:7:"content";s:295:"<div class="infblock">
+1585828544a:1:{s:22:"adverts/add-advert.htm";a:5:{s:8:"fileName";s:22:"adverts/add-advert.htm";s:7:"content";s:295:"<div class="infblock">
   <a class="btn btn-warning btn-lg mb-3" href="{{ 'add-advert'|page }}">Добавить объявление</a>
   <br>
   <a class="btn btn-secondary" href="{{ 'help'|page }}">Как добавить объявление на сайт?</a>

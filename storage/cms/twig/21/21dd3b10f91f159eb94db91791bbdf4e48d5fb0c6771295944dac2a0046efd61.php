@@ -40,7 +40,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
 
 <!-- Знакомства -->
 <div class='title'>
-  <h2>Смс знакомства в Иркутске</h2>
+  <h2>Знакомства в Иркутске</h2>
 </div>
 
 <div class=\"cats\">
@@ -174,7 +174,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   </a>
 
 </div>
-<!-- Знакомства -->
+<!-- /.title -->
 
 
 
@@ -182,7 +182,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
 <div class='title'>
   <h2>Мобильная доска объявлений</h2>
 </div>
-<!-- .title -->
+<!-- /.title -->
 
 
 <div class=\"cats\">
@@ -266,7 +266,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
 
 <!-- Знакомства -->
 <div class='title'>
-  <h2>Смс знакомства в Иркутске</h2>
+  <h2>Знакомства в Иркутске</h2>
 </div>
 
 <div class=\"cats\">
@@ -352,7 +352,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   </a>
 
 </div>
-<!-- Знакомства -->
+<!-- /.title -->
 
 
 
@@ -360,7 +360,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
 <div class='title'>
   <h2>Мобильная доска объявлений</h2>
 </div>
-<!-- .title -->
+<!-- /.title -->
 
 
 <div class=\"cats\">

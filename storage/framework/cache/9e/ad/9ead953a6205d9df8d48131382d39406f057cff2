@@ -1,4 +1,4 @@
-1585828361a:1:{s:8:"home.htm";a:10:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:4596:"title = "Знакомства в Иркутске по смс и бесплатные объявления"
+1585832107a:1:{s:8:"home.htm";a:10:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:4577:"title = "Знакомства в Иркутске по смс и бесплатные объявления"
 url = "/"
 layout = "home"
 is_hidden = 0
@@ -12,7 +12,7 @@ security = "all"
 
 <!-- Знакомства -->
 <div class='title'>
-  <h2>Смс знакомства в Иркутске</h2>
+  <h2>Знакомства в Иркутске</h2>
 </div>
 
 <div class="cats">
@@ -98,7 +98,7 @@ security = "all"
   </a>
 
 </div>
-<!-- Знакомства -->
+<!-- /.title -->
 
 
 
@@ -106,7 +106,7 @@ security = "all"
 <div class='title'>
   <h2>Мобильная доска объявлений</h2>
 </div>
-<!-- .title -->
+<!-- /.title -->
 
 
 <div class="cats">
@@ -142,13 +142,13 @@ security = "all"
 
 </div>
 
-{% partial 'second/socials' %}";s:5:"mtime";i:1584818765;s:6:"markup";s:4409:"<div class="infblock">
+{% partial 'second/socials' %}";s:5:"mtime";i:1585828173;s:6:"markup";s:4390:"<div class="infblock">
   <h1>Сайт знакомств и доска объявлений в Иркутске</h1>
 </div>
 
 <!-- Знакомства -->
 <div class='title'>
-  <h2>Смс знакомства в Иркутске</h2>
+  <h2>Знакомства в Иркутске</h2>
 </div>
 
 <div class="cats">
@@ -234,7 +234,7 @@ security = "all"
   </a>
 
 </div>
-<!-- Знакомства -->
+<!-- /.title -->
 
 
 
@@ -242,7 +242,7 @@ security = "all"
 <div class='title'>
   <h2>Мобильная доска объявлений</h2>
 </div>
-<!-- .title -->
+<!-- /.title -->
 
 
 <div class="cats">

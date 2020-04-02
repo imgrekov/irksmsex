@@ -141,15 +141,19 @@ class __TwigTemplate_f562038c5c01144369bf2dbee545be63b2f90a944322553148ed24935d4
     integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\">
   </script>
 
+  <!-- Yandex Share2 -->
+  <script src=\"https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js\"></script>
+  <script src=\"https://yastatic.net/share2/share.js\" async=\"async\"></script>
+
   <!-- My scripts -->
   <script src=\"";
-        // line 64
+        // line 68
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/app.js");
         echo "\"></script>
 
   <!-- OctoberCMS scripts -->
   ";
-        // line 67
+        // line 71
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -160,12 +164,12 @@ class __TwigTemplate_f562038c5c01144369bf2dbee545be63b2f90a944322553148ed24935d4
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 68
+        // line 72
         echo "  ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 69
-        echo "  
+        // line 73
+        echo "
 </body>
 
 </html>";
@@ -183,7 +187,7 @@ class __TwigTemplate_f562038c5c01144369bf2dbee545be63b2f90a944322553148ed24935d4
 
     public function getDebugInfo()
     {
-        return array (  168 => 69,  164 => 68,  153 => 67,  147 => 64,  130 => 49,  126 => 48,  123 => 47,  121 => 46,  118 => 45,  114 => 44,  111 => 43,  107 => 42,  98 => 36,  94 => 35,  89 => 33,  77 => 23,  74 => 22,  63 => 13,  59 => 11,  53 => 9,  51 => 8,  46 => 7,  44 => 6,  37 => 1,);
+        return array (  172 => 73,  168 => 72,  157 => 71,  151 => 68,  130 => 49,  126 => 48,  123 => 47,  121 => 46,  118 => 45,  114 => 44,  111 => 43,  107 => 42,  98 => 36,  94 => 35,  89 => 33,  77 => 23,  74 => 22,  63 => 13,  59 => 11,  53 => 9,  51 => 8,  46 => 7,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -250,13 +254,17 @@ class __TwigTemplate_f562038c5c01144369bf2dbee545be63b2f90a944322553148ed24935d4
     integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\">
   </script>
 
+  <!-- Yandex Share2 -->
+  <script src=\"https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js\"></script>
+  <script src=\"https://yastatic.net/share2/share.js\" async=\"async\"></script>
+
   <!-- My scripts -->
   <script src=\"{{ 'assets/js/app.js'|theme }}\"></script>
 
   <!-- OctoberCMS scripts -->
   {% framework extras %}
   {% scripts %}
-  
+
 </body>
 
 </html>", "D:\\OSPanel\\domains\\irksmsex.ru/themes/irksmsex/layouts/home.htm", "");
