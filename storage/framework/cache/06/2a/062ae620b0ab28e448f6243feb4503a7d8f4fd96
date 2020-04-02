@@ -1,4 +1,4 @@
-1585832107a:1:{s:16:"user/profile.htm";a:12:{s:8:"fileName";s:16:"user/profile.htm";s:7:"content";s:9435:"title = "Профиль пользователя"
+1585844814a:1:{s:16:"user/profile.htm";a:12:{s:8:"fileName";s:16:"user/profile.htm";s:7:"content";s:7205:"title = "Профиль пользователя"
 url = "/user/profile"
 layout = "index"
 description = "Страница профиля пользователя"
@@ -98,11 +98,11 @@ pageNumber = "{{ :page }}"
                 {% endif %}
               </p>
               <p>
-                Объявление:
+                Выделено:
                 {% if record.highlight == 'on' %}
-                <span class="badge badge-success">выделено</span> <!-- /.badge-success -->
+                <span class="badge badge-success">да</span> <!-- /.badge-success -->
                 {% else %}
-                <span class="badge badge-danger">не выделено</span> <!-- /.state -->
+                <span class="badge badge-danger">нет</span> <!-- /.state -->
                 {% endif %}
               </p>
               <p>
@@ -154,69 +154,12 @@ pageNumber = "{{ :page }}"
       </li> <!-- /.profile-hero__item -->
 
       {% else %}
-      <li class="advert-none">
-        <p>{{ noRecordsMessage }} <span>&uarr;</span></p>
+      <li class="alert alert-danger advert-none">
+        <p>{{ noRecordsMessage }} <span data-toggle="tooltip" data-placement="right" title="Самое время создать">&uarr;</span></p>
       </li>
       {% endfor %}
 
-      <li class="profile-hero__item">
 
-        <div class="row">
-          <div class="col-sm-8">
-
-            <div class="profile-hero__info">
-              <span class="timehead">
-                {{ record.created_at|date('Создано d-m-Y, в H:i') }}
-              </span>
-              <!-- /.timehead -->
-              <p class="profile-hero__item-text">
-                Это базовое объявлнение. Оно не из БД.
-              </p>
-              <!-- /.profile-hero__item-text -->
-
-              <div class="advert__imgs-wrap">
-                <div class="advert__image"><img src="{{ 'assets/images/test/cat-3.jpg'|theme }}" alt="Фото3"></div>
-                <div class="advert__image"><img src="{{ 'assets/images/test/cat-2.jpg'|theme }}" alt="Фото2"></div>
-                <div class="advert__image"><img src="{{ 'assets/images/test/cat-4.jpg'|theme }}" alt="Фото2"></div>
-              </div> <!-- /.advert__imgs-wrap -->
-
-              <span class="profile-hero__id">ID: БОЖЕСТВЕННОЕ{{record.id}}</span>
-            </div>
-
-
-          </div>
-          <!-- /.col-md-8 -->
-
-          <div class="col-sm-4 pos-r">
-            <div class="profile-hero__status">
-              <p>
-                Объявление <span class="badge badge-danger">неактивно</span> <!-- /.badge-danger -->
-              </p>
-
-              <p>
-                Изображений добавлено: <span class="badge badge-primary countimgs"></span> <!-- /.badge-primary -->
-              </p>
-
-              <p>
-                Категория: <span class="state state-category">Парень ищет девушку</span> <!-- /.state-category -->
-              </p>
-            </div>
-
-            <hr>
-
-            {% spaceless %}
-            <a class="btn btn-success btn-sm profile-hero__action"
-              href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">Редактировать&nbsp;объявлнение</a>
-            <!-- /.profile-hero__action -->
-            {% endspaceless %}
-            
-
-          </div>
-          <!-- /.col-md-4 -->
-        </div>
-        <!-- /.row -->
-
-      </li> <!-- /.profile-hero__item -->
 
     </ul>
     <!-- /.profile-hero__list -->
@@ -224,7 +167,7 @@ pageNumber = "{{ :page }}"
   <!-- /.profile-hero -->
 
 </div>
-<!-- /.profile -->";s:5:"mtime";i:1585828030;s:6:"markup";s:8874:"{% set records = userAdverts.records %}
+<!-- /.profile -->";s:5:"mtime";i:1585844213;s:6:"markup";s:6644:"{% set records = userAdverts.records %}
 {% set displayColumn = userAdverts.displayColumn %}
 {% set noRecordsMessage = userAdverts.noRecordsMessage %}
 {% set detailsPage = userAdverts.detailsPage %}
@@ -304,11 +247,11 @@ pageNumber = "{{ :page }}"
                 {% endif %}
               </p>
               <p>
-                Объявление:
+                Выделено:
                 {% if record.highlight == 'on' %}
-                <span class="badge badge-success">выделено</span> <!-- /.badge-success -->
+                <span class="badge badge-success">да</span> <!-- /.badge-success -->
                 {% else %}
-                <span class="badge badge-danger">не выделено</span> <!-- /.state -->
+                <span class="badge badge-danger">нет</span> <!-- /.state -->
                 {% endif %}
               </p>
               <p>
@@ -360,69 +303,12 @@ pageNumber = "{{ :page }}"
       </li> <!-- /.profile-hero__item -->
 
       {% else %}
-      <li class="advert-none">
-        <p>{{ noRecordsMessage }} <span>&uarr;</span></p>
+      <li class="alert alert-danger advert-none">
+        <p>{{ noRecordsMessage }} <span data-toggle="tooltip" data-placement="right" title="Самое время создать">&uarr;</span></p>
       </li>
       {% endfor %}
 
-      <li class="profile-hero__item">
 
-        <div class="row">
-          <div class="col-sm-8">
-
-            <div class="profile-hero__info">
-              <span class="timehead">
-                {{ record.created_at|date('Создано d-m-Y, в H:i') }}
-              </span>
-              <!-- /.timehead -->
-              <p class="profile-hero__item-text">
-                Это базовое объявлнение. Оно не из БД.
-              </p>
-              <!-- /.profile-hero__item-text -->
-
-              <div class="advert__imgs-wrap">
-                <div class="advert__image"><img src="{{ 'assets/images/test/cat-3.jpg'|theme }}" alt="Фото3"></div>
-                <div class="advert__image"><img src="{{ 'assets/images/test/cat-2.jpg'|theme }}" alt="Фото2"></div>
-                <div class="advert__image"><img src="{{ 'assets/images/test/cat-4.jpg'|theme }}" alt="Фото2"></div>
-              </div> <!-- /.advert__imgs-wrap -->
-
-              <span class="profile-hero__id">ID: БОЖЕСТВЕННОЕ{{record.id}}</span>
-            </div>
-
-
-          </div>
-          <!-- /.col-md-8 -->
-
-          <div class="col-sm-4 pos-r">
-            <div class="profile-hero__status">
-              <p>
-                Объявление <span class="badge badge-danger">неактивно</span> <!-- /.badge-danger -->
-              </p>
-
-              <p>
-                Изображений добавлено: <span class="badge badge-primary countimgs"></span> <!-- /.badge-primary -->
-              </p>
-
-              <p>
-                Категория: <span class="state state-category">Парень ищет девушку</span> <!-- /.state-category -->
-              </p>
-            </div>
-
-            <hr>
-
-            {% spaceless %}
-            <a class="btn btn-success btn-sm profile-hero__action"
-              href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">Редактировать&nbsp;объявлнение</a>
-            <!-- /.profile-hero__action -->
-            {% endspaceless %}
-            
-
-          </div>
-          <!-- /.col-md-4 -->
-        </div>
-        <!-- /.row -->
-
-      </li> <!-- /.profile-hero__item -->
 
     </ul>
     <!-- /.profile-hero__list -->

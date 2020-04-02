@@ -68,8 +68,8 @@ class __TwigTemplate_b29aaca7adad6f28ea4b5eebbd7caf9b9bb4a58e458239894372bc244db
             // line 18
             echo "
 \t<div class=\"profile-edit\">
-\t\t<h1 class=\"profile-edit__title\">Настройки</h1>
-\t\t<small>Здесь ты можешь обновить пароль и деактивировать аккаунт.</small>
+\t\t<h1 class=\"profile-edit__title\">Настройки аккаунта</h1>
+\t\t<small>Здесь ты можешь обновить пароль или деактивировать аккаунт.</small>
 
 \t\t<hr>
 \t\t
@@ -133,8 +133,8 @@ class __TwigTemplate_b29aaca7adad6f28ea4b5eebbd7caf9b9bb4a58e458239894372bc244db
 \t{% else %}
 
 \t<div class=\"profile-edit\">
-\t\t<h1 class=\"profile-edit__title\">Настройки</h1>
-\t\t<small>Здесь ты можешь обновить пароль и деактивировать аккаунт.</small>
+\t\t<h1 class=\"profile-edit__title\">Настройки аккаунта</h1>
+\t\t<small>Здесь ты можешь обновить пароль или деактивировать аккаунт.</small>
 
 \t\t<hr>
 \t\t

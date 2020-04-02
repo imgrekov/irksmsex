@@ -1,4 +1,4 @@
-1585832107a:1:{s:15:"edit-advert.htm";a:13:{s:8:"fileName";s:15:"edit-advert.htm";s:7:"content";s:4562:"title = "Редактировать объявление"
+1585844851a:1:{s:15:"edit-advert.htm";a:13:{s:8:"fileName";s:15:"edit-advert.htm";s:7:"content";s:5104:"title = "Редактировать объявление"
 url = "/edit/:id"
 layout = "index"
 description = "Редактировать добавленное объявление"
@@ -28,49 +28,60 @@ notFoundMessage = "Объявление не найдено"
 <div class="advert-edit">
   <h1 class="advert-edit__title">Редактировать объявление</h1>
   <!-- /.advert-edit__title -->
-  <p class="advert-edit__desc">Активируй, меняй текст и изображения.</p>
+  <p class="advert-edit__desc">Активируйте, меняйте текст и добавляйте изображения.</p>
   <!-- /.advert-edir__desc -->
 
   <div class="ad-info">
-    <h3>Информация об&nbsp;объявлении</h3>
-    <p>
-      Объявление:
-      {% if record.state == true %}
-      <span class="badge badge-success">активно</span> <!-- /.badge-success -->
-      {% else %}
-      <span class="badge badge-danger">неактивно</span> <!-- /.state -->
-      {% endif %}
-    </p>
 
-    <p>
-      <!-- Текст в соответствии с категорией объявления -->
-      Категория:
-      {% if record.category == 'ona-on' %}
-      <span class="badge badge-info">Девушка ищет парня</span> <!-- /.state-category -->
-      {% elseif record.category == 'on-ona' %}
-      <span class="badge badge-info">Парень ищет девушку</span> <!-- /.state-category -->
-      {% elseif record.category == 'on-on' %}
-      <span class="badge badge-info">Парень ищет парня</span> <!-- /.state-category -->
-      {% elseif record.category == 'ona-ona' %}
-      <span class="badge badge-info">Девушка ищет девушку</span> <!-- /.state-category -->
-      {% elseif record.category == 'free' %}
-      <span class="badge badge-info">Досуг в Иркутске</span> <!-- /.state-category -->
-      {% elseif record.category == 'services' %}
-      <span class="badge badge-info">Услуги массажа</span> <!-- /.state-category -->
-      {% elseif record.category == 'family' %}
-      <span class="badge badge-info">Семейные пары</span> <!-- /.state-category -->
-      {% elseif record.category == 'flirt' %}
-      <span class="badge badge-info">Свободные отношения</span> <!-- /.state-category -->
-      {% elseif record.category == 'realty' %}
-      <span class="badge badge-info">Недвижимость</span> <!-- /.state-category -->
-      {% elseif record.category == 'arenda' %}
-      <span class="badge badge-info">Аренда квартир на сутки</span> <!-- /.state-category -->
-      {% elseif record.category == 'work' %}
-      <span class="badge badge-info">Работа в Иркутске</span> <!-- /.state-category -->
-      {% else %}
-      <span class="d-block badge badge-danger">Ошибка. Категория не найдена</span> <!-- /.badge-danger -->
-      {% endif %}
-    </p>
+    <h3>Информация об&nbsp;объявлении</h3>
+    <div class="ad-info__stats-wrap">
+      <p class="ad-info__stats-wrap-item">
+        Объявление:
+        {% if record.state == true %}
+        <span class="badge badge-success">активно</span> <!-- /.badge-success -->
+        {% else %}
+        <span class="badge badge-danger">неактивно</span> <!-- /.state -->
+        {% endif %}
+      </p>
+      <p class="ad-info__stats-wrap-item">
+        Выделено:
+        {% if record.highlight == 'on' %}
+        <span class="badge badge-success">да</span> <!-- /.badge-success -->
+        {% else %}
+        <span class="badge badge-danger">нет</span> <!-- /.state -->
+        {% endif %}
+      </p>
+      <p class="ad-info__stats-wrap-item">
+        <!-- Текст в соответствии с категорией объявления -->
+        Категория:
+        {% if record.category == 'ona-on' %}
+        <span class="badge badge-info">Девушка ищет парня</span> <!-- /.state-category -->
+        {% elseif record.category == 'on-ona' %}
+        <span class="badge badge-info">Парень ищет девушку</span> <!-- /.state-category -->
+        {% elseif record.category == 'on-on' %}
+        <span class="badge badge-info">Парень ищет парня</span> <!-- /.state-category -->
+        {% elseif record.category == 'ona-ona' %}
+        <span class="badge badge-info">Девушка ищет девушку</span> <!-- /.state-category -->
+        {% elseif record.category == 'free' %}
+        <span class="badge badge-info">Досуг в Иркутске</span> <!-- /.state-category -->
+        {% elseif record.category == 'services' %}
+        <span class="badge badge-info">Услуги массажа</span> <!-- /.state-category -->
+        {% elseif record.category == 'family' %}
+        <span class="badge badge-info">Семейные пары</span> <!-- /.state-category -->
+        {% elseif record.category == 'flirt' %}
+        <span class="badge badge-info">Свободные отношения</span> <!-- /.state-category -->
+        {% elseif record.category == 'realty' %}
+        <span class="badge badge-info">Недвижимость</span> <!-- /.state-category -->
+        {% elseif record.category == 'arenda' %}
+        <span class="badge badge-info">Аренда квартир на сутки</span> <!-- /.state-category -->
+        {% elseif record.category == 'work' %}
+        <span class="badge badge-info">Работа в Иркутске</span> <!-- /.state-category -->
+        {% else %}
+        <span class="d-block badge badge-danger">Ошибка. Категория не найдена</span> <!-- /.badge-danger -->
+        {% endif %}
+      </p>
+    </div>
+
   </div>
 
   {% component 'editAdvert' %}
@@ -107,7 +118,7 @@ notFoundMessage = "Объявление не найдено"
   <h1 class="text-right">{{ notFoundMessage|raw }}</h1>
 </div> <!-- /.err -->
 
-{% endif %}";s:5:"mtime";i:1585391759;s:6:"markup";s:4104:"{% set record = builderDetails.record %}
+{% endif %}";s:5:"mtime";i:1585844251;s:6:"markup";s:4646:"{% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
@@ -119,49 +130,60 @@ notFoundMessage = "Объявление не найдено"
 <div class="advert-edit">
   <h1 class="advert-edit__title">Редактировать объявление</h1>
   <!-- /.advert-edit__title -->
-  <p class="advert-edit__desc">Активируй, меняй текст и изображения.</p>
+  <p class="advert-edit__desc">Активируйте, меняйте текст и добавляйте изображения.</p>
   <!-- /.advert-edir__desc -->
 
   <div class="ad-info">
-    <h3>Информация об&nbsp;объявлении</h3>
-    <p>
-      Объявление:
-      {% if record.state == true %}
-      <span class="badge badge-success">активно</span> <!-- /.badge-success -->
-      {% else %}
-      <span class="badge badge-danger">неактивно</span> <!-- /.state -->
-      {% endif %}
-    </p>
 
-    <p>
-      <!-- Текст в соответствии с категорией объявления -->
-      Категория:
-      {% if record.category == 'ona-on' %}
-      <span class="badge badge-info">Девушка ищет парня</span> <!-- /.state-category -->
-      {% elseif record.category == 'on-ona' %}
-      <span class="badge badge-info">Парень ищет девушку</span> <!-- /.state-category -->
-      {% elseif record.category == 'on-on' %}
-      <span class="badge badge-info">Парень ищет парня</span> <!-- /.state-category -->
-      {% elseif record.category == 'ona-ona' %}
-      <span class="badge badge-info">Девушка ищет девушку</span> <!-- /.state-category -->
-      {% elseif record.category == 'free' %}
-      <span class="badge badge-info">Досуг в Иркутске</span> <!-- /.state-category -->
-      {% elseif record.category == 'services' %}
-      <span class="badge badge-info">Услуги массажа</span> <!-- /.state-category -->
-      {% elseif record.category == 'family' %}
-      <span class="badge badge-info">Семейные пары</span> <!-- /.state-category -->
-      {% elseif record.category == 'flirt' %}
-      <span class="badge badge-info">Свободные отношения</span> <!-- /.state-category -->
-      {% elseif record.category == 'realty' %}
-      <span class="badge badge-info">Недвижимость</span> <!-- /.state-category -->
-      {% elseif record.category == 'arenda' %}
-      <span class="badge badge-info">Аренда квартир на сутки</span> <!-- /.state-category -->
-      {% elseif record.category == 'work' %}
-      <span class="badge badge-info">Работа в Иркутске</span> <!-- /.state-category -->
-      {% else %}
-      <span class="d-block badge badge-danger">Ошибка. Категория не найдена</span> <!-- /.badge-danger -->
-      {% endif %}
-    </p>
+    <h3>Информация об&nbsp;объявлении</h3>
+    <div class="ad-info__stats-wrap">
+      <p class="ad-info__stats-wrap-item">
+        Объявление:
+        {% if record.state == true %}
+        <span class="badge badge-success">активно</span> <!-- /.badge-success -->
+        {% else %}
+        <span class="badge badge-danger">неактивно</span> <!-- /.state -->
+        {% endif %}
+      </p>
+      <p class="ad-info__stats-wrap-item">
+        Выделено:
+        {% if record.highlight == 'on' %}
+        <span class="badge badge-success">да</span> <!-- /.badge-success -->
+        {% else %}
+        <span class="badge badge-danger">нет</span> <!-- /.state -->
+        {% endif %}
+      </p>
+      <p class="ad-info__stats-wrap-item">
+        <!-- Текст в соответствии с категорией объявления -->
+        Категория:
+        {% if record.category == 'ona-on' %}
+        <span class="badge badge-info">Девушка ищет парня</span> <!-- /.state-category -->
+        {% elseif record.category == 'on-ona' %}
+        <span class="badge badge-info">Парень ищет девушку</span> <!-- /.state-category -->
+        {% elseif record.category == 'on-on' %}
+        <span class="badge badge-info">Парень ищет парня</span> <!-- /.state-category -->
+        {% elseif record.category == 'ona-ona' %}
+        <span class="badge badge-info">Девушка ищет девушку</span> <!-- /.state-category -->
+        {% elseif record.category == 'free' %}
+        <span class="badge badge-info">Досуг в Иркутске</span> <!-- /.state-category -->
+        {% elseif record.category == 'services' %}
+        <span class="badge badge-info">Услуги массажа</span> <!-- /.state-category -->
+        {% elseif record.category == 'family' %}
+        <span class="badge badge-info">Семейные пары</span> <!-- /.state-category -->
+        {% elseif record.category == 'flirt' %}
+        <span class="badge badge-info">Свободные отношения</span> <!-- /.state-category -->
+        {% elseif record.category == 'realty' %}
+        <span class="badge badge-info">Недвижимость</span> <!-- /.state-category -->
+        {% elseif record.category == 'arenda' %}
+        <span class="badge badge-info">Аренда квартир на сутки</span> <!-- /.state-category -->
+        {% elseif record.category == 'work' %}
+        <span class="badge badge-info">Работа в Иркутске</span> <!-- /.state-category -->
+        {% else %}
+        <span class="d-block badge badge-danger">Ошибка. Категория не найдена</span> <!-- /.badge-danger -->
+        {% endif %}
+      </p>
+    </div>
+
   </div>
 
   {% component 'editAdvert' %}

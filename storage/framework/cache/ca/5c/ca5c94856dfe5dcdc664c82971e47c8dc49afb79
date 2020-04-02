@@ -1,4 +1,4 @@
-1585832107a:1:{s:19:"user/reset-pass.htm";a:11:{s:8:"fileName";s:19:"user/reset-pass.htm";s:7:"content";s:430:"title = "Сброс пароля"
+1585844710a:1:{s:19:"user/reset-pass.htm";a:11:{s:8:"fileName";s:19:"user/reset-pass.htm";s:7:"content";s:420:"title = "Сброс пароля"
 url = "/user/reset-password"
 layout = "home"
 description = "Сброс пароля"
@@ -15,11 +15,11 @@ paramCode = "code"
   {% partial resetPassword ~ '::reset' %}
   {% endif %}
 </div>
-<!-- /#partialUserResetForm -->";s:5:"mtime";i:1584695783;s:6:"markup";s:247:"<div class="reset-pass" id="partialUserResetForm">
+<!-- /.reset-pass -->";s:5:"mtime";i:1585841895;s:6:"markup";s:237:"<div class="reset-pass" id="partialUserResetForm">
   {% if resetPassword.code == null %}
   {% partial resetPassword ~ '::restore' %}
   {% else %}
   {% partial resetPassword ~ '::reset' %}
   {% endif %}
 </div>
-<!-- /#partialUserResetForm -->";s:4:"code";N;s:5:"title";s:23:"Сброс пароля";s:3:"url";s:20:"/user/reset-password";s:6:"layout";s:4:"home";s:11:"description";s:23:"Сброс пароля";s:9:"is_hidden";s:1:"0";s:13:"resetPassword";a:1:{s:9:"paramCode";s:4:"code";}}}
+<!-- /.reset-pass -->";s:4:"code";N;s:5:"title";s:23:"Сброс пароля";s:3:"url";s:20:"/user/reset-password";s:6:"layout";s:4:"home";s:11:"description";s:23:"Сброс пароля";s:9:"is_hidden";s:1:"0";s:13:"resetPassword";a:1:{s:9:"paramCode";s:4:"code";}}}

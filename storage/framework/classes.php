@@ -150,4 +150,5 @@
   'martin\\formsextender\\Plugin' => 'plugins\\martin\\formsextender\\Plugin.php',
   'Grekov\\AdvertsList\\Components\\CreateAdvert' => 'plugins\\grekov\\advertslist\\components\\CreateAdvert.php',
   'Grekov\\AdvertsList\\Components\\EditAdvert' => 'plugins\\grekov\\advertslist\\components\\EditAdvert.php',
+  'system\\Controllers\\mailpartials' => 'modules\\system\\controllers\\mailpartials.php',
 );

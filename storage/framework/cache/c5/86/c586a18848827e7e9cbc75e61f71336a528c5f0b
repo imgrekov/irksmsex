@@ -1,4 +1,4 @@
-1585832107a:1:{s:17:"create-advert.htm";a:12:{s:8:"fileName";s:17:"create-advert.htm";s:7:"content";s:639:"title = "Создать объявление"
+1585844710a:1:{s:17:"create-advert.htm";a:12:{s:8:"fileName";s:17:"create-advert.htm";s:7:"content";s:603:"title = "Создать объявление"
 url = "/create"
 layout = "index"
 description = "Добавить объявление"
@@ -23,10 +23,8 @@ security = "all"
 </div>
 
 <main class="main">
-	<div class="container">
-		{% component 'createAdvert' %}
-	</div>
-</main>";s:5:"mtime";i:1585388730;s:6:"markup";s:434:"<div class="infblock">
+	{% component 'createAdvert' %}
+</main>";s:5:"mtime";i:1585843481;s:6:"markup";s:398:"<div class="infblock">
 	<a class="btn btn-secondary" href="{{ 'help'|page }}">Как добавлять объявления?</a>
 </div>
 
@@ -40,7 +38,5 @@ security = "all"
 </div>
 
 <main class="main">
-	<div class="container">
-		{% component 'createAdvert' %}
-	</div>
+	{% component 'createAdvert' %}
 </main>";s:4:"code";N;s:5:"title";s:35:"Создать объявление";s:3:"url";s:7:"/create";s:6:"layout";s:5:"index";s:11:"description";s:37:"Добавить объявление";s:9:"is_hidden";s:1:"0";s:7:"session";a:1:{s:8:"security";s:3:"all";}s:12:"createAdvert";a:0:{}}}

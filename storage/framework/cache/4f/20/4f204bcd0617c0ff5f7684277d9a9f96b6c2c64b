@@ -1,4 +1,4 @@
-1585832107a:1:{s:16:"user/account.htm";a:13:{s:8:"fileName";s:16:"user/account.htm";s:7:"content";s:1028:"title = "Аккаунт"
+1585844868a:1:{s:16:"user/account.htm";a:13:{s:8:"fileName";s:16:"user/account.htm";s:7:"content";s:1049:"title = "Аккаунт"
 url = "/user/account"
 layout = "home"
 description = "Регистрация и логин пользователей"
@@ -34,8 +34,8 @@ paramCode = "code"
 	{% else %}
 
 	<div class="profile-edit">
-		<h1 class="profile-edit__title">Настройки</h1>
-		<small>Здесь ты можешь обновить пароль и деактивировать аккаунт.</small>
+		<h1 class="profile-edit__title">Настройки аккаунта</h1>
+		<small>Здесь ты можешь обновить пароль или деактивировать аккаунт.</small>
 
 		<hr>
 		
@@ -48,7 +48,7 @@ paramCode = "code"
 	{% endif %}
 
 
-</div><!-- /.user-hero -->";s:5:"mtime";i:1585130378;s:6:"markup";s:715:"<div class="user-hero">
+</div><!-- /.user-hero -->";s:5:"mtime";i:1585842919;s:6:"markup";s:736:"<div class="user-hero">
 
 
 	{% if not user %}
@@ -67,8 +67,8 @@ paramCode = "code"
 	{% else %}
 
 	<div class="profile-edit">
-		<h1 class="profile-edit__title">Настройки</h1>
-		<small>Здесь ты можешь обновить пароль и деактивировать аккаунт.</small>
+		<h1 class="profile-edit__title">Настройки аккаунта</h1>
+		<small>Здесь ты можешь обновить пароль или деактивировать аккаунт.</small>
 
 		<hr>
 		

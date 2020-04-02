@@ -7,7 +7,11 @@
 
 		<div class="form-group">
 			<label for="userRestoreEmail">Введите свою почту</label>
-			<input name="email" type="email" class="form-control" id="userRestoreEmail" placeholder="Например: info@irksmsex.ru">
+			<input name="email" type="email" class="form-control" id="userRestoreEmail"
+				placeholder="Например: info@irksmsex.ru">
+			{% flash %}
+			<div class="alert alert-{{ type == 'error' ? 'danger' : type }}">{{ message }}</div>
+			{% endflash %}
 		</div>
 	</fieldset>
 

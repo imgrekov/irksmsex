@@ -54,15 +54,13 @@ class __TwigTemplate_3797170cee66a7cad58cbc6d7dbc189b465926ac30807e4ae4b0a0ca81d
 </div>
 
 <main class=\"main\">
-\t<div class=\"container\">
-\t\t";
-        // line 16
+\t";
+        // line 15
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("createAdvert"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
-        // line 17
-        echo "\t</div>
-</main>";
+        // line 16
+        echo "</main>";
     }
 
     public function getTemplateName()
@@ -77,7 +75,7 @@ class __TwigTemplate_3797170cee66a7cad58cbc6d7dbc189b465926ac30807e4ae4b0a0ca81d
 
     public function getDebugInfo()
     {
-        return array (  64 => 17,  60 => 16,  52 => 11,  40 => 2,  37 => 1,);
+        return array (  63 => 16,  59 => 15,  52 => 11,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -96,9 +94,7 @@ class __TwigTemplate_3797170cee66a7cad58cbc6d7dbc189b465926ac30807e4ae4b0a0ca81d
 </div>
 
 <main class=\"main\">
-\t<div class=\"container\">
-\t\t{% component 'createAdvert' %}
-\t</div>
+\t{% component 'createAdvert' %}
 </main>", "D:\\OSPanel\\domains\\irksmsex.ru/themes/irksmsex/pages/create-advert.htm", "");
     }
 }

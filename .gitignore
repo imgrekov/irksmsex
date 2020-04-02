@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/windows,octobercms
 # Edit at https://www.gitignore.io/?templates=windows,octobercms
 
@@ -53,4 +52,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/windows,octobercms
+*.log
