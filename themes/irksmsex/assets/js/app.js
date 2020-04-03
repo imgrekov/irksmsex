@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  $("body").append('<div class="ajax-errors"></div>');
 
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
@@ -9,8 +10,7 @@ $(document).ready(function () {
   });
 
   $(window).on('ajaxErrorMessage', function (event, message) {
-    $("body").append('<div class="ajax-errors"></div>');
-    $(".ajax-errors")
+    $("div.ajax-errors")
       .append('<div class="alert alert-danger">' + message + '<a class="close ml-2" href="javascript:;">&times;</a></div>')
     event.preventDefault();
   });

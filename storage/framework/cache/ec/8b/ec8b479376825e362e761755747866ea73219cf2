@@ -1,4 +1,4 @@
-1585852072a:1:{s:15:"edit-advert.htm";a:13:{s:8:"fileName";s:15:"edit-advert.htm";s:7:"content";s:5104:"title = "Редактировать объявление"
+1585910737a:1:{s:15:"edit-advert.htm";a:13:{s:8:"fileName";s:15:"edit-advert.htm";s:7:"content";s:5106:"title = "Редактировать объявление"
 url = "/edit/:id"
 layout = "index"
 description = "Редактировать добавленное объявление"
@@ -96,7 +96,7 @@ notFoundMessage = "Объявление не найдено"
   <div class="advert-advance" style="display: none">
 
     <!-- Удалить объявление -->
-    {{ form_ajax('onEditDelete', { redirect: "/advert/edit-success", 'data-request-flash': true } ) }}
+    {{ form_ajax('onEditDelete', { redirect: "/advert/delete-success", 'data-request-flash': true } ) }}
     <input name="id" type="hidden" value="{{ record.id }}">
     <div class="form-group">
       <span class="advert-edit-deactivate__text" data-toggle="tooltip" data-placement="bottom"
@@ -118,7 +118,7 @@ notFoundMessage = "Объявление не найдено"
   <h1 class="text-right">{{ notFoundMessage|raw }}</h1>
 </div> <!-- /.err -->
 
-{% endif %}";s:5:"mtime";i:1585844251;s:6:"markup";s:4646:"{% set record = builderDetails.record %}
+{% endif %}";s:5:"mtime";i:1585903309;s:6:"markup";s:4648:"{% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
@@ -198,7 +198,7 @@ notFoundMessage = "Объявление не найдено"
   <div class="advert-advance" style="display: none">
 
     <!-- Удалить объявление -->
-    {{ form_ajax('onEditDelete', { redirect: "/advert/edit-success", 'data-request-flash': true } ) }}
+    {{ form_ajax('onEditDelete', { redirect: "/advert/delete-success", 'data-request-flash': true } ) }}
     <input name="id" type="hidden" value="{{ record.id }}">
     <div class="form-group">
       <span class="advert-edit-deactivate__text" data-toggle="tooltip" data-placement="bottom"

@@ -35,7 +35,7 @@ class __TwigTemplate_7f3a5622498904e504d92178e6c9456999c330a9ff7cd76ba35e22ea6ef
         $macros = $this->macros;
         // line 1
         echo "<div class=\"title\">
-  <h1>Смс знакомства в Иркутске &rarr; ";
+  <h1>Знакомства в Иркутске &rarr; ";
         // line 2
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 2), "description", [], "any", false, false, false, 2), "html", null, true);
         echo "</h1>
@@ -60,7 +60,7 @@ class __TwigTemplate_7f3a5622498904e504d92178e6c9456999c330a9ff7cd76ba35e22ea6ef
     public function getSourceContext()
     {
         return new Source("<div class=\"title\">
-  <h1>Смс знакомства в Иркутске &rarr; {{ this.page.description }}</h1>
+  <h1>Знакомства в Иркутске &rarr; {{ this.page.description }}</h1>
 </div>", "D:\\OSPanel\\domains\\irksmsex.ru/themes/irksmsex/partials/adverts/title.htm", "");
     }
 }

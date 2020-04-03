@@ -178,7 +178,7 @@ class __TwigTemplate_c6cb92149de73a20197a08f35609ec8331fe49af82caeda6354a63504cc
     <!-- Удалить объявление -->
     ";
             // line 81
-            echo call_user_func_array($this->env->getFunction('form_ajax')->getCallable(), ["ajax", "onEditDelete", ["redirect" => "/advert/edit-success", "data-request-flash" => true]]);
+            echo call_user_func_array($this->env->getFunction('form_ajax')->getCallable(), ["ajax", "onEditDelete", ["redirect" => "/advert/delete-success", "data-request-flash" => true]]);
             echo "
     <input name=\"id\" type=\"hidden\" value=\"";
             // line 82
@@ -316,7 +316,7 @@ class __TwigTemplate_c6cb92149de73a20197a08f35609ec8331fe49af82caeda6354a63504cc
   <div class=\"advert-advance\" style=\"display: none\">
 
     <!-- Удалить объявление -->
-    {{ form_ajax('onEditDelete', { redirect: \"/advert/edit-success\", 'data-request-flash': true } ) }}
+    {{ form_ajax('onEditDelete', { redirect: \"/advert/delete-success\", 'data-request-flash': true } ) }}
     <input name=\"id\" type=\"hidden\" value=\"{{ record.id }}\">
     <div class=\"form-group\">
       <span class=\"advert-edit-deactivate__text\" data-toggle=\"tooltip\" data-placement=\"bottom\"

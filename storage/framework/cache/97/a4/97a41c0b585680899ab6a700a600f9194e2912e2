@@ -1,4 +1,4 @@
-1585851684a:1:{s:27:"account/deactivate_link.htm";a:5:{s:8:"fileName";s:27:"account/deactivate_link.htm";s:7:"content";s:1310:"<button class="profile-edit-deactivate btn btn-outline-secondary btn-sm" type="button" data-toggle="tooltip" data-placement="right" title="Удалить все объявления" href="javascript:;"
+1585902751a:1:{s:27:"account/deactivate_link.htm";a:5:{s:8:"fileName";s:27:"account/deactivate_link.htm";s:7:"content";s:1310:"<button class="profile-edit-deactivate btn btn-outline-secondary btn-sm" type="button" data-toggle="tooltip" data-placement="right" title="Удалить все объявления" href="javascript:;"
 	onclick="$('#accountDeactivateForm').toggle()">
 	Деактивировать аккаунт
 </button>

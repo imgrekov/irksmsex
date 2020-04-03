@@ -1,8 +1,6 @@
-1585852072a:1:{s:21:"categories/on-ona.htm";a:14:{s:8:"fileName";s:21:"categories/on-ona.htm";s:7:"content";s:2433:"﻿title = "Смс объявления парней, которые ищут девушек"
-h1 = "Парень ищет девушку"
-url = "/categories/on-ona"
+1585910737a:1:{s:21:"categories/on-ona.htm";a:12:{s:8:"fileName";s:21:"categories/on-ona.htm";s:7:"content";s:3321:"title = "Объявления: парни ищут девушек"
+url = "/categories/on-ona/:page?"
 layout = "advert"
-attr = "on-ona"
 description = "Парень ищет девушку"
 is_hidden = 0
 
@@ -31,15 +29,11 @@ security = "all"
 {% set detailsUrlParameter = AdvertsList.detailsUrlParameter %}
 
 
+
 <ul class="record-list">
-  {% for record in records %}
-
-  {% if record.category == 'on-ona' and record.type != 'xvip' %}
-
+  {% for record in records if record.category == 'on-ona' and record.state == 'on' and record.type != 'xvip' %}
   <li class="{% if record.type == 'vip' %} vip {% elseif record.type == 'basic' %} basic {% endif %}">
-    <div id="{{ record.id }}" class="sms">
-      <!-- Время добавления объявления -->
-
+    <div id="{{ record.id }}" class="record">
       {% if record.type == 'vip' %}
       <img src="{{ 'assets/images/vip.png'|theme }}" alt="vip" class="id">
       {% endif %}
@@ -47,15 +41,12 @@ security = "all"
       <span class="timehead">
         {{ record.created_at|date('d-m-Y H:i') }}
       </span>
+      <!-- Когда создано -->
 
-      <!-- <span class="views">0</span> -->
-      <!-- /.views -->
-
-      <!-- Текст объявления -->
-      <div class="sms__text">
+      <div class="record__text">
         {{ record.text|raw }}
       </div>
-
+      <!-- Текст объявления -->
 
       {% if record.image1 %}
       <div class="advert__imgs-wrap">
@@ -70,17 +61,48 @@ security = "all"
 
       </div>
       {% endif %}
+      <!-- Изображения к объявлению -->
 
     </div>
+    <!-- /.record -->
   </li>
-  {% endif %}
+  <!-- /.vip ? /.basic -->
 
 
   {% else %}
-  <li class="advert-none">{{ noRecordsMessage }}</li>
+  <li class="alert alert-danger advert-none">
+    <p>{{ noRecordsMessage }}</p>
+  </li>
+  <!-- /.advert-none -->
+  {% endfor %}
+</ul>
+<!-- /.record-list -->
+
+
+{% if records.lastPage > 1 %}
+<ul class="pagination">
+  {% if records.currentPage > 1 %}
+  <li class="pagination__item">
+    <a class="pagination__prev"
+      href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Назад</a>
+  </li>
+  {% endif %}
+
+  {% for page in 1..records.lastPage %}
+  <li class="pagination__item {{ records.currentPage == page ? 'active' : null }}">
+    <a class="pagination__link" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+  </li>
   {% endfor %}
 
-</ul>";s:5:"mtime";i:1585130057;s:6:"markup";s:1709:"{% set records = AdvertsList.records %}
+  {% if records.lastPage > records.currentPage %}
+  <li class="pagination__item">
+    <a class="pagination__next"
+      href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Вперёд &rarr;</a>
+  </li>
+  {% endif %}
+</ul>
+{% endif %}
+<!-- Пагинация -->";s:5:"mtime";i:1585909740;s:6:"markup";s:2679:"{% set records = AdvertsList.records %}
 {% set displayColumn = AdvertsList.displayColumn %}
 {% set noRecordsMessage = AdvertsList.noRecordsMessage %}
 {% set detailsPage = AdvertsList.detailsPage %}
@@ -88,15 +110,11 @@ security = "all"
 {% set detailsUrlParameter = AdvertsList.detailsUrlParameter %}
 
 
+
 <ul class="record-list">
-  {% for record in records %}
-
-  {% if record.category == 'on-ona' and record.type != 'xvip' %}
-
+  {% for record in records if record.category == 'on-ona' and record.state == 'on' and record.type != 'xvip' %}
   <li class="{% if record.type == 'vip' %} vip {% elseif record.type == 'basic' %} basic {% endif %}">
-    <div id="{{ record.id }}" class="sms">
-      <!-- Время добавления объявления -->
-
+    <div id="{{ record.id }}" class="record">
       {% if record.type == 'vip' %}
       <img src="{{ 'assets/images/vip.png'|theme }}" alt="vip" class="id">
       {% endif %}
@@ -104,15 +122,12 @@ security = "all"
       <span class="timehead">
         {{ record.created_at|date('d-m-Y H:i') }}
       </span>
+      <!-- Когда создано -->
 
-      <!-- <span class="views">0</span> -->
-      <!-- /.views -->
-
-      <!-- Текст объявления -->
-      <div class="sms__text">
+      <div class="record__text">
         {{ record.text|raw }}
       </div>
-
+      <!-- Текст объявления -->
 
       {% if record.image1 %}
       <div class="advert__imgs-wrap">
@@ -127,14 +142,45 @@ security = "all"
 
       </div>
       {% endif %}
+      <!-- Изображения к объявлению -->
 
     </div>
+    <!-- /.record -->
   </li>
-  {% endif %}
+  <!-- /.vip ? /.basic -->
 
 
   {% else %}
-  <li class="advert-none">{{ noRecordsMessage }}</li>
+  <li class="alert alert-danger advert-none">
+    <p>{{ noRecordsMessage }}</p>
+  </li>
+  <!-- /.advert-none -->
+  {% endfor %}
+</ul>
+<!-- /.record-list -->
+
+
+{% if records.lastPage > 1 %}
+<ul class="pagination">
+  {% if records.currentPage > 1 %}
+  <li class="pagination__item">
+    <a class="pagination__prev"
+      href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Назад</a>
+  </li>
+  {% endif %}
+
+  {% for page in 1..records.lastPage %}
+  <li class="pagination__item {{ records.currentPage == page ? 'active' : null }}">
+    <a class="pagination__link" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+  </li>
   {% endfor %}
 
-</ul>";s:4:"code";N;s:5:"title";s:80:"Смс объявления парней, которые ищут девушек";s:2:"h1";s:36:"Парень ищет девушку";s:3:"url";s:18:"/categories/on-ona";s:6:"layout";s:6:"advert";s:4:"attr";s:6:"on-ona";s:11:"description";s:36:"Парень ищет девушку";s:9:"is_hidden";s:1:"0";s:23:"builderList AdvertsList";a:12:{s:10:"modelClass";s:32:"Grekov\AdvertsList\Models\Advert";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:85:"Здесь пока нет объявлений. Добавьте его первым";s:11:"detailsPage";s:1:"-";s:16:"detailsKeyColumn";s:2:"id";s:19:"detailsUrlParameter";s:2:"id";s:14:"recordsPerPage";s:2:"50";s:10:"pageNumber";s:11:"{{ :page }}";s:10:"sortColumn";s:4:"type";s:13:"sortDirection";s:4:"desc";}s:7:"session";a:1:{s:8:"security";s:3:"all";}}}
+  {% if records.lastPage > records.currentPage %}
+  <li class="pagination__item">
+    <a class="pagination__next"
+      href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Вперёд &rarr;</a>
+  </li>
+  {% endif %}
+</ul>
+{% endif %}
+<!-- Пагинация -->";s:4:"code";N;s:5:"title";s:56:"Объявления: парни ищут девушек";s:3:"url";s:25:"/categories/on-ona/:page?";s:6:"layout";s:6:"advert";s:11:"description";s:36:"Парень ищет девушку";s:9:"is_hidden";s:1:"0";s:23:"builderList AdvertsList";a:12:{s:10:"modelClass";s:32:"Grekov\AdvertsList\Models\Advert";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:85:"Здесь пока нет объявлений. Добавьте его первым";s:11:"detailsPage";s:1:"-";s:16:"detailsKeyColumn";s:2:"id";s:19:"detailsUrlParameter";s:2:"id";s:14:"recordsPerPage";s:2:"50";s:10:"pageNumber";s:11:"{{ :page }}";s:10:"sortColumn";s:4:"type";s:13:"sortDirection";s:4:"desc";}s:7:"session";a:1:{s:8:"security";s:3:"all";}}}

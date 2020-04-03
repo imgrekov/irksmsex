@@ -112,142 +112,64 @@ class __TwigTemplate_60daa6a3e3287acb4832be96ddadeae70aa2bd10172c5876f6c7d89d777
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("adverts/add-advert"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 39
-        echo "
-\t<ul class=\"xvip-record\">
-\t\t";
-        // line 41
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["records"] ?? null));
-        foreach ($context['_seq'] as $context["_key"] => $context["record"]) {
-            if (((twig_get_attribute($this->env, $this->source, $context["record"], "type", [], "any", false, false, false, 41) == "xvip") && (twig_get_attribute($this->env, $this->source, $context["record"], "category", [], "any", false, false, false, 41) == twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 41), "attr", [], "any", false, false, false, 41)))) {
-                // line 42
-                echo "
-\t\t<li class=\"xvip-record-item\">
-\t\t\t<div id=\"";
-                // line 44
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "id", [], "any", false, false, false, 44), "html", null, true);
-                echo "\" class=\"sms\">
-\t\t\t\t<!-- Время добавления объявления -->
-
-
-\t\t\t\t<span class=\"timehead\">
-\t\t\t\t\t";
-                // line 49
-                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "created_at", [], "any", false, false, false, 49), "d-m-Y H:i"), "html", null, true);
-                echo "
-\t\t\t\t</span>
-
-\t\t\t\t<!-- <span class=\"views\">0</span> -->
-\t\t\t\t<!-- /.views -->
-
-\t\t\t\t<!-- Текст объявления -->
-\t\t\t\t<div class=\"sms__text\">
-\t\t\t\t\t";
-                // line 57
-                echo twig_get_attribute($this->env, $this->source, $context["record"], "text", [], "any", false, false, false, 57);
-                echo "
-\t\t\t\t</div>
-
-
-\t\t\t\t";
-                // line 61
-                if (twig_get_attribute($this->env, $this->source, $context["record"], "image1", [], "any", false, false, false, 61)) {
-                    // line 62
-                    echo "\t\t\t\t<div class=\"advert__imgs-wrap\">
-\t\t\t\t\t<div class=\"advert__image\"><img src=\"";
-                    // line 63
-                    echo $this->extensions['System\Twig\Extension']->mediaFilter(twig_get_attribute($this->env, $this->source, $context["record"], "image1", [], "any", false, false, false, 63));
-                    echo "\" alt=\"Фото1\"></div>
-
-\t\t\t\t\t";
-                    // line 65
-                    if (twig_get_attribute($this->env, $this->source, $context["record"], "image2", [], "any", false, false, false, 65)) {
-                        // line 66
-                        echo "\t\t\t\t\t<div class=\"advert__image\"><img src=\"";
-                        echo $this->extensions['System\Twig\Extension']->mediaFilter(twig_get_attribute($this->env, $this->source, $context["record"], "image2", [], "any", false, false, false, 66));
-                        echo "\" alt=\"Фото2\"></div>
-\t\t\t\t\t";
-                    }
-                    // line 68
-                    echo "\t\t\t\t\t";
-                    if (twig_get_attribute($this->env, $this->source, $context["record"], "image3", [], "any", false, false, false, 68)) {
-                        // line 69
-                        echo "\t\t\t\t\t<div class=\"advert__image\"><img src=\"";
-                        echo $this->extensions['System\Twig\Extension']->mediaFilter(twig_get_attribute($this->env, $this->source, $context["record"], "image3", [], "any", false, false, false, 69));
-                        echo "\" alt=\"Фото3\"></div>
-\t\t\t\t\t";
-                    }
-                    // line 71
-                    echo "
-\t\t\t\t</div>
-\t\t\t\t";
-                }
-                // line 74
-                echo "
-
-\t\t\t</div>
-\t\t</li>
-
-\t\t";
-            }
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 80
-        echo "
-\t</ul>
-
+        echo "\t
 \t";
-        // line 83
+        // line 40
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("adverts/xvip-record"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 41
+        echo "
+\t";
+        // line 42
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("adverts/title"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 84
+        // line 43
         echo "
 \t";
-        // line 85
+        // line 44
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("adverts/tohome"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 86
+        // line 45
         echo "
 \t<div class=\"adverts-list\">
 \t\t";
-        // line 88
+        // line 47
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 89
+        // line 48
         echo "\t</div>
 
 \t";
-        // line 91
+        // line 50
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 92
+        // line 51
         echo "
-  <!-- Версия jquery — 3.3.1 -->
-  <script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>
+\t<!-- Версия jquery — 3.3.1 -->
+\t<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>
 
-  <!-- Popper.js -->
-  <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\"
-    integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\">
-  </script>
+\t<!-- Popper.js -->
+\t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\"
+\t\tintegrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\">
+\t</script>
 
-  <!-- Bootstrap-4.4.1.js -->
-  <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\"
-    integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\">
-  </script>
+\t<!-- Bootstrap-4.4.1.js -->
+\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\"
+\t\tintegrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\">
+\t</script>
 
-  <!-- My scripts -->
-  <script src=\"";
-        // line 107
+\t<!-- My scripts -->
+\t<script src=\"";
+        // line 66
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/app.js");
         echo "\"></script>
 
-  <!-- OctoberCMS scripts -->
-  ";
-        // line 110
+\t<!-- OctoberCMS scripts -->
+\t";
+        // line 69
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -258,12 +180,12 @@ class __TwigTemplate_60daa6a3e3287acb4832be96ddadeae70aa2bd10172c5876f6c7d89d777
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 111
-        echo "  ";
+        // line 70
+        echo "\t";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 112
-        echo "  
+        // line 71
+        echo "
 </body>
 
 </html>";
@@ -281,7 +203,7 @@ class __TwigTemplate_60daa6a3e3287acb4832be96ddadeae70aa2bd10172c5876f6c7d89d777
 
     public function getDebugInfo()
     {
-        return array (  266 => 112,  262 => 111,  251 => 110,  245 => 107,  228 => 92,  224 => 91,  220 => 89,  218 => 88,  214 => 86,  210 => 85,  207 => 84,  203 => 83,  198 => 80,  186 => 74,  181 => 71,  175 => 69,  172 => 68,  166 => 66,  164 => 65,  159 => 63,  156 => 62,  154 => 61,  147 => 57,  136 => 49,  128 => 44,  124 => 42,  119 => 41,  115 => 39,  111 => 38,  108 => 37,  104 => 36,  101 => 35,  97 => 34,  88 => 28,  84 => 27,  80 => 26,  75 => 24,  69 => 20,  66 => 19,  56 => 11,  52 => 9,  46 => 7,  44 => 6,  37 => 1,);
+        return array (  188 => 71,  184 => 70,  173 => 69,  167 => 66,  150 => 51,  146 => 50,  142 => 48,  140 => 47,  136 => 45,  132 => 44,  129 => 43,  125 => 42,  122 => 41,  118 => 40,  115 => 39,  111 => 38,  108 => 37,  104 => 36,  101 => 35,  97 => 34,  88 => 28,  84 => 27,  80 => 26,  75 => 24,  69 => 20,  66 => 19,  56 => 11,  52 => 9,  46 => 7,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -324,49 +246,8 @@ class __TwigTemplate_60daa6a3e3287acb4832be96ddadeae70aa2bd10172c5876f6c7d89d777
 \t{% partial 'header' %}
 
 \t{% partial 'adverts/add-advert' %}
-
-\t<ul class=\"xvip-record\">
-\t\t{% for record in records if record.type == 'xvip' and record.category == this.page.attr %}
-
-\t\t<li class=\"xvip-record-item\">
-\t\t\t<div id=\"{{ record.id }}\" class=\"sms\">
-\t\t\t\t<!-- Время добавления объявления -->
-
-
-\t\t\t\t<span class=\"timehead\">
-\t\t\t\t\t{{ record.created_at|date('d-m-Y H:i') }}
-\t\t\t\t</span>
-
-\t\t\t\t<!-- <span class=\"views\">0</span> -->
-\t\t\t\t<!-- /.views -->
-
-\t\t\t\t<!-- Текст объявления -->
-\t\t\t\t<div class=\"sms__text\">
-\t\t\t\t\t{{ record.text|raw }}
-\t\t\t\t</div>
-
-
-\t\t\t\t{% if record.image1 %}
-\t\t\t\t<div class=\"advert__imgs-wrap\">
-\t\t\t\t\t<div class=\"advert__image\"><img src=\"{{ record.image1|media }}\" alt=\"Фото1\"></div>
-
-\t\t\t\t\t{% if record.image2 %}
-\t\t\t\t\t<div class=\"advert__image\"><img src=\"{{ record.image2|media }}\" alt=\"Фото2\"></div>
-\t\t\t\t\t{% endif %}
-\t\t\t\t\t{% if record.image3 %}
-\t\t\t\t\t<div class=\"advert__image\"><img src=\"{{ record.image3|media }}\" alt=\"Фото3\"></div>
-\t\t\t\t\t{% endif %}
-
-\t\t\t\t</div>
-\t\t\t\t{% endif %}
-
-
-\t\t\t</div>
-\t\t</li>
-
-\t\t{% endfor %}
-
-\t</ul>
+\t
+\t{% partial 'adverts/xvip-record' %}
 
 \t{% partial 'adverts/title' %}
 
@@ -378,26 +259,26 @@ class __TwigTemplate_60daa6a3e3287acb4832be96ddadeae70aa2bd10172c5876f6c7d89d777
 
 \t{% partial 'footer' %}
 
-  <!-- Версия jquery — 3.3.1 -->
-  <script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>
+\t<!-- Версия jquery — 3.3.1 -->
+\t<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>
 
-  <!-- Popper.js -->
-  <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\"
-    integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\">
-  </script>
+\t<!-- Popper.js -->
+\t<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\"
+\t\tintegrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\">
+\t</script>
 
-  <!-- Bootstrap-4.4.1.js -->
-  <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\"
-    integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\">
-  </script>
+\t<!-- Bootstrap-4.4.1.js -->
+\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\"
+\t\tintegrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\">
+\t</script>
 
-  <!-- My scripts -->
-  <script src=\"{{ 'assets/js/app.js'|theme }}\"></script>
+\t<!-- My scripts -->
+\t<script src=\"{{ 'assets/js/app.js'|theme }}\"></script>
 
-  <!-- OctoberCMS scripts -->
-  {% framework extras %}
-  {% scripts %}
-  
+\t<!-- OctoberCMS scripts -->
+\t{% framework extras %}
+\t{% scripts %}
+
 </body>
 
 </html>", "D:\\OSPanel\\domains\\irksmsex.ru/themes/irksmsex/layouts/advert.htm", "");

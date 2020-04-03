@@ -1,0 +1,34 @@
+<ul class="xvip-record">
+  {% for record in records if record.type == 'xvip' and record.category == this.page.attr %}
+
+  <li class="xvip-record-item">
+    <div id="{{ record.id }}" class="record xvip">
+
+      <span class="timehead">
+        {{ record.created_at|date('d-m-Y H:i') }}
+      </span>
+      <!-- Когда создано -->
+
+      <div class="record__text">
+        {{ record.text|raw }}
+      </div>
+      <!-- Текст объявления -->
+
+      {% if record.image1 %}
+      <div class="advert__imgs-wrap">
+        <div class="advert__image"><img src="{{ record.image1|media }}" alt="Фото1"></div>
+        {% if record.image2 %}
+        <div class="advert__image"><img src="{{ record.image2|media }}" alt="Фото2"></div>
+        {% endif %}
+        {% if record.image3 %}
+        <div class="advert__image"><img src="{{ record.image3|media }}" alt="Фото3"></div>
+        {% endif %}
+      </div>
+      {% endif %}
+
+    </div>
+  </li>
+
+  {% endfor %}
+
+</ul>

@@ -37,49 +37,8 @@
 	{% partial 'header' %}
 
 	{% partial 'adverts/add-advert' %}
-
-	<ul class="xvip-record">
-		{% for record in records if record.type == 'xvip' and record.category == this.page.attr %}
-
-		<li class="xvip-record-item">
-			<div id="{{ record.id }}" class="sms">
-				<!-- Время добавления объявления -->
-
-
-				<span class="timehead">
-					{{ record.created_at|date('d-m-Y H:i') }}
-				</span>
-
-				<!-- <span class="views">0</span> -->
-				<!-- /.views -->
-
-				<!-- Текст объявления -->
-				<div class="sms__text">
-					{{ record.text|raw }}
-				</div>
-
-
-				{% if record.image1 %}
-				<div class="advert__imgs-wrap">
-					<div class="advert__image"><img src="{{ record.image1|media }}" alt="Фото1"></div>
-
-					{% if record.image2 %}
-					<div class="advert__image"><img src="{{ record.image2|media }}" alt="Фото2"></div>
-					{% endif %}
-					{% if record.image3 %}
-					<div class="advert__image"><img src="{{ record.image3|media }}" alt="Фото3"></div>
-					{% endif %}
-
-				</div>
-				{% endif %}
-
-
-			</div>
-		</li>
-
-		{% endfor %}
-
-	</ul>
+	
+	{% partial 'adverts/xvip-record' %}
 
 	{% partial 'adverts/title' %}
 
@@ -91,26 +50,26 @@
 
 	{% partial 'footer' %}
 
-  <!-- Версия jquery — 3.3.1 -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<!-- Версия jquery — 3.3.1 -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-  <!-- Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
+	<!-- Popper.js -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
 
-  <!-- Bootstrap-4.4.1.js -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
+	<!-- Bootstrap-4.4.1.js -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
 
-  <!-- My scripts -->
-  <script src="{{ 'assets/js/app.js'|theme }}"></script>
+	<!-- My scripts -->
+	<script src="{{ 'assets/js/app.js'|theme }}"></script>
 
-  <!-- OctoberCMS scripts -->
-  {% framework extras %}
-  {% scripts %}
-  
+	<!-- OctoberCMS scripts -->
+	{% framework extras %}
+	{% scripts %}
+
 </body>
 
 </html>

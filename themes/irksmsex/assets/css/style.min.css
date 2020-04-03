@@ -106,9 +106,6 @@ a:active {
 }
 
 
-div.sms1 a {
-  color: #007bff;
-}
 
 
 
@@ -187,26 +184,33 @@ div.sms1 a {
 }
 
 
-div.sms1 {
-  background-color: #abd3ff;
+
+/* div.sms1 {
   text-shadow: 0 1px 3px #666;
   padding: 10px;
-}
+} */
 
-div.sms2 {
+/* div.sms1 a {
+  color: #007bff;
+} */
+
+/* div.sms2 {
   background-color: #D6D6D6;
   text-align: center;
   text-shadow: 0 1px 3px #666;
   font-size: 18px
-}
+} */
 
 div.sms3 {
   background-color: #abd3ff;
   text-align: center;
-  padding: 10px 0;
+  padding: 0.625rem 0;
 }
 
-
+ul>li>.record {
+  padding: 10px 20px;
+  background-color: #fafafa;
+}
 
 .record-list>li:first-child {
   border-top: 1px solid #111111;
@@ -216,10 +220,14 @@ div.sms3 {
   border-bottom: 1px solid #111111;
 }
 
-.xvip-record .xvip-record-item {
+
+/* .xvip-record {} */
+
+.xvip-record-item {
   border-bottom: 1px solid #111111;
 }
 
+/* .xvip {} */
 
 
 .advert-none {
@@ -238,6 +246,57 @@ div.sms3 {
   color: rgba(0, 123, 255, 0.8);
   cursor: pointer;
 }
+
+
+.pagination {
+  padding: 10px;
+  background-color: #fafafa;
+  border-radius: 0;
+  align-items: center;
+}
+
+.pagination .active .pagination__link {
+  background-color: #00ce19;
+  color: #eeeeee;
+  text-shadow: 0 0 2px #000000b3;
+}
+
+.pagination__item {
+  padding: 0 0.25rem;
+}
+
+.pagination__link {
+  display: block;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #111111;
+  background-color: #38c7ff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+.pagination__link:hover,
+.pagination__prev:hover,
+.pagination__next:hover {
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+.pagination__prev,
+.pagination__next {
+  border: 1px solid #909090;
+  padding: 0.375em;
+  border-radius: 0.375em;
+  color: #1d1d1d;
+  transition: all 0.2s linear;
+  font-size: 14px;
+}
+
 
 .advert__imgs-wrap {
   max-width: 100%;
@@ -546,9 +605,7 @@ li.gold {
   background-position-y: 50%;
 }
 
-ul>li>.sms {
-  padding: 10px 20px
-}
+
 
 .main {
   background-color: #fafafa;
@@ -871,6 +928,7 @@ ul>li>.sms {
   transform: translateX(-50%);
   z-index: 5;
 }
+
 /* END ajax-error */
 
 
