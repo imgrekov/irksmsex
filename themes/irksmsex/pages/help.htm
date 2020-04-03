@@ -6,131 +6,158 @@ is_hidden = 0
 [session]
 security = "all"
 ==
-<div class="help-block">
-	<p class="help-block__title">Рубрика: Смс знакомства > Парень ищет девушку</p>
-
-	<a class="help-block__line" href="#simple">
-		Как разместить обычное объявление?
-	</a>
-
-	<a class="help-block__line" href="#vip">
-		Как разместить VIP объявление?
-	</a>
-
-	<a class="help-block__line" href="#pravila">
-		Правила публикаций объявлений <span>&darr;</span>
-	</a>
-</div>
 
 <div class="sms3">
 	<a class="btn btn-light btn-sm" href="{{ 'home'|page }}">К объявлениям</a>
 </div>
 
-<div class="title">
-	<h2 id="simple">Как разместить обычное объявление?</h2>
+{% partial 'second/help-title' text = "Описание элементов" %}
+
+<div class="help-desc">
+	<h3 class="text-center mt-3 profile-hero__title">Типы объявлений</h3>
+	<ul class="help-page-list">
+
+		<li class="help-page-item">
+			<h4 class="help-desc__title">Basic</h4>
+			<!-- /.help-desc__title -->
+			<p class="help-desc__desc">Обычное объявление</p>
+			<!-- /.help-desc__desc -->
+			<img src="{{ 'assets/images/help-page/basic.jpg'|theme }}" alt="Пример обычного объявления"
+				class="help-desc__image">
+		</li>
+		<!-- /.help-page-item -->
+
+		<li class="help-page-item">
+			<h4 class="help-desc__title">VIP</h4>
+			<!-- /.help-desc__title -->
+			<p class="help-desc__desc">Вип объявление. Оно находится выше обычных</p>
+			<!-- /.help-desc__desc -->
+			<img src="{{ 'assets/images/help-page/vip.jpg'|theme }}" alt="Пример vip объявления" class="help-desc__image">
+		</li>
+		<!-- /.help-page-item -->
+
+		<li class="help-page-item">
+			<h5 class="help-desc__title">xVip</h3>
+			<!-- /.help-desc__title -->
+			<p class="help-desc__desc">Назодится в самом верху страницы. Существовать может только одно объявление такого типа</p>
+			<!-- /.help-desc__desc -->
+			<img src="{{ 'assets/images/help-page/xvip.jpg'|theme }}" alt="Пример объявления типа xvip" class="help-desc__image">
+		</li>
+		<!-- /.help-page-item -->
+
+		<li class="help-page-item">
+			<h4 class="help-desc__title">Экстра выделение</h4>
+			<!-- /.help-desc__title -->
+			<p class="help-desc__desc">Экстра выделение</p>
+			<!-- /.help-desc__desc -->
+			<img src="{{ 'assets/images/help-page/highlight.jpg'|theme }}" alt="Пример экстра выделенного объявления" class="help-desc__image">
+		</li>
+		<!-- /.help-page-item -->
+
+	</ul>
+	<!-- /.help-page-list -->
 </div>
+<!-- /.help-desc -->
 
-<div class="content">
+{% partial 'second/help-title' text = "Как разместить объявление?" %}
 
-	<p class="help-desc">
-		Для размещения обычного объявления, отправьте смс сообщение:
-		<br>
-		<span class="bfs15">
-			vot1</span>&nbsp;(пробел)&nbsp;<b>сообщение</b> на&nbsp;номер&nbsp;<span
-			class="bfs15">9009</span>&nbsp;смс&nbsp;сообщения (10 рублей)
-	</p>
+<div class="help-instruction">
+	<ol class="add-advert">
+		
+		<li class="add-advert__item">
+			<h5>Зарегистрируйтесь</h5>
+			<img src="{{ 'assets/images/help-page/1-register.jpg'|theme }}" alt="Страница регистрации">
+		</li>
+		<!-- /.add-advert__item -->
+		
+		<li class="add-advert__item">
+			<h5>Создайте объявление</h5>
+			<p>Это можно сделать перейдя по ссылке из личного кабинета</p>
+			<img src="{{ 'assets/images/help-page/2-lk.jpg'|theme }}" alt="Личный кабинет без объявлений">
+			<hr>
+			<img src="{{ 'assets/images/help-page/2-create.jpg'|theme }}" alt="Страница «Создать объявление»">
+		</li>
+		<!-- /.add-advert__item -->
 
-	<div style="text-align: center;padding: 5px;">
-		<div class="help">
-			<img src="{{ 'assets/images/example/sms_example11.jpg'|theme }}">
-		</div>
+		<li class="add-advert__item">
+			<h5>Активируйте объявление</h5>
+			<p>Это делается на странице редактирования объявления. Туда можно попасть из личного кабинета</p>
+			<img src="{{ 'assets/images/help-page/3-advert.jpg'|theme }}" alt="Объявление в личном кабинете">
+			<hr>
+			<img src="{{ 'assets/images/help-page/3-activate.jpg'|theme }}" alt="Страница «Редактировать объявление»">
+		</li>
+		<!-- /.add-advert__item -->
 
-		<div class="help">
-			<img src="{{ 'assets/images/example/sms_example21.jpg'|theme }}">
-		</div>
-	</div>
+		<li class="add-advert__item">
+			<h5>Посмотрите на него</h5>
+			<p>Для этого перейдите на страницу со всеми объявлениями выбранной категории</p>
+			<img src="{{ 'assets/images/help-page/4-look.jpg'|theme }}" alt="Главная страница">
+		</li>
+		<!-- /.add-advert__item -->
+	
+	</ol>
+	<!-- /.add-advert -->
 </div>
+<!-- /.help-desc -->
+
+{% partial 'second/help-title' text = "Правила сервиса" %}
 
 
-<div class="title">
-	<h2 id="vip">Как разместить VIP объявление</h2>
-</div>
+<div class="rules">
+	<ol class="rules-list">
+		<li class="rules-item">
+			<p>
+				Администрация сервиса не&nbsp;несёт ответственности за&nbsp;достоверность информации и&nbsp;содержание
+				объявлений.
+			</p>
+		</li>
+		<!-- /.rules-item -->
 
-<div class="content">
-	<div class="help-desc">
-		<p>VIP объявление отличается от&nbsp;обычного объявления тем, что держится
-			в&nbsp;<b>первых</b> позициях на&nbsp;<b>главной странице</b>
-			рубрики&nbsp;течение 2-х&nbsp;суток&nbsp;обозначается&nbsp;значком&nbsp;
-			<img src="{{ 'assets/images/example/vip2.png'|theme }}" alt="ТОП сообщение">.
-		</p>
-		<p>Ваше объявление не&nbsp;останется незамеченным!</p>
-		<p>Для размещения&nbsp;объявления отправьте смс&nbsp;сообщение:</p>
-		<span class="bfs15">votvip1</span>&nbsp;(пробел)&nbsp;<b>сообщение</b>
-		на&nbsp;номер&nbsp;<span class="bfs15">9009</span>&nbsp;смс&nbsp;сообщения
-		(~90 рублей)
-	</div>
+		<li class="rules-item">
+			<p>
+				Отправитель объявления полностью отвечает перед третьими лицами за&nbsp;достоверность информации
+				в&nbsp;размещаемых объявлениях.
+			</p>
+		</li>
+		<!-- /.rules-item -->
 
-	<div style="text-align: center;padding: 5px;">
-		<div class="help">
-			<img src="{{ 'assets/images/example/vip_example11.jpg'|theme }}">
-		</div>
+		<li class="rules-item">
+			<p>Не&nbsp;принимаются к&nbsp;публикации объявления: содержащие рекламу иных сайтов, платных коротких номеров,
+				нецензурные выражения, а также безграмотные, бессмысленные, оскорбительные, клеветнические и мошеннические.
+			</p>
+		</li>
+		<!-- /.rules-item -->
 
-		<div class="help">
-			<img src="{{ 'assets/images/example/vip_example21.jpg'|theme }}">
-		</div>
+		<li class="rules-item">
+			<p>Запрещены к&nbsp;публикации объявления, комментирующие действия администрации сервиса.</p>
+		</li>
+		<!-- /.rules-item -->
+
+		<li class="rules-item">
+			<p>Запрещены к&nbsp;публикации фотографии женских и&nbsp;мужских гениталий.</p>
+		</li>
+		<!-- /.rules-item -->
+	</ol>
+	<!-- /.rules-list -->
 
 
-	</div>
-	<div style="text-align: center;padding: 5px;">
-		<div class="help">
-			<p>Пример отображения VIP объявления:</p><img src="{{ 'assets/images/example/vipsample.jpg'|theme }}">
-		</div>
-	</div>
-</div>
+	<hr>
 
-<div class="title">
-	<h2 id="pravila">Правила публикации объявлений</h2>
-</div>
-
-<div class="content">
-	<div class="red">
-		<ol class="rules">
-			<li>
-				<p>
-					Администрация сервиса не&nbsp;несёт ответственности за&nbsp;достоверность информации и&nbsp;содержание
-					объявлений.
-				</p>
-			</li>
-			<li>
-				<p>
-					Отправитель объявления полностью отвечает перед третьими лицами за&nbsp;достоверность информации
-					в&nbsp;размещаемых объявлениях.
-				</p>
-			</li>
-			<li>
-				<p>Не&nbsp;принимаются к&nbsp;публикации объявления: содержащие рекламу иных сайтов, платных коротких номеров,
-					нецензурные выражения, а также безграмотные, бессмысленные, оскорбительные, клеветнические и мошеннические.
-				</p>
-			</li>
-			<li>
-				<p>Запрещены к&nbsp;публикации объявления, комментирующие действия администрации сервиса.</p>
-			</li>
-			<li>
-				<p>Запрещены к&nbsp;публикации фотографии женских и&nbsp;мужских гениталий.</p>
-			</li>
-		</ol>
-
-		<hr>
-
-		<div class="rules-desc">В&nbsp;вышеперечисленных случаях администрация сервиса оставляет за&nbsp;собой право
-			на&nbsp;свое усмотрение
+	<div class="rules-desc">
+		<p>
+			В&nbsp;вышеперечисленных случаях администрация сервиса оставляет за&nbsp;собой право на&nbsp;свое усмотрение
 			удалить
-			объявление или его&nbsp;часть, проводить модерацию объявлений, такую как: смена рубрики &nbsp;соответствии
-			со&nbsp;смыслом
-			объявления, внесение изменений в&nbsp;текст объявления &nbsp;целью приведения его в&nbsp;соответствие
-			с&nbsp;правилами
-			публикации. Администрация сервиса оставляет за&nbsp;собой право <strong>блокировать телефонные номера</strong>,
-			с&nbsp;которых размещаются объявления, постоянно нарушающие правила публикации смс&nbsp;объявлений.</div>
-
+			объявление или его&nbsp;часть, проводить модерацию объявлений: смена рубрики &nbsp;соответствии
+			со&nbsp;смыслом объявления, внесение изменений в&nbsp;текст объявления &nbsp;целью приведения его
+			в&nbsp;соответствие
+			с&nbsp;правилами публикации.
+		</p>
+		<p>
+			Администрация сервиса оставляет за&nbsp;собой право <strong>блокировать аккаунты</strong> постоянно нарушающие
+			правила, с&nbsp;которых размещаются объявления.
+		</p>
 	</div>
+	<!-- /.rules-desc -->
+
 </div>
+<!-- /.rules -->

@@ -36,9 +36,7 @@ class __TwigTemplate_31eddfeaaece4da53c128ca4a36bd3b0b9d20d04742a0c35c1a69682211
         // line 1
         echo "<footer class=\"footer\">
   <div class=\"admin\">Администратор: <b>info@irksmsex.ru</b></div>
-  <div class=\"copy\">
-    <div>Знакомства в Иркутске | Объявления по смс</div>
-  </div>
+  <p class=\"copy\">Знакомства в Иркутске</p>
 </footer>";
     }
 
@@ -56,9 +54,7 @@ class __TwigTemplate_31eddfeaaece4da53c128ca4a36bd3b0b9d20d04742a0c35c1a69682211
     {
         return new Source("<footer class=\"footer\">
   <div class=\"admin\">Администратор: <b>info@irksmsex.ru</b></div>
-  <div class=\"copy\">
-    <div>Знакомства в Иркутске | Объявления по смс</div>
-  </div>
+  <p class=\"copy\">Знакомства в Иркутске</p>
 </footer>", "D:\\OSPanel\\domains\\irksmsex.ru/themes/irksmsex/partials/second/footer-home.htm", "");
     }
 }

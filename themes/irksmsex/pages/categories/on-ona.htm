@@ -33,8 +33,8 @@ security = "all"
 
 <ul class="record-list">
   {% for record in records if record.category == 'on-ona' and record.state == 'on' and record.type != 'xvip' %}
-  <li class="{% if record.type == 'vip' %} vip {% elseif record.type == 'basic' %} basic {% endif %}">
-    <div id="{{ record.id }}" class="record">
+  <li class="{% if record.type == 'vip' %}vip{% elseif record.type == 'basic' %}basic{% endif %}">
+    <div id="{{ record.id }}" class="{% if record.highlight == 'on' %}highlight{% endif %} record">
       {% if record.type == 'vip' %}
       <img src="{{ 'assets/images/vip.png'|theme }}" alt="vip" class="id">
       {% endif %}
@@ -66,8 +66,9 @@ security = "all"
 
     </div>
     <!-- /.record -->
+
   </li>
-  <!-- /.vip ? /.basic -->
+
 
 
   {% else %}

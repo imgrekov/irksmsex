@@ -1,19 +1,15 @@
-1585910737a:1:{s:10:"footer.htm";a:5:{s:8:"fileName";s:10:"footer.htm";s:7:"content";s:372:"<div class="titlefoot">
+1585929068a:1:{s:10:"footer.htm";a:5:{s:8:"fileName";s:10:"footer.htm";s:7:"content";s:312:"<div class="titlefoot">
   <a rel='nofollow' class="btn btn-light btn-sm" href="{{ 'home'|page }}">На главную</a>
 </div>
 
 <footer class="footer">
   <div class="admin">Администратор: <b>info@irksmsex.ru</b></div>
-  <div class="copy">
-    <div>Знакомства в Иркутске | Объявления по смс</div>
-  </div>
-</footer>";s:5:"mtime";i:1584782134;s:6:"markup";s:372:"<div class="titlefoot">
+  <p class="copy">Знакомства в Иркутске</p>
+</footer>";s:5:"mtime";i:1585913316;s:6:"markup";s:312:"<div class="titlefoot">
   <a rel='nofollow' class="btn btn-light btn-sm" href="{{ 'home'|page }}">На главную</a>
 </div>
 
 <footer class="footer">
   <div class="admin">Администратор: <b>info@irksmsex.ru</b></div>
-  <div class="copy">
-    <div>Знакомства в Иркутске | Объявления по смс</div>
-  </div>
+  <p class="copy">Знакомства в Иркутске</p>
 </footer>";s:4:"code";N;}}

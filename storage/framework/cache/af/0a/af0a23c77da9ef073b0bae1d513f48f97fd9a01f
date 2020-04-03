@@ -1,4 +1,4 @@
-1585910737a:1:{s:22:"advert/edt-success.htm";a:10:{s:8:"fileName";s:22:"advert/edt-success.htm";s:7:"content";s:438:"title = "Объявление изменено успешно"
+1585929068a:1:{s:22:"advert/edt-success.htm";a:10:{s:8:"fileName";s:22:"advert/edt-success.htm";s:7:"content";s:438:"title = "Объявление изменено успешно"
 url = "/advert/edit-success"
 layout = "index"
 is_hidden = 0
@@ -10,7 +10,7 @@ security = "all"
   partial 'adverts/success'
   title = "Объявление изменено успешно"
   text = "Посмотри в личном кабинете. Если вы активировали объявление, оно появится в общем списке"
-%}";s:5:"mtime";i:1585216390;s:6:"markup";s:276:"{%
+%}";s:5:"mtime";i:1585923793;s:6:"markup";s:276:"{%
   partial 'adverts/success'
   title = "Объявление изменено успешно"
   text = "Посмотри в личном кабинете. Если вы активировали объявление, оно появится в общем списке"

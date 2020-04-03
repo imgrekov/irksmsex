@@ -286,16 +286,97 @@ $context["record"], "category", [], "any", false, false, false, 115) == "work"))
         <p>";
             // line 138
             echo twig_escape_filter($this->env, ($context["noRecordsMessage"] ?? null), "html", null, true);
-            echo " <span data-toggle=\"tooltip\" data-placement=\"right\" title=\"Самое время создать\">&uarr;</span></p>
+            echo " <span data-toggle=\"tooltip\" data-placement=\"right\"
+            title=\"Самое время создать\">&uarr;</span></p>
       </li>
       ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 141
+        // line 142
+        echo "
+      <li class=\"profile-hero__item\">
+
+        <div class=\"row\">
+          <div class=\"col-sm-8\">
+
+            <div class=\"profile-hero__info\">
+              <span class=\"timehead\">
+                ";
+        // line 150
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "created_at", [], "any", false, false, false, 150), "Создано d-m-Y, в H:i"), "html", null, true);
+        echo "
+              </span>
+              <!-- /.timehead -->
+              <p class=\"profile-hero__item-text\">
+                Это базовое объявлнение. Оно не из БД.
+              </p>
+              <!-- /.profile-hero__item-text -->
+
+              <div class=\"advert__imgs-wrap\">
+                <div class=\"advert__image\"><img src=\"";
+        // line 159
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/test/cat-3.jpg");
+        echo "\" alt=\"Фото3\"></div>
+                <div class=\"advert__image\"><img src=\"";
+        // line 160
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/test/cat-2.jpg");
+        echo "\" alt=\"Фото2\"></div>
+                <div class=\"advert__image\"><img src=\"";
+        // line 161
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/test/cat-4.jpg");
+        echo "\" alt=\"Фото2\"></div>
+              </div> <!-- /.advert__imgs-wrap -->
+
+              <span class=\"profile-hero__id\">ID: *";
+        // line 164
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "id", [], "any", false, false, false, 164), "html", null, true);
+        echo "</span>
+            </div>
+
+
+          </div>
+          <!-- /.col-md-8 -->
+
+          <div class=\"col-sm-4 pos-r\">
+            <div class=\"profile-hero__status\">
+              <p>
+                Объявление <span class=\"badge badge-danger\">неактивно</span> <!-- /.badge-danger -->
+              </p>
+
+              <p>
+                Изображений добавлено: <span class=\"badge badge-primary countimgs\"></span> <!-- /.badge-primary -->
+              </p>
+
+              <p>
+                Категория: <span class=\"state state-category\">Парень ищет девушку</span> <!-- /.state-category -->
+              </p>
+            </div>
+
+            <hr>
+
+            ";
+        // line 188
+        ob_start();
+        // line 189
+        echo "            <a class=\"btn btn-success btn-sm profile-hero__action\"
+              href=\"";
+        // line 190
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter(($context["detailsPage"] ?? null), [($context["detailsUrlParameter"] ?? null) => twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), ($context["detailsKeyColumn"] ?? null), [], "any", false, false, false, 190)]);
+        echo "\">Редактировать&nbsp;объявлнение</a>
+            <!-- /.profile-hero__action -->
+            ";
+        echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
+        // line 193
         echo "
 
+          </div>
+          <!-- /.col-md-4 -->
+        </div>
+        <!-- /.row -->
+
+      </li> <!-- /.profile-hero__item -->
 
     </ul>
     <!-- /.profile-hero__list -->
@@ -318,7 +399,7 @@ $context["record"], "category", [], "any", false, false, false, 115) == "work"))
 
     public function getDebugInfo()
     {
-        return array (  297 => 141,  288 => 138,  285 => 137,  268 => 126,  260 => 120,  256 => 118,  252 => 116,  250 => 115,  247 => 114,  245 => 113,  242 => 112,  240 => 111,  237 => 110,  235 => 109,  232 => 108,  230 => 107,  227 => 106,  225 => 105,  222 => 104,  220 => 103,  217 => 102,  215 => 101,  212 => 100,  210 => 99,  207 => 98,  205 => 97,  202 => 96,  200 => 95,  190 => 87,  186 => 85,  182 => 83,  180 => 82,  175 => 79,  171 => 77,  167 => 75,  165 => 74,  151 => 63,  147 => 61,  142 => 58,  136 => 56,  133 => 55,  127 => 53,  125 => 52,  120 => 50,  117 => 49,  115 => 48,  108 => 44,  105 => 43,  99 => 41,  97 => 40,  89 => 35,  78 => 26,  72 => 25,  57 => 13,  49 => 7,  47 => 6,  45 => 5,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
+        return array (  372 => 193,  366 => 190,  363 => 189,  361 => 188,  334 => 164,  328 => 161,  324 => 160,  320 => 159,  308 => 150,  298 => 142,  288 => 138,  285 => 137,  268 => 126,  260 => 120,  256 => 118,  252 => 116,  250 => 115,  247 => 114,  245 => 113,  242 => 112,  240 => 111,  237 => 110,  235 => 109,  232 => 108,  230 => 107,  227 => 106,  225 => 105,  222 => 104,  220 => 103,  217 => 102,  215 => 101,  212 => 100,  210 => 99,  207 => 98,  205 => 97,  202 => 96,  200 => 95,  190 => 87,  186 => 85,  182 => 83,  180 => 82,  175 => 79,  171 => 77,  167 => 75,  165 => 74,  151 => 63,  147 => 61,  142 => 58,  136 => 56,  133 => 55,  127 => 53,  125 => 52,  120 => 50,  117 => 49,  115 => 48,  108 => 44,  105 => 43,  99 => 41,  97 => 40,  89 => 35,  78 => 26,  72 => 25,  57 => 13,  49 => 7,  47 => 6,  45 => 5,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -460,11 +541,69 @@ $context["record"], "category", [], "any", false, false, false, 115) == "work"))
 
       {% else %}
       <li class=\"alert alert-danger advert-none\">
-        <p>{{ noRecordsMessage }} <span data-toggle=\"tooltip\" data-placement=\"right\" title=\"Самое время создать\">&uarr;</span></p>
+        <p>{{ noRecordsMessage }} <span data-toggle=\"tooltip\" data-placement=\"right\"
+            title=\"Самое время создать\">&uarr;</span></p>
       </li>
       {% endfor %}
 
+      <li class=\"profile-hero__item\">
 
+        <div class=\"row\">
+          <div class=\"col-sm-8\">
+
+            <div class=\"profile-hero__info\">
+              <span class=\"timehead\">
+                {{ record.created_at|date('Создано d-m-Y, в H:i') }}
+              </span>
+              <!-- /.timehead -->
+              <p class=\"profile-hero__item-text\">
+                Это базовое объявлнение. Оно не из БД.
+              </p>
+              <!-- /.profile-hero__item-text -->
+
+              <div class=\"advert__imgs-wrap\">
+                <div class=\"advert__image\"><img src=\"{{ 'assets/images/test/cat-3.jpg'|theme }}\" alt=\"Фото3\"></div>
+                <div class=\"advert__image\"><img src=\"{{ 'assets/images/test/cat-2.jpg'|theme }}\" alt=\"Фото2\"></div>
+                <div class=\"advert__image\"><img src=\"{{ 'assets/images/test/cat-4.jpg'|theme }}\" alt=\"Фото2\"></div>
+              </div> <!-- /.advert__imgs-wrap -->
+
+              <span class=\"profile-hero__id\">ID: *{{record.id}}</span>
+            </div>
+
+
+          </div>
+          <!-- /.col-md-8 -->
+
+          <div class=\"col-sm-4 pos-r\">
+            <div class=\"profile-hero__status\">
+              <p>
+                Объявление <span class=\"badge badge-danger\">неактивно</span> <!-- /.badge-danger -->
+              </p>
+
+              <p>
+                Изображений добавлено: <span class=\"badge badge-primary countimgs\"></span> <!-- /.badge-primary -->
+              </p>
+
+              <p>
+                Категория: <span class=\"state state-category\">Парень ищет девушку</span> <!-- /.state-category -->
+              </p>
+            </div>
+
+            <hr>
+
+            {% spaceless %}
+            <a class=\"btn btn-success btn-sm profile-hero__action\"
+              href=\"{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}\">Редактировать&nbsp;объявлнение</a>
+            <!-- /.profile-hero__action -->
+            {% endspaceless %}
+
+
+          </div>
+          <!-- /.col-md-4 -->
+        </div>
+        <!-- /.row -->
+
+      </li> <!-- /.profile-hero__item -->
 
     </ul>
     <!-- /.profile-hero__list -->

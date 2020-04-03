@@ -43,9 +43,7 @@ class __TwigTemplate_eacaa388eea0c6b4a60ae489b66d7044069581854e718804bf25b86a877
 
 <footer class=\"footer\">
   <div class=\"admin\">Администратор: <b>info@irksmsex.ru</b></div>
-  <div class=\"copy\">
-    <div>Знакомства в Иркутске | Объявления по смс</div>
-  </div>
+  <p class=\"copy\">Знакомства в Иркутске</p>
 </footer>";
     }
 
@@ -72,9 +70,7 @@ class __TwigTemplate_eacaa388eea0c6b4a60ae489b66d7044069581854e718804bf25b86a877
 
 <footer class=\"footer\">
   <div class=\"admin\">Администратор: <b>info@irksmsex.ru</b></div>
-  <div class=\"copy\">
-    <div>Знакомства в Иркутске | Объявления по смс</div>
-  </div>
+  <p class=\"copy\">Знакомства в Иркутске</p>
 </footer>", "D:\\OSPanel\\domains\\irksmsex.ru/themes/irksmsex/partials/footer.htm", "");
     }
 }

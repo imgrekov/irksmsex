@@ -2,14 +2,14 @@
   {% for record in records if record.type == 'xvip' and record.category == this.page.attr %}
 
   <li class="xvip-record-item">
-    <div id="{{ record.id }}" class="record xvip">
+    <div id="{{ record.id }}" class="xvip record">
 
       <span class="timehead">
         {{ record.created_at|date('d-m-Y H:i') }}
       </span>
       <!-- Когда создано -->
 
-      <div class="record__text">
+      <div class="xvip-record__text">
         {{ record.text|raw }}
       </div>
       <!-- Текст объявления -->
