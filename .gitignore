@@ -18,10 +18,6 @@ nginx-ssl.error.log
 php-errors.log
 sftp-config.json
 selenium.php
-storage/cms/
-storage/framework/
-storage/logs/
-storage/temp/
 
 # for netbeans compiler
 nbproject
