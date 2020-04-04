@@ -1,4 +1,4 @@
-1585929612a:1:{s:10:"advert.htm";a:6:{s:8:"fileName";s:10:"advert.htm";s:7:"content";s:2457:"==
+1586004088a:1:{s:10:"advert.htm";a:6:{s:8:"fileName";s:10:"advert.htm";s:7:"content";s:2766:"==
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -19,8 +19,12 @@
 
 	{% styles %}
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	<!-- Bootstrap -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!-- Lightbox Bootstrap css -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
 
 	<link rel="stylesheet" href="{{ 'assets/css/style.min.css'|theme }}">
 	<link rel="apple-touch-icon" type="image/png" sizes="120x120"
@@ -37,12 +41,12 @@
 	{% partial 'header' %}
 
 	{% partial 'adverts/add-advert' %}
-	
+
 	{% partial 'adverts/xvip-record' %}
 
 	{% partial 'adverts/title' %}
 
-	{% partial 'adverts/tohome' %}
+	{% partial 'second/to_home' %}
 
 	<div class="adverts-list">
 		{% page %}
@@ -63,6 +67,9 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 
+  <!-- Lightbox Bootstrap js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+	
 	<!-- My scripts -->
 	<script src="{{ 'assets/js/app.js'|theme }}"></script>
 
@@ -72,7 +79,7 @@
 
 </body>
 
-</html>";s:5:"mtime";i:1585906763;s:6:"markup";s:2453:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1585993200;s:6:"markup";s:2762:"<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -92,8 +99,12 @@
 
 	{% styles %}
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	<!-- Bootstrap -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!-- Lightbox Bootstrap css -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
 
 	<link rel="stylesheet" href="{{ 'assets/css/style.min.css'|theme }}">
 	<link rel="apple-touch-icon" type="image/png" sizes="120x120"
@@ -110,12 +121,12 @@
 	{% partial 'header' %}
 
 	{% partial 'adverts/add-advert' %}
-	
+
 	{% partial 'adverts/xvip-record' %}
 
 	{% partial 'adverts/title' %}
 
-	{% partial 'adverts/tohome' %}
+	{% partial 'second/to_home' %}
 
 	<div class="adverts-list">
 		{% page %}
@@ -136,6 +147,9 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 
+  <!-- Lightbox Bootstrap js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+	
 	<!-- My scripts -->
 	<script src="{{ 'assets/js/app.js'|theme }}"></script>
 

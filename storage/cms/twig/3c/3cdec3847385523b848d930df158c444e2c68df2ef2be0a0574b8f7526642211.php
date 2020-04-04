@@ -34,7 +34,7 @@ class __TwigTemplate_cb3dbf7169d69d1298a0ec6859ea1b1ba1dc5625a4fb940f95c820e8f93
     {
         $macros = $this->macros;
         // line 1
-        echo call_user_func_array($this->env->getFunction('form_ajax')->getCallable(), ["ajax", "onCreateAdvert", ["class" => "pay-form", "id" => "advert-create-form", "redirect" => "/advert/create-success", "data-request-flash" => true]]);
+        echo call_user_func_array($this->env->getFunction('form_ajax')->getCallable(), ["ajax", "onCreateAdvert", ["class" => "pay-form", "id" => "advert-create-form", "redirect" => "/advert/create-success"]]);
         echo "
 
 <input name=\"author\" type=\"hidden\" value=\"";
@@ -48,17 +48,17 @@ class __TwigTemplate_cb3dbf7169d69d1298a0ec6859ea1b1ba1dc5625a4fb940f95c820e8f93
     <label>
       Категория объявления
       <select name=\"category\" id=\"category\" form=\"advert-create-form\" required>
-        <option value=\"on-ona\">Парень ищет девушку</option>
-        <option value=\"ona-on\">Девушка ищет парня</option>
-        <option value=\"on-on\">Парень ищет парня</option>
-        <option value=\"ona-ona\">Девушка ищет девушку</option>
-        <option value=\"free\">Досуг в Иркутске</option>
-        <option value=\"services\">Услуги массажа</option>
-        <option value=\"family\">Семейные пары</option>
-        <option value=\"flirt\">Флирт</option>
-        <option value=\"realty\">Недвижимость</option>
-        <option value=\"arenda\">Аренда квартир на сутки</option>
-        <option value=\"work\">Работа/подработка</option>
+        <option value=\"categories-on-ona\">Парень ищет девушку</option>
+        <option value=\"categories-ona-on\">Девушка ищет парня</option>
+        <option value=\"categories-on-on\">Парень ищет парня</option>
+        <option value=\"categories-ona-ona\">Девушка ищет девушку</option>
+        <option value=\"categories-free\">Досуг в Иркутске</option>
+        <option value=\"categories-services\">Услуги массажа</option>
+        <option value=\"categories-family\">Семейные пары</option>
+        <option value=\"categories-flirt\">Флирт</option>
+        <option value=\"categories-realty\">Недвижимость</option>
+        <option value=\"categories-arenda\">Аренда квартир на сутки</option>
+        <option value=\"categories-work\">Работа/подработка</option>
       </select>
     </label>
   </div>
@@ -94,7 +94,7 @@ class __TwigTemplate_cb3dbf7169d69d1298a0ec6859ea1b1ba1dc5625a4fb940f95c820e8f93
 
     public function getSourceContext()
     {
-        return new Source("{{ form_ajax('onCreateAdvert', { class: \"pay-form\", id: \"advert-create-form\", redirect: \"/advert/create-success\", 'data-request-flash': true }) }}
+        return new Source("{{ form_ajax('onCreateAdvert', { class: \"pay-form\", id: \"advert-create-form\", redirect: \"/advert/create-success\" }) }}
 
 <input name=\"author\" type=\"hidden\" value=\"{{ user.email }}\">
 
@@ -104,17 +104,17 @@ class __TwigTemplate_cb3dbf7169d69d1298a0ec6859ea1b1ba1dc5625a4fb940f95c820e8f93
     <label>
       Категория объявления
       <select name=\"category\" id=\"category\" form=\"advert-create-form\" required>
-        <option value=\"on-ona\">Парень ищет девушку</option>
-        <option value=\"ona-on\">Девушка ищет парня</option>
-        <option value=\"on-on\">Парень ищет парня</option>
-        <option value=\"ona-ona\">Девушка ищет девушку</option>
-        <option value=\"free\">Досуг в Иркутске</option>
-        <option value=\"services\">Услуги массажа</option>
-        <option value=\"family\">Семейные пары</option>
-        <option value=\"flirt\">Флирт</option>
-        <option value=\"realty\">Недвижимость</option>
-        <option value=\"arenda\">Аренда квартир на сутки</option>
-        <option value=\"work\">Работа/подработка</option>
+        <option value=\"categories-on-ona\">Парень ищет девушку</option>
+        <option value=\"categories-ona-on\">Девушка ищет парня</option>
+        <option value=\"categories-on-on\">Парень ищет парня</option>
+        <option value=\"categories-ona-ona\">Девушка ищет девушку</option>
+        <option value=\"categories-free\">Досуг в Иркутске</option>
+        <option value=\"categories-services\">Услуги массажа</option>
+        <option value=\"categories-family\">Семейные пары</option>
+        <option value=\"categories-flirt\">Флирт</option>
+        <option value=\"categories-realty\">Недвижимость</option>
+        <option value=\"categories-arenda\">Аренда квартир на сутки</option>
+        <option value=\"categories-work\">Работа/подработка</option>
       </select>
     </label>
   </div>

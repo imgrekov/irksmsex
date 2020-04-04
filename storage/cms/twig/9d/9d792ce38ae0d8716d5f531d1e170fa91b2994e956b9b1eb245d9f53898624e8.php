@@ -34,7 +34,7 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
     {
         $macros = $this->macros;
         // line 1
-        echo call_user_func_array($this->env->getFunction('form_ajax')->getCallable(), ["ajax", "onEditAdvert", ["class" => "advert-edit-form", "id" => "advert-edit-form", "data-request-flash" => true, "data-request-files" => true, "redirect" => "../advert/edit-success"]]);
+        echo call_user_func_array($this->env->getFunction('form_ajax')->getCallable(), ["ajax", "onEditAdvert", ["class" => "advert-edit-form", "id" => "advert-edit-form", "data-request-files" => true, "redirect" => "../advert/edit-success"]]);
         echo "
 
 <input type=\"hidden\" name=\"id\" value=\"";
@@ -154,99 +154,99 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
         <!-- /.advert-edit__category-desc -->
 
         <select name=\"category\" id=\"category\" form=\"advert-edit-form\" required>
-          <option value=\"on-ona\" ";
+          <option value=\"categories-on-ona\" ";
         // line 74
-        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 74) == "on-ona")) {
+        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 74) == "categories-on-ona")) {
             echo "selected";
         }
         echo ">
             Парень ищет девушку
           </option> <!-- on-ona -->
 
-          <option value=\"ona-on\" ";
+          <option value=\"categories-ona-on\" ";
         // line 78
-        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 78) == "ona-on")) {
+        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 78) == "categories-ona-on")) {
             echo "selected";
         }
         echo ">
             Девушка ищет парня
           </option> <!-- ona-on -->
 
-          <option value=\"on-on\" ";
+          <option value=\"categories-on-on\" ";
         // line 82
-        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 82) == "on-on")) {
+        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 82) == "categories-on-on")) {
             echo "selected";
         }
         echo ">
             Парень ищет парня
           </option> <!-- on-on -->
 
-          <option value=\"ona-ona\" ";
+          <option value=\"categories-ona-ona\" ";
         // line 86
-        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 86) == "ona-ona")) {
+        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 86) == "categories-ona-ona")) {
             echo "selected";
         }
         echo ">
             Девушка ищет девушку
           </option> <!-- ona-ona -->
 
-          <option value=\"free\" ";
+          <option value=\"categories-free\" ";
         // line 90
-        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 90) == "free")) {
+        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 90) == "categories-free")) {
             echo "selected";
         }
         echo ">
             Досуг в Иркутске
           </option> <!-- free -->
 
-          <option value=\"services\" ";
+          <option value=\"categories-services\" ";
         // line 94
-        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 94) == "services")) {
+        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 94) == "categories-services")) {
             echo "selected";
         }
         echo ">
             Услуги массажа
           </option> <!-- services -->
 
-          <option value=\"family\" ";
+          <option value=\"categories-family\" ";
         // line 98
-        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 98) == "family")) {
+        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 98) == "categories-family")) {
             echo "selected";
         }
         echo ">
             Семейные пары
           </option> <!-- family -->
 
-          <option value=\"flirt\" ";
+          <option value=\"categories-flirt\" ";
         // line 102
-        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 102) == "flirt")) {
+        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 102) == "categories-flirt")) {
             echo "selected";
         }
         echo ">
             Флирт
           </option> <!-- flirt -->
 
-          <option value=\"realty\" ";
+          <option value=\"categories-realty\" ";
         // line 106
-        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 106) == "realty")) {
+        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 106) == "categories-realty")) {
             echo "selected";
         }
         echo ">
             Недвижимость
           </option> <!-- realty -->
 
-          <option value=\"arenda\" ";
+          <option value=\"categories-arenda\" ";
         // line 110
-        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 110) == "arenda")) {
+        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 110) == "categories-arenda")) {
             echo "selected";
         }
         echo ">
             Аренда квартир на сутки
           </option> <!-- arenda -->
 
-          <option value=\"work\" ";
+          <option value=\"categories-work\" ";
         // line 114
-        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 114) == "work")) {
+        if ((twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "category", [], "any", false, false, false, 114) == "categories-work")) {
             echo "selected";
         }
         echo ">
@@ -270,7 +270,8 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
 
       <div class=\"advert-edit__image-item\">
         <p>№ — 1</p>
-        <input class=\"inputfile\" type=\"file\" id=\"attachimage1\" name=\"attachimage1\" accept=\"image/jpeg,image/png,image/jpg\">
+        <input class=\"inputfile\" type=\"file\" id=\"attachimage1\" name=\"attachimage1\"
+          accept=\"image/jpeg,image/png,image/jpg\">
         <label for=\"attachimage1\">Выберите файл</label>
         <div class=\"image1-name image-name\"></div>
         <a class=\"remove-button btn btn-outline-danger btn-sm\" href=\"javascript:;\" id=\"btn-remove-image1\">Очистить</a>
@@ -278,7 +279,8 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
 
       <div class=\"advert-edit__image-item\">
         <p>№ — 2</p>
-        <input class=\"inputfile\" type=\"file\" id=\"attachimage2\" name=\"attachimage2\" accept=\"image/jpeg,image/png,image/jpg\">
+        <input class=\"inputfile\" type=\"file\" id=\"attachimage2\" name=\"attachimage2\"
+          accept=\"image/jpeg,image/png,image/jpg\">
         <label for=\"attachimage2\">Выберите файл</label>
         <div class=\"image2-name image-name\"></div>
         <a class=\"remove-button btn btn-outline-danger btn-sm\" href=\"javascript:;\" id=\"btn-remove-image2\">Очистить</a>
@@ -286,7 +288,8 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
 
       <div class=\"advert-edit__image-item\">
         <p>№ — 3</p>
-        <input class=\"inputfile\" type=\"file\" id=\"attachimage3\" name=\"attachimage3\" accept=\"image/jpeg,image/png,image/jpg\">
+        <input class=\"inputfile\" type=\"file\" id=\"attachimage3\" name=\"attachimage3\"
+          accept=\"image/jpeg,image/png,image/jpg\">
         <label for=\"attachimage3\">Выберите файл</label>
         <div class=\"image3-name image-name\"></div>
         <a class=\"remove-button btn btn-outline-danger btn-sm\" href=\"javascript:;\" id=\"btn-remove-image3\">Очистить</a>
@@ -302,7 +305,7 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
 <!-- /.btn btn-success -->
 
 ";
-        // line 166
+        // line 169
         echo call_user_func_array($this->env->getFunction('form_close')->getCallable(), ["close"]);
     }
 
@@ -318,12 +321,12 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
 
     public function getDebugInfo()
     {
-        return array (  306 => 166,  249 => 114,  240 => 110,  231 => 106,  222 => 102,  213 => 98,  204 => 94,  195 => 90,  186 => 86,  177 => 82,  168 => 78,  159 => 74,  144 => 61,  138 => 60,  124 => 53,  120 => 51,  115 => 50,  98 => 37,  96 => 36,  85 => 30,  76 => 26,  67 => 22,  52 => 10,  42 => 3,  37 => 1,);
+        return array (  309 => 169,  249 => 114,  240 => 110,  231 => 106,  222 => 102,  213 => 98,  204 => 94,  195 => 90,  186 => 86,  177 => 82,  168 => 78,  159 => 74,  144 => 61,  138 => 60,  124 => 53,  120 => 51,  115 => 50,  98 => 37,  96 => 36,  85 => 30,  76 => 26,  67 => 22,  52 => 10,  42 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{{ form_ajax('onEditAdvert', { class: \"advert-edit-form\", id: \"advert-edit-form\", 'data-request-flash': true, 'data-request-files': true, redirect: \"../advert/edit-success\" }) }}
+        return new Source("{{ form_ajax('onEditAdvert', { class: \"advert-edit-form\", id: \"advert-edit-form\", 'data-request-files': true, redirect: \"../advert/edit-success\" }) }}
 
 <input type=\"hidden\" name=\"id\" value=\"{{ record.id }}\">
 
@@ -396,47 +399,47 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
         <!-- /.advert-edit__category-desc -->
 
         <select name=\"category\" id=\"category\" form=\"advert-edit-form\" required>
-          <option value=\"on-ona\" {% if record.category == 'on-ona' %}selected{%endif%}>
+          <option value=\"categories-on-ona\" {% if record.category == 'categories-on-ona' %}selected{%endif%}>
             Парень ищет девушку
           </option> <!-- on-ona -->
 
-          <option value=\"ona-on\" {% if record.category == 'ona-on' %}selected{%endif%}>
+          <option value=\"categories-ona-on\" {% if record.category == 'categories-ona-on' %}selected{%endif%}>
             Девушка ищет парня
           </option> <!-- ona-on -->
 
-          <option value=\"on-on\" {% if record.category == 'on-on' %}selected{%endif%}>
+          <option value=\"categories-on-on\" {% if record.category == 'categories-on-on' %}selected{%endif%}>
             Парень ищет парня
           </option> <!-- on-on -->
 
-          <option value=\"ona-ona\" {% if record.category == 'ona-ona' %}selected{%endif%}>
+          <option value=\"categories-ona-ona\" {% if record.category == 'categories-ona-ona' %}selected{%endif%}>
             Девушка ищет девушку
           </option> <!-- ona-ona -->
 
-          <option value=\"free\" {% if record.category == 'free' %}selected{%endif%}>
+          <option value=\"categories-free\" {% if record.category == 'categories-free' %}selected{%endif%}>
             Досуг в Иркутске
           </option> <!-- free -->
 
-          <option value=\"services\" {% if record.category == 'services' %}selected{%endif%}>
+          <option value=\"categories-services\" {% if record.category == 'categories-services' %}selected{%endif%}>
             Услуги массажа
           </option> <!-- services -->
 
-          <option value=\"family\" {% if record.category == 'family' %}selected{%endif%}>
+          <option value=\"categories-family\" {% if record.category == 'categories-family' %}selected{%endif%}>
             Семейные пары
           </option> <!-- family -->
 
-          <option value=\"flirt\" {% if record.category == 'flirt' %}selected{%endif%}>
+          <option value=\"categories-flirt\" {% if record.category == 'categories-flirt' %}selected{%endif%}>
             Флирт
           </option> <!-- flirt -->
 
-          <option value=\"realty\" {% if record.category == 'realty' %}selected{%endif%}>
+          <option value=\"categories-realty\" {% if record.category == 'categories-realty' %}selected{%endif%}>
             Недвижимость
           </option> <!-- realty -->
 
-          <option value=\"arenda\" {% if record.category == 'arenda' %}selected{%endif%}>
+          <option value=\"categories-arenda\" {% if record.category == 'categories-arenda' %}selected{%endif%}>
             Аренда квартир на сутки
           </option> <!-- arenda -->
 
-          <option value=\"work\" {% if record.category == 'work' %}selected{%endif%}>
+          <option value=\"categories-work\" {% if record.category == 'categories-work' %}selected{%endif%}>
             Работа или подработка
           </option> <!-- work -->
         </select>
@@ -457,7 +460,8 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
 
       <div class=\"advert-edit__image-item\">
         <p>№ — 1</p>
-        <input class=\"inputfile\" type=\"file\" id=\"attachimage1\" name=\"attachimage1\" accept=\"image/jpeg,image/png,image/jpg\">
+        <input class=\"inputfile\" type=\"file\" id=\"attachimage1\" name=\"attachimage1\"
+          accept=\"image/jpeg,image/png,image/jpg\">
         <label for=\"attachimage1\">Выберите файл</label>
         <div class=\"image1-name image-name\"></div>
         <a class=\"remove-button btn btn-outline-danger btn-sm\" href=\"javascript:;\" id=\"btn-remove-image1\">Очистить</a>
@@ -465,7 +469,8 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
 
       <div class=\"advert-edit__image-item\">
         <p>№ — 2</p>
-        <input class=\"inputfile\" type=\"file\" id=\"attachimage2\" name=\"attachimage2\" accept=\"image/jpeg,image/png,image/jpg\">
+        <input class=\"inputfile\" type=\"file\" id=\"attachimage2\" name=\"attachimage2\"
+          accept=\"image/jpeg,image/png,image/jpg\">
         <label for=\"attachimage2\">Выберите файл</label>
         <div class=\"image2-name image-name\"></div>
         <a class=\"remove-button btn btn-outline-danger btn-sm\" href=\"javascript:;\" id=\"btn-remove-image2\">Очистить</a>
@@ -473,7 +478,8 @@ class __TwigTemplate_c57f6686091032954b615a57dccd69336e2d099a4d11427c32c2869694d
 
       <div class=\"advert-edit__image-item\">
         <p>№ — 3</p>
-        <input class=\"inputfile\" type=\"file\" id=\"attachimage3\" name=\"attachimage3\" accept=\"image/jpeg,image/png,image/jpg\">
+        <input class=\"inputfile\" type=\"file\" id=\"attachimage3\" name=\"attachimage3\"
+          accept=\"image/jpeg,image/png,image/jpg\">
         <label for=\"attachimage3\">Выберите файл</label>
         <div class=\"image3-name image-name\"></div>
         <a class=\"remove-button btn btn-outline-danger btn-sm\" href=\"javascript:;\" id=\"btn-remove-image3\">Очистить</a>

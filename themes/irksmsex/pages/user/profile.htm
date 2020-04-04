@@ -27,7 +27,6 @@ sortDirection = "desc"
 {% set detailsKeyColumn = userAdverts.detailsKeyColumn %}
 {% set detailsUrlParameter = userAdverts.detailsUrlParameter %}
 
-
 <div class="profile">
 
   <div class="profile-head">
@@ -67,29 +66,41 @@ sortDirection = "desc"
               </div> <!-- /.profile-hero__item-text -->
 
 
-              {% if record.image1 %}
-              <div class="advert__imgs-wrap">
-                <div class="advert__image"><img src="{{ record.image1|media }}" alt="Фото2"></div>
+              {% if record.attachimage1 %}
+              <div class="advert__imgs-wrap count_imgs-parent">
+                <a class="advert__image" href="{{ record.attachimage1.path }}" data-toggle="lightbox" data-type="image">
+                  <img src="{{ record.attachimage1.path }}" alt="Фото1">
+                </a>
+                <!-- Изображение первое -->
 
-                {% if record.image2 %}
-                <div class="advert__image"><img src="{{ record.image2|media }}" alt="Фото2"></div>
+                {% if record.attachimage2 %}
+                <a class="advert__image" href="{{ record.attachimage2.path }}" data-toggle="lightbox" data-type="image">
+                  <img src="{{ record.attachimage2.path }}" alt="Фото1">
+                </a>
                 {% endif %}
-                {% if record.image3 %}
-                <div class="advert__image"><img src="{{ record.image3|media }}" alt="Фото3"></div>
+                <!-- Изображение второе -->
+                {% if record.attachimage3 %}
+                <a class="advert__image" href="{{ record.attachimage3.path }}" data-toggle="lightbox" data-type="image">
+                  <img src="{{ record.attachimage3.path }}" alt="Фото1">
+                </a>
                 {% endif %}
+                <!-- Изображение третье -->
 
               </div>
               {% endif %}
+              <!-- Изображения к объявлению -->
 
 
-              <span class="profile-hero__id">ID: {{record.id}}</span> <!-- /.profile-hero__id -->
-            </div> <!-- /.profile-hero__info -->
+              <span class="advert-id">ID: {{record.id}}</span>
+              <!-- /.advert-id -->
+            </div>
+            <!-- /.profile-hero__info -->
 
           </div>
           <!-- /.col-md-8 -->
 
 
-          <div class="col-sm-4 pos-r">
+          <div class="col-sm-4">
             <div class="profile-hero__status">
               <p>
                 Объявление:
@@ -109,35 +120,35 @@ sortDirection = "desc"
               </p>
               <p>
                 <!-- Здесь посчитать количество картинок. Если изображений нет, то "0". Если есть, то их количество. -->
-                Изображений добавлено: <span class="badge badge-primary countimgs">0</span> <!-- /.badge-primary -->
+                Изображений добавлено: <span class="badge badge-primary count_imgs">0</span> <!-- /.count_imgs -->
               </p>
               <p>
                 <!-- Текст в соответствии с категорией объявления -->
                 Категория:
-                {% if record.category == 'ona-on' %}
+                {% if record.category == 'categories-ona-on' %}
                 <span class="state state-category">Девушка ищет парня</span> <!-- /.state-category -->
-                {% elseif record.category == 'on-ona' %}
+                {% elseif record.category == 'categories-on-ona' %}
                 <span class="state state-category">Парень ищет девушку</span> <!-- /.state-category -->
-                {% elseif record.category == 'on-on' %}
+                {% elseif record.category == 'categories-on-on' %}
                 <span class="state state-category">Парень ищет парня</span> <!-- /.state-category -->
-                {% elseif record.category == 'ona-ona' %}
+                {% elseif record.category == 'categories-ona-ona' %}
                 <span class="state state-category">Девушка ищет девушку</span> <!-- /.state-category -->
-                {% elseif record.category == 'free' %}
+                {% elseif record.category == 'categories-free' %}
                 <span class="state state-category">Досуг в Иркутске</span> <!-- /.state-category -->
-                {% elseif record.category == 'services' %}
+                {% elseif record.category == 'categories-services' %}
                 <span class="state state-category">Услуги массажа</span> <!-- /.state-category -->
-                {% elseif record.category == 'family' %}
+                {% elseif record.category == 'categories-family' %}
                 <span class="state state-category">Семейные пары</span> <!-- /.state-category -->
-                {% elseif record.category == 'flirt' %}
+                {% elseif record.category == 'categories-flirt' %}
                 <span class="state state-category">Свободные отношения</span> <!-- /.state-category -->
-                {% elseif record.category == 'realty' %}
+                {% elseif record.category == 'categories-realty' %}
                 <span class="state state-category">Недвижимость</span> <!-- /.state-category -->
-                {% elseif record.category == 'arenda' %}
+                {% elseif record.category == 'categories-arenda' %}
                 <span class="state state-category">Аренда квартир на сутки</span> <!-- /.state-category -->
-                {% elseif record.category == 'work' %}
+                {% elseif record.category == 'categories-work' %}
                 <span class="state state-category">Работа в Иркутске</span> <!-- /.state-category -->
                 {% else %}
-                <span class="d-block badge badge-danger">Ошибка. Категория не найдена</span> <!-- /.badge-danger -->
+                <span class="d-block badge badge-danger">Ошибка: 404 — Not Found</span> <!-- /.badge-danger -->
                 {% endif %}
               </p>
             </div> <!-- /.profile-hero__status -->

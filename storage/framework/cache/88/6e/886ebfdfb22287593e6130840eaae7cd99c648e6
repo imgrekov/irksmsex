@@ -1,8 +1,10 @@
-1585926988a:1:{s:19:"adverts/success.htm";a:5:{s:8:"fileName";s:19:"adverts/success.htm";s:7:"content";s:514:"<div class="success " role="alert">
+1586004084a:1:{s:19:"adverts/success.htm";a:5:{s:8:"fileName";s:19:"adverts/success.htm";s:7:"content";s:523:"<div class="success">
 
-  <div class="alert alert-success">
-    <h1>{{ title }}</h1> <!-- title -->
-    <small>{{ text }}&nbsp;<span>&darr;</span></small> <!-- description -->
+  <div class="alert alert-success" role="alert">
+    <h1>{{ title }}</h1>
+    <!-- title -->
+    <small>{{ text }}&nbsp;<span>&darr;</span></small>
+    <!-- description -->
   </div>
   <!-- message -->
 
@@ -11,11 +13,13 @@
   <!-- /.success-button -->
 
 </div>
-<!-- /.success -->";s:5:"mtime";i:1585215683;s:6:"markup";s:514:"<div class="success " role="alert">
+<!-- /.success -->";s:5:"mtime";i:1585984559;s:6:"markup";s:523:"<div class="success">
 
-  <div class="alert alert-success">
-    <h1>{{ title }}</h1> <!-- title -->
-    <small>{{ text }}&nbsp;<span>&darr;</span></small> <!-- description -->
+  <div class="alert alert-success" role="alert">
+    <h1>{{ title }}</h1>
+    <!-- title -->
+    <small>{{ text }}&nbsp;<span>&darr;</span></small>
+    <!-- description -->
   </div>
   <!-- message -->
 

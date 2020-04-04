@@ -13,14 +13,9 @@ security = "all"
 	<a class="btn btn-secondary" href="{{ 'help'|page }}">Как добавлять объявления?</a>
 </div>
 
-<div class='title'>
-	<h2>Добавить объявление</h2>
-</div>
+{% partial 'second/title' text = "Добавить объявление" %}
 
-
-<div class="sms3">
-	<a class="btn btn-light btn-sm" href="{{ 'home'|page }}">На главную</a>
-</div>
+{% partial 'second/to_home' %}
 
 <main class="main">
 	{% component 'createAdvert' %}

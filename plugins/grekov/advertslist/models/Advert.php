@@ -3,6 +3,7 @@
 namespace Grekov\AdvertsList\Models;
 
 use Model;
+use System\Models\File;
 
 class Advert extends Model
 {
@@ -13,22 +14,10 @@ class Advert extends Model
 	 */
 	public $table = 'grekov_advertslist_ads';
 
-	public $fillable = [
-		'text',
-		'type',
-		'category',
-		'state',
-		'highlight',
-		'author',
-		'image1',
-		'image2',
-		'image3',
-	];
-
 	public $attachOne = [
-		'image1' => 'System\Models\File',
-		'image2' => 'System\Models\File',
-		'image3' => 'System\Models\File',
+		'attachimage1' => 'System\Models\File',
+		'attachimage2' => 'System\Models\File',
+		'attachimage3' => 'System\Models\File',
 	];
 
 	/**

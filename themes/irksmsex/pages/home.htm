@@ -10,10 +10,8 @@ security = "all"
   <h1>Сайт знакомств и доска объявлений в Иркутске</h1>
 </div>
 
-<!-- Знакомства -->
-<div class='title'>
-  <h2>Знакомства в Иркутске</h2>
-</div>
+{% partial 'second/title' text = "Знакомства в Иркутске" %}
+<!-- title -->
 
 <div class="cats">
 
@@ -98,17 +96,14 @@ security = "all"
   </a>
 
 </div>
+<!-- /.cats -->
+
+
+
+{% partial 'second/title' text = "Мобильная доска объявлений" %}
 <!-- /.title -->
-
-
 
 <!-- Доска объявлений -->
-<div class='title'>
-  <h2>Мобильная доска объявлений</h2>
-</div>
-<!-- /.title -->
-
-
 <div class="cats">
 
   <a class="main-link" href="{{ 'categories/realty'|page }}">

@@ -2,7 +2,6 @@ title = "Объявления для геев"
 url = "/categories/on-on"
 layout = "advert"
 description = "Парень ищет парня"
-attr = "on-on"
 is_hidden = 0
 
 [builderList AdvertsList]
@@ -31,71 +30,88 @@ security = "all"
 
 
 <ul class="record-list">
-  {% for record in records %}
-
-  {% if record.category == 'on-on' and record.type != 'xvip' %}
-
-  <li class="{% if record.type == 'vip' %}vip{% elseif record.type == 'basic' %}basic{% endif %}
-  {% if record.highlight == 'on' %}gold{% endif %}">
-    <div id="{{ record.id }}" class="sms">
-      <!-- Время добавления объявления -->
-
+  {% for record in records if record.category == this.page.id and record.state == 'on' and record.type != 'xvip' %}
+  <li class="{% if record.type == 'vip' %}vip{% elseif record.type == 'basic' %}basic{% endif %}">
+    <div id="{{ record.id }}" class="{% if record.highlight == 'on' %}highlight{% endif %} record">
       {% if record.type == 'vip' %}
-      <img src="{{ 'assets/images/vip.png'|theme }}" alt="vip">
+      <img src="{{ 'assets/images/vip.png'|theme }}" alt="vip" class="id">
       {% endif %}
 
       <span class="timehead">
         {{ record.created_at|date('d-m-Y H:i') }}
       </span>
+      <!-- Когда создано -->
 
-      <!-- <span class="views">0</span> -->
-      <!-- /.views -->
-
-      <!-- Текст объявления -->
-      <div class="record-text">
+      <div class="record__text">
         {{ record.text|raw }}
       </div>
+      <!-- Текст объявления -->
 
-      
-      {% if record.image1 %}
+      {% if record.attachimage1 %}
       <div class="advert__imgs-wrap">
-        <div class="advert__image"><img src="{{ record.image1|media }}" alt="Фото1"></div>
+        <a class="advert__image" href="{{ record.attachimage1.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage1.path }}" alt="Фото1">
+        </a>
+        <!-- Изображение первое -->
 
-        {% if record.image2 %}
-        <div class="advert__image"><img src="{{ record.image2|media }}" alt="Фото2"></div>
+        {% if record.attachimage2 %}
+        <a class="advert__image" href="{{ record.attachimage2.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage2.path }}" alt="Фото1">
+        </a>
         {% endif %}
-        {% if record.image3 %}
-        <div class="advert__image"><img src="{{ record.image3|media }}" alt="Фото3"></div>
+        <!-- Изображение второе -->
+        {% if record.attachimage3 %}
+        <a class="advert__image" href="{{ record.attachimage3.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage3.path }}" alt="Фото1">
+        </a>
         {% endif %}
+        <!-- Изображение третье -->
 
       </div>
       {% endif %}
+      <!-- Изображения к объявлению -->
+
+      <span class="advert-id">ID: {{record.id}}</span>
+      <!-- /.advert-id -->
 
     </div>
+    <!-- /.record -->
+
   </li>
-  {% endif %}
+
 
 
   {% else %}
-  <li class="advert-none">{{ noRecordsMessage }}</li>
+  <li class="alert alert-danger advert-none">
+    <p>{{ noRecordsMessage }}</p>
+  </li>
+  <!-- /.advert-none -->
   {% endfor %}
-
 </ul>
+<!-- /.record-list -->
+
 
 {% if records.lastPage > 1 %}
 <ul class="pagination">
   {% if records.currentPage > 1 %}
-  <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Prev</a></li>
+  <li class="pagination__item">
+    <a class="pagination__prev"
+      href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Назад</a>
+  </li>
   {% endif %}
 
   {% for page in 1..records.lastPage %}
-  <li class="{{ records.currentPage == page ? 'active' : null }}">
-    <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+  <li class="pagination__item {{ records.currentPage == page ? 'active' : null }}">
+    <a class="pagination__link" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
   </li>
   {% endfor %}
 
   {% if records.lastPage > records.currentPage %}
-  <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
+  <li class="pagination__item">
+    <a class="pagination__next"
+      href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Вперёд &rarr;</a>
+  </li>
   {% endif %}
 </ul>
 {% endif %}
+<!-- Пагинация -->

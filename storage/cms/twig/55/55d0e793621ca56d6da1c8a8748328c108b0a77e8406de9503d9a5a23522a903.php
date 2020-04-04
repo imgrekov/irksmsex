@@ -67,24 +67,28 @@ class __TwigTemplate_60daa6a3e3287acb4832be96ddadeae70aa2bd10172c5876f6c7d89d777
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('styles');
         // line 20
         echo "
-\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\"
+\t<!-- Bootstrap -->
+\t<link href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" rel=\"stylesheet\"
 \t\tintegrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
 
+\t<!-- Lightbox Bootstrap css -->
+\t<link href=\"https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css\" rel=\"stylesheet\">
+
 \t<link rel=\"stylesheet\" href=\"";
-        // line 24
+        // line 28
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/style.min.css");
         echo "\">
 \t<link rel=\"apple-touch-icon\" type=\"image/png\" sizes=\"120x120\"
 \t\thref=\"";
-        // line 26
+        // line 30
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/favicon/apple-touch-icon.png");
         echo "\">
 \t<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"";
-        // line 27
+        // line 31
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/favicon/favicon-32x32.png");
         echo "\">
 \t<link rel=\"mask-icon\" href=\"";
-        // line 28
+        // line 32
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/favicon/safari-pinned-tab.svg");
         echo "\" color=\"#5bbad5\">
 
@@ -93,60 +97,60 @@ class __TwigTemplate_60daa6a3e3287acb4832be96ddadeae70aa2bd10172c5876f6c7d89d777
 <body>
 
 \t";
-        // line 34
+        // line 38
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("user-status"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 35
-        echo "
-\t";
-        // line 36
-        $context['__cms_partial_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("header"        , $context['__cms_partial_params']        , true        );
-        unset($context['__cms_partial_params']);
-        // line 37
-        echo "
-\t";
-        // line 38
-        $context['__cms_partial_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("adverts/add-advert"        , $context['__cms_partial_params']        , true        );
-        unset($context['__cms_partial_params']);
         // line 39
-        echo "\t
+        echo "
 \t";
         // line 40
         $context['__cms_partial_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("adverts/xvip-record"        , $context['__cms_partial_params']        , true        );
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("header"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 41
         echo "
 \t";
         // line 42
         $context['__cms_partial_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("adverts/title"        , $context['__cms_partial_params']        , true        );
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("adverts/add-advert"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 43
         echo "
 \t";
         // line 44
         $context['__cms_partial_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("adverts/tohome"        , $context['__cms_partial_params']        , true        );
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("adverts/xvip-record"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 45
         echo "
+\t";
+        // line 46
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("adverts/title"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 47
+        echo "
+\t";
+        // line 48
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("second/to_home"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 49
+        echo "
 \t<div class=\"adverts-list\">
 \t\t";
-        // line 47
+        // line 51
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 48
+        // line 52
         echo "\t</div>
 
 \t";
-        // line 50
+        // line 54
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 51
+        // line 55
         echo "
 \t<!-- Версия jquery — 3.3.1 -->
 \t<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>
@@ -161,15 +165,18 @@ class __TwigTemplate_60daa6a3e3287acb4832be96ddadeae70aa2bd10172c5876f6c7d89d777
 \t\tintegrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\">
 \t</script>
 
+  <!-- Lightbox Bootstrap js -->
+\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js\"></script>
+\t
 \t<!-- My scripts -->
 \t<script src=\"";
-        // line 66
+        // line 73
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/app.js");
         echo "\"></script>
 
 \t<!-- OctoberCMS scripts -->
 \t";
-        // line 69
+        // line 76
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -180,11 +187,11 @@ class __TwigTemplate_60daa6a3e3287acb4832be96ddadeae70aa2bd10172c5876f6c7d89d777
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 70
+        // line 77
         echo "\t";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 71
+        // line 78
         echo "
 </body>
 
@@ -203,7 +210,7 @@ class __TwigTemplate_60daa6a3e3287acb4832be96ddadeae70aa2bd10172c5876f6c7d89d777
 
     public function getDebugInfo()
     {
-        return array (  188 => 71,  184 => 70,  173 => 69,  167 => 66,  150 => 51,  146 => 50,  142 => 48,  140 => 47,  136 => 45,  132 => 44,  129 => 43,  125 => 42,  122 => 41,  118 => 40,  115 => 39,  111 => 38,  108 => 37,  104 => 36,  101 => 35,  97 => 34,  88 => 28,  84 => 27,  80 => 26,  75 => 24,  69 => 20,  66 => 19,  56 => 11,  52 => 9,  46 => 7,  44 => 6,  37 => 1,);
+        return array (  195 => 78,  191 => 77,  180 => 76,  174 => 73,  154 => 55,  150 => 54,  146 => 52,  144 => 51,  140 => 49,  136 => 48,  133 => 47,  129 => 46,  126 => 45,  122 => 44,  119 => 43,  115 => 42,  112 => 41,  108 => 40,  105 => 39,  101 => 38,  92 => 32,  88 => 31,  84 => 30,  79 => 28,  69 => 20,  66 => 19,  56 => 11,  52 => 9,  46 => 7,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -228,8 +235,12 @@ class __TwigTemplate_60daa6a3e3287acb4832be96ddadeae70aa2bd10172c5876f6c7d89d777
 
 \t{% styles %}
 
-\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\"
+\t<!-- Bootstrap -->
+\t<link href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" rel=\"stylesheet\"
 \t\tintegrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
+
+\t<!-- Lightbox Bootstrap css -->
+\t<link href=\"https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css\" rel=\"stylesheet\">
 
 \t<link rel=\"stylesheet\" href=\"{{ 'assets/css/style.min.css'|theme }}\">
 \t<link rel=\"apple-touch-icon\" type=\"image/png\" sizes=\"120x120\"
@@ -246,12 +257,12 @@ class __TwigTemplate_60daa6a3e3287acb4832be96ddadeae70aa2bd10172c5876f6c7d89d777
 \t{% partial 'header' %}
 
 \t{% partial 'adverts/add-advert' %}
-\t
+
 \t{% partial 'adverts/xvip-record' %}
 
 \t{% partial 'adverts/title' %}
 
-\t{% partial 'adverts/tohome' %}
+\t{% partial 'second/to_home' %}
 
 \t<div class=\"adverts-list\">
 \t\t{% page %}
@@ -272,6 +283,9 @@ class __TwigTemplate_60daa6a3e3287acb4832be96ddadeae70aa2bd10172c5876f6c7d89d777
 \t\tintegrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\">
 \t</script>
 
+  <!-- Lightbox Bootstrap js -->
+\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js\"></script>
+\t
 \t<!-- My scripts -->
 \t<script src=\"{{ 'assets/js/app.js'|theme }}\"></script>
 

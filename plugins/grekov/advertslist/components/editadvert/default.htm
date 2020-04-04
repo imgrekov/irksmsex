@@ -1,4 +1,4 @@
-{{ form_ajax('onEditAdvert', { class: "advert-edit-form", id: "advert-edit-form", 'data-request-flash': true, 'data-request-files': true, redirect: "../advert/edit-success" }) }}
+{{ form_ajax('onEditAdvert', { class: "advert-edit-form", id: "advert-edit-form", 'data-request-files': true, redirect: "../advert/edit-success" }) }}
 
 <input type="hidden" name="id" value="{{ record.id }}">
 
@@ -71,47 +71,47 @@
         <!-- /.advert-edit__category-desc -->
 
         <select name="category" id="category" form="advert-edit-form" required>
-          <option value="on-ona" {% if record.category == 'on-ona' %}selected{%endif%}>
+          <option value="categories-on-ona" {% if record.category == 'categories-on-ona' %}selected{%endif%}>
             Парень ищет девушку
           </option> <!-- on-ona -->
 
-          <option value="ona-on" {% if record.category == 'ona-on' %}selected{%endif%}>
+          <option value="categories-ona-on" {% if record.category == 'categories-ona-on' %}selected{%endif%}>
             Девушка ищет парня
           </option> <!-- ona-on -->
 
-          <option value="on-on" {% if record.category == 'on-on' %}selected{%endif%}>
+          <option value="categories-on-on" {% if record.category == 'categories-on-on' %}selected{%endif%}>
             Парень ищет парня
           </option> <!-- on-on -->
 
-          <option value="ona-ona" {% if record.category == 'ona-ona' %}selected{%endif%}>
+          <option value="categories-ona-ona" {% if record.category == 'categories-ona-ona' %}selected{%endif%}>
             Девушка ищет девушку
           </option> <!-- ona-ona -->
 
-          <option value="free" {% if record.category == 'free' %}selected{%endif%}>
+          <option value="categories-free" {% if record.category == 'categories-free' %}selected{%endif%}>
             Досуг в Иркутске
           </option> <!-- free -->
 
-          <option value="services" {% if record.category == 'services' %}selected{%endif%}>
+          <option value="categories-services" {% if record.category == 'categories-services' %}selected{%endif%}>
             Услуги массажа
           </option> <!-- services -->
 
-          <option value="family" {% if record.category == 'family' %}selected{%endif%}>
+          <option value="categories-family" {% if record.category == 'categories-family' %}selected{%endif%}>
             Семейные пары
           </option> <!-- family -->
 
-          <option value="flirt" {% if record.category == 'flirt' %}selected{%endif%}>
+          <option value="categories-flirt" {% if record.category == 'categories-flirt' %}selected{%endif%}>
             Флирт
           </option> <!-- flirt -->
 
-          <option value="realty" {% if record.category == 'realty' %}selected{%endif%}>
+          <option value="categories-realty" {% if record.category == 'categories-realty' %}selected{%endif%}>
             Недвижимость
           </option> <!-- realty -->
 
-          <option value="arenda" {% if record.category == 'arenda' %}selected{%endif%}>
+          <option value="categories-arenda" {% if record.category == 'categories-arenda' %}selected{%endif%}>
             Аренда квартир на сутки
           </option> <!-- arenda -->
 
-          <option value="work" {% if record.category == 'work' %}selected{%endif%}>
+          <option value="categories-work" {% if record.category == 'categories-work' %}selected{%endif%}>
             Работа или подработка
           </option> <!-- work -->
         </select>
@@ -132,7 +132,8 @@
 
       <div class="advert-edit__image-item">
         <p>№ — 1</p>
-        <input class="inputfile" type="file" id="attachimage1" name="attachimage1" accept="image/jpeg,image/png,image/jpg">
+        <input class="inputfile" type="file" id="attachimage1" name="attachimage1"
+          accept="image/jpeg,image/png,image/jpg">
         <label for="attachimage1">Выберите файл</label>
         <div class="image1-name image-name"></div>
         <a class="remove-button btn btn-outline-danger btn-sm" href="javascript:;" id="btn-remove-image1">Очистить</a>
@@ -140,7 +141,8 @@
 
       <div class="advert-edit__image-item">
         <p>№ — 2</p>
-        <input class="inputfile" type="file" id="attachimage2" name="attachimage2" accept="image/jpeg,image/png,image/jpg">
+        <input class="inputfile" type="file" id="attachimage2" name="attachimage2"
+          accept="image/jpeg,image/png,image/jpg">
         <label for="attachimage2">Выберите файл</label>
         <div class="image2-name image-name"></div>
         <a class="remove-button btn btn-outline-danger btn-sm" href="javascript:;" id="btn-remove-image2">Очистить</a>
@@ -148,7 +150,8 @@
 
       <div class="advert-edit__image-item">
         <p>№ — 3</p>
-        <input class="inputfile" type="file" id="attachimage3" name="attachimage3" accept="image/jpeg,image/png,image/jpg">
+        <input class="inputfile" type="file" id="attachimage3" name="attachimage3"
+          accept="image/jpeg,image/png,image/jpg">
         <label for="attachimage3">Выберите файл</label>
         <div class="image3-name image-name"></div>
         <a class="remove-button btn btn-outline-danger btn-sm" href="javascript:;" id="btn-remove-image3">Очистить</a>

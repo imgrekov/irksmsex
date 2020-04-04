@@ -69,22 +69,25 @@ class __TwigTemplate_3e555cf030cca6579c35abe917f1e7eeaaf3632f952c2f84d90afd94279
   <link href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" rel=\"stylesheet\"
     integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
 
+  <!-- Lightbox Bootstrap css -->
+  <link href=\"https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css\" rel=\"stylesheet\">
+
   <!-- FontAwesome -->
   <link href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" rel=\"stylesheet\"
     integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">
-  
+
   <!-- My styles -->
   <link href=\"";
-        // line 28
+        // line 31
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/style.min.css");
         echo "\" rel=\"stylesheet\">
 
   <link rel=\"icon\" type=\"image/png\" href=\"";
-        // line 30
+        // line 33
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/favicon/favicon-32x32.png");
         echo "\">
   <link rel=\"apple-touch-icon\" type=\"image/png\" href=\"";
-        // line 31
+        // line 34
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/favicon/apple-touch-icon.png");
         echo "\">
 
@@ -93,48 +96,48 @@ class __TwigTemplate_3e555cf030cca6579c35abe917f1e7eeaaf3632f952c2f84d90afd94279
 <body>
 
   ";
-        // line 37
+        // line 40
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("user-status"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 38
+        // line 41
         echo "
   ";
-        // line 39
+        // line 42
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("header"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 40
+        // line 43
         echo "
 
   ";
-        // line 42
+        // line 45
         if (($context["user"] ?? null)) {
-            // line 43
+            // line 46
             echo "  ";
             echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-            // line 44
+            // line 47
             echo "
 
   ";
         } else {
-            // line 47
+            // line 50
             echo "  ";
             $context['__cms_partial_params'] = [];
             echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("account/not-registered"            , $context['__cms_partial_params']            , true            );
             unset($context['__cms_partial_params']);
-            // line 48
+            // line 51
             echo "  ";
         }
-        // line 49
+        // line 52
         echo "
 
   ";
-        // line 51
+        // line 54
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 52
+        // line 55
         echo "
   <!-- Версия jquery — 3.3.1 -->
   <script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>
@@ -149,15 +152,18 @@ class __TwigTemplate_3e555cf030cca6579c35abe917f1e7eeaaf3632f952c2f84d90afd94279
     integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\">
   </script>
 
+  <!-- Lightbox Bootstrap js -->
+  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js\"></script>
+
   <!-- My scripts -->
   <script src=\"";
-        // line 67
+        // line 73
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/app.js");
         echo "\"></script>
 
   <!-- OctoberCMS scripts -->
   ";
-        // line 70
+        // line 76
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -168,11 +174,11 @@ class __TwigTemplate_3e555cf030cca6579c35abe917f1e7eeaaf3632f952c2f84d90afd94279
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 71
+        // line 77
         echo "  ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 72
+        // line 78
         echo "
 </body>
 
@@ -191,7 +197,7 @@ class __TwigTemplate_3e555cf030cca6579c35abe917f1e7eeaaf3632f952c2f84d90afd94279
 
     public function getDebugInfo()
     {
-        return array (  176 => 72,  172 => 71,  161 => 70,  155 => 67,  138 => 52,  134 => 51,  130 => 49,  127 => 48,  122 => 47,  117 => 44,  114 => 43,  112 => 42,  108 => 40,  104 => 39,  101 => 38,  97 => 37,  88 => 31,  84 => 30,  79 => 28,  67 => 18,  64 => 17,  56 => 11,  52 => 9,  46 => 7,  44 => 6,  37 => 1,);
+        return array (  182 => 78,  178 => 77,  167 => 76,  161 => 73,  141 => 55,  137 => 54,  133 => 52,  130 => 51,  125 => 50,  120 => 47,  117 => 46,  115 => 45,  111 => 43,  107 => 42,  104 => 41,  100 => 40,  91 => 34,  87 => 33,  82 => 31,  67 => 18,  64 => 17,  56 => 11,  52 => 9,  46 => 7,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -218,10 +224,13 @@ class __TwigTemplate_3e555cf030cca6579c35abe917f1e7eeaaf3632f952c2f84d90afd94279
   <link href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" rel=\"stylesheet\"
     integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">
 
+  <!-- Lightbox Bootstrap css -->
+  <link href=\"https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css\" rel=\"stylesheet\">
+
   <!-- FontAwesome -->
   <link href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" rel=\"stylesheet\"
     integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">
-  
+
   <!-- My styles -->
   <link href=\"{{ 'assets/css/style.min.css'|theme }}\" rel=\"stylesheet\">
 
@@ -260,6 +269,9 @@ class __TwigTemplate_3e555cf030cca6579c35abe917f1e7eeaaf3632f952c2f84d90afd94279
   <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\"
     integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\">
   </script>
+
+  <!-- Lightbox Bootstrap js -->
+  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js\"></script>
 
   <!-- My scripts -->
   <script src=\"{{ 'assets/js/app.js'|theme }}\"></script>

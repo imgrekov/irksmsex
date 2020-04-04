@@ -1,4 +1,4 @@
-1585926958a:1:{s:18:"account/update.htm";a:5:{s:8:"fileName";s:18:"account/update.htm";s:7:"content";s:1743:"{{ form_ajax('onUpdate') }}
+1585987265a:1:{s:18:"account/update.htm";a:5:{s:8:"fileName";s:18:"account/update.htm";s:7:"content";s:1743:"{{ form_ajax('onUpdate') }}
 
 <fieldset class="form-wrapper">
 	<!-- <div class="form-group">

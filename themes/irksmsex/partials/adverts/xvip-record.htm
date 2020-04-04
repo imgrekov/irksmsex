@@ -1,5 +1,5 @@
 <ul class="xvip-record">
-  {% for record in records if record.type == 'xvip' and record.category == this.page.attr %}
+  {% for record in records if record.type == 'xvip' and record.category == this.page.id %}
 
   <li class="xvip-record-item">
     <div id="{{ record.id }}" class="xvip record">
@@ -14,21 +14,38 @@
       </div>
       <!-- Текст объявления -->
 
-      {% if record.image1 %}
+      {% if record.attachimage1 %}
       <div class="advert__imgs-wrap">
-        <div class="advert__image"><img src="{{ record.image1|media }}" alt="Фото1"></div>
-        {% if record.image2 %}
-        <div class="advert__image"><img src="{{ record.image2|media }}" alt="Фото2"></div>
+        <a class="advert__image" href="{{ record.attachimage1.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage1.path }}" alt="Фото1">
+        </a>
+        <!-- Изображение первое -->
+        
+        {% if record.attachimage2 %}
+        <a class="advert__image" href="{{ record.attachimage2.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage2.path }}" alt="Фото1">
+        </a>
         {% endif %}
-        {% if record.image3 %}
-        <div class="advert__image"><img src="{{ record.image3|media }}" alt="Фото3"></div>
+        <!-- Изображение второе -->
+        {% if record.attachimage3 %}
+        <a class="advert__image" href="{{ record.attachimage3.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage3.path }}" alt="Фото1">
+        </a>
         {% endif %}
+        <!-- Изображение третье -->
+
       </div>
       {% endif %}
+      <!-- Изображения к объявлению -->
+
+      <span class="advert-id">ID: {{record.id}}</span>
+      <!-- /.advert-id -->
 
     </div>
+    <!-- /.xvip.record -->
   </li>
-
+  <!-- /.xvip-record-item -->
+  
   {% endfor %}
-
 </ul>
+<!-- /.xvip-record -->

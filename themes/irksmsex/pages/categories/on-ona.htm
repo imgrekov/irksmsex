@@ -2,7 +2,6 @@ title = "Объявления: парни ищут девушек"
 url = "/categories/on-ona/:page?"
 layout = "advert"
 description = "Парень ищет девушку"
-attr = "on-ona"
 is_hidden = 0
 
 [builderList AdvertsList]
@@ -32,7 +31,7 @@ security = "all"
 
 
 <ul class="record-list">
-  {% for record in records if record.category == 'on-ona' and record.state == 'on' and record.type != 'xvip' %}
+  {% for record in records if record.category == this.page.id and record.state == 'on' and record.type != 'xvip' %}
   <li class="{% if record.type == 'vip' %}vip{% elseif record.type == 'basic' %}basic{% endif %}">
     <div id="{{ record.id }}" class="{% if record.highlight == 'on' %}highlight{% endif %} record">
       {% if record.type == 'vip' %}
@@ -49,20 +48,32 @@ security = "all"
       </div>
       <!-- Текст объявления -->
 
-      {% if record.image1 %}
+      {% if record.attachimage1 %}
       <div class="advert__imgs-wrap">
-        <img class="advert__image" src="{{ record.image1|media }}" alt="Фото1">
-
-        {% if record.image2 %}
-        <img class="advert__image" src="{{ record.image2|media }}" alt="Фото2">
+        <a class="advert__image" href="{{ record.attachimage1.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage1.path }}" alt="Фото1">
+        </a>
+        <!-- Изображение первое -->
+        
+        {% if record.attachimage2 %}
+        <a class="advert__image" href="{{ record.attachimage2.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage2.path }}" alt="Фото1">
+        </a>
         {% endif %}
-        {% if record.image3 %}
-        <img class="advert__image" src="{{ record.image3|media }}" alt="Фото3">
+        <!-- Изображение второе -->
+        {% if record.attachimage3 %}
+        <a class="advert__image" href="{{ record.attachimage3.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage3.path }}" alt="Фото1">
+        </a>
         {% endif %}
+        <!-- Изображение третье -->
 
       </div>
       {% endif %}
       <!-- Изображения к объявлению -->
+
+      <span class="advert-id">ID: {{record.id}}</span>
+      <!-- /.advert-id -->
 
     </div>
     <!-- /.record -->

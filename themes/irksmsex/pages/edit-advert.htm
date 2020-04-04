@@ -43,6 +43,7 @@ notFoundMessage = "Объявление не найдено"
         <span class="badge badge-danger">неактивно</span> <!-- /.state -->
         {% endif %}
       </p>
+      <!-- /.ad-info__stats-wrap-item -->
       <p class="ad-info__stats-wrap-item">
         Выделено:
         {% if record.highlight == 'on' %}
@@ -51,36 +52,41 @@ notFoundMessage = "Объявление не найдено"
         <span class="badge badge-danger">нет</span> <!-- /.state -->
         {% endif %}
       </p>
+      <!-- /.ad-info__stats-wrap-item -->
+
       <p class="ad-info__stats-wrap-item">
         <!-- Текст в соответствии с категорией объявления -->
         Категория:
-        {% if record.category == 'ona-on' %}
-        <span class="badge badge-info">Девушка ищет парня</span> <!-- /.state-category -->
-        {% elseif record.category == 'on-ona' %}
-        <span class="badge badge-info">Парень ищет девушку</span> <!-- /.state-category -->
-        {% elseif record.category == 'on-on' %}
-        <span class="badge badge-info">Парень ищет парня</span> <!-- /.state-category -->
-        {% elseif record.category == 'ona-ona' %}
-        <span class="badge badge-info">Девушка ищет девушку</span> <!-- /.state-category -->
-        {% elseif record.category == 'free' %}
-        <span class="badge badge-info">Досуг в Иркутске</span> <!-- /.state-category -->
-        {% elseif record.category == 'services' %}
-        <span class="badge badge-info">Услуги массажа</span> <!-- /.state-category -->
-        {% elseif record.category == 'family' %}
-        <span class="badge badge-info">Семейные пары</span> <!-- /.state-category -->
-        {% elseif record.category == 'flirt' %}
-        <span class="badge badge-info">Свободные отношения</span> <!-- /.state-category -->
-        {% elseif record.category == 'realty' %}
-        <span class="badge badge-info">Недвижимость</span> <!-- /.state-category -->
-        {% elseif record.category == 'arenda' %}
-        <span class="badge badge-info">Аренда квартир на сутки</span> <!-- /.state-category -->
-        {% elseif record.category == 'work' %}
-        <span class="badge badge-info">Работа в Иркутске</span> <!-- /.state-category -->
+        {% if record.category == 'categories-ona-on' %}
+        <span class="state state-category">Девушка ищет парня</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-on-ona' %}
+        <span class="state state-category">Парень ищет девушку</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-on-on' %}
+        <span class="state state-category">Парень ищет парня</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-ona-ona' %}
+        <span class="state state-category">Девушка ищет девушку</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-free' %}
+        <span class="state state-category">Досуг в Иркутске</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-services' %}
+        <span class="state state-category">Услуги массажа</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-family' %}
+        <span class="state state-category">Семейные пары</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-flirt' %}
+        <span class="state state-category">Свободные отношения</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-realty' %}
+        <span class="state state-category">Недвижимость</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-arenda' %}
+        <span class="state state-category">Аренда квартир на сутки</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-work' %}
+        <span class="state state-category">Работа в Иркутске</span> <!-- /.state-category -->
         {% else %}
-        <span class="d-block badge badge-danger">Ошибка. Категория не найдена</span> <!-- /.badge-danger -->
+        <span class="badge badge-danger">Ошибка: 404 — Not Found</span> <!-- /.badge-danger -->
         {% endif %}
       </p>
+      <!-- /.ad-info__stats-wrap-item -->
+
     </div>
+    <!-- /.ad-info__stats-wrap -->
 
   </div>
 

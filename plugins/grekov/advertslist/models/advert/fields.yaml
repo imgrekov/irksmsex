@@ -29,18 +29,42 @@ fields:
         label: Активно/неактивно
         span: auto
         type: text
-    image1:
-        label: 'Изображение 1'
+    attachimage1:
+        label: 'Изображение первое'
         mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        fileTypes: 'png,jpg,jpeg,bmp,webp'
+        mimeTypes: 'png,jpg,jpeg,bmp,webp'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
         span: auto
-        type: mediafinder
-    image2:
-        label: 'Изображение 2'
+        type: fileupload
+    attachimage2:
+        label: 'Изображение второе'
         mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        fileTypes: 'png,jpg,jpeg,bmp,webp'
+        mimeTypes: 'png,jpg,jpeg,bmp,webp'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
         span: auto
-        type: mediafinder
-    image3:
-        label: 'Изображение 3'
+        type: fileupload
+    attachimage3:
+        label: 'Изображение третье'
         mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        fileTypes: 'png,jpg,jpeg,bmp,webp'
+        mimeTypes: 'png,jpg,jpeg,bmp,webp'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
         span: auto
-        type: mediafinder
+        type: fileupload

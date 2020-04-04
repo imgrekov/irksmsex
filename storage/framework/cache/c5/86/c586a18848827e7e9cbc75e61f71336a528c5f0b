@@ -1,4 +1,4 @@
-1585929068a:1:{s:17:"create-advert.htm";a:12:{s:8:"fileName";s:17:"create-advert.htm";s:7:"content";s:603:"title = "Создать объявление"
+1586004929a:1:{s:17:"create-advert.htm";a:12:{s:8:"fileName";s:17:"create-advert.htm";s:7:"content";s:521:"title = "Создать объявление"
 url = "/create"
 layout = "index"
 description = "Добавить объявление"
@@ -13,29 +13,19 @@ security = "all"
 	<a class="btn btn-secondary" href="{{ 'help'|page }}">Как добавлять объявления?</a>
 </div>
 
-<div class='title'>
-	<h2>Добавить объявление</h2>
-</div>
+{% partial 'second/title' text = "Добавить объявление" %}
 
-
-<div class="sms3">
-	<a class="btn btn-light btn-sm" href="{{ 'home'|page }}">На главную</a>
-</div>
+{% partial 'second/to_home' %}
 
 <main class="main">
 	{% component 'createAdvert' %}
-</main>";s:5:"mtime";i:1585843481;s:6:"markup";s:398:"<div class="infblock">
+</main>";s:5:"mtime";i:1585984293;s:6:"markup";s:316:"<div class="infblock">
 	<a class="btn btn-secondary" href="{{ 'help'|page }}">Как добавлять объявления?</a>
 </div>
 
-<div class='title'>
-	<h2>Добавить объявление</h2>
-</div>
+{% partial 'second/title' text = "Добавить объявление" %}
 
-
-<div class="sms3">
-	<a class="btn btn-light btn-sm" href="{{ 'home'|page }}">На главную</a>
-</div>
+{% partial 'second/to_home' %}
 
 <main class="main">
 	{% component 'createAdvert' %}

@@ -7,11 +7,9 @@ is_hidden = 0
 security = "all"
 ==
 
-<div class="sms3">
-	<a class="btn btn-light btn-sm" href="{{ 'home'|page }}">К объявлениям</a>
-</div>
+{% partial 'second/to_home' %}
 
-{% partial 'second/help-title' text = "Описание элементов" %}
+{% partial 'second/title' text = "Описание элементов" %}
 
 <div class="help-desc">
 	<h3 class="text-center mt-3 profile-hero__title">Типы объявлений</h3>
@@ -59,7 +57,7 @@ security = "all"
 </div>
 <!-- /.help-desc -->
 
-{% partial 'second/help-title' text = "Как разместить объявление?" %}
+{% partial 'second/title' text = "Как разместить объявление?" %}
 
 <div class="help-instruction">
 	<ol class="add-advert">
@@ -100,7 +98,7 @@ security = "all"
 </div>
 <!-- /.help-desc -->
 
-{% partial 'second/help-title' text = "Правила сервиса" %}
+{% partial 'second/title' text = "Правила сервиса" %}
 
 
 <div class="rules">

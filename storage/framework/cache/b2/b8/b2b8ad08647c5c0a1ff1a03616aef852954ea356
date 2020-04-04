@@ -1,4 +1,4 @@
-1585929068a:1:{s:8:"help.htm";a:10:{s:8:"fileName";s:8:"help.htm";s:7:"content";s:7007:"title = "Как добавить объявление?"
+1586004929a:1:{s:8:"help.htm";a:10:{s:8:"fileName";s:8:"help.htm";s:7:"content";s:6907:"title = "Как добавить объявление?"
 url = "/help"
 layout = "help"
 is_hidden = 0
@@ -7,11 +7,9 @@ is_hidden = 0
 security = "all"
 ==
 
-<div class="sms3">
-	<a class="btn btn-light btn-sm" href="{{ 'home'|page }}">К объявлениям</a>
-</div>
+{% partial 'second/to_home' %}
 
-{% partial 'second/help-title' text = "Описание элементов" %}
+{% partial 'second/title' text = "Описание элементов" %}
 
 <div class="help-desc">
 	<h3 class="text-center mt-3 profile-hero__title">Типы объявлений</h3>
@@ -59,7 +57,7 @@ security = "all"
 </div>
 <!-- /.help-desc -->
 
-{% partial 'second/help-title' text = "Как разместить объявление?" %}
+{% partial 'second/title' text = "Как разместить объявление?" %}
 
 <div class="help-instruction">
 	<ol class="add-advert">
@@ -100,7 +98,7 @@ security = "all"
 </div>
 <!-- /.help-desc -->
 
-{% partial 'second/help-title' text = "Правила сервиса" %}
+{% partial 'second/title' text = "Правила сервиса" %}
 
 
 <div class="rules">
@@ -160,11 +158,9 @@ security = "all"
 	<!-- /.rules-desc -->
 
 </div>
-<!-- /.rules -->";s:5:"mtime";i:1585927103;s:6:"markup";s:6866:"<div class="sms3">
-	<a class="btn btn-light btn-sm" href="{{ 'home'|page }}">К объявлениям</a>
-</div>
+<!-- /.rules -->";s:5:"mtime";i:1585984315;s:6:"markup";s:6766:"{% partial 'second/to_home' %}
 
-{% partial 'second/help-title' text = "Описание элементов" %}
+{% partial 'second/title' text = "Описание элементов" %}
 
 <div class="help-desc">
 	<h3 class="text-center mt-3 profile-hero__title">Типы объявлений</h3>
@@ -212,7 +208,7 @@ security = "all"
 </div>
 <!-- /.help-desc -->
 
-{% partial 'second/help-title' text = "Как разместить объявление?" %}
+{% partial 'second/title' text = "Как разместить объявление?" %}
 
 <div class="help-instruction">
 	<ol class="add-advert">
@@ -253,7 +249,7 @@ security = "all"
 </div>
 <!-- /.help-desc -->
 
-{% partial 'second/help-title' text = "Правила сервиса" %}
+{% partial 'second/title' text = "Правила сервиса" %}
 
 
 <div class="rules">

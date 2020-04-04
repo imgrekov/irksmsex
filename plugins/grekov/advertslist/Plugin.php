@@ -14,7 +14,7 @@ class Plugin extends PluginBase
 			'name'        => 'Объявления',
 			'description' => 'Самописный плагин для вывода и хранения объявлений',
 			'author'      => 'Gregar Grekov',
-			'icon'        => 'adn',
+			'icon'        => 'icon-adn',
 		];
 	}
 

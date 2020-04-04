@@ -37,7 +37,7 @@ class __TwigTemplate_2df742ce015292dcfa3be096cd2f9c0f7281c306b482b962a2188139d4b
         echo "<div class=\"infblock\">
   <a class=\"btn btn-warning btn-lg mb-3\" href=\"";
         // line 2
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("add-advert");
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("create-advert");
         echo "\">Добавить объявление</a>
   <br>
   <a class=\"btn btn-secondary\" href=\"";
@@ -66,7 +66,7 @@ class __TwigTemplate_2df742ce015292dcfa3be096cd2f9c0f7281c306b482b962a2188139d4b
     public function getSourceContext()
     {
         return new Source("<div class=\"infblock\">
-  <a class=\"btn btn-warning btn-lg mb-3\" href=\"{{ 'add-advert'|page }}\">Добавить объявление</a>
+  <a class=\"btn btn-warning btn-lg mb-3\" href=\"{{ 'create-advert'|page }}\">Добавить объявление</a>
   <br>
   <a class=\"btn btn-secondary\" href=\"{{ 'help'|page }}\">Как добавить объявление на сайт?</a>
 </div>

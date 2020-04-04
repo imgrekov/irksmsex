@@ -38,21 +38,25 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   <h1>Сайт знакомств и доска объявлений в Иркутске</h1>
 </div>
 
-<!-- Знакомства -->
-<div class='title'>
-  <h2>Знакомства в Иркутске</h2>
-</div>
+";
+        // line 5
+        $context['__cms_partial_params'] = [];
+        $context['__cms_partial_params']['text'] = "Знакомства в Иркутске"        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("second/title"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 6
+        echo "<!-- title -->
 
 <div class=\"cats\">
 
   <a class=\"main-link\" href=\"";
-        // line 12
+        // line 10
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories/ona-on");
         echo "\">
     <span class=\"arrow\">
       Девушка ищет парня
       <img src=\"";
-        // line 15
+        // line 13
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/f-m.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
@@ -62,13 +66,13 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   </a>
 
   <a class=\"main-link\" href=\"";
-        // line 22
+        // line 20
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories/on-ona");
         echo "\">
     <span class=\"arrow\">
       Парень ищет девушку
       <img src=\"";
-        // line 25
+        // line 23
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/m-f.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
@@ -78,13 +82,13 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   </a>
 
   <a class=\"main-link\" href=\"";
-        // line 32
+        // line 30
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories/on-on");
         echo "\">
     <span class=\"arrow\">
       Парень ищет парня
       <img src=\"";
-        // line 35
+        // line 33
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/m-m.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
@@ -94,13 +98,13 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   </a>
 
   <a class=\"main-link\" href=\"";
-        // line 42
+        // line 40
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories/ona-ona");
         echo "\">
     <span class=\"arrow\">
       Дувешка ищет девушку
       <img src=\"";
-        // line 45
+        // line 43
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/f-f.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
@@ -110,13 +114,13 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   </a>
 
   <a class=\"main-link\" href=\"";
-        // line 52
+        // line 50
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories/free");
         echo "\">
     <span class=\"arrow\">
       Досуг в Иркутске
       <img src=\"";
-        // line 55
+        // line 53
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/dosug.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
@@ -126,13 +130,13 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   </a>
 
   <a class=\"main-link\" href=\"";
-        // line 62
+        // line 60
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories/services");
         echo "\">
     <span class=\"services\">
       Услуги массажа
       <img src=\"";
-        // line 65
+        // line 63
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/services.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
@@ -142,13 +146,13 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   </a>
 
   <a class=\"main-link\" href=\"";
-        // line 72
+        // line 70
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories/family");
         echo "\">
     <span class=\"arrow\">
       Семейные пары
       <img src=\"";
-        // line 75
+        // line 73
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/family.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
@@ -158,13 +162,13 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   </a>
 
   <a class=\"main-link\" href=\"";
-        // line 82
+        // line 80
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories/flirt");
         echo "\">
     <span class=\"arrow\">
       Свободные отношения, флирт
       <img src=\"";
-        // line 85
+        // line 83
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/free.png");
         echo "\" alt=\"Картинка категории\">
       <span class=\"count\">
@@ -174,27 +178,30 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   </a>
 
 </div>
-<!-- /.title -->
+<!-- /.cats -->
 
 
+
+";
+        // line 95
+        $context['__cms_partial_params'] = [];
+        $context['__cms_partial_params']['text'] = "Мобильная доска объявлений"        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("second/title"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 96
+        echo "<!-- /.title -->
 
 <!-- Доска объявлений -->
-<div class='title'>
-  <h2>Мобильная доска объявлений</h2>
-</div>
-<!-- /.title -->
-
-
 <div class=\"cats\">
 
   <a class=\"main-link\" href=\"";
-        // line 106
+        // line 101
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories/realty");
         echo "\">
     <span class=\"arrow\">
       Недвижимость
       <img alt='мобильные смс знакомства' src=\"";
-        // line 109
+        // line 104
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/realty.png");
         echo "\">
       <span class=\"count\">
@@ -205,13 +212,13 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   </a>
 
   <a class=\"main-link\" href=\"";
-        // line 117
+        // line 112
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories/arenda");
         echo "\">
     <span class=\"arrow\">
       Аренда квартир (суточно)
       <img alt='мобильные смс знакомства' src=\"";
-        // line 120
+        // line 115
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/arenda.png");
         echo "\">
       <span class=\"count\">
@@ -222,13 +229,13 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   </a>
 
   <a class=\"main-link\" href=\"";
-        // line 128
+        // line 123
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("categories/work");
         echo "\">
     <span class=\"arrow\">
       Работа
       <img alt=\"мобильные смс знакомства\" src=\"";
-        // line 131
+        // line 126
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/cats/work.png");
         echo "\">
       <span class=\"count\">
@@ -241,7 +248,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
 </div>
 
 ";
-        // line 141
+        // line 136
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("second/socials"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
@@ -259,7 +266,7 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
 
     public function getDebugInfo()
     {
-        return array (  245 => 141,  232 => 131,  226 => 128,  215 => 120,  209 => 117,  198 => 109,  192 => 106,  168 => 85,  162 => 82,  152 => 75,  146 => 72,  136 => 65,  130 => 62,  120 => 55,  114 => 52,  104 => 45,  98 => 42,  88 => 35,  82 => 32,  72 => 25,  66 => 22,  56 => 15,  50 => 12,  37 => 1,);
+        return array (  252 => 136,  239 => 126,  233 => 123,  222 => 115,  216 => 112,  205 => 104,  199 => 101,  192 => 96,  187 => 95,  172 => 83,  166 => 80,  156 => 73,  150 => 70,  140 => 63,  134 => 60,  124 => 53,  118 => 50,  108 => 43,  102 => 40,  92 => 33,  86 => 30,  76 => 23,  70 => 20,  60 => 13,  54 => 10,  48 => 6,  43 => 5,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -268,10 +275,8 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   <h1>Сайт знакомств и доска объявлений в Иркутске</h1>
 </div>
 
-<!-- Знакомства -->
-<div class='title'>
-  <h2>Знакомства в Иркутске</h2>
-</div>
+{% partial 'second/title' text = \"Знакомства в Иркутске\" %}
+<!-- title -->
 
 <div class=\"cats\">
 
@@ -356,17 +361,14 @@ class __TwigTemplate_6019dd62b25eb10083cf25bdd81117b7ed8182a93db24fa66170faebcab
   </a>
 
 </div>
+<!-- /.cats -->
+
+
+
+{% partial 'second/title' text = \"Мобильная доска объявлений\" %}
 <!-- /.title -->
-
-
 
 <!-- Доска объявлений -->
-<div class='title'>
-  <h2>Мобильная доска объявлений</h2>
-</div>
-<!-- /.title -->
-
-
 <div class=\"cats\">
 
   <a class=\"main-link\" href=\"{{ 'categories/realty'|page }}\">

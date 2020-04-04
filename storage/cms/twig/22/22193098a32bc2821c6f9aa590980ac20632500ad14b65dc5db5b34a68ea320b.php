@@ -41,25 +41,28 @@ class __TwigTemplate_3797170cee66a7cad58cbc6d7dbc189b465926ac30807e4ae4b0a0ca81d
         echo "\">Как добавлять объявления?</a>
 </div>
 
-<div class='title'>
-\t<h2>Добавить объявление</h2>
-</div>
-
-
-<div class=\"sms3\">
-\t<a class=\"btn btn-light btn-sm\" href=\"";
-        // line 11
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
-        echo "\">На главную</a>
-</div>
-
+";
+        // line 5
+        $context['__cms_partial_params'] = [];
+        $context['__cms_partial_params']['text'] = "Добавить объявление"        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("second/title"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 6
+        echo "
+";
+        // line 7
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("second/to_home"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 8
+        echo "
 <main class=\"main\">
 \t";
-        // line 15
+        // line 10
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("createAdvert"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
-        // line 16
+        // line 11
         echo "</main>";
     }
 
@@ -75,7 +78,7 @@ class __TwigTemplate_3797170cee66a7cad58cbc6d7dbc189b465926ac30807e4ae4b0a0ca81d
 
     public function getDebugInfo()
     {
-        return array (  63 => 16,  59 => 15,  52 => 11,  40 => 2,  37 => 1,);
+        return array (  66 => 11,  62 => 10,  58 => 8,  54 => 7,  51 => 6,  46 => 5,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -84,14 +87,9 @@ class __TwigTemplate_3797170cee66a7cad58cbc6d7dbc189b465926ac30807e4ae4b0a0ca81d
 \t<a class=\"btn btn-secondary\" href=\"{{ 'help'|page }}\">Как добавлять объявления?</a>
 </div>
 
-<div class='title'>
-\t<h2>Добавить объявление</h2>
-</div>
+{% partial 'second/title' text = \"Добавить объявление\" %}
 
-
-<div class=\"sms3\">
-\t<a class=\"btn btn-light btn-sm\" href=\"{{ 'home'|page }}\">На главную</a>
-</div>
+{% partial 'second/to_home' %}
 
 <main class=\"main\">
 \t{% component 'createAdvert' %}
