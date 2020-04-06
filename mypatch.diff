@@ -1,0 +1,213 @@
+diff --git a/plugins/grekov/advertslist/components/EditAdvert.php b/plugins/grekov/advertslist/components/EditAdvert.php
+index 75fb921..1e03f62 100644
+--- a/plugins/grekov/advertslist/components/EditAdvert.php
++++ b/plugins/grekov/advertslist/components/EditAdvert.php
+@@ -20,23 +20,24 @@ class EditAdvert extends ComponentBase
+ 
+   public function onEditAdvert()
+   {
+-    $advert = AdvertFather::find((int) post('id'));
++      /** @var AdvertFather|mixed $advert */
++      $advert = AdvertFather::find((int) post('id'));
+ 
+     $advert->text = post('text');
+     $advert->category = post('category');
+     $advert->type = post('type');
+     $advert->state = post('state');
+     $advert->highlight = post('highlight');
+-    $advert->attachimage1 = Input::file('attachimage1');
+-    $advert->attachimage2 = Input::file('attachimage2');
+-    $advert->attachimage3 = Input::file('attachimage3');
+ 
+-    // if (Input::hasFile('attachimage1')) {
+-    //   $advert->image1 = Input::file('attachimage1');
+-    // }
++    foreach ($advert->attachOne as $name => $type) {
++        if (Input::hasFile($name)) {
++            $advert->{$name} = Input::file($name);
++        } elseif (isset($advert->{$name}) && input($name . 'del')) {
++            $advert->{$name}->delete();
++        }
++    }
+ 
+     $advert->save();
+-
+   }
+ 
+   public function onEditDelete()
+diff --git a/plugins/grekov/advertslist/components/editadvert/default.htm b/plugins/grekov/advertslist/components/editadvert/default.htm
+index 73ede88..7d4d9a5 100644
+--- a/plugins/grekov/advertslist/components/editadvert/default.htm
++++ b/plugins/grekov/advertslist/components/editadvert/default.htm
+@@ -27,7 +27,7 @@
+           Вип
+         </label>
+         <label for="xvip">
+-          <input type="radio" name="type" id="xvip" value="xvip" {% if record.type == 'xvip' %} checked {% endif %}>
++          <input type="radio" name="type" id="xvip" value="xvip" {% if record.type == 'xvip' %} checked {% endif %} {% if user.hasVip %} disabled="disabled" {% endif %}>
+           xVIP
+         </label>
+       </div> <!-- /.form-group -->
+@@ -132,28 +132,31 @@
+ 
+       <div class="advert-edit__image-item">
+         <p>№ — 1</p>
++        <input type="hidden" id="attachimage1del" name="attachimage1del">
+         <input class="inputfile" type="file" id="attachimage1" name="attachimage1"
+           accept="image/jpeg,image/png,image/jpg">
+         <label for="attachimage1">Выберите файл</label>
+-        <div class="image1-name image-name"></div>
++        <div class="image1-name image-name">{{record.attachimage1.file_name ?? ''}}</div>
+         <a class="remove-button btn btn-outline-danger btn-sm" href="javascript:;" id="btn-remove-image1">Очистить</a>
+       </div> <!-- /.advert-edit__image-item -->
+ 
+       <div class="advert-edit__image-item">
+         <p>№ — 2</p>
++        <input type="hidden" id="attachimage2del" name="attachimage2del">
+         <input class="inputfile" type="file" id="attachimage2" name="attachimage2"
+           accept="image/jpeg,image/png,image/jpg">
+         <label for="attachimage2">Выберите файл</label>
+-        <div class="image2-name image-name"></div>
++        <div class="image2-name image-name">{{record.attachimage2.file_name ?? ''}}</div>
+         <a class="remove-button btn btn-outline-danger btn-sm" href="javascript:;" id="btn-remove-image2">Очистить</a>
+       </div> <!-- /.advert-edit__image-item -->
+ 
+       <div class="advert-edit__image-item">
+         <p>№ — 3</p>
++        <input type="hidden" id="attachimage3del" name="attachimage3del">
+         <input class="inputfile" type="file" id="attachimage3" name="attachimage3"
+           accept="image/jpeg,image/png,image/jpg">
+         <label for="attachimage3">Выберите файл</label>
+-        <div class="image3-name image-name"></div>
++        <div class="image3-name image-name">{{record.attachimage3.file_name ?? ''}}</div>
+         <a class="remove-button btn btn-outline-danger btn-sm" href="javascript:;" id="btn-remove-image3">Очистить</a>
+       </div> <!-- /.advert-edit__image-item -->
+ 
+diff --git a/plugins/grekov/advertslist/models/Advert.php b/plugins/grekov/advertslist/models/Advert.php
+index e082bf7..b8c8d48 100644
+--- a/plugins/grekov/advertslist/models/Advert.php
++++ b/plugins/grekov/advertslist/models/Advert.php
+@@ -2,6 +2,8 @@
+ 
+ namespace Grekov\AdvertsList\Models;
+ 
++use Carbon\Carbon;
++use Illuminate\Database\Eloquent\Builder;
+ use Model;
+ use System\Models\File;
+ 
+@@ -9,6 +11,8 @@ class Advert extends Model
+ {
+ 	use \October\Rain\Database\Traits\Validation;
+ 
++	const XVIP = 'xvip';
++
+ 	/**
+ 	 * @var string The database table used by the model.
+ 	 */
+@@ -24,4 +28,29 @@ class Advert extends Model
+ 	 * @var array Validation rules
+ 	 */
+ 	public $rules = [];
++
++    public function getImageCountAttribute()
++    {
++        $count = 0;
++        foreach ($this->attachOne as $item => $type) {
++            $count += (int)isset($this->{$item});
++        }
++        return $count;
++    }
++
++    protected static function boot()
++    {
++        parent::boot();
++
++        static::addGlobalScope('active', function (Builder $builder) {
++            $builder->where(function ($query) {
++                $query->where('type', '!=', self::XVIP)
++                    ->orWhereNull('type')
++                    ->orWhere(function ($query) {
++                        $query->where('type', '=', self::XVIP)
++                            ->where('created_at', '>=', Carbon::now()->subDay()->toDateTimeString());
++                    });
++            });
++        });
++    }
+ }
+diff --git a/plugins/rainlab/user/models/User.php b/plugins/rainlab/user/models/User.php
+index 01d0a51..bef5a35 100644
+--- a/plugins/rainlab/user/models/User.php
++++ b/plugins/rainlab/user/models/User.php
+@@ -2,6 +2,7 @@
+ 
+ namespace RainLab\User\Models;
+ 
++use Grekov\AdvertsList\Models\Advert;
+ use Str;
+ use Auth;
+ use Mail;
+@@ -445,4 +446,22 @@ class User extends UserBase
+ 	{
+ 		$this->password = $this->password_confirmation = Str::random(static::getMinPasswordLength());
+ 	}
++
++	public function adverts()
++    {
++        return $this->hasMany(Advert::class, 'author', 'email');
++    }
++
++    /**
++     * @return \Illuminate\Database\Eloquent\Collection|Advert[]
++     */
++    public function ads()
++    {
++        return $this->adverts ?? $this->adverts()->get();
++    }
++
++    public function hasVip()
++    {
++        return Advert::query()->where('type', Advert::XVIP)->count();
++    }
+ }
+diff --git a/themes/irksmsex/assets/js/app.js b/themes/irksmsex/assets/js/app.js
+index acab09a..2e1e5a4 100644
+--- a/themes/irksmsex/assets/js/app.js
++++ b/themes/irksmsex/assets/js/app.js
+@@ -31,6 +31,7 @@ $(document).ready(function () {
+   // Очищает input от выбранного файла
+   $('#btn-remove-image1').click(function () {
+     $('#attachimage1').val("");
++    $('#attachimage1del').val("1");
+     $('.image1-name').text("");
+   });
+ 
+@@ -42,6 +43,7 @@ $(document).ready(function () {
+   // Очищает input от выбранного файла
+   $('#btn-remove-image2').click(function () {
+     $('#attachimage2').val("");
++    $('#attachimage2del').val("1");
+     $('.image2-name').text("");
+   });
+ 
+@@ -53,6 +55,7 @@ $(document).ready(function () {
+   // Очищает input от выбранного файла
+   $('#btn-remove-image3').click(function () {
+     $('#attachimage3').val("");
++    $('#attachimage3del').val("1");
+     $('.image3-name').text("");
+   });
+ 
+diff --git a/themes/irksmsex/pages/user/profile.htm b/themes/irksmsex/pages/user/profile.htm
+index 3ffaa2f..e1bc0a5 100644
+--- a/themes/irksmsex/pages/user/profile.htm
++++ b/themes/irksmsex/pages/user/profile.htm
+@@ -120,7 +120,7 @@ sortDirection = "desc"
+               </p>
+               <p>
+                 <!-- Здесь посчитать количество картинок. Если изображений нет, то "0". Если есть, то их количество. -->
+-                Изображений добавлено: <span class="badge badge-primary count_imgs">0</span> <!-- /.count_imgs -->
++                Изображений добавлено: <span class="badge badge-primary count_imgs">{{record.imageCount}}</span> <!-- /.count_imgs -->
+               </p>
+               <p>
+                 <!-- Текст в соответствии с категорией объявления -->

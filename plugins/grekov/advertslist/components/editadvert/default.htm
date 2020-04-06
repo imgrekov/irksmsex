@@ -27,7 +27,7 @@
           Вип
         </label>
         <label for="xvip">
-          <input type="radio" name="type" id="xvip" value="xvip" {% if record.type == 'xvip' %} checked {% endif %}>
+          <input type="radio" name="type" id="xvip" value="xvip" {% if record.type == 'xvip' %} checked {% endif %} {% if user.hasVip %} disabled="disabled" {% endif %}>
           xVIP
         </label>
       </div> <!-- /.form-group -->
@@ -132,28 +132,31 @@
 
       <div class="advert-edit__image-item">
         <p>№ — 1</p>
+        <input type="hidden" id="attachimage1del" name="attachimage1del">
         <input class="inputfile" type="file" id="attachimage1" name="attachimage1"
           accept="image/jpeg,image/png,image/jpg">
         <label for="attachimage1">Выберите файл</label>
-        <div class="image1-name image-name"></div>
+        <div class="image1-name image-name">{{record.attachimage1.file_name ?? ''}}</div>
         <a class="remove-button btn btn-outline-danger btn-sm" href="javascript:;" id="btn-remove-image1">Очистить</a>
       </div> <!-- /.advert-edit__image-item -->
 
       <div class="advert-edit__image-item">
         <p>№ — 2</p>
+        <input type="hidden" id="attachimage2del" name="attachimage2del">
         <input class="inputfile" type="file" id="attachimage2" name="attachimage2"
           accept="image/jpeg,image/png,image/jpg">
         <label for="attachimage2">Выберите файл</label>
-        <div class="image2-name image-name"></div>
+        <div class="image2-name image-name">{{record.attachimage2.file_name ?? ''}}</div>
         <a class="remove-button btn btn-outline-danger btn-sm" href="javascript:;" id="btn-remove-image2">Очистить</a>
       </div> <!-- /.advert-edit__image-item -->
 
       <div class="advert-edit__image-item">
         <p>№ — 3</p>
+        <input type="hidden" id="attachimage3del" name="attachimage3del">
         <input class="inputfile" type="file" id="attachimage3" name="attachimage3"
           accept="image/jpeg,image/png,image/jpg">
         <label for="attachimage3">Выберите файл</label>
-        <div class="image3-name image-name"></div>
+        <div class="image3-name image-name">{{record.attachimage3.file_name ?? ''}}</div>
         <a class="remove-button btn btn-outline-danger btn-sm" href="javascript:;" id="btn-remove-image3">Очистить</a>
       </div> <!-- /.advert-edit__image-item -->
 

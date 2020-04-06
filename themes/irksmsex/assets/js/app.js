@@ -31,6 +31,7 @@ $(document).ready(function () {
   // Очищает input от выбранного файла
   $('#btn-remove-image1').click(function () {
     $('#attachimage1').val("");
+    $('#attachimage1del').val("1");
     $('.image1-name').text("");
   });
 
@@ -42,6 +43,7 @@ $(document).ready(function () {
   // Очищает input от выбранного файла
   $('#btn-remove-image2').click(function () {
     $('#attachimage2').val("");
+    $('#attachimage2del').val("1");
     $('.image2-name').text("");
   });
 
@@ -53,6 +55,7 @@ $(document).ready(function () {
   // Очищает input от выбранного файла
   $('#btn-remove-image3').click(function () {
     $('#attachimage3').val("");
+    $('#attachimage3del').val("1");
     $('.image3-name').text("");
   });
 

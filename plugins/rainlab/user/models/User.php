@@ -2,6 +2,7 @@
 
 namespace RainLab\User\Models;
 
+use Grekov\AdvertsList\Models\Advert;
 use Str;
 use Auth;
 use Mail;
@@ -445,4 +446,22 @@ class User extends UserBase
 	{
 		$this->password = $this->password_confirmation = Str::random(static::getMinPasswordLength());
 	}
+
+	public function adverts()
+    {
+        return $this->hasMany(Advert::class, 'author', 'email');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Collection|Advert[]
+     */
+    public function ads()
+    {
+        return $this->adverts ?? $this->adverts()->get();
+    }
+
+    public function hasVip()
+    {
+        return Advert::query()->where('type', Advert::XVIP)->count();
+    }
 }

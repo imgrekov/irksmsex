@@ -20,23 +20,24 @@ class EditAdvert extends ComponentBase
 
   public function onEditAdvert()
   {
-    $advert = AdvertFather::find((int) post('id'));
+      /** @var AdvertFather|mixed $advert */
+      $advert = AdvertFather::find((int) post('id'));
 
     $advert->text = post('text');
     $advert->category = post('category');
     $advert->type = post('type');
     $advert->state = post('state');
     $advert->highlight = post('highlight');
-    $advert->attachimage1 = Input::file('attachimage1');
-    $advert->attachimage2 = Input::file('attachimage2');
-    $advert->attachimage3 = Input::file('attachimage3');
 
-    // if (Input::hasFile('attachimage1')) {
-    //   $advert->image1 = Input::file('attachimage1');
-    // }
+    foreach ($advert->attachOne as $name => $type) {
+        if (Input::hasFile($name)) {
+            $advert->{$name} = Input::file($name);
+        } elseif (isset($advert->{$name}) && input($name . 'del')) {
+            $advert->{$name}->delete();
+        }
+    }
 
     $advert->save();
-
   }
 
   public function onEditDelete()
