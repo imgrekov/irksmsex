@@ -3,6 +3,9 @@
 
 ### OctoberCms ###
 /bootstrap/compiled.php
+/storage/framework
+/storage/cms
+/storage/logs
 /vendor
 composer.phar
 .DS_Store
@@ -18,10 +21,6 @@ nginx-ssl.error.log
 php-errors.log
 sftp-config.json
 selenium.php
-storage/cms/
-storage/framework/
-storage/logs/
-storage/temp/
 
 # for netbeans compiler
 nbproject

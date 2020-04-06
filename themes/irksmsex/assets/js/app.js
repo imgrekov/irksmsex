@@ -58,8 +58,5 @@ $(document).ready(function () {
 
 
 
-  // let countImgs = $(".count_imgs-parent").children('.advert__image').length;
-
-
 
 });
