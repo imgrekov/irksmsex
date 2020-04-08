@@ -1,7 +1,7 @@
 ### OctoberCms ###
 /bootstrap/compiled.php
 /storage/app
-# /storage/framework
+/storage/framework
 /storage/cms
 /storage/logs
 /vendor
