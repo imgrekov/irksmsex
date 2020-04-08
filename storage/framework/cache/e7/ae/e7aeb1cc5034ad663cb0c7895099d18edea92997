@@ -1,0 +1,101 @@
+1586344329a:1:{s:23:"adverts/xvip-record.htm";a:5:{s:8:"fileName";s:23:"adverts/xvip-record.htm";s:7:"content";s:1756:"<ul class="xvip-record">
+  {% for record in records if record.type == 'xvip' and record.category == this.page.id %}
+
+  <li class="xvip-record-item">
+    <div id="{{ record.id }}" class="xvip record">
+
+      <span class="timehead">
+        {{ record.created_at|date('d-m-Y H:i') }}
+      </span>
+      <!-- Когда создано -->
+
+      <div class="xvip-record__text">
+        {{ record.text|raw }}
+      </div>
+      <!-- Текст объявления -->
+
+      {% if record.attachimage1 %}
+      <div class="advert__imgs-wrap">
+        <a class="advert__image" href="{{ record.attachimage1.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage1.path }}" alt="Фото1">
+        </a>
+        <!-- Изображение первое -->
+        
+        {% if record.attachimage2 %}
+        <a class="advert__image" href="{{ record.attachimage2.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage2.path }}" alt="Фото1">
+        </a>
+        {% endif %}
+        <!-- Изображение второе -->
+        {% if record.attachimage3 %}
+        <a class="advert__image" href="{{ record.attachimage3.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage3.path }}" alt="Фото1">
+        </a>
+        {% endif %}
+        <!-- Изображение третье -->
+
+      </div>
+      {% endif %}
+      <!-- Изображения к объявлению -->
+
+      <span class="advert-id">ID: {{record.id}}</span>
+      <!-- /.advert-id -->
+
+    </div>
+    <!-- /.xvip.record -->
+  </li>
+  <!-- /.xvip-record-item -->
+  
+  {% endfor %}
+</ul>
+<!-- /.xvip-record -->";s:5:"mtime";i:1586341650;s:6:"markup";s:1756:"<ul class="xvip-record">
+  {% for record in records if record.type == 'xvip' and record.category == this.page.id %}
+
+  <li class="xvip-record-item">
+    <div id="{{ record.id }}" class="xvip record">
+
+      <span class="timehead">
+        {{ record.created_at|date('d-m-Y H:i') }}
+      </span>
+      <!-- Когда создано -->
+
+      <div class="xvip-record__text">
+        {{ record.text|raw }}
+      </div>
+      <!-- Текст объявления -->
+
+      {% if record.attachimage1 %}
+      <div class="advert__imgs-wrap">
+        <a class="advert__image" href="{{ record.attachimage1.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage1.path }}" alt="Фото1">
+        </a>
+        <!-- Изображение первое -->
+        
+        {% if record.attachimage2 %}
+        <a class="advert__image" href="{{ record.attachimage2.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage2.path }}" alt="Фото1">
+        </a>
+        {% endif %}
+        <!-- Изображение второе -->
+        {% if record.attachimage3 %}
+        <a class="advert__image" href="{{ record.attachimage3.path }}" data-toggle="lightbox" data-type="image">
+          <img src="{{ record.attachimage3.path }}" alt="Фото1">
+        </a>
+        {% endif %}
+        <!-- Изображение третье -->
+
+      </div>
+      {% endif %}
+      <!-- Изображения к объявлению -->
+
+      <span class="advert-id">ID: {{record.id}}</span>
+      <!-- /.advert-id -->
+
+    </div>
+    <!-- /.xvip.record -->
+  </li>
+  <!-- /.xvip-record-item -->
+  
+  {% endfor %}
+</ul>
+<!-- /.xvip-record -->";s:4:"code";N;}}

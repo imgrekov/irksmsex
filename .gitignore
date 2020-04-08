@@ -1,9 +1,7 @@
-# Created by https://www.gitignore.io/api/windows,octobercms
-# Edit at https://www.gitignore.io/?templates=windows,octobercms
-
 ### OctoberCms ###
 /bootstrap/compiled.php
-/storage/framework
+/storage/app
+# /storage/framework
 /storage/cms
 /storage/logs
 /vendor

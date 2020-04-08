@@ -1,4 +1,4 @@
-1586177173a:1:{s:21:"categories/realty.htm";a:9:{s:8:"fileName";s:21:"categories/realty.htm";s:7:"content";s:933:"﻿title = "Объявления недвижимости в Иркутске"
+1586344633a:1:{s:21:"categories/realty.htm";a:9:{s:8:"fileName";s:21:"categories/realty.htm";s:7:"content";s:933:"﻿title = "Объявления недвижимости в Иркутске"
 h1 = "Недвижимость"
 url = "/categories/realty"
 layout = "advert"
@@ -29,7 +29,7 @@ layout = "advert"
 
     </div>
   </li>
-</ul>";s:5:"mtime";i:1583928388;s:6:"markup";s:765:"<ul class="advert-list">
+</ul>";s:5:"mtime";i:1586341650;s:6:"markup";s:765:"<ul class="advert-list">
   
   <li>
     <div id="1" class="sms">

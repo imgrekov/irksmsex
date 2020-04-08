@@ -912,8 +912,7 @@ li.gold {
   margin-bottom: 10px;
 }
 
-.profile-hero__status p>span.state,
-.ad-info__stats-wrap .ad-info__stats-wrap-item>span.state {
+.state {
   padding: .25em .4em;
   border-radius: 4px;
 
@@ -922,13 +921,7 @@ li.gold {
   color: #fefefe;
 }
 
-.profile-hero__status p>span.state-category {
-  display: block;
-  text-align: center;
-  background-color: #1f9791;
-}
-
-.ad-info__stats-wrap .ad-info__stats-wrap-item>span.state-category {
+.state-category {
   text-align: center;
   background-color: #1f9791;
 }

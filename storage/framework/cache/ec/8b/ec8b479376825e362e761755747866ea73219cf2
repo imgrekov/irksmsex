@@ -1,4 +1,4 @@
-1586177173a:1:{s:15:"edit-advert.htm";a:13:{s:8:"fileName";s:15:"edit-advert.htm";s:7:"content";s:5411:"title = "Редактировать объявление"
+1586344633a:1:{s:15:"edit-advert.htm";a:13:{s:8:"fileName";s:15:"edit-advert.htm";s:7:"content";s:5411:"title = "Редактировать объявление"
 url = "/edit/:id"
 layout = "index"
 description = "Редактировать добавленное объявление"
@@ -124,7 +124,7 @@ notFoundMessage = "Объявление не найдено"
   <h1 class="text-right">{{ notFoundMessage|raw }}</h1>
 </div> <!-- /.err -->
 
-{% endif %}";s:5:"mtime";i:1586175209;s:6:"markup";s:4953:"{% set record = builderDetails.record %}
+{% endif %}";s:5:"mtime";i:1586341650;s:6:"markup";s:4953:"{% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 

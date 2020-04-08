@@ -1,0 +1,7 @@
+1586343361a:1:{s:7:"404.htm";a:5:{s:8:"fileName";s:7:"404.htm";s:7:"content";s:173:"<div class="err">
+  <img src="{{ 'assets/images/errors/404.svg'|theme }}" alt="404 Ошибка">
+  <h1 class="text-right">{{ error_text|raw }}</h1>
+</div> <!-- /.err -->";s:5:"mtime";i:1586341650;s:6:"markup";s:173:"<div class="err">
+  <img src="{{ 'assets/images/errors/404.svg'|theme }}" alt="404 Ошибка">
+  <h1 class="text-right">{{ error_text|raw }}</h1>
+</div> <!-- /.err -->";s:4:"code";N;}}

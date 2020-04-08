@@ -1,0 +1,29 @@
+1586342518a:1:{s:25:"resetpassword/restore.htm";a:5:{s:8:"fileName";s:25:"resetpassword/restore.htm";s:7:"content";s:575:"<form data-request="{{ __SELF__ }}::onRestorePassword"
+	data-request-update="'{{ __SELF__ }}::reset': '#partialUserResetForm'">
+
+	<fieldset class="form-wrapper">
+
+		<h2>Забыли пароль?</h2>
+		<div class="form-group">
+			<label for="userRestoreEmail">Введите свою почту</label>
+			<input name="email" type="email" class="form-control" id="userRestoreEmail"
+				placeholder="Например: info@irksmsex.ru">
+		</div>
+	</fieldset>
+
+	<button type="submit" class="btn btn-success">Восстановить пароль</button>
+</form>";s:5:"mtime";i:1586341650;s:6:"markup";s:575:"<form data-request="{{ __SELF__ }}::onRestorePassword"
+	data-request-update="'{{ __SELF__ }}::reset': '#partialUserResetForm'">
+
+	<fieldset class="form-wrapper">
+
+		<h2>Забыли пароль?</h2>
+		<div class="form-group">
+			<label for="userRestoreEmail">Введите свою почту</label>
+			<input name="email" type="email" class="form-control" id="userRestoreEmail"
+				placeholder="Например: info@irksmsex.ru">
+		</div>
+	</fieldset>
+
+	<button type="submit" class="btn btn-success">Восстановить пароль</button>
+</form>";s:4:"code";N;}}

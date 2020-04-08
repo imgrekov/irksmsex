@@ -1,4 +1,4 @@
-1586177173a:1:{s:17:"create-advert.htm";a:12:{s:8:"fileName";s:17:"create-advert.htm";s:7:"content";s:521:"title = "Создать объявление"
+1586344633a:1:{s:17:"create-advert.htm";a:12:{s:8:"fileName";s:17:"create-advert.htm";s:7:"content";s:521:"title = "Создать объявление"
 url = "/create"
 layout = "index"
 description = "Добавить объявление"
@@ -19,7 +19,7 @@ security = "all"
 
 <main class="main">
 	{% component 'createAdvert' %}
-</main>";s:5:"mtime";i:1585984293;s:6:"markup";s:316:"<div class="infblock">
+</main>";s:5:"mtime";i:1586341650;s:6:"markup";s:316:"<div class="infblock">
 	<a class="btn btn-secondary" href="{{ 'help'|page }}">Как добавлять объявления?</a>
 </div>
 

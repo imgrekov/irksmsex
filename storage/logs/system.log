@@ -20678,3 +20678,267 @@ Stack trace:
 #50 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #51 D:\OSPanel\domains\irksmsex.ru\index.php(43): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #52 {main}  
+[2020-04-08 10:31:07] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:3:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:31:45] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:3:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:31:48] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:2:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:31:55] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:2:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:31:58] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:3:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:31:59] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:2:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:32:07] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:4:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:4:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:4:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:4:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#9 {main}  
+[2020-04-08 10:32:07] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:3:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#9 {main}  
+[2020-04-08 10:32:08] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:3:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:32:19] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:2:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:32:27] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:3:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:32:35] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:2:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:45:10] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:3:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:45:54] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:3:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:46:01] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:3:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:47:05] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:2:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:47:05] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:3:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:47:07] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:4:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:4:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:4:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:4:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#9 {main}  
+[2020-04-08 10:47:07] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:3:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#9 {main}  
+[2020-04-08 10:47:07] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:3:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:47:11] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:2:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:2:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  
+[2020-04-08 10:47:52] development.ERROR: ErrorException: file_put_contents(D:\OSPanel\domains\irksmsex.ru\storage\framework/sessions/pkmPhRPBcconeuN9gC98LKMun1MjcEx1VY0OdDXb): failed to open stream: No such file or directory in D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:122
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\OSPanel\\doma...', 122, Array)
+#1 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(122): file_put_contents('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\OSPanel\domains\irksmsex.ru\vendor\october\rain\src\Filesystem\Filesystem.php(217): Illuminate\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#3 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): October\Rain\Filesystem\Filesystem->put('D:\\OSPanel\\doma...', 'a:3:{s:6:"_toke...', true)
+#4 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Store.php(128): Illuminate\Session\FileSessionHandler->write('pkmPhRPBcconeuN...', 'a:3:{s:6:"_toke...')
+#5 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(87): Illuminate\Session\Store->save()
+#6 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(218): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\OSPanel\domains\irksmsex.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(189): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 D:\OSPanel\domains\irksmsex.ru\index.php(48): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#9 {main}  

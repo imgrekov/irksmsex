@@ -27,6 +27,8 @@ sortDirection = "desc"
 {% set detailsKeyColumn = userAdverts.detailsKeyColumn %}
 {% set detailsUrlParameter = userAdverts.detailsUrlParameter %}
 
+
+
 <div class="profile">
 
   <div class="profile-head">
@@ -120,38 +122,51 @@ sortDirection = "desc"
               </p>
               <p>
                 <!-- Здесь посчитать количество картинок. Если изображений нет, то "0". Если есть, то их количество. -->
-                Изображений добавлено: <span class="badge badge-primary count_imgs">{{record.imageCount}}</span> <!-- /.count_imgs -->
+                Изображений добавлено: <span class="badge badge-primary count_imgs">{{record.imageCount}}</span>
+                <!-- /.count_imgs -->
               </p>
-              <p>
+              <a>
                 <!-- Текст в соответствии с категорией объявления -->
                 Категория:
                 {% if record.category == 'categories-ona-on' %}
-                <span class="state state-category">Девушка ищет парня</span> <!-- /.state-category -->
+                <a href="{{ 'categories/ona-on'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">Девушка ищет парня</a>
+
                 {% elseif record.category == 'categories-on-ona' %}
-                <span class="state state-category">Парень ищет девушку</span> <!-- /.state-category -->
+                <a href="{{ 'categories/on-ona'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">Парень ищет девушку</a>
+
                 {% elseif record.category == 'categories-on-on' %}
-                <span class="state state-category">Парень ищет парня</span> <!-- /.state-category -->
+                <a href="{{ 'categories/on-on'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">Парень ищет парня</a>
+
                 {% elseif record.category == 'categories-ona-ona' %}
-                <span class="state state-category">Девушка ищет девушку</span> <!-- /.state-category -->
+                <a href="{{ 'categories/ona-ona'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">Девушка ищет девушку</a>
+
                 {% elseif record.category == 'categories-free' %}
-                <span class="state state-category">Досуг в Иркутске</span> <!-- /.state-category -->
+                <a href="{{ 'categories/free'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">Досуг в Иркутске</a>
+
                 {% elseif record.category == 'categories-services' %}
-                <span class="state state-category">Услуги массажа</span> <!-- /.state-category -->
+                <a href="{{ 'categories/services'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">Услуги массажа</a>
+
                 {% elseif record.category == 'categories-family' %}
-                <span class="state state-category">Семейные пары</span> <!-- /.state-category -->
+                <a href="{{ 'categories/family'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">Семейные пары</a>
+
                 {% elseif record.category == 'categories-flirt' %}
-                <span class="state state-category">Свободные отношения</span> <!-- /.state-category -->
+                <a href="{{ 'categories/flirt'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">Свободные отношения</a>
+
                 {% elseif record.category == 'categories-realty' %}
-                <span class="state state-category">Недвижимость</span> <!-- /.state-category -->
+                <a href="{{ 'categories/realty'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">Недвижимость</a>
+
                 {% elseif record.category == 'categories-arenda' %}
-                <span class="state state-category">Аренда квартир на сутки</span> <!-- /.state-category -->
+                <a href="{{ 'categories/arenda'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">Аренда квартир на сутки</a>
+
                 {% elseif record.category == 'categories-work' %}
-                <span class="state state-category">Работа в Иркутске</span> <!-- /.state-category -->
+                <a href="{{ 'categories/work'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">Работа в Иркутске</a>
+
                 {% else %}
-                <span class="d-block badge badge-danger">Ошибка: 404 — Not Found</span> <!-- /.badge-danger -->
+                <span class="d-block badge badge-danger">Ошибка: 404 — Not Found</span>
                 {% endif %}
-              </p>
-            </div> <!-- /.profile-hero__status -->
+                </p>
+            </div>
+            <!-- /.profile-hero__status -->
 
             <hr>
 
