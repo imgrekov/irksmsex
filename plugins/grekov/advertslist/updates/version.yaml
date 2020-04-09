@@ -150,3 +150,6 @@
 1.0.51:
     - 'Updated table grekov_advertslist_ads'
     - builder_table_update_grekov_advertslist_ads_45.php
+1.0.52:
+    - 'Updated table grekov_advertslist_ads'
+    - builder_table_update_grekov_advertslist_ads_46.php

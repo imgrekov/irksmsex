@@ -15,16 +15,17 @@ displayColumn = "id"
 notFoundMessage = "Объявление не найдено"
 
 [editAdvert]
+basic = 15
+vip = 50
+xvip = 100
+hihglight = 20
 ==
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
 
-
 {% if record %}
-
-
 <div class="advert-edit">
   <h1 class="advert-edit__title">Редактировать объявление</h1>
   <!-- /.advert-edit__title -->
@@ -32,7 +33,6 @@ notFoundMessage = "Объявление не найдено"
   <!-- /.advert-edir__desc -->
 
   <div class="ad-info">
-
     <h3>Информация об&nbsp;объявлении</h3>
     <div class="ad-info__stats-wrap">
       <p class="ad-info__stats-wrap-item">

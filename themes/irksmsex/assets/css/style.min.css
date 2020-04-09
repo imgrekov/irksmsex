@@ -425,6 +425,24 @@ img {
   padding: 2.125rem 1.5rem 1rem;
 }
 
+.advert-edit-type {
+  text-align: center;
+}
+
+.advert-edit-type small {
+  display: block;
+}
+
+.advert-edit-price {
+  margin-top: 2.5rem;
+  font-size: 1.25rem;
+}
+
+.advert-edit-price__count {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
 
 
 /* /.advert-edit-form__text */
@@ -697,6 +715,7 @@ li.gold {
   padding: 1.25rem;
 }
 
+/* .main-link {} */
 .main-link {
   display: block;
   padding: 10px;
@@ -707,7 +726,10 @@ li.gold {
 }
 
 .main-link:hover {
+  color: #0081ff;
   background-color: #fcfcec;
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .main-link img {
@@ -895,7 +917,7 @@ li.gold {
 
 .advert-id {
   position: absolute;
-  right: 10px;
+  right: 0.25rem;
   bottom: 0;
 
   text-align: right;
@@ -982,15 +1004,11 @@ li.gold {
 }
 
 .profile-edit-deactivate {
-  /* margin-top: 1rem; */
   display: inline-block;
 }
 
 #accountDeactivateForm {
   margin-top: calc(1rem + 2px);
-  /* border: 1px solid #c8c8c8; */
-  /* border-radius: 4px; */
-  /* padding: 20px 15px; */
 }
 
 .profile-pass-link {
@@ -1132,7 +1150,6 @@ li.gold {
 
 
 /* success */
-
 .success {
   text-align: center;
   padding: 0.375rem;
@@ -1155,15 +1172,16 @@ li.gold {
 
 
 
+/* END pay-form */
+select#category:focus {
+  outline: 1px dotted #0078fc;
+}
+
 .pay-form {
   padding: 1.25rem 1.875rem;
   -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
   border-radius: 0.375rem;
-}
-
-select#category:focus {
-  outline: 1px dotted #0078fc;
 }
 
 .pay-form__category label {

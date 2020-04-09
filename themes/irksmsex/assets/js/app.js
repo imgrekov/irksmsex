@@ -5,12 +5,15 @@ $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
   })
 
+  // Close btn
   $('html').on('click', '.close', function () {
     $(this).parent().remove();
   });
 
+  // Отлов ajax ошибок
   $(window).on('ajaxErrorMessage', function (event, message) {
     $("div.ajax-errors")
+      .empty()
       .append('<div class="alert alert-danger">' + message + '<a class="close ml-2" href="javascript:;">&times;</a></div>')
     event.preventDefault();
   });
@@ -21,6 +24,32 @@ $(document).ready(function () {
     event.preventDefault();
     $(this).ekkoLightbox();
   });
+
+
+  // Prise result
+  let highlight = 0,
+    count = parseInt($('input#basic').attr('data-price')),
+    result = parseInt($('.advert-edit-price__count').text());
+
+  $('input[name=highlight]').on('change', function () {
+    if ($(this).prop("checked")) {
+      highlight = parseInt($(this).attr('data-price'))
+      resultPrice();
+    } else {
+      highlight = 0;
+      resultPrice();
+    }
+  });
+
+  $('input[name=type]').on('change', function () {
+    count = parseInt($(this).attr('data-price'));
+    resultPrice();
+  });
+
+  function resultPrice() {
+    result = highlight + count;
+    $('.advert-edit-price__count').text(parseInt(result));
+  }
 
 
   // Выводит название файла

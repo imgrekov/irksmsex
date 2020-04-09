@@ -6,8 +6,27 @@ is_hidden = 0
 [session]
 security = "all"
 ==
+<?
+  use Grekov\AdvertsList\Models\Advert;
+  function onStart()
+  {
+    $this['countOnaOn'] = count(Advert::where('category', '=', 'categories-ona-on')->where('state', '=', 'on')->get());
+    $this['countOnOna'] = count(Advert::where('category', '=', 'categories-on-ona')->where('state', '=', 'on')->get());
+    $this['countOnOn'] = count(Advert::where('category', '=', 'categories-on-on')->where('state', '=', 'on')->get());
+    $this['countOnaOna'] = count(Advert::where('category', '=', 'categories-ona-ona')->where('state', '=', 'on')->get());
+    $this['countFree'] = count(Advert::where('category', '=', 'categories-free')->where('state', '=', 'on')->get());
+    $this['countServices'] = count(Advert::where('category', '=', 'categories-services')->where('state', '=', 'on')->get());
+    $this['countFamily'] = count(Advert::where('category', '=', 'categories-family')->where('state', '=', 'on')->get());
+    $this['countFlirt'] = count(Advert::where('category', '=', 'categories-flirt')->where('state', '=', 'on')->get());
+    $this['countRealty'] = count(Advert::where('category', '=', 'categories-realty')->where('state', '=', 'on')->get());
+    $this['countArenda'] = count(Advert::where('category', '=', 'categories-arenda')->where('state', '=', 'on')->get());
+    $this['countWork'] = count(Advert::where('category', '=', 'categories-work')->where('state', '=', 'on')->get());
+  }
+?>
+==
 <div class="infblock">
   <h1>Сайт знакомств и доска объявлений в Иркутске</h1>
+  <!-- <p>{{ name }}</p> -->
 </div>
 
 {% partial 'second/title' text = "Знакомства в Иркутске" %}
@@ -20,7 +39,7 @@ security = "all"
       Девушка ищет парня
       <img src="{{ 'assets/images/cats/f-m.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="fa fa-comment-o"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>{{ countOnaOn }}</span>
       </span>
     </span>
   </a>
@@ -30,7 +49,7 @@ security = "all"
       Парень ищет девушку
       <img src="{{ 'assets/images/cats/m-f.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="fa fa-comment-o"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>{{ countOnOna }}</span>
       </span>
     </span>
   </a>
@@ -40,17 +59,17 @@ security = "all"
       Парень ищет парня
       <img src="{{ 'assets/images/cats/m-m.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="fa fa-comment-o"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>{{ countOnOn }}</span>
       </span>
     </span>
   </a>
 
   <a class="main-link" href="{{ 'categories/ona-ona'|page }}">
     <span class="arrow">
-      Дувешка ищет девушку
+      Девушка ищет девушку
       <img src="{{ 'assets/images/cats/f-f.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="fa fa-comment-o"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>{{ countOnaOna }}</span>
       </span>
     </span>
   </a>
@@ -60,7 +79,7 @@ security = "all"
       Досуг в Иркутске
       <img src="{{ 'assets/images/cats/dosug.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="fa fa-comment-o"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>{{ countFree }}</span>
       </span>
     </span>
   </a>
@@ -70,7 +89,7 @@ security = "all"
       Услуги массажа
       <img src="{{ 'assets/images/cats/services.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="fa fa-comment-o"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>{{ countServices }}</span>
       </span>
     </span>
   </a>
@@ -80,7 +99,7 @@ security = "all"
       Семейные пары
       <img src="{{ 'assets/images/cats/family.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="fa fa-comment-o"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>{{ countFamily }}</span>
       </span>
     </span>
   </a>
@@ -90,7 +109,7 @@ security = "all"
       Свободные отношения, флирт
       <img src="{{ 'assets/images/cats/free.png'|theme }}" alt="Картинка категории">
       <span class="count">
-        <i class="fa fa-comment-o"></i><span>1</span>
+        <i class="fa fa-comment-o"></i><span>{{ countFlirt }}</span>
       </span>
     </span>
   </a>
@@ -111,8 +130,7 @@ security = "all"
       Недвижимость
       <img alt='мобильные смс знакомства' src="{{ 'assets/images/cats/realty.png'|theme }}">
       <span class="count">
-        <i class="fa fa-comment-o"></i>
-        <span>1</span>
+        <i class="fa fa-comment-o"></i><span>{{ countRealty }}</span>
       </span>
     </span>
   </a>
@@ -122,8 +140,7 @@ security = "all"
       Аренда квартир (суточно)
       <img alt='мобильные смс знакомства' src="{{ 'assets/images/cats/arenda.png'|theme }}">
       <span class="count">
-        <i class="fa fa-comment-o"></i>
-        <span>1</span>
+        <i class="fa fa-comment-o"></i><span>{{ countArenda }}</span>
       </span>
     </span>
   </a>
@@ -133,8 +150,7 @@ security = "all"
       Работа
       <img alt="мобильные смс знакомства" src="{{ 'assets/images/cats/work.png'|theme }}">
       <span class="count">
-        <i class="fa fa-comment-o"></i>
-        <span>1</span>
+        <i class="fa fa-comment-o"></i><span>{{ countWork }}</span>
       </span>
     </span>
   </a>

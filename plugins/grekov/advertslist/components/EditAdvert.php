@@ -5,7 +5,6 @@ namespace Grekov\AdvertsList\Components;
 use Cms\Classes\ComponentBase;
 use Grekov\AdvertsList\Models\Advert as AdvertFather;
 use Input;
-// use System\Models\File;
 
 class EditAdvert extends ComponentBase
 {
@@ -18,10 +17,54 @@ class EditAdvert extends ComponentBase
     ];
   }
 
+  public function defineProperties()
+  {
+    return [
+      'basicPrice' => [
+        'title' => 'Цена за обычное объявление',
+        'description' => 'Сколько брать с клиента за обычное объявление?',
+        'default' => 15,
+        'validationPattern' => '^[0-9]+$',
+        'validationMessage' => 'Введите число',
+      ],
+      'vipPrice' => [
+        'title' => 'Цена за VIP объявление',
+        'description' => 'Сколько брать с клиента за вип?',
+        'default' => 50,
+        'validationPattern' => '^[0-9]+$',
+        'validationMessage' => 'Введите число',
+      ],
+      'xvipPrice' => [
+        'title' => 'Цена за xVIP объявление',
+        'description' => 'Сколько брать с клиента за xVIP?',
+        'default' => 250,
+        'validationPattern' => '^[0-9]+$',
+        'validationMessage' => 'Введите число',
+      ],
+      'hihglightPrice' => [
+        'title' => 'Цена за выделение',
+        'description' => 'Сколько брать с клиента за выделение объявления?',
+        'default' => 10,
+        'validationPattern' => '^[0-9]+$',
+        'validationMessage' => 'Введите число',
+      ],
+    ];
+  }
+
+  public $basicPrice, $vipPrice, $xvipPrice, $hihglightPrice;
+
+  public function onRun()
+  {
+    $this->basicPrice = $this->property('basicPrice');
+    $this->vipPrice = $this->property('vipPrice');
+    $this->xvipPrice = $this->property('xvipPrice');
+    $this->hihglightPrice = $this->property('hihglightPrice');
+  }
+
   public function onEditAdvert()
   {
-      /** @var AdvertFather|mixed $advert */
-      $advert = AdvertFather::find((int) post('id'));
+    /** @var AdvertFather|mixed $advert */
+    $advert = AdvertFather::find((int) post('id'));
 
     $advert->text = post('text');
     $advert->category = post('category');
@@ -30,11 +73,11 @@ class EditAdvert extends ComponentBase
     $advert->highlight = post('highlight');
 
     foreach ($advert->attachOne as $name => $type) {
-        if (Input::hasFile($name)) {
-            $advert->{$name} = Input::file($name);
-        } elseif (isset($advert->{$name}) && input($name . 'del')) {
-            $advert->{$name}->delete();
-        }
+      if (Input::hasFile($name)) {
+        $advert->{$name} = Input::file($name);
+      } elseif (isset($advert->{$name}) && input($name . 'del')) {
+        $advert->{$name}->delete();
+      }
     }
 
     $advert->save();

@@ -1,4 +1,4 @@
-1586344329a:1:{s:18:"second/to_home.htm";a:5:{s:8:"fileName";s:18:"second/to_home.htm";s:7:"content";s:112:"<div class="to-home">
+1586449381a:1:{s:18:"second/to_home.htm";a:5:{s:8:"fileName";s:18:"second/to_home.htm";s:7:"content";s:112:"<div class="to-home">
 	<a class="btn btn-light btn-sm" href="{{ 'home'|page }}">На главную</a>
 </div>";s:5:"mtime";i:1586341650;s:6:"markup";s:112:"<div class="to-home">
 	<a class="btn btn-light btn-sm" href="{{ 'home'|page }}">На главную</a>
