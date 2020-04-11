@@ -33,7 +33,7 @@ $(document).ready(function () {
 
   $('input[name=highlight]').on('change', function () {
     if ($(this).prop("checked")) {
-      highlight = parseInt($(this).attr('data-price'))
+      highlight = parseInt($(this).attr('data-price'));
       resultPrice();
     } else {
       highlight = 0;
@@ -50,16 +50,6 @@ $(document).ready(function () {
     result = highlight + count;
     $('.advert-edit-price__count').text(parseInt(result));
   }
-
-
-
-  // let label = $('label[for=xvip]');
-  // console.log(label);
-  // $('select[name=category]').on('change', function () {
-  //   if (label.length > 0) {
-  //     alert('yay');
-  //   };
-  // });
 
 
   // Выводит название файла
