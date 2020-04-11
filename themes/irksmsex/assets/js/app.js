@@ -26,30 +26,6 @@ $(document).ready(function () {
   });
 
 
-  // Prise result
-  let highlight = 0,
-    count = parseInt($('input#basic').attr('data-price')),
-    result = parseInt($('.advert-edit-price__count').text());
-
-  $('input[name=highlight]').on('change', function () {
-    if ($(this).prop("checked")) {
-      highlight = parseInt($(this).attr('data-price'));
-      resultPrice();
-    } else {
-      highlight = 0;
-      resultPrice();
-    }
-  });
-
-  $('input[name=type]').on('change', function () {
-    count = parseInt($(this).attr('data-price'));
-    resultPrice();
-  });
-
-  function resultPrice() {
-    result = highlight + count;
-    $('.advert-edit-price__count').text(parseInt(result));
-  }
 
 
   // Выводит название файла

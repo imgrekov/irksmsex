@@ -23,7 +23,6 @@
           <input type="radio" name="type" data-price="{{ basicPrice }}" id="basic" value="basic"
             {% if record.type == 'basic' %} checked {% endif %}>
           Обычное
-          <small>{{ basicPrice }} рублей</small>
         </label>
         <!-- basic -->
 
@@ -31,7 +30,6 @@
           <input type="radio" name="type" data-price="{{ vipPrice }}" id="vip" value="vip" {% if record.type == 'vip' %}
             checked {% endif %}>
           Вип
-          <small>{{ vipPrice }} рублей</small>
         </label>
         <!-- vip -->
 
@@ -45,7 +43,6 @@
           <input type="radio" name="type" data-price="{{ xvipPrice }}" id="xvip" value="xvip"
             {% if record.type == 'xvip' %} checked {% endif %}>
           xVIP
-          <small>{{ xvipPrice }} рублей</small>
         </label>
         <!-- xvip -->
         {% endfor %}
@@ -65,7 +62,6 @@
           </svg>
           Экстра выделение
         </label>
-        <small class="d-block">{{ hihglightPrice }} рублей</small>
       </div> <!-- /.advert-edit__vip -->
 
       <div class="form-group advert-edit-vip">
@@ -141,15 +137,6 @@
 
       </div> <!-- /.form-group advert-edit__category -->
 
-      <div class="form-group">
-        <p class="advert-edit-price">
-          Цена:
-          <span class="advert-edit-price__count">{{ basicPrice }}</span> <!-- /.advert-edit-price__count -->
-          р.
-        </p>
-        <!-- /.advert-edit-price -->
-      </div>
-      <!-- /.form-group -->
 
     </div> <!-- /.col-md-5 -->
   </div>
