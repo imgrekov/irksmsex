@@ -4,7 +4,7 @@
 {% set hihglightPrice = __SELF__.hihglightPrice %}
 
 
-{{ form_ajax('onEditAdvert', { class: "advert-edit-form", id: "advert-edit-form", 'data-request-files': true, redirect: "../advert/edit-success" }) }}
+{{ form_ajax('onEditAdvert', { class: "advert-edit-form", id: "advert-edit-form", 'data-request-files': true }) }}
 <input type="hidden" name="id" value="{{ record.id }}">
 
 <fieldset class="advert-form">
@@ -15,7 +15,7 @@
   </div>
 
   <div class="row mb-4">
-    <div class="col-md-7">
+    <div class="col-md-7 mb-4">
       <div class="form-group advert-edit__type">
         <p>Тип объявления</p>
 
@@ -35,13 +35,20 @@
         </label>
         <!-- vip -->
 
+        {% for xvip in hasXVip if xvip.category == record.category %}
+        <span class="advert-edit__already">
+          <strong class="">Обявление типа xVIP уже создано</strong>
+          <a href="{{ 'help'|page }}" class="btn btn-sm btn-outline-info">Подробнее</a>
+        </span>
+        {% else %}
         <label class="advert-edit-type" for="xvip">
-          <input type="radio" name="type" data-price="{{ xvipPrice }}" id="xvip" value="xvip" {% if record.type == 'xvip' %}
-            checked {% endif %} {% if user.hasVip %} disabled {% endif %}>
+          <input type="radio" name="type" data-price="{{ xvipPrice }}" id="xvip" value="xvip"
+            {% if record.type == 'xvip' %} checked {% endif %}>
           xVIP
           <small>{{ xvipPrice }} рублей</small>
         </label>
         <!-- xvip -->
+        {% endfor %}
 
       </div>
       <!-- /.form-group -->
@@ -115,7 +122,7 @@
           </option> <!-- family -->
 
           <option value="categories-flirt" {% if record.category == 'categories-flirt' %}selected{%endif%}>
-            Флирт
+            Свободные отношения
           </option> <!-- flirt -->
 
           <option value="categories-realty" {% if record.category == 'categories-realty' %}selected{%endif%}>
@@ -137,7 +144,7 @@
       <div class="form-group">
         <p class="advert-edit-price">
           Цена:
-          <span class="advert-edit-price__count">{{ basic }}</span> <!-- /.advert-edit-price__count -->
+          <span class="advert-edit-price__count">{{ basicPrice }}</span> <!-- /.advert-edit-price__count -->
           р.
         </p>
         <!-- /.advert-edit-price -->

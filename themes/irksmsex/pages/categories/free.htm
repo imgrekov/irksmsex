@@ -1,31 +1,34 @@
 title = "Досуг в Иркутске, агентства экскорт, индивидуалки"
-h1 = "Досуг в Иркутске"
-url = "/categories/free"
+description = "Досуг в Иркутске"
+url = "/categories/free/:page?"
 layout = "advert"
+is_hidden = 0
+
+[builderList AdvertsList]
+modelClass = "Grekov\AdvertsList\Models\Advert"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Здесь пока нет объявлений. Добавьте его первым"
+detailsPage = "-"
+detailsKeyColumn = "id"
+detailsUrlParameter = "id"
+recordsPerPage = 50
+pageNumber = "{{ :page }}"
+sortColumn = "type"
+sortDirection = "desc"
+
+[session]
+security = "all"
 ==
+{% set records = AdvertsList.records %}
+{% set displayColumn = AdvertsList.displayColumn %}
+{% set noRecordsMessage = AdvertsList.noRecordsMessage %}
+{% set detailsPage = AdvertsList.detailsPage %}
+{% set detailsKeyColumn = AdvertsList.detailsKeyColumn %}
+{% set detailsUrlParameter = AdvertsList.detailsUrlParameter %}
 
-<ul class="advert-list">
-  
-  <li>
-    <div id="1" class="sms">
-      <!-- Время добавления объявления -->
-      <span class="timehead">2020-01-29 21:20</span>
 
-      <!-- Текст объявления -->
-      <span class="sms__text">
-        Ищу девушку для ***, и чобы не выносила
-        мозг. Возможно и мп, при сильной симатии
-      </span>
+{% partial 'adverts/adverts-list' %}
 
-      <!-- Управление объявлением -->
-      <div class="menu">
-        <a href="#!">Поднять</a>
-        <a href="#!">Выделить</a>
-        <a href="#!">Удалить</a>
-        <a href="#!">Фото</a>
-        <span>№ 1</span>
-      </div>
-
-    </div>
-  </li>
-</ul>
+{% partial 'adverts/adverts-pagination' %}

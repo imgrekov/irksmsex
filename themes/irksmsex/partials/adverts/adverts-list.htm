@@ -1,15 +1,17 @@
-<ul class="xvip-record">
-  {% for record in records if record.state == 'on' and record.type == 'xvip' and record.category == this.page.id %}
-
-  <li class="xvip-record-item">
-    <div id="{{ record.id }}" class="xvip record">
+<ul class="record-list">
+  {% for record in records if record.state == 'on' and record.category == this.page.id and record.type != 'xvip' %}
+  <li class="{% if record.type == 'vip' %}vip{% elseif record.type == 'basic' %}basic{% endif %}">
+    <div id="{{ record.id }}" class="{% if record.highlight == 'on' %}highlight{% endif %} record">
+      {% if record.type == 'vip' %}
+      <img src="{{ 'assets/images/vip.png'|theme }}" alt="vip" class="id">
+      {% endif %}
 
       <span class="timehead">
         {{ record.created_at|date('d-m-Y H:i') }}
       </span>
       <!-- Когда создано -->
 
-      <div class="xvip-record__text">
+      <div class="record__text">
         {{ record.text|raw }}
       </div>
       <!-- Текст объявления -->
@@ -19,33 +21,41 @@
         <a class="advert__image" href="{{ record.attachimage1.path }}" data-toggle="lightbox" data-type="image">
           <img src="{{ record.attachimage1.path }}" alt="Фото1">
         </a>
-        <!-- Изображение первое -->
-        
+        <!-- Изображение 1 -->
+
         {% if record.attachimage2 %}
         <a class="advert__image" href="{{ record.attachimage2.path }}" data-toggle="lightbox" data-type="image">
           <img src="{{ record.attachimage2.path }}" alt="Фото1">
         </a>
         {% endif %}
-        <!-- Изображение второе -->
+        <!-- Изображение 2 -->
+
         {% if record.attachimage3 %}
         <a class="advert__image" href="{{ record.attachimage3.path }}" data-toggle="lightbox" data-type="image">
           <img src="{{ record.attachimage3.path }}" alt="Фото1">
         </a>
         {% endif %}
-        <!-- Изображение третье -->
+        <!-- Изображение 3 -->
 
       </div>
       {% endif %}
       <!-- Изображения к объявлению -->
 
-      <span class="advert-id">ID: {{record.id}}</span>
+      <span class="advert-id">ID: {{ record.id }}</span>
       <!-- /.advert-id -->
 
     </div>
-    <!-- /.xvip.record -->
+    <!-- /.record -->
+
   </li>
-  <!-- /.xvip-record-item -->
-  
+
+
+
+  {% else %}
+  <li class="alert alert-danger advert-none">
+    <p>{{ noRecordsMessage }}</p>
+  </li>
+  <!-- /.advert-none -->
   {% endfor %}
 </ul>
-<!-- /.xvip-record -->
+<!-- /.record-list -->

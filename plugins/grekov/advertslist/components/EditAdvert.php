@@ -5,6 +5,7 @@ namespace Grekov\AdvertsList\Components;
 use Cms\Classes\ComponentBase;
 use Grekov\AdvertsList\Models\Advert as AdvertFather;
 use Input;
+use Redirect;
 
 class EditAdvert extends ComponentBase
 {
@@ -12,7 +13,7 @@ class EditAdvert extends ComponentBase
   public function componentDetails()
   {
     return [
-      'name' => 'Form edit advert',
+      'name' => 'Edit advert form',
       'description' => 'Editing advert in database'
     ];
   }
@@ -81,10 +82,14 @@ class EditAdvert extends ComponentBase
     }
 
     $advert->save();
+
+    return Redirect::to('../advert/edit-success');
   }
 
   public function onEditDelete()
   {
     AdvertFather::find((int) post('id'))->delete();
+
+    return Redirect::to('../advert/delete-success');
   }
 }

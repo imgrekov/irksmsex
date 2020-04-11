@@ -1,4 +1,4 @@
-1586449385a:1:{s:19:"adverts/success.htm";a:5:{s:8:"fileName";s:19:"adverts/success.htm";s:7:"content";s:523:"<div class="success">
+1586603147a:1:{s:19:"adverts/success.htm";a:5:{s:8:"fileName";s:19:"adverts/success.htm";s:7:"content";s:394:"<div class="success">
 
   <div class="alert alert-success" role="alert">
     <h1>{{ title }}</h1>
@@ -8,12 +8,11 @@
   </div>
   <!-- message -->
 
-  <a href="{{ 'user/profile.htm'|page }}" class="btn btn-info" type="button" data-toggle="tooltip"
-    data-placement="right" title="Активировать и&nbsp;редактировать">В личный кабинет</a>
+  <a href="{{ 'user/profile.htm'|page }}" class="btn btn-success">В личный кабинет</a>
   <!-- /.success-button -->
 
 </div>
-<!-- /.success -->";s:5:"mtime";i:1586341650;s:6:"markup";s:523:"<div class="success">
+<!-- /.success -->";s:5:"mtime";i:1586597071;s:6:"markup";s:394:"<div class="success">
 
   <div class="alert alert-success" role="alert">
     <h1>{{ title }}</h1>
@@ -23,8 +22,7 @@
   </div>
   <!-- message -->
 
-  <a href="{{ 'user/profile.htm'|page }}" class="btn btn-info" type="button" data-toggle="tooltip"
-    data-placement="right" title="Активировать и&nbsp;редактировать">В личный кабинет</a>
+  <a href="{{ 'user/profile.htm'|page }}" class="btn btn-success">В личный кабинет</a>
   <!-- /.success-button -->
 
 </div>

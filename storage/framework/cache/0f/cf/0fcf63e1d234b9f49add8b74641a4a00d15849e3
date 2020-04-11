@@ -1,5 +1,6 @@
-1586449369a:1:{s:21:"categories/ona-on.htm";a:10:{s:8:"fileName";s:21:"categories/ona-on.htm";s:7:"content";s:2725:"title = "Смс объявления девушек, которые ищут парней"
-url = "/categories/ona-on"
+1586603132a:1:{s:21:"categories/ona-on.htm";a:12:{s:8:"fileName";s:21:"categories/ona-on.htm";s:7:"content";s:1032:"title = "Девушки ищут парней"
+description = "Девушка ищет парня"
+url = "/categories/ona-on/:page?"
 layout = "advert"
 is_hidden = 0
 
@@ -9,11 +10,16 @@ scope = "-"
 scopeValue = "{{ :scope }}"
 displayColumn = "id"
 noRecordsMessage = "Здесь пока нет объявлений. Добавьте его первым"
-detailsPage = "cats/post"
+detailsPage = "-"
 detailsKeyColumn = "id"
 detailsUrlParameter = "id"
 recordsPerPage = 50
 pageNumber = "{{ :page }}"
+sortColumn = "type"
+sortDirection = "desc"
+
+[session]
+security = "all"
 ==
 {% set records = AdvertsList.records %}
 {% set displayColumn = AdvertsList.displayColumn %}
@@ -23,73 +29,9 @@ pageNumber = "{{ :page }}"
 {% set detailsUrlParameter = AdvertsList.detailsUrlParameter %}
 
 
+{% partial 'adverts/adverts-list' %}
 
-<ul class="record-list">
-  {% for record in records %}
-
-  {% if record.category == 'ona-on' %}
-
-  <li class="{% if record.type == 'vip' %}vip{% elseif record.type == 'svip' %}svip{% else %}basic{% endif %}">
-    <div id="{{ record.id }}" class="sms">
-      <!-- Время добавления объявления -->
-
-      {% if record.type == 'vip' %}
-      <img src="{{ 'assets/images/vip.png'|theme }}" alt="vip" class="id">
-      {% endif %}
-
-      <span class="timehead">
-        {{ record.created_at|date('d-m-Y H:i') }}
-      </span>
-
-      <!-- <span class="views">0</span> -->
-      <!-- /.views -->
-
-      <!-- Текст объявления -->
-      <div class="sms__text">
-        {{ record.text|raw }}
-      </div>
-
-
-      {% if record.image1 %}
-      <div class="advert__imgs-wrap">
-        <img class="advert__image" src="{{ record.image2|media }}" alt="Фото1">
-      </div>
-      {% endif %}
-      
-      {% if record.image2 %}
-      <div class="advert__imgs-wrap">
-        <img class="advert__image" src="{{ record.image2|media }}" alt="Фото2">
-      </div>
-      {% endif %}
-
-      {% if record.image3 %}
-      <div class="advert__imgs-wrap">
-        <img class="advert__image" src="{{ record.image3|media }}" alt="Фото3">
-      </div>
-      {% endif %}
-
-      <!-- Управление объявлением -->
-      <div class="menu">
-        <a class="menu-btn__up" href="#!">Поднять</a>
-        <a class="menu-btn__select" href="#!">Выделить</a>
-        <a href="#!">Удалить</a>
-        <a href="#!">Фото</a>
-        <span>№ {{ record.id }}</span>
-      </div>
-
-    </div>
-  </li>
-  {% endif %}
-
-
-  {% else %}
-  <li class="advert-none">{{ noRecordsMessage }}</li>
-  {% endfor %}
-
-</ul>
-
-{% partial 'adverts/pagination' %}
-";s:5:"mtime";i:1586341650;s:6:"markup";s:2186:"{% set records = AdvertsList.records %}
+{% partial 'adverts/adverts-pagination' %}";s:5:"mtime";i:1586522450;s:6:"markup";s:412:"{% set records = AdvertsList.records %}
 {% set displayColumn = AdvertsList.displayColumn %}
 {% set noRecordsMessage = AdvertsList.noRecordsMessage %}
 {% set detailsPage = AdvertsList.detailsPage %}
@@ -97,69 +39,6 @@ pageNumber = "{{ :page }}"
 {% set detailsUrlParameter = AdvertsList.detailsUrlParameter %}
 
 
+{% partial 'adverts/adverts-list' %}
 
-<ul class="record-list">
-  {% for record in records %}
-
-  {% if record.category == 'ona-on' %}
-
-  <li class="{% if record.type == 'vip' %}vip{% elseif record.type == 'svip' %}svip{% else %}basic{% endif %}">
-    <div id="{{ record.id }}" class="sms">
-      <!-- Время добавления объявления -->
-
-      {% if record.type == 'vip' %}
-      <img src="{{ 'assets/images/vip.png'|theme }}" alt="vip" class="id">
-      {% endif %}
-
-      <span class="timehead">
-        {{ record.created_at|date('d-m-Y H:i') }}
-      </span>
-
-      <!-- <span class="views">0</span> -->
-      <!-- /.views -->
-
-      <!-- Текст объявления -->
-      <div class="sms__text">
-        {{ record.text|raw }}
-      </div>
-
-
-      {% if record.image1 %}
-      <div class="advert__imgs-wrap">
-        <img class="advert__image" src="{{ record.image2|media }}" alt="Фото1">
-      </div>
-      {% endif %}
-      
-      {% if record.image2 %}
-      <div class="advert__imgs-wrap">
-        <img class="advert__image" src="{{ record.image2|media }}" alt="Фото2">
-      </div>
-      {% endif %}
-
-      {% if record.image3 %}
-      <div class="advert__imgs-wrap">
-        <img class="advert__image" src="{{ record.image3|media }}" alt="Фото3">
-      </div>
-      {% endif %}
-
-      <!-- Управление объявлением -->
-      <div class="menu">
-        <a class="menu-btn__up" href="#!">Поднять</a>
-        <a class="menu-btn__select" href="#!">Выделить</a>
-        <a href="#!">Удалить</a>
-        <a href="#!">Фото</a>
-        <span>№ {{ record.id }}</span>
-      </div>
-
-    </div>
-  </li>
-  {% endif %}
-
-
-  {% else %}
-  <li class="advert-none">{{ noRecordsMessage }}</li>
-  {% endfor %}
-
-</ul>
-
-{% partial 'adverts/pagination' %}";s:4:"code";N;s:5:"title";s:80:"Смс объявления девушек, которые ищут парней";s:3:"url";s:18:"/categories/ona-on";s:6:"layout";s:6:"advert";s:9:"is_hidden";s:1:"0";s:23:"builderList AdvertsList";a:10:{s:10:"modelClass";s:32:"Grekov\AdvertsList\Models\Advert";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:85:"Здесь пока нет объявлений. Добавьте его первым";s:11:"detailsPage";s:9:"cats/post";s:16:"detailsKeyColumn";s:2:"id";s:19:"detailsUrlParameter";s:2:"id";s:14:"recordsPerPage";s:2:"50";s:10:"pageNumber";s:11:"{{ :page }}";}}}
+{% partial 'adverts/adverts-pagination' %}";s:4:"code";N;s:5:"title";s:36:"Девушки ищут парней";s:11:"description";s:34:"Девушка ищет парня";s:3:"url";s:25:"/categories/ona-on/:page?";s:6:"layout";s:6:"advert";s:9:"is_hidden";s:1:"0";s:23:"builderList AdvertsList";a:12:{s:10:"modelClass";s:32:"Grekov\AdvertsList\Models\Advert";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:2:"id";s:16:"noRecordsMessage";s:85:"Здесь пока нет объявлений. Добавьте его первым";s:11:"detailsPage";s:1:"-";s:16:"detailsKeyColumn";s:2:"id";s:19:"detailsUrlParameter";s:2:"id";s:14:"recordsPerPage";s:2:"50";s:10:"pageNumber";s:11:"{{ :page }}";s:10:"sortColumn";s:4:"type";s:13:"sortDirection";s:4:"desc";}s:7:"session";a:1:{s:8:"security";s:3:"all";}}}

@@ -101,7 +101,7 @@ img {
 }
 
 .add-advert__item {
-  padding: 0.5rem;
+  padding: 0.625rem 1rem;
   margin-bottom: 1rem;
   border: 1px dotted #000000;
   border-radius: 4px;
@@ -220,11 +220,6 @@ img {
   text-align: center;
   padding: 1rem 0;
   z-index: 3;
-}
-
-.title h1 {
-  font-size: 2rem;
-  margin-bottom: 0;
 }
 
 .title h2 {
@@ -444,6 +439,18 @@ img {
 }
 
 
+.advert-edit__already {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 160px;
+  text-align: center;
+}
+
+.advert-edit__already strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
 
 /* /.advert-edit-form__text */
 
@@ -514,17 +521,20 @@ img {
   border-radius: 4px;
 }
 
-.advert-edit__title {
+.advert-edit__title,
+.advert-create__title {
   text-align: center;
 }
 
-.advert-edit__desc {
+.advert-edit__desc,
+.advert-create__desc {
   position: relative;
   margin-bottom: 2.5rem;
   text-align: center;
 }
 
-.advert-edit__desc::after {
+.advert-edit__desc::after,
+.advert-create__desc::after {
   content: '';
   display: block;
   position: absolute;
@@ -600,6 +610,11 @@ img {
 .advert-edit__image-wrap {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.advert-edit__image-item {
+  margin: 0 4px;
 }
 
 .image-name {
@@ -682,12 +697,23 @@ img {
 
 .ad-info__stats-wrap {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   /* justify-content: center; */
 }
 
 .ad-info__stats-wrap-item {
   margin-right: 1.25rem;
   margin-bottom: 0;
+}
+
+.ad-info__xvip {
+  padding: 0.25em 0.5em;
+  font-size: 14px;
+  /* color: #fefefe; */
+  background-color: #fffbce;
+  border: 1px solid #ffd700;
+  border-radius: 4px;
 }
 
 .imgs__container {
@@ -779,7 +805,7 @@ li.gold {
 
 .user-status {
   background-color: #abd3fe;
-  padding: 0.25rem 1.25rem;
+  padding: 0.25rem 1rem;
   text-align: right;
 }
 
@@ -1209,4 +1235,44 @@ select#category:focus {
 
   font-size: 1.125rem;
   font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .advert-edit__image-item {
+    margin-bottom: 1rem;
+  }
+
+  .ad-info__stats-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ad-info__stats-wrap-item {
+    margin-bottom: 0.25rem;
+  }
+
+  .ad-info__stats-wrap-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-hero__info {
+    border-right: none;
+    border-bottom: 1px dotted #000000;
+    margin-bottom: 1rem;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .advert-edit__image-wrap {
+    justify-content: center;
+  }
 }

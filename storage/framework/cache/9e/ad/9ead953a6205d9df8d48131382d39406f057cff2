@@ -1,4 +1,4 @@
-1586449369a:1:{s:8:"home.htm";a:10:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:6221:"title = "Знакомства в Иркутске по смс и бесплатные объявления"
+1586603132a:1:{s:8:"home.htm";a:10:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:6263:"title = "Знакомства в Иркутске по смс и бесплатные объявления"
 url = "/"
 layout = "home"
 is_hidden = 0
@@ -7,21 +7,20 @@ is_hidden = 0
 security = "all"
 ==
 <?
-
   use Grekov\AdvertsList\Models\Advert;
   function onStart()
   {
-    $this['countOnaOn'] = count(Advert::where('category', '=', 'categories-ona-on')->where('state', '=', 'on')->get());
-    $this['countOnOna'] = count(Advert::where('category', '=', 'categories-on-ona')->where('state', '=', 'on')->get());
-    $this['countOnOn'] = count(Advert::where('category', '=', 'categories-on-on')->where('state', '=', 'on')->get());
-    $this['countOnaOna'] = count(Advert::where('category', '=', 'categories-ona-ona')->where('state', '=', 'on')->get());
-    $this['countFree'] = count(Advert::where('category', '=', 'categories-free')->where('state', '=', 'on')->get());
-    $this['countServices'] = count(Advert::where('category', '=', 'categories-services')->where('state', '=', 'on')->get());
-    $this['countFamily'] = count(Advert::where('category', '=', 'categories-family')->where('state', '=', 'on')->get());
-    $this['countFlirt'] = count(Advert::where('category', '=', 'categories-flirt')->where('state', '=', 'on')->get());
-    $this['countRealty'] = count(Advert::where('category', '=', 'categories-realty')->where('state', '=', 'on')->get());
-    $this['countArenda'] = count(Advert::where('category', '=', 'categories-arenda')->where('state', '=', 'on')->get());
-    $this['countWork'] = count(Advert::where('category', '=', 'categories-work')->where('state', '=', 'on')->get());
+    $this['countOnaOn'] = Advert::query()->where('category', '=', 'categories-ona-on')->where('state', '=', 'on')->count();
+    $this['countOnOna'] = Advert::query()->where('category', '=', 'categories-on-ona')->where('state', '=', 'on')->count();
+    $this['countOnOn'] = Advert::query()->where('category', '=', 'categories-on-on')->where('state', '=', 'on')->count();
+    $this['countOnaOna'] = Advert::query()->where('category', '=', 'categories-ona-ona')->where('state', '=', 'on')->count();
+    $this['countFree'] = Advert::query()->where('category', '=', 'categories-free')->where('state', '=', 'on')->count();
+    $this['countServices'] = Advert::query()->where('category', '=', 'categories-services')->where('state', '=', 'on')->count();
+    $this['countFamily'] = Advert::query()->where('category', '=', 'categories-family')->where('state', '=', 'on')->count();
+    $this['countFlirt'] = Advert::query()->where('category', '=', 'categories-flirt')->where('state', '=', 'on')->count();
+    $this['countRealty'] = Advert::query()->where('category', '=', 'categories-realty')->where('state', '=', 'on')->count();
+    $this['countArenda'] = Advert::query()->where('category', '=', 'categories-arenda')->where('state', '=', 'on')->count();
+    $this['countWork'] = Advert::query()->where('category', '=', 'categories-work')->where('state', '=', 'on')->count();
   }
 ?>
 ==
@@ -158,7 +157,7 @@ security = "all"
 
 </div>
 
-{% partial 'second/socials' %}";s:5:"mtime";i:1586448584;s:6:"markup";s:4615:"<div class="infblock">
+{% partial 'second/socials' %}";s:5:"mtime";i:1586521360;s:6:"markup";s:4615:"<div class="infblock">
   <h1>Сайт знакомств и доска объявлений в Иркутске</h1>
   <!-- <p>{{ name }}</p> -->
 </div>
@@ -291,18 +290,18 @@ security = "all"
 
 </div>
 
-{% partial 'second/socials' %}";s:4:"code";s:1403:"  use Grekov\AdvertsList\Models\Advert;
+{% partial 'second/socials' %}";s:4:"code";s:1447:"  use Grekov\AdvertsList\Models\Advert;
   function onStart()
   {
-    $this['countOnaOn'] = count(Advert::where('category', '=', 'categories-ona-on')->where('state', '=', 'on')->get());
-    $this['countOnOna'] = count(Advert::where('category', '=', 'categories-on-ona')->where('state', '=', 'on')->get());
-    $this['countOnOn'] = count(Advert::where('category', '=', 'categories-on-on')->where('state', '=', 'on')->get());
-    $this['countOnaOna'] = count(Advert::where('category', '=', 'categories-ona-ona')->where('state', '=', 'on')->get());
-    $this['countFree'] = count(Advert::where('category', '=', 'categories-free')->where('state', '=', 'on')->get());
-    $this['countServices'] = count(Advert::where('category', '=', 'categories-services')->where('state', '=', 'on')->get());
-    $this['countFamily'] = count(Advert::where('category', '=', 'categories-family')->where('state', '=', 'on')->get());
-    $this['countFlirt'] = count(Advert::where('category', '=', 'categories-flirt')->where('state', '=', 'on')->get());
-    $this['countRealty'] = count(Advert::where('category', '=', 'categories-realty')->where('state', '=', 'on')->get());
-    $this['countArenda'] = count(Advert::where('category', '=', 'categories-arenda')->where('state', '=', 'on')->get());
-    $this['countWork'] = count(Advert::where('category', '=', 'categories-work')->where('state', '=', 'on')->get());
+    $this['countOnaOn'] = Advert::query()->where('category', '=', 'categories-ona-on')->where('state', '=', 'on')->count();
+    $this['countOnOna'] = Advert::query()->where('category', '=', 'categories-on-ona')->where('state', '=', 'on')->count();
+    $this['countOnOn'] = Advert::query()->where('category', '=', 'categories-on-on')->where('state', '=', 'on')->count();
+    $this['countOnaOna'] = Advert::query()->where('category', '=', 'categories-ona-ona')->where('state', '=', 'on')->count();
+    $this['countFree'] = Advert::query()->where('category', '=', 'categories-free')->where('state', '=', 'on')->count();
+    $this['countServices'] = Advert::query()->where('category', '=', 'categories-services')->where('state', '=', 'on')->count();
+    $this['countFamily'] = Advert::query()->where('category', '=', 'categories-family')->where('state', '=', 'on')->count();
+    $this['countFlirt'] = Advert::query()->where('category', '=', 'categories-flirt')->where('state', '=', 'on')->count();
+    $this['countRealty'] = Advert::query()->where('category', '=', 'categories-realty')->where('state', '=', 'on')->count();
+    $this['countArenda'] = Advert::query()->where('category', '=', 'categories-arenda')->where('state', '=', 'on')->count();
+    $this['countWork'] = Advert::query()->where('category', '=', 'categories-work')->where('state', '=', 'on')->count();
   }";s:5:"title";s:97:"Знакомства в Иркутске по смс и бесплатные объявления";s:3:"url";s:1:"/";s:6:"layout";s:4:"home";s:9:"is_hidden";s:1:"0";s:7:"session";a:1:{s:8:"security";s:3:"all";}}}

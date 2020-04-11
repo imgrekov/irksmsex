@@ -1,5 +1,5 @@
-1586449401a:1:{s:23:"adverts/xvip-record.htm";a:5:{s:8:"fileName";s:23:"adverts/xvip-record.htm";s:7:"content";s:1756:"<ul class="xvip-record">
-  {% for record in records if record.type == 'xvip' and record.category == this.page.id %}
+1586603140a:1:{s:23:"adverts/xvip-record.htm";a:5:{s:8:"fileName";s:23:"adverts/xvip-record.htm";s:7:"content";s:1781:"<ul class="xvip-record">
+  {% for record in records if record.state == 'on' and record.type == 'xvip' and record.category == this.page.id %}
 
   <li class="xvip-record-item">
     <div id="{{ record.id }}" class="xvip record">
@@ -48,8 +48,8 @@
   
   {% endfor %}
 </ul>
-<!-- /.xvip-record -->";s:5:"mtime";i:1586341650;s:6:"markup";s:1756:"<ul class="xvip-record">
-  {% for record in records if record.type == 'xvip' and record.category == this.page.id %}
+<!-- /.xvip-record -->";s:5:"mtime";i:1586521865;s:6:"markup";s:1781:"<ul class="xvip-record">
+  {% for record in records if record.state == 'on' and record.type == 'xvip' and record.category == this.page.id %}
 
   <li class="xvip-record-item">
     <div id="{{ record.id }}" class="xvip record">

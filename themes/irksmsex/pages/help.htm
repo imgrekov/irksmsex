@@ -18,7 +18,11 @@ security = "all"
 		<li class="help-page-item">
 			<h4 class="help-desc__title">Basic</h4>
 			<!-- /.help-desc__title -->
-			<p class="help-desc__desc">Обычное объявление</p>
+			<p class="help-desc__desc">
+				Обычное объявление
+				<small class="d-block">Автоматически удалится через три дня после создания</small>
+				<!-- /.d-block -->
+			</p>
 			<!-- /.help-desc__desc -->
 			<img src="{{ 'assets/images/help-page/basic.jpg'|theme }}" alt="Пример обычного объявления"
 				class="help-desc__image">
@@ -28,32 +32,50 @@ security = "all"
 		<li class="help-page-item">
 			<h4 class="help-desc__title">VIP</h4>
 			<!-- /.help-desc__title -->
-			<p class="help-desc__desc">Вип объявление. Оно находится выше обычных</p>
+			<p class="help-desc__desc">
+				Вип объявление. Находится выше обычных и отмечено сердечком
+				<small class="d-block">Автоматически удалится через три дня после создания</small>
+				<!-- /.d-block -->
+			</p>
 			<!-- /.help-desc__desc -->
 			<img src="{{ 'assets/images/help-page/vip.jpg'|theme }}" alt="Пример vip объявления" class="help-desc__image">
 		</li>
 		<!-- /.help-page-item -->
 
-		<li class="help-page-item">
-			<h5 class="help-desc__title">xVip</h3>
-			<!-- /.help-desc__title -->
-			<p class="help-desc__desc">Назодится в самом верху страницы. Существовать может только одно объявление такого типа</p>
-			<!-- /.help-desc__desc -->
-			<img src="{{ 'assets/images/help-page/xvip.jpg'|theme }}" alt="Пример объявления типа xvip" class="help-desc__image">
-		</li>
-		<!-- /.help-page-item -->
-
-		<li class="help-page-item">
-			<h4 class="help-desc__title">Экстра выделение</h4>
-			<!-- /.help-desc__title -->
-			<p class="help-desc__desc">Экстра выделение</p>
-			<!-- /.help-desc__desc -->
-			<img src="{{ 'assets/images/help-page/highlight.jpg'|theme }}" alt="Пример экстра выделенного объявления" class="help-desc__image">
+		<li class="help-page-item" id="xvip">
+			<h4 class="help-desc__title">xVip</h4>
+				<!-- /.help-desc__title -->
+				<p class="help-desc__desc">
+					Находится в самом верху страницы. Существовать может только одно объявление такого
+					типа. Ему не нужно «Экстра выделение», оно уже заметнее всех
+					<small class="d-block">Автоматически удалится через сутки после создания</small>
+					<!-- /.d-block -->
+				</p>
+				<!-- /.help-desc__desc -->
+				<img src="{{ 'assets/images/help-page/xvip.jpg'|theme }}" alt="Пример объявления типа xvip"
+					class="help-desc__image">
 		</li>
 		<!-- /.help-page-item -->
 
 	</ul>
 	<!-- /.help-page-list -->
+
+	<h3 class="text-center mt-5 profile-hero__title">Дополнительно</h3>
+	<ul class="help-page-list">
+
+		<li class="help-page-item">
+			<h4 class="help-desc__title">Экстра выделение</h4>
+			<!-- /.help-desc__title -->
+			<p class="help-desc__desc">Хотите сделать объявление более заметным? Поставьте галочку на странице «Редактировать&nbsp;объявление»</p>
+			<!-- /.help-desc__desc -->
+			<img src="{{ 'assets/images/help-page/highlight.jpg'|theme }}" alt="Пример экстра выделенного объявления"
+				class="help-desc__image">
+		</li>
+		<!-- /.help-page-item --> 
+
+	</ul>
+	<!-- /.help-page-list -->
+
 </div>
 <!-- /.help-desc -->
 
@@ -61,15 +83,15 @@ security = "all"
 
 <div class="help-instruction">
 	<ol class="add-advert">
-		
+
 		<li class="add-advert__item">
-			<h5>Зарегистрируйтесь</h5>
+			<h4>Зарегистрируйтесь</h4>
 			<img src="{{ 'assets/images/help-page/1-register.jpg'|theme }}" alt="Страница регистрации">
 		</li>
 		<!-- /.add-advert__item -->
-		
+
 		<li class="add-advert__item">
-			<h5>Создайте объявление</h5>
+			<h4>Создайте объявление</h4>
 			<p>Это можно сделать перейдя по ссылке из личного кабинета</p>
 			<img src="{{ 'assets/images/help-page/2-lk.jpg'|theme }}" alt="Личный кабинет без объявлений">
 			<hr>
@@ -78,7 +100,7 @@ security = "all"
 		<!-- /.add-advert__item -->
 
 		<li class="add-advert__item">
-			<h5>Активируйте объявление</h5>
+			<h4>Активируйте объявление</h4>
 			<p>Это делается на странице редактирования объявления. Туда можно попасть из личного кабинета</p>
 			<img src="{{ 'assets/images/help-page/3-advert.jpg'|theme }}" alt="Объявление в личном кабинете">
 			<hr>
@@ -87,12 +109,12 @@ security = "all"
 		<!-- /.add-advert__item -->
 
 		<li class="add-advert__item">
-			<h5>Посмотрите на него</h5>
+			<h4>Посмотрите на него</h4>
 			<p>Для этого перейдите на страницу со всеми объявлениями выбранной категории</p>
 			<img src="{{ 'assets/images/help-page/4-look.jpg'|theme }}" alt="Главная страница">
 		</li>
 		<!-- /.add-advert__item -->
-	
+
 	</ol>
 	<!-- /.add-advert -->
 </div>

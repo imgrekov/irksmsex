@@ -1,4 +1,4 @@
-1586449369a:1:{s:25:"advert/delete-success.htm";a:10:{s:8:"fileName";s:25:"advert/delete-success.htm";s:7:"content";s:326:"title = "Объявление изменено успешно"
+1586603132a:1:{s:25:"advert/delete-success.htm";a:10:{s:8:"fileName";s:25:"advert/delete-success.htm";s:7:"content";s:333:"title = "Объявление изменено успешно"
 url = "/advert/delete-success"
 layout = "index"
 is_hidden = 0
@@ -9,9 +9,9 @@ security = "all"
 {%
   partial 'adverts/success'
   title = "Объявление удалено успешно"
-  text = "Создай новое и порадуй всех"
-%}";s:5:"mtime";i:1586341650;s:6:"markup";s:162:"{%
+  text = "Создайте новое. Удивите всех 😉"
+%}";s:5:"mtime";i:1586464601;s:6:"markup";s:169:"{%
   partial 'adverts/success'
   title = "Объявление удалено успешно"
-  text = "Создай новое и порадуй всех"
+  text = "Создайте новое. Удивите всех 😉"
 %}";s:4:"code";N;s:5:"title";s:52:"Объявление изменено успешно";s:3:"url";s:22:"/advert/delete-success";s:6:"layout";s:5:"index";s:9:"is_hidden";s:1:"0";s:7:"session";a:1:{s:8:"security";s:3:"all";}}}

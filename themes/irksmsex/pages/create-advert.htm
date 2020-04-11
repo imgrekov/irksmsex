@@ -9,14 +9,16 @@ security = "all"
 
 [createAdvert]
 ==
-<div class="infblock">
-	<a class="btn btn-secondary" href="{{ 'help'|page }}">Как добавлять объявления?</a>
-</div>
 
-{% partial 'second/title' text = "Добавить объявление" %}
 
-{% partial 'second/to_home' %}
 
 <main class="main">
+	<h1 class="advert-create__title">Создать объявление</h1>
+	<!-- /.advert-edit__title -->
+	<p class="advert-create__desc">Напишите текст и выберите категорию</p>
+	<!-- /.advert-edir__desc -->
+	
+	<a class="btn btn-outline-info btn-sm mb-4" href="{{ 'help'|page }}">Как добавить объявления?</a>
+
 	{% component 'createAdvert' %}
 </main>

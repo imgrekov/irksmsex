@@ -1,4 +1,4 @@
-1586449369a:1:{s:16:"user/account.htm";a:13:{s:8:"fileName";s:16:"user/account.htm";s:7:"content";s:1049:"title = "Аккаунт"
+1586603132a:1:{s:16:"user/account.htm";a:13:{s:8:"fileName";s:16:"user/account.htm";s:7:"content";s:1074:"title = "Аккаунт пользователя"
 url = "/user/account"
 layout = "home"
 description = "Регистрация и логин пользователей"
@@ -48,7 +48,7 @@ paramCode = "code"
 	{% endif %}
 
 
-</div><!-- /.user-hero -->";s:5:"mtime";i:1586341650;s:6:"markup";s:736:"<div class="user-hero">
+</div><!-- /.user-hero -->";s:5:"mtime";i:1586510053;s:6:"markup";s:736:"<div class="user-hero">
 
 
 	{% if not user %}
@@ -81,4 +81,4 @@ paramCode = "code"
 	{% endif %}
 
 
-</div><!-- /.user-hero -->";s:4:"code";N;s:5:"title";s:14:"Аккаунт";s:3:"url";s:13:"/user/account";s:6:"layout";s:4:"home";s:11:"description";s:63:"Регистрация и логин пользователей";s:9:"is_hidden";s:1:"0";s:7:"account";a:3:{s:8:"redirect";s:12:"user/profile";s:9:"paramCode";s:4:"code";s:11:"forceSecure";s:1:"0";}s:7:"session";a:1:{s:8:"security";s:3:"all";}s:13:"resetPassword";a:1:{s:9:"paramCode";s:4:"code";}}}
+</div><!-- /.user-hero -->";s:4:"code";N;s:5:"title";s:39:"Аккаунт пользователя";s:3:"url";s:13:"/user/account";s:6:"layout";s:4:"home";s:11:"description";s:63:"Регистрация и логин пользователей";s:9:"is_hidden";s:1:"0";s:7:"account";a:3:{s:8:"redirect";s:12:"user/profile";s:9:"paramCode";s:4:"code";s:11:"forceSecure";s:1:"0";}s:7:"session";a:1:{s:8:"security";s:3:"all";}s:13:"resetPassword";a:1:{s:9:"paramCode";s:4:"code";}}}

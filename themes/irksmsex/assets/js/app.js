@@ -52,6 +52,16 @@ $(document).ready(function () {
   }
 
 
+
+  // let label = $('label[for=xvip]');
+  // console.log(label);
+  // $('select[name=category]').on('change', function () {
+  //   if (label.length > 0) {
+  //     alert('yay');
+  //   };
+  // });
+
+
   // Выводит название файла
   $('#attachimage1').on('change', function () {
     var splittedFakePath = this.value.split('\\');

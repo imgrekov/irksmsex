@@ -47,7 +47,7 @@ sortDirection = "desc"
 
       {% for record in records if user.email == record.author %}
 
-      <li class="profile-hero__item">
+      <li class="profile-hero__item {% if record.type == 'xvip' %}xvip xvip-record__text p-2{% endif %}">
 
         <div class="row">
 
@@ -55,7 +55,7 @@ sortDirection = "desc"
 
             <div class="profile-hero__info">
               <span class="timehead">
-                {{ record.updated_at|date('Создано d-m-Y, в H:i') }}
+                {{ record.created_at|date('Создано d-m-Y, в H:i') }}
               </span> <!-- /.timehead -->
 
               <div class="profile-hero__item-text">
@@ -112,6 +112,8 @@ sortDirection = "desc"
                 <span class="badge badge-danger">неактивно</span> <!-- /.state -->
                 {% endif %}
               </p>
+
+              {% if record.type != 'xvip' %}
               <p>
                 Выделено:
                 {% if record.highlight == 'on' %}
@@ -120,6 +122,8 @@ sortDirection = "desc"
                 <span class="badge badge-danger">нет</span> <!-- /.state -->
                 {% endif %}
               </p>
+              {% endif %}
+
               <p>
                 Изображений добавлено: <span class="badge badge-primary count_imgs">{{ record.imageCount }}</span>
                 <!-- /.count_imgs -->

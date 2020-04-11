@@ -29,28 +29,28 @@ class Advert extends Model
 	 */
 	public $rules = [];
 
-    public function getImageCountAttribute()
-    {
-        $count = 0;
-        foreach ($this->attachOne as $item => $type) {
-            $count += (int)isset($this->{$item});
-        }
-        return $count;
-    }
+	public function getImageCountAttribute()
+	{
+		$count = 0;
+		foreach ($this->attachOne as $item => $type) {
+			$count += (int) isset($this->{$item});
+		}
+		return $count;
+	}
 
-    protected static function boot()
-    {
-        parent::boot();
+	protected static function boot()
+	{
+		parent::boot();
 
-        static::addGlobalScope('active', function (Builder $builder) {
-            $builder->where(function ($query) {
-                $query->where('type', '!=', self::XVIP)
-                    ->orWhereNull('type')
-                    ->orWhere(function ($query) {
-                        $query->where('type', '=', self::XVIP)
-                            ->where('created_at', '>=', Carbon::now()->subDay()->toDateTimeString());
-                    });
-            });
-        });
-    }
+		static::addGlobalScope('active', function (Builder $builder) {
+			$builder->where(function ($query) {
+				$query->where('type', '!=', self::XVIP)
+					->orWhereNull('type')
+					->orWhere(function ($query) {
+						$query->where('type', '=', self::XVIP)
+							->where('created_at', '>=', Carbon::now()->subDay()->toDateTimeString());
+					});
+			});
+		});
+	}
 }

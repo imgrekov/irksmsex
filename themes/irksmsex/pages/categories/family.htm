@@ -1,30 +1,34 @@
 title = "Семейные пары и бисексуальные знакомства"
-url = "/categories/family"
+description = ""
+url = "/categories/family/:page?"
 layout = "advert"
 is_hidden = 0
+
+[builderList AdvertsList]
+modelClass = "Grekov\AdvertsList\Models\Advert"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Здесь пока нет объявлений. Добавьте его первым"
+detailsPage = "-"
+detailsKeyColumn = "id"
+detailsUrlParameter = "id"
+recordsPerPage = 50
+pageNumber = "{{ :page }}"
+sortColumn = "type"
+sortDirection = "desc"
+
+[session]
+security = "all"
 ==
-<ul class="advert-list">
-  
-  <li>
-    <div id="2" class="sms">
-      <!-- Время добавления объявления -->
-      <span class="timehead">2020-01-29 21:20</span>
+{% set records = AdvertsList.records %}
+{% set displayColumn = AdvertsList.displayColumn %}
+{% set noRecordsMessage = AdvertsList.noRecordsMessage %}
+{% set detailsPage = AdvertsList.detailsPage %}
+{% set detailsKeyColumn = AdvertsList.detailsKeyColumn %}
+{% set detailsUrlParameter = AdvertsList.detailsUrlParameter %}
 
-      <!-- Текст объявления -->
-      <span class="sms__text">
-        Ищу девушку для ***, и чобы не выносила
-        мозг. Возможно и мп, при сильной симатии
-      </span>
 
-      <!-- Управление объявлением -->
-      <div class="menu">
-        <a href="#!">Поднять</a>
-        <a href="#!">Выделить</a>
-        <a href="#!">Удалить</a>
-        <a href="#!">Фото</a>
-        <span>№ 1</span>
-      </div>
+{% partial 'adverts/adverts-list' %}
 
-    </div>
-  </li>
-</ul>
+{% partial 'adverts/adverts-pagination' %}

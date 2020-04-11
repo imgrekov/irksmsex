@@ -15,26 +15,36 @@ displayColumn = "id"
 notFoundMessage = "Объявление не найдено"
 
 [editAdvert]
-basic = 15
-vip = 50
-xvip = 100
-hihglight = 20
+basicPrice = 15
+vipPrice = 50
+xvipPrice = 150
+hihglightPrice = 30
+==
+<?php
+use Grekov\AdvertsList\Models\Advert;
+  function onStart()
+  {
+    $this['hasXVip'] = Advert::query()->where('type', Advert::XVIP)->get();
+  }
+?>
 ==
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
 
-{% if record %}
+{% if record and record.author == user.email %}
+
 <div class="advert-edit">
   <h1 class="advert-edit__title">Редактировать объявление</h1>
   <!-- /.advert-edit__title -->
-  <p class="advert-edit__desc">Активируйте, меняйте текст и добавляйте изображения.</p>
+  <p class="advert-edit__desc">Активируйте, меняйте текст и добавляйте изображения</p>
   <!-- /.advert-edir__desc -->
 
   <div class="ad-info">
     <h3>Информация об&nbsp;объявлении</h3>
     <div class="ad-info__stats-wrap">
+
       <p class="ad-info__stats-wrap-item">
         Объявление:
         {% if record.state == true %}
@@ -44,6 +54,11 @@ hihglight = 20
         {% endif %}
       </p>
       <!-- /.ad-info__stats-wrap-item -->
+
+      {% if record.type == 'xvip' %}
+      <p class="ad-info__stats-wrap-item ad-info__xvip">Объявление выше всех</p>
+      <!-- /.ad-info__stats-wrap-item -->
+      {% else %}
       <p class="ad-info__stats-wrap-item">
         Выделено:
         {% if record.highlight == 'on' %}
@@ -53,6 +68,7 @@ hihglight = 20
         {% endif %}
       </p>
       <!-- /.ad-info__stats-wrap-item -->
+      {% endif %}
 
       <p class="ad-info__stats-wrap-item">
         <!-- Текст в соответствии с категорией объявления -->
@@ -87,22 +103,20 @@ hihglight = 20
 
     </div>
     <!-- /.ad-info__stats-wrap -->
-
   </div>
 
   {% component 'editAdvert' %}
 
   <hr class="my-3">
 
-  <button class="btn btn-outline-secondary btn-sm" type="button" data-toggle="tooltip" data-placement="right"
-    title="Удалить или деактивировать объявления" href="javascript:;" onclick="$('.advert-advance').toggle()">
+  <button class="btn btn-outline-secondary btn-sm" href="javascript:;" onclick="$('.advert-advance').toggle()">
     Дополнительные функции
   </button>
 
   <div class="advert-advance" style="display: none">
 
     <!-- Удалить объявление -->
-    {{ form_ajax('onEditDelete', { redirect: "/advert/delete-success", 'data-request-flash': true } ) }}
+    {{ form_ajax('onEditDelete', { 'data-request-confirm': "Вы уверены?" } ) }}
     <input name="id" type="hidden" value="{{ record.id }}">
     <div class="form-group">
       <span class="advert-edit-deactivate__text" data-toggle="tooltip" data-placement="bottom"
@@ -115,13 +129,14 @@ hihglight = 20
 
 </div> <!-- /.advert-edit -->
 
+{% elseif not record %}
 
+{% partial '404' error_text = notFoundMessage|raw %}
+<!-- 404 Error -->
 
 {% else %}
 
-<div class="err">
-  <img src="{{ 'assets/images/errors/404.svg'|theme }}" alt="404 Ошибка">
-  <h1 class="text-right">{{ notFoundMessage|raw }}</h1>
-</div> <!-- /.err -->
+{% partial '404' error_text = 'Усп… Это&nbsp;не&nbsp;ваше объявление' %}
+<!-- Not your Advert… -->
 
 {% endif %}
