@@ -1,4 +1,4 @@
-1586603760a:1:{s:16:"user/profile.htm";a:12:{s:8:"fileName";s:16:"user/profile.htm";s:7:"content";s:9119:"title = "Профиль пользователя"
+1586773946a:1:{s:16:"user/profile.htm";a:12:{s:8:"fileName";s:16:"user/profile.htm";s:7:"content";s:9121:"title = "Профиль пользователя"
 url = "/user/profile"
 layout = "index"
 description = "Страница профиля пользователя"
@@ -25,7 +25,7 @@ sortDirection = "desc"
 {% set noRecordsMessage = userAdverts.noRecordsMessage %}
 {% set detailsPage = userAdverts.detailsPage %}
 {% set detailsKeyColumn = userAdverts.detailsKeyColumn %}
-{% set detailsUrlParameter = userAdverts.detailsUrlParameter %}
+{% set detailsUrlParameter = userAdverts.detailsUrlParameter %}я
 
 
 
@@ -208,12 +208,12 @@ sortDirection = "desc"
   <!-- /.profile-hero -->
 
 </div>
-<!-- /.profile -->";s:5:"mtime";i:1586602531;s:6:"markup";s:8515:"{% set records = userAdverts.records %}
+<!-- /.profile -->";s:5:"mtime";i:1586694906;s:6:"markup";s:8517:"{% set records = userAdverts.records %}
 {% set displayColumn = userAdverts.displayColumn %}
 {% set noRecordsMessage = userAdverts.noRecordsMessage %}
 {% set detailsPage = userAdverts.detailsPage %}
 {% set detailsKeyColumn = userAdverts.detailsKeyColumn %}
-{% set detailsUrlParameter = userAdverts.detailsUrlParameter %}
+{% set detailsUrlParameter = userAdverts.detailsUrlParameter %}я
 
 
 

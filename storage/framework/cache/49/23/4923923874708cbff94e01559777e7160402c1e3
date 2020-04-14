@@ -1,4 +1,4 @@
-1586603140a:1:{s:10:"advert.htm";a:6:{s:8:"fileName";s:10:"advert.htm";s:7:"content";s:2766:"==
+1586684036a:1:{s:10:"advert.htm";a:6:{s:8:"fileName";s:10:"advert.htm";s:7:"content";s:2767:"==
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -39,7 +39,7 @@
 	{% partial 'user-status' %}
 
 	{% partial 'header' %}
-
+	
 	{% partial 'adverts/add-advert' %}
 
 	{% partial 'adverts/xvip-record' %}
@@ -79,7 +79,7 @@
 
 </body>
 
-</html>";s:5:"mtime";i:1586341650;s:6:"markup";s:2762:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1586683431;s:6:"markup";s:2763:"<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -119,7 +119,7 @@
 	{% partial 'user-status' %}
 
 	{% partial 'header' %}
-
+	
 	{% partial 'adverts/add-advert' %}
 
 	{% partial 'adverts/xvip-record' %}

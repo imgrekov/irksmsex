@@ -26,7 +26,6 @@ security = "all"
 ==
 <div class="infblock">
   <h1>Сайт знакомств и доска объявлений в Иркутске</h1>
-  <!-- <p>{{ name }}</p> -->
 </div>
 
 {% partial 'second/title' text = "Знакомства в Иркутске" %}
@@ -35,82 +34,66 @@ security = "all"
 <div class="cats">
 
   <a class="main-link" href="{{ 'categories/ona-on'|page }}">
-    <span class="arrow">
-      Девушка ищет парня
-      <img src="{{ 'assets/images/cats/f-m.png'|theme }}" alt="Картинка категории">
-      <span class="count">
-        <i class="fa fa-comment-o"></i><span>{{ countOnaOn }}</span>
-      </span>
+    Девушка ищет парня
+    <img src="{{ 'assets/images/cats/f-m.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countOnaOn }}</span>
     </span>
   </a>
 
   <a class="main-link" href="{{ 'categories/on-ona'|page }}">
-    <span class="arrow">
-      Парень ищет девушку
-      <img src="{{ 'assets/images/cats/m-f.png'|theme }}" alt="Картинка категории">
-      <span class="count">
-        <i class="fa fa-comment-o"></i><span>{{ countOnOna }}</span>
-      </span>
+    Парень ищет девушку
+    <img src="{{ 'assets/images/cats/m-f.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countOnOna }}</span>
     </span>
   </a>
 
   <a class="main-link" href="{{ 'categories/on-on'|page }}">
-    <span class="arrow">
-      Парень ищет парня
-      <img src="{{ 'assets/images/cats/m-m.png'|theme }}" alt="Картинка категории">
-      <span class="count">
-        <i class="fa fa-comment-o"></i><span>{{ countOnOn }}</span>
-      </span>
+    Парень ищет парня
+    <img src="{{ 'assets/images/cats/m-m.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countOnOn }}</span>
     </span>
   </a>
 
   <a class="main-link" href="{{ 'categories/ona-ona'|page }}">
-    <span class="arrow">
-      Девушка ищет девушку
-      <img src="{{ 'assets/images/cats/f-f.png'|theme }}" alt="Картинка категории">
-      <span class="count">
-        <i class="fa fa-comment-o"></i><span>{{ countOnaOna }}</span>
-      </span>
+    Девушка ищет девушку
+    <img src="{{ 'assets/images/cats/f-f.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countOnaOna }}</span>
     </span>
   </a>
 
   <a class="main-link" href="{{ 'categories/free'|page }}">
-    <span class="arrow">
-      Досуг в Иркутске
-      <img src="{{ 'assets/images/cats/dosug.png'|theme }}" alt="Картинка категории">
-      <span class="count">
-        <i class="fa fa-comment-o"></i><span>{{ countFree }}</span>
-      </span>
+    Досуг в Иркутске
+    <img src="{{ 'assets/images/cats/dosug.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countFree }}</span>
     </span>
   </a>
 
   <a class="main-link" href="{{ 'categories/services'|page }}">
-    <span class="services">
-      Услуги массажа
-      <img src="{{ 'assets/images/cats/services.png'|theme }}" alt="Картинка категории">
-      <span class="count">
-        <i class="fa fa-comment-o"></i><span>{{ countServices }}</span>
-      </span>
+    Услуги массажа
+    <img src="{{ 'assets/images/cats/services.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countServices }}</span>
     </span>
   </a>
 
   <a class="main-link" href="{{ 'categories/family'|page }}">
-    <span class="arrow">
-      Семейные пары
-      <img src="{{ 'assets/images/cats/family.png'|theme }}" alt="Картинка категории">
-      <span class="count">
-        <i class="fa fa-comment-o"></i><span>{{ countFamily }}</span>
-      </span>
+    Семейные пары
+    <img src="{{ 'assets/images/cats/family.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countFamily }}</span>
     </span>
   </a>
 
   <a class="main-link" href="{{ 'categories/flirt'|page }}">
-    <span class="arrow">
-      Свободные отношения, флирт
-      <img src="{{ 'assets/images/cats/free.png'|theme }}" alt="Картинка категории">
-      <span class="count">
-        <i class="fa fa-comment-o"></i><span>{{ countFlirt }}</span>
-      </span>
+    Свободные отношения, флирт
+    <img src="{{ 'assets/images/cats/free.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countFlirt }}</span>
     </span>
   </a>
 
@@ -119,39 +102,33 @@ security = "all"
 
 
 
-{% partial 'second/title' text = "Мобильная доска объявлений" %}
+{% partial 'second/sub_title' text = "Доска объявлений" %}
 <!-- /.title -->
 
 <!-- Доска объявлений -->
 <div class="cats">
 
   <a class="main-link" href="{{ 'categories/realty'|page }}">
-    <span class="arrow">
-      Недвижимость
-      <img alt='мобильные смс знакомства' src="{{ 'assets/images/cats/realty.png'|theme }}">
-      <span class="count">
-        <i class="fa fa-comment-o"></i><span>{{ countRealty }}</span>
-      </span>
+    Недвижимость
+    <img alt='мобильные смс знакомства' src="{{ 'assets/images/cats/realty.png'|theme }}">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countRealty }}</span>
     </span>
   </a>
 
   <a class="main-link" href="{{ 'categories/arenda'|page }}">
-    <span class="arrow">
-      Аренда квартир (суточно)
-      <img alt='мобильные смс знакомства' src="{{ 'assets/images/cats/arenda.png'|theme }}">
-      <span class="count">
-        <i class="fa fa-comment-o"></i><span>{{ countArenda }}</span>
-      </span>
+    Аренда квартир на сутки
+    <img alt='мобильные смс знакомства' src="{{ 'assets/images/cats/arenda.png'|theme }}">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countArenda }}</span>
     </span>
   </a>
 
   <a class="main-link" href="{{ 'categories/work'|page }}">
-    <span class="arrow">
-      Работа
-      <img alt="мобильные смс знакомства" src="{{ 'assets/images/cats/work.png'|theme }}">
-      <span class="count">
-        <i class="fa fa-comment-o"></i><span>{{ countWork }}</span>
-      </span>
+    Работа
+    <img alt="мобильные смс знакомства" src="{{ 'assets/images/cats/work.png'|theme }}">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countWork }}</span>
     </span>
   </a>
 

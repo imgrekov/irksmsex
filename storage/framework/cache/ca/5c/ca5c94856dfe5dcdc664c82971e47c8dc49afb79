@@ -1,4 +1,4 @@
-1586603760a:1:{s:19:"user/reset-pass.htm";a:11:{s:8:"fileName";s:19:"user/reset-pass.htm";s:7:"content";s:420:"title = "Сброс пароля"
+1586773946a:1:{s:19:"user/reset-pass.htm";a:11:{s:8:"fileName";s:19:"user/reset-pass.htm";s:7:"content";s:420:"title = "Сброс пароля"
 url = "/user/reset-password"
 layout = "home"
 description = "Сброс пароля"

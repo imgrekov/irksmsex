@@ -1,5 +1,5 @@
 <?php 
-use Grekov\AdvertsList\Models\Advert;class Cms5e90651289286617048049_0cec90b5ff59087fc383d74da8ae2423Class extends Cms\Classes\PageCode
+use Grekov\AdvertsList\Models\Advert;class Cms5e92dd1d3c3f0147512841_95168bce6b4966d32283a5b2dbbdb871Class extends Cms\Classes\PageCode
 {
   
 public function onStart()

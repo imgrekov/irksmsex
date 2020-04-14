@@ -1,13 +1,13 @@
 <div class="user-status">
-  {% if user %}
-  <a href="{{ 'user/profile'|page }}" class="btn btn-primary btn-sm">Личный&nbsp;кабинет</a>
-  <a href="{{ 'user/account'|page }}" class="btn btn-info btn-sm">Настройки</a>
-  <a href="javascript:;" data-request="onLogout" class="btn btn-danger btn-sm">Выйти</a>
-  <!-- /.logout -->
+	{% if user %}
+		<a href="{{ 'user/profile'|page }}" class="btn btn-primary btn-sm">Личный&nbsp;кабинет</a>
+		<a href="{{ 'user/account'|page }}" class="btn btn-info btn-sm">Настройки</a>
+		<a href="javascript:;" data-request="onLogout" class="btn btn-danger btn-sm">Выйти</a>
+		<!-- /.logout -->
 
-  {% else %}
-  <a href="{{ 'user/account'|page }}" class="btn btn-light btn-sm user-status__link">Регистрация и&nbsp;Вход</a>
-  <!-- /.user-status__link -->
-  {% endif %}
+	{% else %}
+		<a href="{{ 'user/account'|page }}" class="btn btn-light btn-sm user-status__link">Регистрация и&nbsp;Вход</a>
+		<!-- /.user-status__link -->
+	{% endif %}
 </div>
 <!-- /.user-status -->

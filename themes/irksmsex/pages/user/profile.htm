@@ -20,6 +20,14 @@ pageNumber = "{{ :page }}"
 sortColumn = "id"
 sortDirection = "desc"
 ==
+<?
+  use Grekov\Advertlist\Models\Advert;
+  function onStart()
+  {
+    dd('hi');
+  }
+?>
+==
 {% set records = userAdverts.records %}
 {% set displayColumn = userAdverts.displayColumn %}
 {% set noRecordsMessage = userAdverts.noRecordsMessage %}
