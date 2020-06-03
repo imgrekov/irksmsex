@@ -26,14 +26,6 @@ $(document).ready(function () {
   });
 
 
-  let inuptXvip = $('input#xvip');    
-    $('.advert-edit-type').on('change', function () {
-      if (inuptXvip.prop("checked")) {
-        $('input#highlight').prop("disabled", true);
-      } else {
-        $('input#highlight').prop("disabled", false);
-      }
-    });
 
 
   // Выводит название файла

@@ -1,0 +1,356 @@
+1586773946a:1:{s:8:"help.htm";a:10:{s:8:"fileName";s:8:"help.htm";s:7:"content";s:7886:"title = "Как добавить объявление?"
+url = "/help"
+layout = "help"
+is_hidden = 0
+
+[session]
+security = "all"
+==
+
+{% partial 'second/to_home' %}
+
+{% partial 'second/title' text = "Описание элементов" %}
+
+<div class="help-desc">
+	<h3 class="text-center mt-3 profile-hero__title">Типы объявлений</h3>
+	<ul class="help-page-list">
+
+		<li class="help-page-item">
+			<h4 class="help-desc__title">Basic</h4>
+			<!-- /.help-desc__title -->
+			<p class="help-desc__desc">
+				Обычное объявление
+				<small class="d-block">Автоматически удалится через три дня после создания</small>
+				<!-- /.d-block -->
+			</p>
+			<!-- /.help-desc__desc -->
+			<img src="{{ 'assets/images/help-page/basic.jpg'|theme }}" alt="Пример обычного объявления"
+				class="help-desc__image">
+		</li>
+		<!-- /.help-page-item -->
+
+		<li class="help-page-item">
+			<h4 class="help-desc__title">VIP</h4>
+			<!-- /.help-desc__title -->
+			<p class="help-desc__desc">
+				Вип объявление. Находится выше обычных и отмечено сердечком
+				<small class="d-block">Автоматически удалится через три дня после создания</small>
+				<!-- /.d-block -->
+			</p>
+			<!-- /.help-desc__desc -->
+			<img src="{{ 'assets/images/help-page/vip.jpg'|theme }}" alt="Пример vip объявления" class="help-desc__image">
+		</li>
+		<!-- /.help-page-item -->
+
+		<li class="help-page-item" id="xvip">
+			<h4 class="help-desc__title">xVip</h4>
+				<!-- /.help-desc__title -->
+				<p class="help-desc__desc">
+					Находится в самом верху страницы. Существовать может только одно объявление такого
+					типа. Ему не нужно «Экстра выделение», оно уже заметнее всех
+					<small class="d-block">Автоматически удалится через сутки после создания</small>
+					<!-- /.d-block -->
+				</p>
+				<!-- /.help-desc__desc -->
+				<img src="{{ 'assets/images/help-page/xvip.jpg'|theme }}" alt="Пример объявления типа xvip"
+					class="help-desc__image">
+		</li>
+		<!-- /.help-page-item -->
+
+	</ul>
+	<!-- /.help-page-list -->
+
+	<h3 class="text-center mt-5 profile-hero__title">Дополнительно</h3>
+	<ul class="help-page-list">
+
+		<li class="help-page-item">
+			<h4 class="help-desc__title">Экстра выделение</h4>
+			<!-- /.help-desc__title -->
+			<p class="help-desc__desc">Хотите сделать объявление более заметным? Поставьте галочку на странице «Редактировать&nbsp;объявление»</p>
+			<!-- /.help-desc__desc -->
+			<img src="{{ 'assets/images/help-page/highlight.jpg'|theme }}" alt="Пример экстра выделенного объявления"
+				class="help-desc__image">
+		</li>
+		<!-- /.help-page-item --> 
+
+	</ul>
+	<!-- /.help-page-list -->
+
+</div>
+<!-- /.help-desc -->
+
+{% partial 'second/title' text = "Как разместить объявление?" %}
+
+<div class="help-instruction">
+	<ol class="add-advert">
+
+		<li class="add-advert__item">
+			<h4>Зарегистрируйтесь</h4>
+			<img src="{{ 'assets/images/help-page/1-register.jpg'|theme }}" alt="Страница регистрации">
+		</li>
+		<!-- /.add-advert__item -->
+
+		<li class="add-advert__item">
+			<h4>Создайте объявление</h4>
+			<p>Это можно сделать перейдя по ссылке из личного кабинета</p>
+			<img src="{{ 'assets/images/help-page/2-lk.jpg'|theme }}" alt="Личный кабинет без объявлений">
+			<hr>
+			<img src="{{ 'assets/images/help-page/2-create.jpg'|theme }}" alt="Страница «Создать объявление»">
+		</li>
+		<!-- /.add-advert__item -->
+
+		<li class="add-advert__item">
+			<h4>Активируйте объявление</h4>
+			<p>Это делается на странице редактирования объявления. Туда можно попасть из личного кабинета</p>
+			<img src="{{ 'assets/images/help-page/3-advert.jpg'|theme }}" alt="Объявление в личном кабинете">
+			<hr>
+			<img src="{{ 'assets/images/help-page/3-activate.jpg'|theme }}" alt="Страница «Редактировать объявление»">
+		</li>
+		<!-- /.add-advert__item -->
+
+		<li class="add-advert__item">
+			<h4>Посмотрите на него</h4>
+			<p>Для этого перейдите на страницу со всеми объявлениями выбранной категории</p>
+			<img src="{{ 'assets/images/help-page/4-look.jpg'|theme }}" alt="Главная страница">
+		</li>
+		<!-- /.add-advert__item -->
+
+	</ol>
+	<!-- /.add-advert -->
+</div>
+<!-- /.help-desc -->
+
+{% partial 'second/title' text = "Правила сервиса" %}
+
+
+<div class="rules">
+	<ol class="rules-list">
+		<li class="rules-item">
+			<p>
+				Администрация сервиса не&nbsp;несёт ответственности за&nbsp;достоверность информации и&nbsp;содержание
+				объявлений.
+			</p>
+		</li>
+		<!-- /.rules-item -->
+
+		<li class="rules-item">
+			<p>
+				Отправитель объявления полностью отвечает перед третьими лицами за&nbsp;достоверность информации
+				в&nbsp;размещаемых объявлениях.
+			</p>
+		</li>
+		<!-- /.rules-item -->
+
+		<li class="rules-item">
+			<p>Не&nbsp;принимаются к&nbsp;публикации объявления: содержащие рекламу иных сайтов, платных коротких номеров,
+				нецензурные выражения, а также безграмотные, бессмысленные, оскорбительные, клеветнические и мошеннические.
+			</p>
+		</li>
+		<!-- /.rules-item -->
+
+		<li class="rules-item">
+			<p>Запрещены к&nbsp;публикации объявления, комментирующие действия администрации сервиса.</p>
+		</li>
+		<!-- /.rules-item -->
+
+		<li class="rules-item">
+			<p>Запрещены к&nbsp;публикации фотографии женских и&nbsp;мужских гениталий.</p>
+		</li>
+		<!-- /.rules-item -->
+	</ol>
+	<!-- /.rules-list -->
+
+
+	<hr>
+
+	<div class="rules-desc">
+		<p>
+			В&nbsp;вышеперечисленных случаях администрация сервиса оставляет за&nbsp;собой право на&nbsp;свое усмотрение
+			удалить
+			объявление или его&nbsp;часть, проводить модерацию объявлений: смена рубрики &nbsp;соответствии
+			со&nbsp;смыслом объявления, внесение изменений в&nbsp;текст объявления &nbsp;целью приведения его
+			в&nbsp;соответствие
+			с&nbsp;правилами публикации.
+		</p>
+		<p>
+			Администрация сервиса оставляет за&nbsp;собой право <strong>блокировать аккаунты</strong> постоянно нарушающие
+			правила, с&nbsp;которых размещаются объявления.
+		</p>
+	</div>
+	<!-- /.rules-desc -->
+
+</div>
+<!-- /.rules -->";s:5:"mtime";i:1586599435;s:6:"markup";s:7745:"{% partial 'second/to_home' %}
+
+{% partial 'second/title' text = "Описание элементов" %}
+
+<div class="help-desc">
+	<h3 class="text-center mt-3 profile-hero__title">Типы объявлений</h3>
+	<ul class="help-page-list">
+
+		<li class="help-page-item">
+			<h4 class="help-desc__title">Basic</h4>
+			<!-- /.help-desc__title -->
+			<p class="help-desc__desc">
+				Обычное объявление
+				<small class="d-block">Автоматически удалится через три дня после создания</small>
+				<!-- /.d-block -->
+			</p>
+			<!-- /.help-desc__desc -->
+			<img src="{{ 'assets/images/help-page/basic.jpg'|theme }}" alt="Пример обычного объявления"
+				class="help-desc__image">
+		</li>
+		<!-- /.help-page-item -->
+
+		<li class="help-page-item">
+			<h4 class="help-desc__title">VIP</h4>
+			<!-- /.help-desc__title -->
+			<p class="help-desc__desc">
+				Вип объявление. Находится выше обычных и отмечено сердечком
+				<small class="d-block">Автоматически удалится через три дня после создания</small>
+				<!-- /.d-block -->
+			</p>
+			<!-- /.help-desc__desc -->
+			<img src="{{ 'assets/images/help-page/vip.jpg'|theme }}" alt="Пример vip объявления" class="help-desc__image">
+		</li>
+		<!-- /.help-page-item -->
+
+		<li class="help-page-item" id="xvip">
+			<h4 class="help-desc__title">xVip</h4>
+				<!-- /.help-desc__title -->
+				<p class="help-desc__desc">
+					Находится в самом верху страницы. Существовать может только одно объявление такого
+					типа. Ему не нужно «Экстра выделение», оно уже заметнее всех
+					<small class="d-block">Автоматически удалится через сутки после создания</small>
+					<!-- /.d-block -->
+				</p>
+				<!-- /.help-desc__desc -->
+				<img src="{{ 'assets/images/help-page/xvip.jpg'|theme }}" alt="Пример объявления типа xvip"
+					class="help-desc__image">
+		</li>
+		<!-- /.help-page-item -->
+
+	</ul>
+	<!-- /.help-page-list -->
+
+	<h3 class="text-center mt-5 profile-hero__title">Дополнительно</h3>
+	<ul class="help-page-list">
+
+		<li class="help-page-item">
+			<h4 class="help-desc__title">Экстра выделение</h4>
+			<!-- /.help-desc__title -->
+			<p class="help-desc__desc">Хотите сделать объявление более заметным? Поставьте галочку на странице «Редактировать&nbsp;объявление»</p>
+			<!-- /.help-desc__desc -->
+			<img src="{{ 'assets/images/help-page/highlight.jpg'|theme }}" alt="Пример экстра выделенного объявления"
+				class="help-desc__image">
+		</li>
+		<!-- /.help-page-item --> 
+
+	</ul>
+	<!-- /.help-page-list -->
+
+</div>
+<!-- /.help-desc -->
+
+{% partial 'second/title' text = "Как разместить объявление?" %}
+
+<div class="help-instruction">
+	<ol class="add-advert">
+
+		<li class="add-advert__item">
+			<h4>Зарегистрируйтесь</h4>
+			<img src="{{ 'assets/images/help-page/1-register.jpg'|theme }}" alt="Страница регистрации">
+		</li>
+		<!-- /.add-advert__item -->
+
+		<li class="add-advert__item">
+			<h4>Создайте объявление</h4>
+			<p>Это можно сделать перейдя по ссылке из личного кабинета</p>
+			<img src="{{ 'assets/images/help-page/2-lk.jpg'|theme }}" alt="Личный кабинет без объявлений">
+			<hr>
+			<img src="{{ 'assets/images/help-page/2-create.jpg'|theme }}" alt="Страница «Создать объявление»">
+		</li>
+		<!-- /.add-advert__item -->
+
+		<li class="add-advert__item">
+			<h4>Активируйте объявление</h4>
+			<p>Это делается на странице редактирования объявления. Туда можно попасть из личного кабинета</p>
+			<img src="{{ 'assets/images/help-page/3-advert.jpg'|theme }}" alt="Объявление в личном кабинете">
+			<hr>
+			<img src="{{ 'assets/images/help-page/3-activate.jpg'|theme }}" alt="Страница «Редактировать объявление»">
+		</li>
+		<!-- /.add-advert__item -->
+
+		<li class="add-advert__item">
+			<h4>Посмотрите на него</h4>
+			<p>Для этого перейдите на страницу со всеми объявлениями выбранной категории</p>
+			<img src="{{ 'assets/images/help-page/4-look.jpg'|theme }}" alt="Главная страница">
+		</li>
+		<!-- /.add-advert__item -->
+
+	</ol>
+	<!-- /.add-advert -->
+</div>
+<!-- /.help-desc -->
+
+{% partial 'second/title' text = "Правила сервиса" %}
+
+
+<div class="rules">
+	<ol class="rules-list">
+		<li class="rules-item">
+			<p>
+				Администрация сервиса не&nbsp;несёт ответственности за&nbsp;достоверность информации и&nbsp;содержание
+				объявлений.
+			</p>
+		</li>
+		<!-- /.rules-item -->
+
+		<li class="rules-item">
+			<p>
+				Отправитель объявления полностью отвечает перед третьими лицами за&nbsp;достоверность информации
+				в&nbsp;размещаемых объявлениях.
+			</p>
+		</li>
+		<!-- /.rules-item -->
+
+		<li class="rules-item">
+			<p>Не&nbsp;принимаются к&nbsp;публикации объявления: содержащие рекламу иных сайтов, платных коротких номеров,
+				нецензурные выражения, а также безграмотные, бессмысленные, оскорбительные, клеветнические и мошеннические.
+			</p>
+		</li>
+		<!-- /.rules-item -->
+
+		<li class="rules-item">
+			<p>Запрещены к&nbsp;публикации объявления, комментирующие действия администрации сервиса.</p>
+		</li>
+		<!-- /.rules-item -->
+
+		<li class="rules-item">
+			<p>Запрещены к&nbsp;публикации фотографии женских и&nbsp;мужских гениталий.</p>
+		</li>
+		<!-- /.rules-item -->
+	</ol>
+	<!-- /.rules-list -->
+
+
+	<hr>
+
+	<div class="rules-desc">
+		<p>
+			В&nbsp;вышеперечисленных случаях администрация сервиса оставляет за&nbsp;собой право на&nbsp;свое усмотрение
+			удалить
+			объявление или его&nbsp;часть, проводить модерацию объявлений: смена рубрики &nbsp;соответствии
+			со&nbsp;смыслом объявления, внесение изменений в&nbsp;текст объявления &nbsp;целью приведения его
+			в&nbsp;соответствие
+			с&nbsp;правилами публикации.
+		</p>
+		<p>
+			Администрация сервиса оставляет за&nbsp;собой право <strong>блокировать аккаунты</strong> постоянно нарушающие
+			правила, с&nbsp;которых размещаются объявления.
+		</p>
+	</div>
+	<!-- /.rules-desc -->
+
+</div>
+<!-- /.rules -->";s:4:"code";N;s:5:"title";s:45:"Как добавить объявление?";s:3:"url";s:5:"/help";s:6:"layout";s:4:"help";s:9:"is_hidden";s:1:"0";s:7:"session";a:1:{s:8:"security";s:3:"all";}}}

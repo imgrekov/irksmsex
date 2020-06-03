@@ -1,9 +1,0 @@
-User-agent: *
-Disallow: /irkadminpanel
-Disallow: /config/
-Disallow: /modules/
-Disallow: /plugins/
-Allow: /
-
-Sitemap: https://irksmsex.ru/sitemap.xml
-Host: irksmsex.ru

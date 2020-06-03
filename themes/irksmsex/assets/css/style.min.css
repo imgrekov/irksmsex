@@ -42,6 +42,14 @@ img {
 }
 
 
+.ya-share2__container_size_m .ya-share2__item {
+  margin-left: 0.5rem !important;
+}
+
+.ya-share2__container_size_m .ya-share2__icon {
+  width: 30px !important;
+  height: 30px !important;
+}
 
 .copy {
   margin-top: 1rem;
@@ -187,10 +195,6 @@ img {
   border-top: #111111 solid 1px;
   border-bottom: #111111 solid 1px;
   background-color: #abd3ff;
-}
-
-.infblock h1 {
-  margin-bottom: 0;
 }
 
 .infblock__line {
@@ -401,6 +405,7 @@ img {
 .advert__image {
   display: block;
   max-width: 30%;
+  max-height: 200px;
   margin-right: 0.5rem;
   padding: 0.5rem 0;
   overflow: hidden;
@@ -411,11 +416,8 @@ img {
 }
 
 .advert__image img {
-  border-radius: 4px;
   max-width: 100%;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
+  border-radius: 4px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -461,7 +463,7 @@ img {
 /* /.advert-edit-form__text */
 
 .advert-edit-form__text {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .advert-edit-form__text label {
@@ -499,13 +501,13 @@ img {
 
 
 
-.advert-edit-state__text {
+.advert-edit-deactivate__text {
   position: relative;
   display: inline-block;
   margin-right: 10px;
 }
 
-.advert-edit-state__text::after {
+.advert-edit-deactivate__text::after {
   content: '*';
   display: block;
   color: #ff0000;
@@ -522,7 +524,7 @@ img {
 .advert-form {
   position: relative;
   margin-bottom: 1.5rem;
-  padding: 1rem 2rem;
+  padding: 15px 30px;
   border: 1px solid #c8c8c8;
   border-radius: 4px;
 }
@@ -558,11 +560,11 @@ img {
 .advert-edit__type p {
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
 }
 
 .advert-edit__type>label:not(:last-child) {
-  margin-right: 1.2rem;
+  margin-right: 1.5rem;
   margin-bottom: 0;
 }
 
@@ -575,9 +577,9 @@ img {
 /* .advert-edit__category {} */
 
 .advert-edit__category-desc {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
 }
 
 .advert-edit__category select {
@@ -605,18 +607,12 @@ img {
 /* .advert-edit__price-count {} */
 
 
-/* .advert-edit__image {
+.advert-edit__image {
   text-align: center;
-} */
-/* 
+}
+
 .advert-edit__image p {
   text-align: left;
-} */
-
-.advert-edit__image-title {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
 }
 
 .advert-edit__image-wrap {
@@ -951,22 +947,6 @@ li.gold {
   text-align: justify;
   padding-right: .5rem;
   padding-bottom: 1em;
-  word-wrap: break-word;
-}
-
-.advert-action {
-  margin-top: 1rem;
-}
-
-.advert-action__link {
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.advert-action__link:hover {
-  color: #0037ff;
-  transition: all 0.3s;
-  text-decoration: none;
 }
 
 .advert-id {
@@ -1182,17 +1162,6 @@ li.gold {
 
 /* End checkbox */
 
-.page-desc {
-  font-size: 14px;
-}
-
-.page-desc p {
-  margin-bottom: 0.4rem;
-}
-
-.page-desc p:last-child {
-  margin-bottom: 0;
-}
 
 
 /* error 404 */
@@ -1276,9 +1245,6 @@ select#category:focus {
   font-weight: 500;
 }
 
-.ekko-lightbox-item {
-  word-wrap: break-word;
-}
 
 @media (max-width: 768px) {
   html {
@@ -1310,9 +1276,6 @@ select#category:focus {
     margin-bottom: 1rem;
   }
 
-  .advert-edit-state__text {
-    margin-bottom: 0.4rem;
-  }
 
 }
 

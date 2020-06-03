@@ -12,13 +12,21 @@ modelClass = "Grekov\AdvertsList\Models\Advert"
 identifierValue = "{{ :id }}"
 modelKeyColumn = "id"
 displayColumn = "id"
-notFoundMessage = "Объявление не&nbsp;найдено"
+notFoundMessage = "Объявление не найдено"
 
 [editAdvert]
 basicPrice = 15
 vipPrice = 50
 xvipPrice = 150
 hihglightPrice = 30
+==
+<?php
+use Grekov\AdvertsList\Models\Advert;
+  function onStart()
+  {
+    $this['hasXVip'] = Advert::query()->where('type', Advert::XVIP)->get();
+  }
+?>
 ==
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
@@ -30,24 +38,74 @@ hihglightPrice = 30
 <div class="advert-edit">
   <h1 class="advert-edit__title">Редактировать объявление</h1>
   <!-- /.advert-edit__title -->
-  <p class="advert-edit__desc">Измените текст, категорию и добавьте изображения</p>
+  <p class="advert-edit__desc">Активируйте, меняйте текст и добавляйте изображения</p>
   <!-- /.advert-edir__desc -->
 
+  <div class="ad-info">
+    <h3>Информация об&nbsp;объявлении</h3>
+    <div class="ad-info__stats-wrap">
+
+      <p class="ad-info__stats-wrap-item">
+        Объявление:
+        {% if record.state == true %}
+        <span class="badge badge-success">активно</span> <!-- /.badge-success -->
+        {% else %}
+        <span class="badge badge-danger">неактивно</span> <!-- /.state -->
+        {% endif %}
+      </p>
+      <!-- /.ad-info__stats-wrap-item -->
+
+      {% if record.type == 'xvip' %}
+      <p class="ad-info__stats-wrap-item ad-info__xvip">Объявление выше всех</p>
+      <!-- /.ad-info__stats-wrap-item -->
+      {% else %}
+      <p class="ad-info__stats-wrap-item">
+        Выделено:
+        {% if record.highlight == 'on' %}
+        <span class="badge badge-success">да</span> <!-- /.badge-success -->
+        {% else %}
+        <span class="badge badge-danger">нет</span> <!-- /.state -->
+        {% endif %}
+      </p>
+      <!-- /.ad-info__stats-wrap-item -->
+      {% endif %}
+
+      <p class="ad-info__stats-wrap-item">
+        <!-- Текст в соответствии с категорией объявления -->
+        Категория:
+        {% if record.category == 'categories-ona-on' %}
+        <span class="state state-category">Девушка ищет парня</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-on-ona' %}
+        <span class="state state-category">Парень ищет девушку</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-on-on' %}
+        <span class="state state-category">Парень ищет парня</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-ona-ona' %}
+        <span class="state state-category">Девушка ищет девушку</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-free' %}
+        <span class="state state-category">Досуг в Иркутске</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-services' %}
+        <span class="state state-category">Услуги массажа</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-family' %}
+        <span class="state state-category">Семейные пары</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-flirt' %}
+        <span class="state state-category">Свободные отношения</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-realty' %}
+        <span class="state state-category">Недвижимость</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-arenda' %}
+        <span class="state state-category">Аренда квартир на сутки</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-work' %}
+        <span class="state state-category">Работа в Иркутске</span> <!-- /.state-category -->
+        {% else %}
+        <span class="badge badge-danger">Ошибка: 404 — Not Found</span> <!-- /.badge-danger -->
+        {% endif %}
+      </p>
+      <!-- /.ad-info__stats-wrap-item -->
+
+    </div>
+    <!-- /.ad-info__stats-wrap -->
+  </div>
 
   {% component 'editAdvert' %}
-
-  {% if record.state != "on" %}
-  {{ form_ajax('onEditActivate', {class: "mt-4"} ) }}
-  <input name="id" type="hidden" value="{{ record.id }}">
-  <div class="form-group">
-
-    <strong data-toggle="tooltip" data-placement="top" title="Объявление снова вернётся в строй"
-      class="advert-edit-state__text">Ваше объявление не активно</strong>
-    <button class="btn btn-success btn-sm">Активировать</button>
-
-  </div>
-  {{ form_close() }}
-  {% endif %}
 
   <hr class="my-3">
 
@@ -55,34 +113,17 @@ hihglightPrice = 30
     Дополнительные функции
   </button>
 
-
-
   <div class="advert-advance" style="display: none">
 
     <!-- Удалить объявление -->
-    {{ form_ajax('onEditDelete', { 'data-request-confirm': "Вы уверены, что хотите удалить объявление?" } ) }}
+    {{ form_ajax('onEditDelete', { 'data-request-confirm': "Вы уверены?" } ) }}
     <input name="id" type="hidden" value="{{ record.id }}">
     <div class="form-group">
-      <span class="advert-edit-state__text" data-toggle="tooltip" data-placement="bottom"
-        title="Объявление исчезнет из списка, но не удалится">Удалить объявление</span>
+      <span class="advert-edit-deactivate__text" data-toggle="tooltip" data-placement="bottom"
+        title="Безвозвратно">Удалить объявление</span>
       <button class="btn btn-danger btn-sm">Удалить</button>
-
     </div>
     {{ form_close() }}
-
-
-    {% if record.state == "on" %}
-    {{ form_ajax('onEditDeactivate', { 'data-request-confirm': "Вы уверены, что хотите деактивировать объявление?" } ) }}
-    <input name="id" type="hidden" value="{{ record.id }}">
-    <div class="form-group">
-
-      <span class="advert-edit-state__text" data-toggle="tooltip" data-placement="bottom"
-        title="Объявление не будет показываться">Снять с&nbsp;публикации</span>
-      <button class="btn btn-outline-danger btn-sm">Деактивировать</button>
-
-    </div>
-    {{ form_close() }}
-    {% endif %}
 
   </div> <!-- /.advert-advance -->
 

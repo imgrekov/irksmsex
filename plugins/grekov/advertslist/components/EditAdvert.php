@@ -6,7 +6,6 @@ use Cms\Classes\ComponentBase;
 use Grekov\AdvertsList\Models\Advert as AdvertFather;
 use Input;
 use Redirect;
-use ApplicationException;
 
 class EditAdvert extends ComponentBase
 {
@@ -71,6 +70,7 @@ class EditAdvert extends ComponentBase
     $advert->text = post('text');
     $advert->category = post('category');
     $advert->type = post('type');
+    $advert->state = post('state');
     $advert->highlight = post('highlight');
 
     foreach ($advert->attachOne as $name => $type) {
@@ -81,41 +81,15 @@ class EditAdvert extends ComponentBase
       }
     }
 
-    if ($advert->type == 'xvip') {
-      $hasXvip = AdvertFather::query()->where('type', '=', 'xvip')->where('category', '=', $advert->category)->count();
-      if ($hasXvip > 0) {
-        throw new ApplicationException('Объявление с типом xvip уже созданно в этой категории. Выберите другой тип.');
-      }
-    }
-
     $advert->save();
+
     return Redirect::to('../advert/edit-success');
   }
-  
-
-  public function onEditActivate()
-  {
-    $advert = AdvertFather::find((int) post('id'));
-    $advert->state = "on";
-    
-    $advert->save();
-    return Redirect::to('../advert/activate-success');
-  }
- 
-
-  public function onEditDeactivate()
-  {
-    $advert = AdvertFather::find((int) post('id'));
-    $advert->state = "";
-    
-    $advert->save();
-    return Redirect::to('../advert/deactivate-success');
-  }
-
 
   public function onEditDelete()
   {
     AdvertFather::find((int) post('id'))->delete();
+
     return Redirect::to('../advert/delete-success');
   }
 }

@@ -1,0 +1,257 @@
+1586773946a:1:{s:15:"edit-advert.htm";a:13:{s:8:"fileName";s:15:"edit-advert.htm";s:7:"content";s:5775:"title = "Редактировать объявление"
+url = "/edit/:id"
+layout = "index"
+description = "Редактировать добавленное объявление"
+is_hidden = 0
+
+[session]
+security = "all"
+
+[builderDetails]
+modelClass = "Grekov\AdvertsList\Models\Advert"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "id"
+notFoundMessage = "Объявление не найдено"
+
+[editAdvert]
+basicPrice = 15
+vipPrice = 50
+xvipPrice = 150
+hihglightPrice = 30
+==
+<?php
+use Grekov\AdvertsList\Models\Advert;
+  function onStart()
+  {
+    $this['hasXVip'] = Advert::query()->where('type', Advert::XVIP)->get();
+  }
+?>
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+
+{% if record and record.author == user.email %}
+
+<div class="advert-edit">
+  <h1 class="advert-edit__title">Редактировать объявление</h1>
+  <!-- /.advert-edit__title -->
+  <p class="advert-edit__desc">Активируйте, меняйте текст и добавляйте изображения</p>
+  <!-- /.advert-edir__desc -->
+
+  <div class="ad-info">
+    <h3>Информация об&nbsp;объявлении</h3>
+    <div class="ad-info__stats-wrap">
+
+      <p class="ad-info__stats-wrap-item">
+        Объявление:
+        {% if record.state == true %}
+        <span class="badge badge-success">активно</span> <!-- /.badge-success -->
+        {% else %}
+        <span class="badge badge-danger">неактивно</span> <!-- /.state -->
+        {% endif %}
+      </p>
+      <!-- /.ad-info__stats-wrap-item -->
+
+      {% if record.type == 'xvip' %}
+      <p class="ad-info__stats-wrap-item ad-info__xvip">Объявление выше всех</p>
+      <!-- /.ad-info__stats-wrap-item -->
+      {% else %}
+      <p class="ad-info__stats-wrap-item">
+        Выделено:
+        {% if record.highlight == 'on' %}
+        <span class="badge badge-success">да</span> <!-- /.badge-success -->
+        {% else %}
+        <span class="badge badge-danger">нет</span> <!-- /.state -->
+        {% endif %}
+      </p>
+      <!-- /.ad-info__stats-wrap-item -->
+      {% endif %}
+
+      <p class="ad-info__stats-wrap-item">
+        <!-- Текст в соответствии с категорией объявления -->
+        Категория:
+        {% if record.category == 'categories-ona-on' %}
+        <span class="state state-category">Девушка ищет парня</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-on-ona' %}
+        <span class="state state-category">Парень ищет девушку</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-on-on' %}
+        <span class="state state-category">Парень ищет парня</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-ona-ona' %}
+        <span class="state state-category">Девушка ищет девушку</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-free' %}
+        <span class="state state-category">Досуг в Иркутске</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-services' %}
+        <span class="state state-category">Услуги массажа</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-family' %}
+        <span class="state state-category">Семейные пары</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-flirt' %}
+        <span class="state state-category">Свободные отношения</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-realty' %}
+        <span class="state state-category">Недвижимость</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-arenda' %}
+        <span class="state state-category">Аренда квартир на сутки</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-work' %}
+        <span class="state state-category">Работа в Иркутске</span> <!-- /.state-category -->
+        {% else %}
+        <span class="badge badge-danger">Ошибка: 404 — Not Found</span> <!-- /.badge-danger -->
+        {% endif %}
+      </p>
+      <!-- /.ad-info__stats-wrap-item -->
+
+    </div>
+    <!-- /.ad-info__stats-wrap -->
+  </div>
+
+  {% component 'editAdvert' %}
+
+  <hr class="my-3">
+
+  <button class="btn btn-outline-secondary btn-sm" href="javascript:;" onclick="$('.advert-advance').toggle()">
+    Дополнительные функции
+  </button>
+
+  <div class="advert-advance" style="display: none">
+
+    <!-- Удалить объявление -->
+    {{ form_ajax('onEditDelete', { 'data-request-confirm': "Вы уверены?" } ) }}
+    <input name="id" type="hidden" value="{{ record.id }}">
+    <div class="form-group">
+      <span class="advert-edit-deactivate__text" data-toggle="tooltip" data-placement="bottom"
+        title="Безвозвратно">Удалить объявление</span>
+      <button class="btn btn-danger btn-sm">Удалить</button>
+    </div>
+    {{ form_close() }}
+
+  </div> <!-- /.advert-advance -->
+
+</div> <!-- /.advert-edit -->
+
+{% elseif not record %}
+
+{% partial '404' error_text = notFoundMessage|raw %}
+<!-- 404 Error -->
+
+{% else %}
+
+{% partial '404' error_text = 'Усп… Это&nbsp;не&nbsp;ваше объявление' %}
+<!-- Not your Advert… -->
+
+{% endif %}";s:5:"mtime";i:1586600939;s:6:"markup";s:5084:"{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+
+{% if record and record.author == user.email %}
+
+<div class="advert-edit">
+  <h1 class="advert-edit__title">Редактировать объявление</h1>
+  <!-- /.advert-edit__title -->
+  <p class="advert-edit__desc">Активируйте, меняйте текст и добавляйте изображения</p>
+  <!-- /.advert-edir__desc -->
+
+  <div class="ad-info">
+    <h3>Информация об&nbsp;объявлении</h3>
+    <div class="ad-info__stats-wrap">
+
+      <p class="ad-info__stats-wrap-item">
+        Объявление:
+        {% if record.state == true %}
+        <span class="badge badge-success">активно</span> <!-- /.badge-success -->
+        {% else %}
+        <span class="badge badge-danger">неактивно</span> <!-- /.state -->
+        {% endif %}
+      </p>
+      <!-- /.ad-info__stats-wrap-item -->
+
+      {% if record.type == 'xvip' %}
+      <p class="ad-info__stats-wrap-item ad-info__xvip">Объявление выше всех</p>
+      <!-- /.ad-info__stats-wrap-item -->
+      {% else %}
+      <p class="ad-info__stats-wrap-item">
+        Выделено:
+        {% if record.highlight == 'on' %}
+        <span class="badge badge-success">да</span> <!-- /.badge-success -->
+        {% else %}
+        <span class="badge badge-danger">нет</span> <!-- /.state -->
+        {% endif %}
+      </p>
+      <!-- /.ad-info__stats-wrap-item -->
+      {% endif %}
+
+      <p class="ad-info__stats-wrap-item">
+        <!-- Текст в соответствии с категорией объявления -->
+        Категория:
+        {% if record.category == 'categories-ona-on' %}
+        <span class="state state-category">Девушка ищет парня</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-on-ona' %}
+        <span class="state state-category">Парень ищет девушку</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-on-on' %}
+        <span class="state state-category">Парень ищет парня</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-ona-ona' %}
+        <span class="state state-category">Девушка ищет девушку</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-free' %}
+        <span class="state state-category">Досуг в Иркутске</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-services' %}
+        <span class="state state-category">Услуги массажа</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-family' %}
+        <span class="state state-category">Семейные пары</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-flirt' %}
+        <span class="state state-category">Свободные отношения</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-realty' %}
+        <span class="state state-category">Недвижимость</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-arenda' %}
+        <span class="state state-category">Аренда квартир на сутки</span> <!-- /.state-category -->
+        {% elseif record.category == 'categories-work' %}
+        <span class="state state-category">Работа в Иркутске</span> <!-- /.state-category -->
+        {% else %}
+        <span class="badge badge-danger">Ошибка: 404 — Not Found</span> <!-- /.badge-danger -->
+        {% endif %}
+      </p>
+      <!-- /.ad-info__stats-wrap-item -->
+
+    </div>
+    <!-- /.ad-info__stats-wrap -->
+  </div>
+
+  {% component 'editAdvert' %}
+
+  <hr class="my-3">
+
+  <button class="btn btn-outline-secondary btn-sm" href="javascript:;" onclick="$('.advert-advance').toggle()">
+    Дополнительные функции
+  </button>
+
+  <div class="advert-advance" style="display: none">
+
+    <!-- Удалить объявление -->
+    {{ form_ajax('onEditDelete', { 'data-request-confirm': "Вы уверены?" } ) }}
+    <input name="id" type="hidden" value="{{ record.id }}">
+    <div class="form-group">
+      <span class="advert-edit-deactivate__text" data-toggle="tooltip" data-placement="bottom"
+        title="Безвозвратно">Удалить объявление</span>
+      <button class="btn btn-danger btn-sm">Удалить</button>
+    </div>
+    {{ form_close() }}
+
+  </div> <!-- /.advert-advance -->
+
+</div> <!-- /.advert-edit -->
+
+{% elseif not record %}
+
+{% partial '404' error_text = notFoundMessage|raw %}
+<!-- 404 Error -->
+
+{% else %}
+
+{% partial '404' error_text = 'Усп… Это&nbsp;не&nbsp;ваше объявление' %}
+<!-- Not your Advert… -->
+
+{% endif %}";s:4:"code";s:146:"use Grekov\AdvertsList\Models\Advert;
+  function onStart()
+  {
+    $this['hasXVip'] = Advert::query()->where('type', Advert::XVIP)->get();
+  }";s:5:"title";s:47:"Редактировать объявление";s:3:"url";s:9:"/edit/:id";s:6:"layout";s:5:"index";s:11:"description";s:70:"Редактировать добавленное объявление";s:9:"is_hidden";s:1:"0";s:7:"session";a:1:{s:8:"security";s:3:"all";}s:14:"builderDetails";a:5:{s:10:"modelClass";s:32:"Grekov\AdvertsList\Models\Advert";s:15:"identifierValue";s:9:"{{ :id }}";s:14:"modelKeyColumn";s:2:"id";s:13:"displayColumn";s:2:"id";s:15:"notFoundMessage";s:41:"Объявление не найдено";}s:10:"editAdvert";a:4:{s:10:"basicPrice";s:2:"15";s:8:"vipPrice";s:2:"50";s:9:"xvipPrice";s:3:"150";s:14:"hihglightPrice";s:2:"30";}}}

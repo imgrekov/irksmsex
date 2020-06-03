@@ -1,7 +1,7 @@
-title = "Работа в Иркутске"
+﻿title = "Работа в Иркутске"
+description = "объявления работодателей"
 url = "/categories/work/:page?"
 layout = "advert"
-description = "объявления работодателей"
 is_hidden = 0
 
 [builderList AdvertsList]
@@ -20,8 +20,6 @@ sortDirection = "desc"
 
 [session]
 security = "all"
-
-[contenteditor]
 ==
 {% set records = AdvertsList.records %}
 {% set displayColumn = AdvertsList.displayColumn %}
