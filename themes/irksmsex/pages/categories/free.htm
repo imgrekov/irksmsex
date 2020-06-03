@@ -1,7 +1,7 @@
 title = "Досуг в Иркутске, агентства экскорт, индивидуалки"
-description = "Досуг в Иркутске"
 url = "/categories/free/:page?"
 layout = "advert"
+description = "Досуг в Иркутске"
 is_hidden = 0
 
 [builderList AdvertsList]
@@ -20,6 +20,8 @@ sortDirection = "desc"
 
 [session]
 security = "all"
+
+[contenteditor]
 ==
 {% set records = AdvertsList.records %}
 {% set displayColumn = AdvertsList.displayColumn %}
@@ -32,3 +34,5 @@ security = "all"
 {% partial 'adverts/adverts-list' %}
 
 {% partial 'adverts/adverts-pagination' %}
+
+{# {% component 'contenteditor' file="page-desc/test.htm" fixture="div" class="page-desc" %} #}

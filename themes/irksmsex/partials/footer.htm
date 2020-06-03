@@ -3,6 +3,37 @@
 </div>
 
 <footer class="footer">
+  {% if this.page.id == 'categories-on-ona' %}
+  {% component 'contenteditor' file="page-desc/on-ona.htm" fixture="div" class="page-desc" %}
+  
+  {% elseif this.page.id == 'categories-ona-on' %}
+  {% component 'contenteditor' file="page-desc/ona-on.htm" fixture="div" class="page-desc" %}
+  
+  {% elseif this.page.id == 'categories-on-on' %}
+  {% component 'contenteditor' file="page-desc/on-on.htm" fixture="div" class="page-desc" %}
+  
+  {% elseif this.page.id == 'categories-ona-ona' %}
+  {% component 'contenteditor' file="page-desc/ona-ona.htm" fixture="div" class="page-desc" %}
+  
+  {% elseif this.page.id == 'categories-free' %}
+  {% component 'contenteditor' file="page-desc/free.htm" fixture="div" class="page-desc" %}
+
+  {% elseif this.page.id == 'categories-services' %}
+  {% component 'contenteditor' file="page-desc/services.htm" fixture="div" class="page-desc" %}
+  
+  {% elseif this.page.id == 'categories-family' %}
+  {% component 'contenteditor' file="page-desc/family.htm" fixture="div" class="page-desc" %}
+  
+  {% elseif this.page.id == 'categories-flirt' %}
+  {% component 'contenteditor' file="page-desc/flirt.htm" fixture="div" class="page-desc" %}
+  
+  {% elseif this.page.id == 'categories-arenda' %}
+  {% component 'contenteditor' file="page-desc/arenda.htm" fixture="div" class="page-desc" %}
+  
+  {% elseif this.page.id == 'categories-work' %}
+  {% component 'contenteditor' file="page-desc/work.htm" fixture="div" class="page-desc" %}
+  {% endif %}
+  <hr class="my-3">
   <div class="admin">Администратор: <b>info@irksmsex.ru</b></div>
   <p class="copy">Знакомства в&nbsp;Иркутске</p>
 </footer>

@@ -27,7 +27,10 @@ class Advert extends Model
 	/**
 	 * @var array Validation rules
 	 */
-	public $rules = [];
+	public $rules = [
+		'text' => 'required',
+		'type' => 'required',
+	];
 
 	public function getImageCountAttribute()
 	{

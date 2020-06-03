@@ -2,7 +2,6 @@
 
 namespace Grekov\AdvertsList;
 
-use Event;
 use System\Classes\PluginBase;
 
 class Plugin extends PluginBase
@@ -13,7 +12,7 @@ class Plugin extends PluginBase
 		return [
 			'name'        => 'Объявления',
 			'description' => 'Самописный плагин для вывода и хранения объявлений',
-			'author'      => 'Gregar Grekov',
+			'author'      => 'Gregory Grekov',
 			'icon'        => 'icon-adn',
 		];
 	}

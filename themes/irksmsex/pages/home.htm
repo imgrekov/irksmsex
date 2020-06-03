@@ -5,9 +5,11 @@ is_hidden = 0
 
 [session]
 security = "all"
+
+[contenteditor]
 ==
-<?
-  use Grekov\AdvertsList\Models\Advert;
+<?php
+use Grekov\AdvertsList\Models\Advert;
   function onStart()
   {
     $this['countOnaOn'] = Advert::query()->where('category', '=', 'categories-ona-on')->where('state', '=', 'on')->count();
@@ -74,7 +76,7 @@ security = "all"
   </a>
 
   <a class="main-link" href="{{ 'categories/services'|page }}">
-    Услуги массажа
+    Массаж
     <img src="{{ 'assets/images/cats/services.png'|theme }}" alt="Картинка категории">
     <span class="count">
       <i class="fa fa-comment-o"></i><span>{{ countServices }}</span>
