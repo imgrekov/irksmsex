@@ -1,7 +1,7 @@
-﻿title = "Девушки ищут девушек"
-description = "Девушка ищет девушку"
+title = "Девушки ищут девушек"
 url = "/categories/ona-ona/:page?"
 layout = "advert"
+description = "Девушка ищет девушку"
 is_hidden = 0
 
 [builderList AdvertsList]
@@ -20,6 +20,8 @@ sortDirection = "desc"
 
 [session]
 security = "all"
+
+[contenteditor]
 ==
 {% set records = AdvertsList.records %}
 {% set displayColumn = AdvertsList.displayColumn %}

@@ -151,4 +151,7 @@
   'Grekov\\AdvertsList\\Components\\CreateAdvert' => 'plugins\\grekov\\advertslist\\components\\CreateAdvert.php',
   'Grekov\\AdvertsList\\Components\\EditAdvert' => 'plugins\\grekov\\advertslist\\components\\EditAdvert.php',
   'system\\Controllers\\mailpartials' => 'modules\\system\\controllers\\mailpartials.php',
+  'samuell\\contenteditor\\Plugin' => 'plugins\\samuell\\contenteditor\\Plugin.php',
+  'Samuell\\ContentEditor\\Components\\ContentEditor' => 'plugins\\samuell\\contenteditor\\components\\ContentEditor.php',
+  'Samuell\\ContentEditor\\Models\\Settings' => 'plugins\\samuell\\contenteditor\\models\\Settings.php',
 );

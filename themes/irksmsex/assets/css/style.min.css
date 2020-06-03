@@ -446,6 +446,9 @@ img {
   font-size: 1.5rem;
 }
 
+.advert-edit-state__text {
+  margin-bottom: 0.4rem;
+}
 
 .advert-edit__already {
   display: inline-block;
@@ -1163,6 +1166,18 @@ li.gold {
 /* End checkbox */
 
 
+.page-desc {
+  font-size: 14px;
+}
+
+.page-desc p {
+  margin-bottom: 0.4rem;
+}
+
+.page-desc p:last-child {
+  margin-bottom: 0;
+}
+
 
 /* error 404 */
 
@@ -1204,7 +1219,20 @@ li.gold {
 
 /* END success */
 
+.advert-action {
+  margin-top: 1rem;
+}
 
+.advert-action__link {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.advert-action__link:hover {
+  color: #0037ff;
+  transition: all 0.3s;
+  text-decoration: none;
+}
 
 /* END pay-form */
 select#category:focus {
