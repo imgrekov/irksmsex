@@ -1,5 +1,5 @@
 title = "Аккаунт пользователя"
-url = "/user/account"
+url = "/user/account/:code?"
 layout = "home"
 description = "Регистрация и логин пользователей"
 is_hidden = 0
@@ -7,7 +7,8 @@ is_hidden = 0
 [account]
 redirect = "user/profile"
 paramCode = "code"
-forceSecure = 0
+forceSecure = 1
+requirePassword = 1
 
 [session]
 security = "all"
@@ -35,7 +36,7 @@ paramCode = "code"
 
 	<div class="profile-edit">
 		<h1 class="profile-edit__title">Настройки аккаунта</h1>
-		<small>Здесь ты можешь обновить пароль или деактивировать аккаунт.</small>
+		<small>Здесь вы можете обновить пароль или деактивировать аккаунт.</small>
 
 		<hr>
 		

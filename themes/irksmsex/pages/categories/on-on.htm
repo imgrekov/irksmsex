@@ -1,7 +1,9 @@
-title = "Объявления для геев"
-url = "/categories/on-on/:page?"
+title = "Объявления для геев в Иркутске — Гей знакомства"
+url = "/categories/on-on/"
 layout = "advert"
-description = "Парень ищет парня"
+description = "Парень ищет парня → Гей знакомства в Иркутске"
+meta_title = "Объявления для геев"
+meta_description = "Размещение смс объявлений для геев в Иркутске. Гей знакомства в Иркутске"
 is_hidden = 0
 
 [builderList AdvertsList]
@@ -13,26 +15,49 @@ noRecordsMessage = "Здесь пока нет объявлений. Добав�
 detailsPage = "-"
 detailsKeyColumn = "id"
 detailsUrlParameter = "id"
-recordsPerPage = 50
+recordsPerPage = 10
 pageNumber = "{{ :page }}"
-sortColumn = "type"
+sortColumn = "created_at"
 sortDirection = "desc"
 
 [session]
 security = "all"
 
 [contenteditor]
-
-[contenteditor contenteditor2]
 ==
-{% set records = AdvertsList.records %}
+<?php
+use Grekov\AdvertsList\Models\Advert;
+  function onStart()
+  {
+    $this['adverts'] = Advert::where('category', 'categories-on-on')->where('state', 'on')->where('type', 'basic')->orderBy('created_at', 'desc')->paginate(25);
+    //$this['test'] = Advert::where('id', '264')->first();
+    $this['advertsVip'] = Advert::where('category', 'categories-on-on')->where('state', 'on')->where('type', 'vip')->orderBy('created_at', 'desc')->paginate(10);
+    $this['advertsXVip'] = Advert::where('category', 'categories-on-on')->where('state', 'on')->where('type', 'xvip')->orderBy('created_at', 'desc')->get();
+  }
+?>
+==
 {% set displayColumn = AdvertsList.displayColumn %}
 {% set noRecordsMessage = AdvertsList.noRecordsMessage %}
 {% set detailsPage = AdvertsList.detailsPage %}
 {% set detailsKeyColumn = AdvertsList.detailsKeyColumn %}
 {% set detailsUrlParameter = AdvertsList.detailsUrlParameter %}
 
+{# <div class="jumbotron">
+  <p>
+    {{ test }}
+    <p>
+      {{ test.attachimage1.path }}
+    </p>
+    <p>
+      {{ test.attachimage2.path }}
+    </p>
+    <p>
+      {{ test.attachimage3.path }}
+    </p>
+  </p>
+</div> #}
 
+{% partial 'adverts/adverts-list-vip' %}
 {% partial 'adverts/adverts-list' %}
 
 {% partial 'adverts/adverts-pagination' %}

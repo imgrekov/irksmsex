@@ -1,7 +1,9 @@
-title = "Парни ищут девушек"
-url = "/categories/on-ona/:page?"
+title = "Смс объявления парней, которые ищут девушек в Иркутске"
+url = "/categories/on-ona/"
 layout = "advert"
-description = "Парень ищет девушку"
+description = "Парень ищет девушку &rarr; Смс объявления в Иркутске"
+meta_title = "Парни ищут девушек"
+meta_description = "Размещение смс объявлений для поиска девушек в Иркутске. Знакомства с девушками в Иркутске"
 is_hidden = 0
 
 [builderList AdvertsList]
@@ -13,9 +15,9 @@ noRecordsMessage = "Здесь пока нет объявлений. Добав�
 detailsPage = "-"
 detailsKeyColumn = "id"
 detailsUrlParameter = "id"
-recordsPerPage = 50
+recordsPerPage = 10
 pageNumber = "{{ :page }}"
-sortColumn = "type"
+sortColumn = "created_at"
 sortDirection = "desc"
 
 [session]
@@ -23,14 +25,24 @@ security = "all"
 
 [contenteditor]
 ==
-{% set records = AdvertsList.records %}
+<?php
+use Grekov\AdvertsList\Models\Advert;
+  function onStart()
+  {
+    $this['adverts'] = Advert::where('category', 'categories-on-ona')->where('state', 'on')->where('type', 'basic')->orderBy('created_at', 'desc')->paginate(25);
+    $this['advertsVip'] = Advert::where('category', 'categories-on-ona')->where('state', 'on')->where('type', 'vip')->orderBy('created_at', 'desc')->paginate(10);
+    $this['advertsXVip'] = Advert::where('category', 'categories-on-ona')->where('state', 'on')->where('type', 'xvip')->orderBy('created_at', 'desc')->get();    
+  }
+?>
+==
 {% set displayColumn = AdvertsList.displayColumn %}
 {% set noRecordsMessage = AdvertsList.noRecordsMessage %}
 {% set detailsPage = AdvertsList.detailsPage %}
 {% set detailsKeyColumn = AdvertsList.detailsKeyColumn %}
 {% set detailsUrlParameter = AdvertsList.detailsUrlParameter %}
+{% set pageNumber = AdvertsList.pageNumber %}
 
-
+{% partial 'adverts/adverts-list-vip' %}
 {% partial 'adverts/adverts-list' %}
 
 {% partial 'adverts/adverts-pagination' %}

@@ -1,51 +1,63 @@
-<ul class="xvip-record">
-  {% for record in records if record.state == 'on' and record.type == 'xvip' and record.category == this.page.id %}
+<ul class="xvip-advert">
+	{% for record in advertsXVip %}
+		<li class="xvip-advert-item">
+			<div id="{{ record.id }}" class="xvip advert{% if record.highlight == 'on' %} highlight{% endif %}">
 
-  <li class="xvip-record-item">
-    <div id="{{ record.id }}" class="xvip record">
+				{% if record.author == user.email %}
+					<a class="advert-edit-btn" href="/edit/{{ record.id }}/">
+						<img src="{{ 'assets/images/edit/pencil-blue.svg'|theme }}" alt="">
+					</a>
+				{% endif %}
 
-      <span class="timehead">
-        {{ record.created_at|date('d-m-Y H:i') }}
-      </span>
-      <!-- Когда создано -->
+				<span class="xvip-advert__type">super</span>
 
-      <div class="xvip-record__text">
-        {{ record.text|raw }}
-      </div>
-      <!-- Текст объявления -->
+				<span class="timehead">
+					Создано
+					{{ record.created_at|date('d-m-Y H:i') }}
+				</span>
+				<!-- Когда создано -->
 
-      {% if record.attachimage1 %}
-      <div class="advert__imgs-wrap">
-        <a class="advert__image" href="{{ record.attachimage1.path }}" data-toggle="lightbox" data-type="image">
-          <img src="{{ record.attachimage1.path }}" alt="Фото1">
-        </a>
-        <!-- Изображение первое -->
-        
-        {% if record.attachimage2 %}
-        <a class="advert__image" href="{{ record.attachimage2.path }}" data-toggle="lightbox" data-type="image">
-          <img src="{{ record.attachimage2.path }}" alt="Фото1">
-        </a>
-        {% endif %}
-        <!-- Изображение второе -->
-        {% if record.attachimage3 %}
-        <a class="advert__image" href="{{ record.attachimage3.path }}" data-toggle="lightbox" data-type="image">
-          <img src="{{ record.attachimage3.path }}" alt="Фото1">
-        </a>
-        {% endif %}
-        <!-- Изображение третье -->
+				<div class="xvip-advert__text">
+					{{ record.text|raw }}
+				</div>
+				<!-- Текст объявления -->
 
-      </div>
-      {% endif %}
-      <!-- Изображения к объявлению -->
+				{# {% if records.attachimage1 or records.attachimage2 or records.attachimage3 %} #}
 
-      <span class="advert-id">ID: {{record.id}}</span>
-      <!-- /.advert-id -->
+				<div class="advert__imgs-wrap">
+					{% if record.attachimage1 %}
+						<a class="advert__image" href="{{ record.attachimage1.thumb(800, 600, {mode:'auto',quality:80,extension:'webp'}) }}" data-toggle="lightbox" data-type="image" data-gallery="name-{{ record.id }}">
+							<img src="{{ record.attachimage1.thumb(800, 600, {mode:'auto',quality:80,extension:'webp'}) }}" alt="Первое фото">
+						</a>
+						<!-- Изображение 1 -->
+					{% endif %}
 
-    </div>
-    <!-- /.xvip.record -->
-  </li>
-  <!-- /.xvip-record-item -->
-  
-  {% endfor %}
+					{% if record.attachimage2 %}
+						<a class="advert__image" href="{{ record.attachimage2.thumb(800, 600, {mode:'auto',quality:80,extension:'webp'}) }}" data-toggle="lightbox" data-type="image" data-gallery="name-{{ record.id }}">
+							<img src="{{ record.attachimage2.thumb(800, 600, {mode:'auto',quality:80,extension:'webp'}) }}" alt="Второе фото">
+						</a>
+					{% endif %}
+					<!-- Изображение 2 -->
+
+					{% if record.attachimage3 %}
+						<a class="advert__image" href="{{ record.attachimage3.thumb(800, 600, {mode:'auto',quality:30,extension:'webp'}) }}" data-toggle="lightbox" data-type="image" data-gallery="name-{{ record.id }}">
+							<img src="{{ record.attachimage3.thumb(800, 600, {mode:'auto',quality:30,extension:'webp'}) }}" alt="Третье фото">
+						</a>
+					{% endif %}
+					<!-- Изображение 3 -->
+				</div>
+
+				{# {% endif %} #}
+				<!-- Изображения к объявлению -->
+
+				<p class="advert-id">ID:
+					{{record.id}}</p>
+				<!-- /.advert-id -->
+
+			</div>
+			<!-- /.xvip.record -->
+		</li>
+		<!-- /.xvip-record-item -->
+	{% endfor %}
 </ul>
 <!-- /.xvip-record -->

@@ -2,7 +2,7 @@
 	{% if user %}
 		<a href="{{ 'user/profile'|page }}" class="btn btn-primary btn-sm">Личный&nbsp;кабинет</a>
 		<a href="{{ 'user/account'|page }}" class="btn btn-info btn-sm">Настройки</a>
-		<a href="javascript:;" data-request="onLogout" class="btn btn-danger btn-sm">Выйти</a>
+		<a href="javascript:;" class="btn btn-danger btn-sm" data-request="onLogout" data-request-data="redirect: '/'">Выйти</a>
 		<!-- /.logout -->
 
 	{% else %}

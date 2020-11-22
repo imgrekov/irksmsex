@@ -1,72 +1,78 @@
 ==
+<?php
+  function onStart()
+  {
+		$this['canonical_url'] = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		$this['canonical_url'] = explode('?', $this['canonical_url']);
+		$this['canonical_url'] = $this['canonical_url'][0];
+		$this['canonical_url'] = preg_replace('/\d/', '', $this['canonical_url']);
+  }
+?>
+==
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-  <title>
-    {% if this.page.title %}
-    {{ this.page.title }}
-    {% else %}
-    Сайт знакомств irksmsex.ru
-    {% endif %}
-  </title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="keywords" content="знакомства для девушек, парни иркутска, ищу парня, ищу мужчину">
-  <meta name="description" content="Размещение объявлений для поиска девушек">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<head>
+		<title>
+			{{ this.page.title }}
+		</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="знакомства Иркутск, Иркутск,доска объявлений,гей знакомства,знакомства взрослых, легкий контакт">
+		<meta name="description" content="Бесплатные знакомства в Иркутске. Доска объявлений">
+		<meta
+		name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic"
-    rel="stylesheet">
+		<!-- Canonitial link -->
+		<link
+		rel="canonical" href="{{ canonical_url }}">
 
-  {% styles %}
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
 
-  <!-- Bootstrap -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		{% styles %}
 
-  <!-- FontAwesome -->
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<!-- Bootstrap -->
+		<link
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <link href="{{ 'assets/css/style.min.css'|theme }}" rel="stylesheet">
-  <link rel="apple-touch-icon" type="image/png" href="{{ 'assets/images/favicon/apple-touch-icon.png'|theme }}">
-  <link rel="icon" type="image/png" href="{{ 'assets/images/favicon/favicon-32x32.png'|theme }}">
+		<!-- FontAwesome -->
+		<link
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-</head>
+		<!-- Мои стили -->
+		<link
+		href="{{ 'assets/css/style.min.css'|theme }}" rel="stylesheet">
 
-<body>
-  {% partial 'user-status' %}
+		<!-- Favicon для сайта -->
+		<link rel="shortcut icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon">
 
-  {% partial 'header' %}
+	</head>
 
+	<body>
+		{% partial 'user-status' %}
 
+		{% partial 'header' %}
 
-  {% page %}
+		{% page %}
 
+		{% partial 'footer' %}
 
+		<!-- Версия jquery — 3.3.1 -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-  {% partial 'footer' %}
+		<!-- Popper.js -->
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
-  <!-- Версия jquery — 3.3.1 -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<!-- Bootstrap-4.4.1.js -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-  <!-- Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
+		<!-- My scripts -->
+		<script src="{{ 'assets/js/app.js'|theme }}"></script>
 
-  <!-- Bootstrap-4.4.1.js -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
+		<!-- OctoberCMS scripts -->
+		{% framework extras %}
+		{% scripts %}
 
-  <!-- My scripts -->
-  <script src="{{ 'assets/js/app.js'|theme }}"></script>
-
-  <!-- OctoberCMS scripts -->
-  {% framework extras %}
-  {% scripts %}
-  
-</body>
+	</body>
 
 </html>

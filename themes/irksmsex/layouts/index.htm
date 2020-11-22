@@ -1,17 +1,37 @@
 ==
+<?php
+  function onStart()
+  {
+		$this['canonical_url'] = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		$this['canonical_url'] = explode('?', $this['canonical_url']);
+		$this['canonical_url'] = $this['canonical_url'][0];
+		$this['canonical_url'] = preg_replace('/\d/', '', $this['canonical_url']);
+  }
+?>
+==
 <!DOCTYPE html>
 <html lang="ru">
-
 	<head>
 		<title>
-			{% if this.page.title %}
-				{{ this.page.title }}
-			{% else %}
-				Сайт знакомств irksmsex.ru
-			{% endif %}
+			{{ record.id ? "ID: #{record.id}" : '' }}
+			{{ this.page.title }}
+
+
 		</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="robots" content="noidex"/>
+		<meta name="keywords" content="Знакомства Иркутск,Иркутск,доска объявлений,гей знакомства,знакомства для взрослых">
 
+		{% if this.page.meta_description %}
+			<meta name="description" content="{{ this.page.meta_description }}">
+		{% endif %}
+
+		<!-- Canonitial link -->
+		<link
+		rel="canonical" href="{{ canonical_url }}">
+
+		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
 
 		{% styles %}
@@ -19,20 +39,19 @@
 		<!-- Bootstrap -->
 		<link
 		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
 		<!-- Lightbox Bootstrap css -->
 		<link
 		href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
-
 		<!-- FontAwesome -->
 		<link
 		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-		<!-- My styles -->
-		<link href="{{ 'assets/css/style.min.css'|theme }}" rel="stylesheet">
+		<!-- Мои стили -->
+		<link
+		href="{{ 'assets/css/style.min.css'|theme }}" rel="stylesheet">
 
-		<link rel="icon" type="image/png" href="{{ 'assets/images/favicon/favicon-32x32.png'|theme }}">
-		<link rel="apple-touch-icon" type="image/png" href="{{ 'assets/images/favicon/apple-touch-icon.png'|theme }}">
+		<!-- Favicon для сайта -->
+		<link rel="shortcut icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon">
 
 	</head>
 

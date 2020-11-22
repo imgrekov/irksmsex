@@ -1,35 +1,147 @@
-{{ form_ajax('onCreateAdvert', { class: "pay-form", id: "advert-create-form" }) }}
+{% set basicPrice = __SELF__.basicPrice %}
+{% set vipPrice = __SELF__.vipPrice %}
+{% set xvipPrice = __SELF__.xvipPrice %}
+{% set hihglightPrice = __SELF__.hihglightPrice %}
 
+{{ form_ajax('onCreateAdvert', { class: "advert-edit-form", id: "advert-create-form", 'data-request-files': true, enctype: "multipart/form-data" } ) }}
 <input name="author" type="hidden" value="{{ user.email }}">
+<input id="sum" name="sum" type="hidden" value="15">
 
-<fieldset class="pay-form__info">
+<fieldset class="advert-form">
 
-  <div class="pay-form__category">
-    <label>
-      Категория объявления
-      <select name="category" id="category" form="advert-create-form" required>
-        <option value="categories-on-ona">Парень ищет девушку</option>
-        <option value="categories-ona-on">Девушка ищет парня</option>
-        <option value="categories-on-on">Парень ищет парня</option>
-        <option value="categories-ona-ona">Девушка ищет девушку</option>
-        <option value="categories-free">Досуг в Иркутске</option>
-        <option value="categories-services">Услуги массажа</option>
-        <option value="categories-family">Семейные пары</option>
-        <option value="categories-flirt">Флирт</option>
-        <option value="categories-realty">Недвижимость</option>
-        <option value="categories-arenda">Аренда квартир на сутки</option>
-        <option value="categories-work">Работа/подработка</option>
-      </select>
-    </label>
-  </div>
+	<div class="advert-edit-form__text">
 
-  <div class="pay-form__text">
-    <label for="text">Текст объявления</label>
-    <textarea id="text" name="text" autofocus required></textarea>
-  </div>
+		<label for="text" data-toggle="tooltip" data-placement="right" title="Чтобы вам ответили на&nbsp;объявление, оставьте контактные данные">Текст объявления
+			<span>*</span>
+		</label>
+		<textarea id="text" name="text" autofocus></textarea>
+	</div>
+
+	<div class="advert-edit__image mb-4">
+		<p class="advert-edit__image-title">Добавьте изображения к&nbsp;объявлению</p>
+
+		<div class="advert-edit__image-wrap">
+
+			<div class="advert-edit__image-item">
+				<p>№ — 1</p>
+				<input type="hidden" id="attachimage1del" name="attachimage1del">
+				<input class="inputfile" type="file" id="attachimage1" name="attachimage1" accept="image/jpeg,image/png,image/jpg">
+				<label for="attachimage1">Выберите файл</label>
+				<div class="image1-name image-name">{{record.attachimage1.file_name ?? ''}}</div>
+				<a class="remove-button btn btn-outline-danger btn-sm" href="javascript:;" id="btn-remove-image1">Очистить</a>
+			</div>
+			<!-- /.advert-edit__image-item -->
+
+			<div class="advert-edit__image-item">
+				<p>№ — 2</p>
+				<input type="hidden" id="attachimage2del" name="attachimage2del">
+				<input class="inputfile" type="file" id="attachimage2" name="attachimage2" accept="image/jpeg,image/png,image/jpg">
+				<label for="attachimage2">Выберите файл</label>
+				<div class="image2-name image-name">{{record.attachimage2.file_name ?? ''}}</div>
+				<a class="remove-button btn btn-outline-danger btn-sm" href="javascript:;" id="btn-remove-image2">Очистить</a>
+			</div>
+			<!-- /.advert-edit__image-item -->
+
+			<div class="advert-edit__image-item">
+				<p>№ — 3</p>
+				<input type="hidden" id="attachimage3del" name="attachimage3del">
+				<input class="inputfile" type="file" id="attachimage3" name="attachimage3" accept="image/jpeg,image/png,image/jpg">
+				<label for="attachimage3">Выберите файл</label>
+				<div class="image3-name image-name">{{record.attachimage3.file_name ?? ''}}</div>
+				<a class="remove-button btn btn-outline-danger btn-sm" href="javascript:;" id="btn-remove-image3">Очистить</a>
+			</div>
+			<!-- /.advert-edit__image-item -->
+
+		</div>
+		<!-- /.advert-edit__image-wrap -->
+
+	</div>
+	<!-- /.advert-edit__image -->
+
+	<div class="row">
+		<div class="col-md-7">
+			<div class="form-group advert-edit__type">
+				<p>Тип объявления</p>
+
+				<label class="advert-edit-type" for="basic">
+					<input type="radio" name="type" data-price="{{ basicPrice }}" id="basic" value="basic">
+					Обычное
+				</label>
+				<!-- basic -->
+
+				<label class="advert-edit-type" for="vip">
+					<input type="radio" name="type" data-price="{{ vipPrice }}" id="vip" value="vip">
+					Вип
+				</label>
+				<!-- vip -->
+
+				<label class="advert-edit-type advert-edit-type_super" for="xvip">
+					<input type="radio" name="type" data-price="{{ xvipPrice }}" id="xvip" value="xvip">
+					super
+				</label>
+				<!-- xvip -->
+
+			</div>
+			<!-- /.form-group -->
+
+			<div class="form-group advert-edit-vip">
+				<input name="highlight" type="checkbox" data-price="{{ hihglightPrice }}" id="highlight" style="display: none;">
+				<label for="highlight" class="check" data-toggle="tooltip" data-placement="bottom" title="Выделите объявление синим фоном">
+					<svg width="18px" height="18px" viewbox="0 0 18 18">
+						<path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+						<polyline points="1 9 7 14 15 4"></polyline>
+					</svg>
+					Экстра выделение
+					<span>*</span>
+				</label>
+			</div>
+			<!-- /.advert-edit__vip -->
+
+		</div>
+		<!-- /.col-md-7 -->
+
+
+		<div class="col-md-5">
+			<div class="form-group advert-edit__category">
+
+				<p class="advert-edit__category-desc">Категория</p>
+				<!-- /.advert-edit__category-desc -->
+
+				<select name="category" id="category" form="advert-create-form" required>
+					<option value="categories-on-ona">Парень ищет девушку</option>
+					<option value="categories-ona-on">Девушка ищет парня</option>
+					<option value="categories-on-on">Парень ищет парня</option>
+					<option value="categories-ona-ona">Девушка ищет девушку</option>
+					<option value="categories-free">Досуг в Иркутске</option>
+					<option value="categories-services">Услуги массажа</option>
+					<option value="categories-family">Семейные пары</option>
+					<option value="categories-flirt">Флирт</option>
+					<option value="categories-realty">Недвижимость</option>
+					<option value="categories-arenda">Аренда квартир на сутки</option>
+					<option value="categories-work">Работа/подработка</option>
+				</select>
+				<!-- /#category -->
+
+			</div>
+			<!-- /.form-group advert-edit__category -->
+
+
+		</div>
+		<!-- /.col-md-5 -->
+	</div>
+	<!-- /.row -->
+
 
 </fieldset>
+<!-- /.advert-form -->
 
-<button type="submit" class="btn btn-success mt-4">Создать</button>
+<button type="submit" class="btn btn-success mr-3">Создать</button>
+<!-- /.btn btn-success -->
+
+{# <span class="advert-price">Цена: **р.</span> #}
+
 
 {{ form_close() }}
+
+
+{# <button class="btn btn-lg btn-info mt-5" data-request="onTest"  data-request-data="account: '{{ user.email }}'">test</button> #}

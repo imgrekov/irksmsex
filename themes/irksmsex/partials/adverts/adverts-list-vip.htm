@@ -1,0 +1,61 @@
+<ul class="advert-list-vip">
+	{% for record in advertsVip %}
+		<li class="vip">
+			<div id="{{ record.id }}" class="advert{% if record.highlight == 'on' %} highlight vip{% endif %}">
+				<img src="{{ 'assets/images/vip.png'|theme }}" alt="vip">
+
+				{% if record.author == user.email %}
+					<a class="advert-edit-btn" href="/edit/{{ record.id }}/">
+						<img src="{{ 'assets/images/edit/pencil-blue.svg'|theme }}" alt="">
+					</a>
+				{% endif %}
+
+				<span class="timehead">
+					Последний раз изменено
+					{{ record.updated_at|date('d-m-Y H:i') }}
+				</span>
+				<!-- Когда создано -->
+
+				<div class="advert__text">
+					{{ record.text|raw }}
+				</div>
+				<!-- Текст объявления -->
+				{# {% if records.attachimage1 or records.attachimage2 or records.attachimage3 %} #}
+
+				<div class="advert__imgs-wrap">
+					{% if record.attachimage1 %}
+						<a class="advert__image" href="{{ record.attachimage1.thumb(800, 600, {mode:'auto',quality:80,extension:'webp'}) }}" data-toggle="lightbox" data-type="image" data-gallery="name-{{ record.id }}">
+							<img src="{{ record.attachimage1.thumb(800, 600, {mode:'auto',quality:80,extension:'webp'}) }}" alt="Первое фото">
+						</a>
+					{% endif %}
+					<!-- Изображение 1 -->
+
+					{% if record.attachimage2 %}
+						<a class="advert__image" href="{{ record.attachimage2.thumb(800, 600, {mode:'auto',quality:80,extension:'webp'}) }}" data-toggle="lightbox" data-type="image" data-gallery="name-{{ record.id }}">
+							<img src="{{ record.attachimage2.thumb(800, 600, {mode:'auto',quality:80,extension:'webp'}) }}" alt="Второе фото">
+						</a>
+					{% endif %}
+					<!-- Изображение 2 -->
+
+					{% if record.attachimage3 %}
+						<a class="advert__image" href="{{ record.attachimage3.thumb(800, 600, {mode:'auto',quality:30,extension:'webp'}) }}" data-toggle="lightbox" data-type="image" data-gallery="name-{{ record.id }}">
+							<img src="{{ record.attachimage3.thumb(800, 600, {mode:'auto',quality:30,extension:'webp'}) }}" alt="Третье фото">
+						</a>
+					{% endif %}
+					<!-- Изображение 3 -->
+
+				</div>
+				{# {% endif %} #}
+				<!-- Изображения к объявлению -->
+
+				<p class="advert-id">ID:
+					{{ record.id }}</p>
+				<!-- /.advert-id -->
+
+			</div>
+			<!-- /.record -->
+
+		</li>
+	{% endfor %}
+</ul>
+<!-- /.record-list -->

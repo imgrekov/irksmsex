@@ -2,8 +2,10 @@
 
 namespace Grekov\AdvertsList;
 
-use Event;
 use System\Classes\PluginBase;
+use Event;
+use Grekov\AdvertsList\Models\Advert;
+
 
 class Plugin extends PluginBase
 {
@@ -24,5 +26,12 @@ class Plugin extends PluginBase
 			'Grekov\AdvertsList\Components\CreateAdvert' => 'createAdvert',
 			'Grekov\AdvertsList\Components\EditAdvert' => 'editAdvert',
 		];
+	}
+
+	public function boot()
+	{
+		Event::listen('rainlab.user.deactivate', function ($user) {
+			Advert::all()->where('author', $user->email)->update(['state' => '']);
+		});
 	}
 }

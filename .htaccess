@@ -4,19 +4,56 @@
         Options -MultiViews
     </IfModule>
 
-    RewriteEngine On
+    Header set X-Frame-Options: DENY
 
-    ##
-    ## You may need to uncomment the following line for some hosting environments,
-    ## if you have installed to a subdirectory, enter the name here also.
-    ##
-    # RewriteBase /
-    
-    ##
-    ## Uncomment following lines to force HTTPS.
-    ##
-    # RewriteCond %{HTTPS} off
-    # RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
+    RewriteEngine On
+    RewriteBase /
+
+    # HTTPS On
+    RewriteCond %{HTTPS} off
+    RewriteRule (.*) https://%{SERVER_NAME}/$1 [R=301,L]
+
+    # Основное зеркало без www
+    RewriteCond %{HTTP_HOST} ^www\.(.*?) [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+    # Перенаправляем URL на домен без www
+
+    # Убираем повторяющиеся / в URL
+    RewriteCond %{REQUEST_URI} ^(.*?)\/{2,}(.*?)$
+    RewriteRule . %1/%2 [L,R=301]
+    RewriteCond %{THE_REQUEST} //
+    RewriteRule .* /$0 [R=301,L]
+    ###########################
+
+    # Убираем слеши в конце URL для статических файлов (содержит точку)
+    RewriteCond %{REQUEST_URI} \..+$  
+    # Если файл содержит точку.
+    RewriteCond %{REQUEST_FILENAME} !-d   
+    # И это не директория.
+    RewriteCond %{REQUEST_FILENAME} -f
+    # Является файлом.
+    RewriteCond %{REQUEST_URI} ^(.+)/$      
+    # И в конце URL есть слеш.
+    RewriteRule ^(.+)/$ /$1 [R=301,L]     
+    # Исключить слеш.
+
+    # Добавляем /, если его нет, и это не файл.
+    RewriteCond %{REQUEST_URI} !(.*)/$
+    # Если слеша в конце нет.
+    RewriteCond %{REQUEST_FILENAME} !-f
+    # Не является файлом.
+    RewriteCond %{REQUEST_URI} !\..+$
+    # В URL нет точки (файл).
+    RewriteCond %{REQUEST_URI} !^/irkadminpanel [NC]
+    # Не url панели администратора.
+    RewriteCond %{REQUEST_URI} !^/contenteditor [NC]
+    # Не плагин contenteditor
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [L,R=301]
+    # Добавляем слеш в конце.
+
+    # Убираем дублирование страниц, редирект на без ?page=1
+    RewriteCond %{QUERY_STRING} ^page=1$ [NC]
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301,QSD]
 
     ##
     ## Black listed folders
@@ -41,7 +78,10 @@
     RewriteCond %{REQUEST_FILENAME} !/themes/.*/(assets|resources)/.*
     RewriteCond %{REQUEST_FILENAME} !/plugins/.*/(assets|resources)/.*
     RewriteCond %{REQUEST_FILENAME} !/modules/.*/(assets|resources)/.*
+    RewriteCond %{REQUEST_URI} !^/sitemap.xml$
+    RewriteCond %{REQUEST_URI} !^/robots.txt$
     RewriteRule !^index.php index.php [L,NC]
+    RewriteRule ^robots.txt [L]
 
     ##
     ## Block all PHP files, except index

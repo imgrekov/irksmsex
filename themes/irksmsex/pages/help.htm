@@ -6,7 +6,6 @@ is_hidden = 0
 [session]
 security = "all"
 ==
-
 {% partial 'second/to_home' %}
 
 {% partial 'second/title' text = "Описание элементов" %}
@@ -33,7 +32,7 @@ security = "all"
 			<h4 class="help-desc__title">VIP</h4>
 			<!-- /.help-desc__title -->
 			<p class="help-desc__desc">
-				Вип объявление. Находится выше обычных и отмечено сердечком
+				Вип объявление. Находится выше обычных, выделено сердечком
 				<small class="d-block">Автоматически удалится через три дня после создания</small>
 				<!-- /.d-block -->
 			</p>
@@ -43,11 +42,11 @@ security = "all"
 		<!-- /.help-page-item -->
 
 		<li class="help-page-item" id="xvip">
-			<h4 class="help-desc__title">xVip</h4>
+			<h4 class="help-desc__title help-desc__title_upper">super</h4>
 				<!-- /.help-desc__title -->
 				<p class="help-desc__desc">
-					Находится в самом верху страницы. Существовать может только одно объявление такого
-					типа. Ему не нужно «Экстра выделение», оно уже заметнее всех
+					Находится выше всех объявлений. В каждой категории может существовать только одно объявление такого
+					типа.
 					<small class="d-block">Автоматически удалится через сутки после создания</small>
 					<!-- /.d-block -->
 				</p>
@@ -64,11 +63,21 @@ security = "all"
 	<ul class="help-page-list">
 
 		<li class="help-page-item">
-			<h4 class="help-desc__title">Экстра выделение</h4>
+			<h4 class="help-desc__title">Экстра выделение обычных объявлений</h4>
 			<!-- /.help-desc__title -->
 			<p class="help-desc__desc">Хотите сделать объявление более заметным? Поставьте галочку на странице «Редактировать&nbsp;объявление»</p>
 			<!-- /.help-desc__desc -->
 			<img src="{{ 'assets/images/help-page/highlight.jpg'|theme }}" alt="Пример экстра выделенного объявления"
+				class="help-desc__image">
+		</li>
+		<!-- /.help-page-item --> 
+		
+		<li class="help-page-item">
+			<h4 class="help-desc__title">SUPER экстра выделение</h4>
+			<!-- /.help-desc__title -->
+			<p class="help-desc__desc">Хотите сделать объявление более заметным? Поставьте галочку на странице «Редактировать&nbsp;объявление»</p>
+			<!-- /.help-desc__desc -->
+			<img src="{{ 'assets/images/help-page/xvip-highlight.jpg'|theme }}" alt="Пример экстра выделенного объявления"
 				class="help-desc__image">
 		</li>
 		<!-- /.help-page-item --> 
@@ -86,32 +95,22 @@ security = "all"
 
 		<li class="add-advert__item">
 			<h4>Зарегистрируйтесь</h4>
-			<img src="{{ 'assets/images/help-page/1-register.jpg'|theme }}" alt="Страница регистрации">
+			{# <img src="{{ 'assets/images/help-page/1-register.jpg'|theme }}" alt="Страница регистрации"> #}
 		</li>
 		<!-- /.add-advert__item -->
 
 		<li class="add-advert__item">
-			<h4>Создайте объявление</h4>
+			<h4>Создайте объявление и оплатите</h4>
 			<p>Это можно сделать перейдя по ссылке из личного кабинета</p>
-			<img src="{{ 'assets/images/help-page/2-lk.jpg'|theme }}" alt="Личный кабинет без объявлений">
-			<hr>
-			<img src="{{ 'assets/images/help-page/2-create.jpg'|theme }}" alt="Страница «Создать объявление»">
+			{# <img src="{{ 'assets/images/help-page/2-lk.jpg'|theme }}" alt="Личный кабинет без объявлений"> #}
+			{# <hr> #}
+			{# <img src="{{ 'assets/images/help-page/2-create.jpg'|theme }}" alt="Страница «Создать объявление»"> #}
 		</li>
 		<!-- /.add-advert__item -->
 
 		<li class="add-advert__item">
-			<h4>Активируйте объявление</h4>
-			<p>Это делается на странице редактирования объявления. Туда можно попасть из личного кабинета</p>
-			<img src="{{ 'assets/images/help-page/3-advert.jpg'|theme }}" alt="Объявление в личном кабинете">
-			<hr>
-			<img src="{{ 'assets/images/help-page/3-activate.jpg'|theme }}" alt="Страница «Редактировать объявление»">
-		</li>
-		<!-- /.add-advert__item -->
-
-		<li class="add-advert__item">
-			<h4>Посмотрите на него</h4>
-			<p>Для этого перейдите на страницу со всеми объявлениями выбранной категории</p>
-			<img src="{{ 'assets/images/help-page/4-look.jpg'|theme }}" alt="Главная страница">
+			<h4>Profit</h4>
+			{# <img src="{{ 'assets/images/help-page/3-activate.jpg'|theme }}" alt="Страница «Редактировать объявление»"> #}
 		</li>
 		<!-- /.add-advert__item -->
 
@@ -120,8 +119,9 @@ security = "all"
 </div>
 <!-- /.help-desc -->
 
-{% partial 'second/title' text = "Правила сервиса" %}
 
+
+{% partial 'second/title' text = "Правила сайта" %}
 
 <div class="rules">
 	<ol class="rules-list">

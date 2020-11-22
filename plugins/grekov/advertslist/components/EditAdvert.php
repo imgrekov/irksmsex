@@ -3,9 +3,13 @@
 namespace Grekov\AdvertsList\Components;
 
 use Cms\Classes\ComponentBase;
-use Grekov\AdvertsList\Models\Advert as AdvertFather;
+use Grekov\AdvertsList\Models\Advert;
 use Input;
+use System\Models\File;
+use Flash;
 use Redirect;
+use ApplicationException;
+use Carbon\Carbon;
 
 class EditAdvert extends ComponentBase
 {
@@ -38,7 +42,7 @@ class EditAdvert extends ComponentBase
       'xvipPrice' => [
         'title' => 'Цена за xVIP объявление',
         'description' => 'Сколько брать с клиента за xVIP?',
-        'default' => 250,
+        'default' => 150,
         'validationPattern' => '^[0-9]+$',
         'validationMessage' => 'Введите число',
       ],
@@ -49,10 +53,17 @@ class EditAdvert extends ComponentBase
         'validationPattern' => '^[0-9]+$',
         'validationMessage' => 'Введите число',
       ],
+      'upPrice' => [
+        'title' => 'Цена за поднятие',
+        'description' => 'Сколько брать с клиента за поднятие объявления?',
+        'default' => 50,
+        'validationPattern' => '^[0-9]+$',
+        'validationMessage' => 'Введите число',
+      ],
     ];
   }
 
-  public $basicPrice, $vipPrice, $xvipPrice, $hihglightPrice;
+  public $basicPrice, $vipPrice, $xvipPrice, $hihglightPrice, $upPrice;
 
   public function onRun()
   {
@@ -60,36 +71,83 @@ class EditAdvert extends ComponentBase
     $this->vipPrice = $this->property('vipPrice');
     $this->xvipPrice = $this->property('xvipPrice');
     $this->hihglightPrice = $this->property('hihglightPrice');
+    $this->upPrice = $this->property('upPrice');
   }
 
   public function onEditAdvert()
   {
-    /** @var AdvertFather|mixed $advert */
-    $advert = AdvertFather::find((int) post('id'));
+    /** @var Advert|mixed $advert */
+    $advert = Advert::find((int) post('id'));
 
     $advert->text = post('text');
     $advert->category = post('category');
     $advert->type = post('type');
-    $advert->state = post('state');
     $advert->highlight = post('highlight');
 
     foreach ($advert->attachOne as $name => $type) {
       if (Input::hasFile($name)) {
-        $advert->{$name} = Input::file($name);
+        // $advert->{$name} = Input::file($name);
+        // dd($advert->{$name});
+
+        $image = Input::all();
+        $file = (new File())->fromPost($image[$name]);
+        $advert->{$name} = $file;
       } elseif (isset($advert->{$name}) && input($name . 'del')) {
         $advert->{$name}->delete();
       }
     }
 
-    $advert->save();
+    $super = post('super');
+    if ($advert->type == 'xvip' and $super == FALSE) {
+      $quantityXvip = Advert::query()->where('type', 'xvip')->where('category', $advert->category)->count();
+      if ($quantityXvip > 0) {
+        throw new ApplicationException('Объявление с типом SUPER уже созданно в&nbsp;этой категории. Выберите другой тип');
+      }
+    }
 
-    return Redirect::to('../advert/edit-success');
+    $advert->save();
+    Flash::success('Объявление изменено успешно!');
+    return Redirect::to('/user/profile/');
   }
 
-  public function onEditDelete()
-  {
-    AdvertFather::find((int) post('id'))->delete();
 
-    return Redirect::to('../advert/delete-success');
+  public function onEditAdvertActivate()
+  {
+    $advert = Advert::find((int) post('id'));
+    $advert->created_at = Carbon::now()->toDateTimeString();
+    $advert->state = "on";
+
+    $advert->save();
+    Flash::success('Вы активировали объявление!');
+    return Redirect::to('/user/profile/');
+  }
+
+
+  public function onEditAdvertDeactivate()
+  {
+    $advert = Advert::find((int) post('id'));
+    $advert->state = "";
+
+    $advert->save();
+    Flash::success('Вы деактивировали объявление!');
+    return Redirect::to('/user/profile/');
+  }
+
+  public function onEditAdvertUp()
+  {
+    $advert = Advert::find((int) post('id'));
+    $advert->created_at = Carbon::now()->toDateTimeString();
+
+    $advert->save();
+    Flash::success('Объявление пондято успешно!');
+    return Redirect::to('/user/profile/');
+  }
+
+
+  public function onEditAdvertDelete()
+  {
+    Advert::find((int) post('id'))->delete();
+    Flash::success('Объявление удалено успешно!');
+    return Redirect::to('/user/profile/');
   }
 }

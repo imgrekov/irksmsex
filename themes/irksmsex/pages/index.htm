@@ -1,0 +1,140 @@
+title = "Знакомства в Иркутске по смс — Доска объявлений в Иркутске"
+url = "/"
+layout = "home"
+description = "Доска объявлений в&nbsp;Иркутске —&nbsp;Сайт смс&nbsp;знакомств"
+meta_description = "Смс знакомства в Иркутске без регистрации. Доска мобильных объявлений в Иркутской области"
+is_hidden = 0
+
+[session]
+security = "all"
+
+[contenteditor]
+file = "page-desc/index.htm"
+==
+<?php
+use Grekov\AdvertsList\Models\Advert;
+  function onStart()
+  {
+    $this['countOnaOn'] = Advert::query()->where('category', 'categories-ona-on')->where('state', 'on')->count();
+    $this['countOnOna'] = Advert::query()->where('category', 'categories-on-ona')->where('state', 'on')->count();
+    $this['countOnOn'] = Advert::query()->where('category', 'categories-on-on')->where('state', 'on')->count();
+    $this['countOnaOna'] = Advert::query()->where('category', 'categories-ona-ona')->where('state', 'on')->count();
+    $this['countFree'] = Advert::query()->where('category', 'categories-free')->where('state', 'on')->count();
+    $this['countServices'] = Advert::query()->where('category', 'categories-services')->where('state', 'on')->count();
+    $this['countFamily'] = Advert::query()->where('category', 'categories-family')->where('state', 'on')->count();
+    $this['countFlirt'] = Advert::query()->where('category', 'categories-flirt')->where('state', 'on')->count();
+    $this['countRealty'] = Advert::query()->where('category', 'categories-realty')->where('state', 'on')->count();
+    $this['countArenda'] = Advert::query()->where('category', 'categories-arenda')->where('state', 'on')->count();
+    $this['countWork'] = Advert::query()->where('category', 'categories-work')->where('state', 'on')->count();
+  }
+?>
+==
+{% partial 'adverts/add-advert' %}
+
+{% partial 'second/title' text = this.page.description %}
+<!-- title -->
+
+<div class="cats">
+
+  <a class="main-link" href="{{ 'categories/ona-on'|page }}/">
+    Девушка ищет парня
+    <img src="{{ 'assets/images/cats/f-m.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countOnaOn }}</span>
+    </span>
+  </a>
+
+  <a class="main-link" href="{{ 'categories/on-ona'|page }}/">
+    Парень ищет девушку
+    <img src="{{ 'assets/images/cats/m-f.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countOnOna }}</span>
+    </span>
+  </a>
+
+  <a class="main-link" href="{{ 'categories/on-on'|page }}/">
+    Парень ищет парня
+    <img src="{{ 'assets/images/cats/m-m.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countOnOn }}</span>
+    </span>
+  </a>
+
+  <a class="main-link" href="{{ 'categories/ona-ona'|page }}/">
+    Девушка ищет девушку
+    <img src="{{ 'assets/images/cats/f-f.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countOnaOna }}</span>
+    </span>
+  </a>
+
+  <a class="main-link" href="{{ 'categories/free'|page }}/">
+    Досуг в Иркутске
+    <img src="{{ 'assets/images/cats/dosug.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countFree }}</span>
+    </span>
+  </a>
+
+  <a class="main-link" href="{{ 'categories/services'|page }}/">
+    Услуги массажа
+    <img src="{{ 'assets/images/cats/services.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countServices }}</span>
+    </span>
+  </a>
+
+  <a class="main-link" href="{{ 'categories/family'|page }}/">
+    Семейные пары
+    <img src="{{ 'assets/images/cats/family.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countFamily }}</span>
+    </span>
+  </a>
+
+  <a class="main-link" href="{{ 'categories/flirt'|page }}/">
+    Свободные отношения, флирт
+    <img src="{{ 'assets/images/cats/free.png'|theme }}" alt="Картинка категории">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countFlirt }}</span>
+    </span>
+  </a>
+
+</div>
+<!-- /.cats -->
+
+
+
+{% partial 'second/sub_title' text = "Доска объявлений" %}
+<!-- /.title -->
+
+<!-- Доска объявлений -->
+<div class="cats">
+
+  <a class="main-link" href="{{ 'categories/realty'|page }}/">
+    Недвижимость
+    <img alt='мобильные смс знакомства' src="{{ 'assets/images/cats/realty.png'|theme }}">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countRealty }}</span>
+    </span>
+  </a>
+
+  <a class="main-link" href="{{ 'categories/arenda'|page }}/">
+    Аренда квартир на сутки
+    <img alt='мобильные смс знакомства' src="{{ 'assets/images/cats/arenda.png'|theme }}">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countArenda }}</span>
+    </span>
+  </a>
+
+  <a class="main-link" href="{{ 'categories/work'|page }}/">
+    Работа
+    <img alt="мобильные смс знакомства" src="{{ 'assets/images/cats/work.png'|theme }}">
+    <span class="count">
+      <i class="fa fa-comment-o"></i><span>{{ countWork }}</span>
+    </span>
+  </a>
+
+</div>
+
+{% partial 'second/socials' %}

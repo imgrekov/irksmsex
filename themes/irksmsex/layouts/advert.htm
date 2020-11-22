@@ -1,82 +1,100 @@
 ==
+<?php
+  function onStart()
+  {
+		$this['canonical_url'] = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		$this['canonical_url'] = explode('?', $this['canonical_url']);
+		$this['canonical_url'] = $this['canonical_url'][0];
+		$this['canonical_url'] = preg_replace('/\d/', '', $this['canonical_url']);
+		
+		$this['page_number'] = $_GET["page"] ?? '';
+		//var_dump($this['page_number']);
+  }
+?>
+==
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-	<title>
-		{% if this.page.title %}
-		{{ this.page.title }}
-		{% else %}
-		Сайт знакомств irksmsex.ru
+	<head>
+		<title>
+			{{this.page.title}}
+			{% if page_number > 1 %}
+				| Страница №
+				{{ page_number }}
+			{% endif %}
+		</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="Знакомства Иркутск,Иркутск,доска объявлений,гей знакомства,знакомства для взрослых">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		{% if this.page.meta_description %}
+			<meta name="description" content="{{ this.page.meta_description }}{% if page_number > 1 %} | Страница № {{ page_number }}{% endif %}">
 		{% endif %}
-	</title>
-	<meta http-equiv="content-type" content="charset=utf-8">
-	<meta name="keywords" content="знакомства для девушек, парни иркутска, ищу парня, ищу мужчину">
-	<meta name="description" content="Размещение объявлений для поиска девушек">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+		<!-- Canonitial link -->
+		<link
+		rel="canonical" href="{{ canonical_url }}">
 
-	{% styles %}
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
 
-	<!-- Bootstrap -->
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		{% styles %}
 
-	<!-- Lightbox Bootstrap css -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
+		<!-- Bootstrap -->
+		<link
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="{{ 'assets/css/style.min.css'|theme }}">
-	<link rel="apple-touch-icon" type="image/png" sizes="120x120"
-		href="{{ 'assets/images/favicon/apple-touch-icon.png'|theme }}">
-	<link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicon/favicon-32x32.png'|theme }}">
-	<link rel="mask-icon" href="{{ 'assets/images/favicon/safari-pinned-tab.svg'|theme }}" color="#5bbad5">
+		<!-- Lightbox Bootstrap css -->
+		<link
+		href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
 
-</head>
+		<!-- Мои стили -->
+		<link
+		rel="stylesheet" href="{{ 'assets/css/style.min.css'|theme }}">
 
-<body>
+		<!-- Favicon для сайта -->
+		<link rel="shortcut icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon">
 
-	{% partial 'user-status' %}
+	</head>
 
-	{% partial 'header' %}
-	
-	{% partial 'adverts/add-advert' %}
+	<body>
 
-	{% partial 'adverts/xvip-record' %}
+		{% partial 'user-status' %}
 
-	{% partial 'adverts/title' %}
+		{% partial 'header' %}
 
-	{% partial 'second/to_home' %}
+		{% partial 'adverts/add-advert' %}
 
-	<div class="adverts-list">
-		{% page %}
-	</div>
+		{% partial 'adverts/title' %}
 
-	{% partial 'footer' %}
+		{% partial 'second/to_home' %}
 
-	<!-- Версия jquery — 3.3.1 -->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		{% partial 'adverts/xvip-record' %}
 
-	<!-- Popper.js -->
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
+		<div class="adverts-list">
+			{% page %}
+		</div>
 
-	<!-- Bootstrap-4.4.1.js -->
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-	</script>
+		{% partial 'footer' %}
 
-  <!-- Lightbox Bootstrap js -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
-	
-	<!-- My scripts -->
-	<script src="{{ 'assets/js/app.js'|theme }}"></script>
+		<!-- Версия jquery — 3.3.1 -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-	<!-- OctoberCMS scripts -->
-	{% framework extras %}
-	{% scripts %}
+		<!-- Popper.js -->
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
-</body>
+		<!-- Bootstrap-4.4.1.js -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+		<!-- Lightbox Bootstrap js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+		<!-- My scripts -->
+		<script src="{{ 'assets/js/app.js'|theme }}"></script>
+
+		<!-- OctoberCMS scripts -->
+		{% framework extras %}
+		{% scripts %}
+
+	</body>
 
 </html>

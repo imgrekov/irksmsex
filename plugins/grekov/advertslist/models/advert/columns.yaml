@@ -5,12 +5,17 @@ columns:
     type:
         label: type
         type: text
+        searchable: true
+        sortable: true
     category:
         label: category
         type: text
+        searchable: true
+        sortable: true
     author:
         label: author
         type: text
+        searchable: true
     state:
         label: state
         type: text
@@ -23,3 +28,12 @@ columns:
     updated_at:
         label: updated_at
         type: datetime
+    text:
+        label: text
+        type: text
+    paid:
+        label: paid
+        type: text
+    sum:
+        label: sum
+        type: number

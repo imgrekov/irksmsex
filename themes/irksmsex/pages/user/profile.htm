@@ -20,14 +20,6 @@ pageNumber = "{{ :page }}"
 sortColumn = "id"
 sortDirection = "desc"
 ==
-<?
-  use Grekov\Advertlist\Models\Advert;
-  function onStart()
-  {
-    dd('hi');
-  }
-?>
-==
 {% set records = userAdverts.records %}
 {% set displayColumn = userAdverts.displayColumn %}
 {% set noRecordsMessage = userAdverts.noRecordsMessage %}
@@ -35,185 +27,222 @@ sortDirection = "desc"
 {% set detailsKeyColumn = userAdverts.detailsKeyColumn %}
 {% set detailsUrlParameter = userAdverts.detailsUrlParameter %}
 
-
-
 <div class="profile">
+	<div class="profile-head">
+		<h1 class="profile__title">Личный кабинет</h1>
+		<a class="btn btn-outline-primary profile__add-link" href="{{ 'create-advert'|page }}">
+			Создать объявлнение
+		</a>
+	</div>
+	<!-- /.profile-head -->
 
-  <div class="profile-head">
-    <h1 class="profile__title">Личный кабинет</h1>
-    <a class="btn btn-outline-primary profile__add-link" href="{{ 'create-advert'|page }}">Создать объявлнение</a>
-  </div>
-  <!-- /.profile-head -->
+	{% flash success %}
+	<div class="alert alert-success">
+		{{ message }}
+		<a class="close ml-2" href="javascript:;">&times;</a>
+	</div>
+	{% endflash %}
 
-  <hr>
+	<hr/>
 
-  <div class="profile-hero">
-    <h2 class="profile-hero__title">Ваши объявлнения</h2>
+	<div class="profile-hero">
+		<h2 class="profile-hero__title">Ваши объявлнения</h2>
 
+		<ul class="profile-hero__list">
+			{% for record in records if user.email == record.author %}
 
-    <ul class="profile-hero__list">
+				<li class="profile-hero__item{% if record.type == 'xvip' and record.highlight == 'on' %} xvip xvip-record__text highlight p-2{% endif %}">
+					<div class="row">
+						<div class="col-sm-8">
+							<div class="profile-hero__info">
+								{% if record.type == 'xvip' %}
+									<span class="xvip-advert__type">super</span>
+								{% endif %}
 
-      {% for record in records if user.email == record.author %}
+								<span class="timehead">
+									{{ record.updated_at|date('Последний раз изменено d-m-Y в H:i') }}
+								</span>
+								<!-- /.timehead -->
 
-      <li class="profile-hero__item {% if record.type == 'xvip' %}xvip xvip-record__text p-2{% endif %}">
+								<div class="profile-hero__item-text">
+									{% if record.type == 'vip' %}
+										<img src="{{ 'assets/images/vip.png'|theme }}" alt="vip" class="id"/>
+									{% endif %}
+									{{ record.text|raw }}
+								</div>
+								<!-- /.profile-hero__item-text -->
 
-        <div class="row">
+								{# {% if records.attachimage1 or records.attachimage2 or records.attachimage3 %} #}
 
-          <div class="col-sm-8">
+									<div class="advert__imgs-wrap count_imgs-parent">
+										{% if record.attachimage1 %}
+											<a class="advert__image advert__image_profile" href="{{ record.attachimage1.thumb(1280, 720, {mode:'auto',quality:80,extension:'webp'}) }}" data-toggle="lightbox" data-type="image" data-gallery="name-{{ record.id }}">
+												<img src="{{ record.attachimage1.thumb(1280, 720, {mode:'auto',quality:80,extension:'webp'}) }}" alt="Первое фото">
+											</a>
+										{% endif %}
+										<!-- Изображение первое -->
 
-            <div class="profile-hero__info">
-              <span class="timehead">
-                {{ record.created_at|date('Создано d-m-Y, в H:i') }}
-              </span> <!-- /.timehead -->
+										{% if record.attachimage2 %}
+											<a class="advert__image advert__image_profile" href="{{ record.attachimage2.thumb(1280, 720, {mode:'auto',quality:80,extension:'webp'}) }}" data-toggle="lightbox" data-type="image" data-gallery="name-{{ record.id }}">
+												<img src="{{ record.attachimage2.thumb(1280, 720, {mode:'auto',quality:80,extension:'webp'}) }}" alt="Второе фото">
+											</a>
+										{% endif %}
 
-              <div class="profile-hero__item-text">
+										<!-- Изображение второе -->
 
-                {% if record.type == 'vip' %}
-                <img src="{{ 'assets/images/vip.png'|theme }}" alt="vip" class="id">
-                {% endif %}
+										{% if record.attachimage3 %}
+											<a class="advert__image advert__image_profile" href="{{ record.attachimage3.thumb(1280, 720, {mode:'auto',quality:80,extension:'webp'}) }}" data-toggle="lightbox" data-type="image" data-gallery="name-{{ record.id }}">
+												<img src="{{ record.attachimage3.thumb(1280, 720, {mode:'auto',quality:80,extension:'webp'}) }}" alt="Третье фото">
+											</a>
+										{% endif %}
+										<!-- Изображение третье -->
 
-                {{ record.text|raw }}
-              </div> <!-- /.profile-hero__item-text -->
-
-
-              {% if record.attachimage1 %}
-              <div class="advert__imgs-wrap count_imgs-parent">
-                <a class="advert__image" href="{{ record.attachimage1.path }}" data-toggle="lightbox" data-type="image">
-                  <img src="{{ record.attachimage1.path }}" alt="Фото1">
-                </a>
-                <!-- Изображение первое -->
-
-                {% if record.attachimage2 %}
-                <a class="advert__image" href="{{ record.attachimage2.path }}" data-toggle="lightbox" data-type="image">
-                  <img src="{{ record.attachimage2.path }}" alt="Фото1">
-                </a>
-                {% endif %}
-                <!-- Изображение второе -->
-                {% if record.attachimage3 %}
-                <a class="advert__image" href="{{ record.attachimage3.path }}" data-toggle="lightbox" data-type="image">
-                  <img src="{{ record.attachimage3.path }}" alt="Фото1">
-                </a>
-                {% endif %}
-                <!-- Изображение третье -->
-
-              </div>
-              {% endif %}
-              <!-- Изображения к объявлению -->
-
-
-              <span class="advert-id">ID: {{record.id}}</span>
-              <!-- /.advert-id -->
-            </div>
-            <!-- /.profile-hero__info -->
-
-          </div>
-          <!-- /.col-md-8 -->
+									</div>
+								{# {% endif %} #}
+								<!-- Изображения к объявлению -->
 
 
-          <div class="col-sm-4">
-            <div class="profile-hero__status">
-              <p>
-                Объявление:
-                {% if record.state == 'on' %}
-                <span class="badge badge-success">активно</span> <!-- /.badge-success -->
-                {% else %}
-                <span class="badge badge-danger">неактивно</span> <!-- /.state -->
-                {% endif %}
-              </p>
+							</div>
+							<!-- /.profile-hero__info -->
+						</div>
+						<!-- /.col-md-8 -->
 
-              {% if record.type != 'xvip' %}
-              <p>
-                Выделено:
-                {% if record.highlight == 'on' %}
-                <span class="badge badge-success">да</span> <!-- /.badge-success -->
-                {% else %}
-                <span class="badge badge-danger">нет</span> <!-- /.state -->
-                {% endif %}
-              </p>
-              {% endif %}
+						<div class="col-sm-4 advert-id__parent">
+							<div class="profile-hero__status">
+								<p>
+									Объявление:
+									{% if record.state == 'on' %}
+										<span class="badge badge-success">активно</span>
+										<!-- /.badge-success -->
+									{% else %}
+										<span class="badge badge-danger">неактивно</span>
+										<!-- /.state -->
+									{% endif %}
+								</p>
 
-              <p>
-                Изображений добавлено: <span class="badge badge-primary count_imgs">{{ record.imageCount }}</span>
-                <!-- /.count_imgs -->
-              </p>
-              <p>
-                <!-- Текст в соответствии с категорией объявления -->
-                Категория:
-                {% if record.category == 'categories-ona-on' %}
-                <a href="{{ 'categories/ona-on'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip"
-                  data-placement="bottom" title="Перейти">Девушка ищет парня</a>
+								{% if record.type == 'xvip' and record.highlight == 'on' %}
+									{%
+							else %}
+										<p>
+											Выделено:
+											{% if record.highlight == 'on' %}
+												<span class="badge badge-success">да</span>
+												<!-- /.badge-success -->
+											{% else %}
+												<span class="badge badge-danger">нет</span>
+												<!-- /.state -->
+											{% endif %}
+										</p>
+								{% endif %}
 
-                {% elseif record.category == 'categories-on-ona' %}
-                <a href="{{ 'categories/on-ona'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip"
-                  data-placement="bottom" title="Перейти">Парень ищет девушку</a>
+								<p>
+									Изображений добавлено:
+									<span class="badge badge-primary count_imgs">
+										{{ record.imageCount }}
+									</span>
+									<!-- /.count_imgs -->
+								</p>
+								<p>
+									<!-- Текст в соответствии с категорией объявления -->
+									Категория:
+									{% if record.category == 'categories-ona-on' %}
+										<a href="{{ 'categories/ona-on'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">
+											Девушка ищет парня
+										</a>
 
-                {% elseif record.category == 'categories-on-on' %}
-                <a href="{{ 'categories/on-on'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip"
-                  data-placement="bottom" title="Перейти">Парень ищет парня</a>
+									{% elseif record.category == 'categories-on-ona' %}
+										<a href="{{ 'categories/on-ona'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">
+											Парень ищет девушку
+										</a>
 
-                {% elseif record.category == 'categories-ona-ona' %}
-                <a href="{{ 'categories/ona-ona'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip"
-                  data-placement="bottom" title="Перейти">Девушка ищет девушку</a>
+									{% elseif record.category == 'categories-on-on' %}
+										<a href="{{ 'categories/on-on'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">
+											Парень ищет парня
+										</a>
 
-                {% elseif record.category == 'categories-free' %}
-                <a href="{{ 'categories/free'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip"
-                  data-placement="bottom" title="Перейти">Досуг в Иркутске</a>
+									{% elseif record.category == 'categories-ona-ona' %}
+										<a href="{{ 'categories/ona-ona'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">
+											Девушка ищет девушку
+										</a>
 
-                {% elseif record.category == 'categories-services' %}
-                <a href="{{ 'categories/services'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip"
-                  data-placement="bottom" title="Перейти">Услуги массажа</a>
+									{% elseif record.category == 'categories-free' %}
+										<a href="{{ 'categories/free'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">
+											Досуг в Иркутске
+										</a>
 
-                {% elseif record.category == 'categories-family' %}
-                <a href="{{ 'categories/family'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip"
-                  data-placement="bottom" title="Перейти">Семейные пары</a>
+									{% elseif record.category == 'categories-services' %}
+										<a href="{{ 'categories/services'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">
+											Услуги массажа
+										</a>
 
-                {% elseif record.category == 'categories-flirt' %}
-                <a href="{{ 'categories/flirt'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip"
-                  data-placement="bottom" title="Перейти">Свободные отношения</a>
+									{% elseif record.category == 'categories-family' %}
+										<a href="{{ 'categories/family'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">
+											Семейные пары
+										</a>
 
-                {% elseif record.category == 'categories-realty' %}
-                <a href="{{ 'categories/realty'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip"
-                  data-placement="bottom" title="Перейти">Недвижимость</a>
+									{% elseif record.category == 'categories-flirt' %}
+										<a href="{{ 'categories/flirt'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">
+											Свободные отношения
+										</a>
 
-                {% elseif record.category == 'categories-arenda' %}
-                <a href="{{ 'categories/arenda'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip"
-                  data-placement="bottom" title="Перейти">Аренда квартир на сутки</a>
+									{% elseif record.category == 'categories-realty' %}
+										<a href="{{ 'categories/realty'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">
+											Недвижимость
+										</a>
 
-                {% elseif record.category == 'categories-work' %}
-                <a href="{{ 'categories/work'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip"
-                  data-placement="bottom" title="Перейти">Работа в Иркутске</a>
+									{% elseif record.category == 'categories-arenda' %}
+										<a href="{{ 'categories/arenda'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">
+											Аренда квартир на сутки
+										</a>
 
-                {% else %}
-                <span class="d-block badge badge-danger">Ошибка: 404 — Not Found</span>
-                {% endif %}
-              </p>
-            </div>
-            <!-- /.profile-hero__status -->
+									{% elseif record.category == 'categories-work' %}
+										<a href="{{ 'categories/work'|page }}" class="d-block btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="Перейти">
+											Работа в Иркутске
+										</a>
 
-            <hr>
+									{% else %}
+										<span class="d-block badge badge-danger">
+											Ошибка: 404 — Not Found
+										</span>
+									{% endif %}
+								</p>
 
-            <a class="btn btn-success btn-sm profile-hero__action"
-              href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">Редактировать
-              объявлнение</a>
-            <!-- /.profile-hero__action -->
-          </div>
-          <!-- /.col-md-4 -->
 
-        </div> <!-- /.row -->
+							</div>
+							<!-- /.profile-hero__status -->
 
-      </li> <!-- /.profile-hero__item -->
+							<hr/>
 
-      {% else %}
-      <li class="alert alert-danger advert-none">
-        <p>{{ noRecordsMessage }} <span data-toggle="tooltip" data-placement="right"
-            title="Самое время создать">&uarr;</span></p>
-      </li>
-      {% endfor %}
+							<a class="btn btn-success btn-sm profile-hero__action" href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
+								Редактировать объявлнение
+							</a>
+							<!-- /.profile-hero__action -->
 
-    </ul>
-    <!-- /.profile-hero__list -->
-  </div>
-  <!-- /.profile-hero -->
+							<p class="advert-id">ID:
+								{{record.id}}</p>
+							<!-- /.advert-id -->
 
+
+						</div>
+						<!-- /.col-md-4 -->
+					</div>
+					<!-- /.row -->
+				</li>
+				<!-- /.profile-hero__item -->
+
+			{% else %}
+				<li class="alert alert-danger advert-none">
+					<p>
+						{{ noRecordsMessage }}
+						<span data-toggle="tooltip" data-placement="right" title="Самое время создать">
+							&uarr;
+						</span>
+					</p>
+				</li>
+			{% endfor %}
+		</ul>
+		<!-- /.profile-hero__list -->
+	</div>
+	<!-- /.profile-hero -->
 </div>
 <!-- /.profile -->

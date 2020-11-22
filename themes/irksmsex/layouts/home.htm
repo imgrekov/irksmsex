@@ -1,77 +1,159 @@
 ==
+<?php
+  function onStart()
+  {
+		$this['canonical_url'] = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		$this['canonical_url'] = explode('?', $this['canonical_url']);
+		$this['canonical_url'] = $this['canonical_url'][0];
+		$this['canonical_url'] = preg_replace('/\d/', '', $this['canonical_url']);
+  }
+?>
+==
 <!DOCTYPE html>
 <html lang="ru">
+	<head>
+		<title>
+			{{ this.page.title }}
+		</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="Знакомства Иркутск,Иркутск,Знакомства для взрослых">
+		{% if this.page.meta_title %}
+			<meta name="title" content="{{ this.page.meta_title }}">
+		{% endif %}
+		{% if this.page.meta_description %}
+			<meta name="description" content="{{ this.page.meta_description }}">
+		{% endif %}
 
-<head>
-  <title>
-    {% if this.page.title %}
-    {{ this.page.title }}
-    {% elseif title %}
-    {{ title }}
-    {% else %}
-    Сайт знакомств irksmsex.ru
-    {% endif %}
-  </title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="keywords" content="знакомства для девушек, парни иркутска, ищу парня, ищу мужчину">
-  <meta name="description" content="Размещение объявлений для поиска девушек">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="yandex-verification" content="47a394e2836b8547" />
+		<meta
+		name="google-site-verification" content="M7bALPGaI6VsqRKKRnBfZqf13uX0kcV_UMIS792mI_c"/>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+		<!-- Canonitial link -->
+		<link
+		rel="canonical" href="{{ canonical_url }}">
 
-  {% styles %}
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
 
-  <!-- Bootstrap -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		{% styles %}
 
-  <!-- FontAwesome -->
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<!-- Bootstrap -->
+		<link
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <!-- Мои стили -->
-  <link href="{{ 'assets/css/style.min.css'|theme }}" rel="stylesheet">
+		<!-- FontAwesome -->
+		<link
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-  <link rel="apple-touch-icon" type="image/png" href="{{ 'assets/images/favicon/apple-touch-icon.png'|theme }}">
-  <link rel="icon" type="image/png" href="{{ 'assets/images/favicon/favicon-32x32.png'|theme }}">
+		<!-- Мои стили -->
+		<link
+		href="{{ 'assets/css/style.min.css'|theme }}" rel="stylesheet">
 
-</head>
+		<!-- Favicon для сайта -->
+		<link rel="shortcut icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon">
 
-<body>
+	</head>
 
-  {% partial 'user-status' %}
+	<body>
 
-  {% partial 'header' %}
+		{% partial 'user-status' %}
 
-  {% page %}
+		{% partial 'header' %}
 
-  {% partial 'second/footer-home' %}
+		{% page %}
 
-  <!-- Версия jquery — 3.3.1 -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		{% partial 'second/footer-home' %}
 
-  <!-- Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
+		<!-- Версия jquery — 3.3.1 -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-  <!-- Bootstrap-4.4.1.js -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
+		<!-- Popper.js -->
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
-  <!-- Yandex Share2 -->
-  <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
-  <script src="https://yastatic.net/share2/share.js" async="async"></script>
+		<!-- Bootstrap-4.4.1.js -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-  <!-- My scripts -->
-  <script src="{{ 'assets/js/app.js'|theme }}"></script>
+		<!-- Yandex Share2 -->
+		<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+		<script src="https://yastatic.net/share2/share.js" async="async"></script>
 
-  <!-- OctoberCMS scripts -->
-  {% framework extras %}
-  {% scripts %}
+		<!-- My scripts -->
+		<script src="{{ 'assets/js/app.js'|theme }}"></script>
 
-</body>
+		<!-- OctoberCMS scripts -->
+		{% framework extras %}
+		{% scripts %}
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+			(function (m, e, t, r, i, k, a) {
+m[i] = m[i] || function () {
+(m[i].a = m[i].a || []).push(arguments)
+};
+m[i].l = 1 * new Date();
+k = e.createElement(t),
+a = e.getElementsByTagName(t)[0],
+k.async = 1,
+k.src = r,
+a.parentNode.insertBefore(k, a)
+})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ym(61969966, "init", {
+clickmap: true,
+trackLinks: true,
+accurateTrackBounce: true,
+webvisor: true
+});
+		</script>
+		<noscript>
+			<div><img src="https://mc.yandex.ru/watch/61969966" style="position:absolute; left:-9999px;" alt=""/></div>
+		</noscript>
+		<!-- /Yandex.Metrika counter -->
+
+		<!— Global site tag (gtag.js) - Google Analytics —>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-22020904-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+function gtag() {
+dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'UA-22020904-2');
+		</script>
+		<!— Global site tag (gtag.js) - Google Analytics —>
+		<!-- Yandex.RTB R-A-576113-2 -->
+		<div id="yandex_rtb_R-A-576113-2"></div>
+		<script type="text/javascript">
+			(function (w, d, n, s, t) {
+w[n] = w[n] || [];
+w[n].push(function () {
+Ya.Context.AdvManager.render({blockId: "R-A-576113-2", renderTo: "yandex_rtb_R-A-576113-2", async: true});
+});
+t = d.getElementsByTagName("script")[0];
+s = d.createElement("script");
+s.type = "text/javascript";
+s.src = "//an.yandex.ru/system/context.js";
+s.async = true;
+t.parentNode.insertBefore(s, t);
+})(this, this.document, "yandexContextAsyncCallbacks");
+		</script>
+		<!-- Yandex.RTB R-A-576113-4 -->
+		<div id="yandex_rtb_R-A-576113-4"></div>
+		<script type="text/javascript">
+			(function (w, d, n, s, t) {
+w[n] = w[n] || [];
+w[n].push(function () {
+Ya.Context.AdvManager.render({blockId: "R-A-576113-4", renderTo: "yandex_rtb_R-A-576113-4", async: true});
+});
+t = d.getElementsByTagName("script")[0];
+s = d.createElement("script");
+s.type = "text/javascript";
+s.src = "//an.yandex.ru/system/context.js";
+s.async = true;
+t.parentNode.insertBefore(s, t);
+})(this, this.document, "yandexContextAsyncCallbacks");
+		</script>
+	</body>
 
 </html>

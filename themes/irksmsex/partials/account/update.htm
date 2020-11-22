@@ -1,10 +1,6 @@
 {{ form_ajax('onUpdate') }}
 
 <fieldset class="form-wrapper">
-	<!-- <div class="form-group">
-		<label for="accountName">Имя</label>
-		<input name="name" type="text" class="form-control" id="accountName" value="{{ user.name }}">
-	</div> -->
 
 	{% if loginAttribute == "username" %}
 	<div class="form-group">
@@ -18,14 +14,8 @@
 		<span>*</span>
 	</h3>
 	<div class="form-group">
-		<input name="email" type="email" class="form-control" id="Email" value="{{ user.email }}" disabled>
+	    <p class="form-control" style="background-color:#e9ecef; margin:0;">{{ user.email }}</p>
 	</div>
-
-	<!-- на всякий случай сохраню -->
-	<!-- <div class="form-group">
-		<label for="accountEmail">Почта</label>
-		<input name="email" type="email" class="form-control" id="accountEmail" value="{{ user.email }}">
-	</div> -->
 
 </fieldset>
 

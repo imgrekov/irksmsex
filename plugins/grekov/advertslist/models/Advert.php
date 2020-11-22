@@ -19,15 +19,18 @@ class Advert extends Model
 	public $table = 'grekov_advertslist_ads';
 
 	public $attachOne = [
-		'attachimage1' => 'System\Models\File',
-		'attachimage2' => 'System\Models\File',
-		'attachimage3' => 'System\Models\File',
+		'attachimage1' => File::class,
+		'attachimage2' => File::class,
+		'attachimage3' => File::class,
 	];
 
 	/**
 	 * @var array Validation rules
 	 */
-	public $rules = [];
+	public $rules = [
+		'text' => 'required',
+		'type' => 'required',
+	];
 
 	public function getImageCountAttribute()
 	{

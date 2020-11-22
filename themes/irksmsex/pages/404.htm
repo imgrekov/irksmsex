@@ -1,10 +1,22 @@
-title = "404 — Page Not Found"
+title = "404 — Страница не найдена"
 url = "/404"
 layout = "home"
 is_hidden = 0
 ==
+<?php
+	use Redirect;
+  function onReturnBackFrom404()
+  {
+  	return \Redirect::back();
+  }
+?>
+==
+<div class="back text-center py-2">
+	<button class="btn btn-primary btn-lg" data-request="onReturnBackFrom404">Назад</button>
+</div>
 
 {% partial '404' error_text = "Страница не&nbsp;найдена" %}
+
 <div class="titlefoot">
-	<a class="btn btn-light btn-sm" href="{{ 'home'|page }}">На главную</a>
+	<a class="btn btn-light btn-sm" href="{{ 'index'|page }}">На главную</a>
 </div>

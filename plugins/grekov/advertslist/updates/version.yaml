@@ -153,3 +153,9 @@
 1.0.52:
     - 'Updated table grekov_advertslist_ads'
     - builder_table_update_grekov_advertslist_ads_46.php
+1.0.53:
+    - 'Updated table grekov_advertslist_ads'
+    - builder_table_update_grekov_advertslist_ads_47.php
+1.0.54:
+    - 'Updated table grekov_advertslist_ads'
+    - builder_table_update_grekov_advertslist_ads_48.php

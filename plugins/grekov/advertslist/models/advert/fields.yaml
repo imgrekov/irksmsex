@@ -68,3 +68,11 @@ fields:
             extension: auto
         span: auto
         type: fileupload
+    sum:
+        label: 'Сумма оплаты'
+        span: auto
+        type: text
+    paid:
+        label: 'Оплачено ли?'
+        span: auto
+        type: switch

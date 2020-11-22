@@ -7,5 +7,5 @@
       | The minimum length of characters required for user passwords.
       |
       */
-    'minPasswordLength' => 8,
+    'minPasswordLength' => 4,
 ];

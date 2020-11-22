@@ -1,4 +1,10 @@
 <?php
+// Редирект на нижний регистр в url
+if ($_SERVER['REQUEST_URI'] != strtolower($_SERVER['REQUEST_URI'])) {
+    header('Location: //' . $_SERVER['HTTP_HOST'] . strtolower($_SERVER['REQUEST_URI']), true, 301);
+    exit();
+}
+
 /**
  * October - The PHP platform that gets back to basics.
  *
@@ -15,7 +21,7 @@
 |
 */
 
-require __DIR__.'/bootstrap/autoload.php';
+require __DIR__ . '/bootstrap/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +32,7 @@ require __DIR__.'/bootstrap/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/bootstrap/app.php';
+$app = require_once __DIR__ . '/bootstrap/app.php';
 
 /*
 |--------------------------------------------------------------------------
